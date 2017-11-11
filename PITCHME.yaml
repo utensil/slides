@@ -1,0 +1,18 @@
+theme: black
+background : assets/bg.jpg
+logo : assets/logo.png
+theme-override : assets/css/PITCHME.css
+background-size : cover
+highlight : railscasts
+mathjax : TeX-AMS_HTML-full
+charts : true
+slide-number : false
+footnote : ""
+published : true
+# autoslide : 5000
+loop : false
+rtl : false
+# convex, concave, default, fade, none, slide and zoom
+# transition : fade
+mousewheel : true
+
