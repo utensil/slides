@@ -135,6 +135,13 @@ Step through GIST source code within
 @[62](Delegate execution off Spark cluster to AWS Lambda)
 @[72-75](Handle AWS Lambda task execution results)
 
++++
+@title[Present Jupyter Notebook]
+
+#### Present Jupyter Notebook(`\(\sqrt{3x-1}+(1+x)^2\)`)
+
+<iframe src="http://nbviewer.jupyter.org/github/lightning-viz/lightning-example-notebooks/blob/master/index.ipynb"></iframe>
+
 ---
 @title[Embed Images]
 
