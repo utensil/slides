@@ -8,53 +8,16 @@
 ## Links
 
 +++
-@title[]
+@title[ML Links]
 
 [Digest ML/NLP/CV/CG reading materials](https://github.com/utensil/utensil.github.io/issues/83)
 
-<iframe src="https://github.com/utensil/utensil.github.io/issues/83"></iframe>
-
 +++
-@title[]
+@title[Jupyter Notebooks]
 
 https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/
 
 <iframe src="https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/"></iframe>
-
-+++
-@title[]
-
-
-
-<iframe src=""></iframe>
-
-+++
-@title[]
-
-
-
-<iframe src=""></iframe>
-
-+++
-@title[]
-
-
-
-<iframe src=""></iframe>
-
-+++
-@title[]
-
-
-
-<iframe src=""></iframe>
-
-+++
-@title[]
-
-
-
-<iframe src=""></iframe>
 
 ---
 @title[Theme Switcher]
