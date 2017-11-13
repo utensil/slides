@@ -3,6 +3,60 @@
 ##### <span style="font-family:Helvetica Neue; font-weight:bold">A <span style="color:#e49436">Git</span>Pitch Feature Tour</span>
 
 ---
+@title[Links]
+
+## Links
+
++++
+@title[]
+
+[Digest ML/NLP/CV/CG reading materials](https://github.com/utensil/utensil.github.io/issues/83)
+
+<iframe src="https://github.com/utensil/utensil.github.io/issues/83"></iframe>
+
++++
+@title[]
+
+https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/
+
+<iframe src="https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/"></iframe>
+
++++
+@title[]
+
+
+
+<iframe src=""></iframe>
+
++++
+@title[]
+
+
+
+<iframe src=""></iframe>
+
++++
+@title[]
+
+
+
+<iframe src=""></iframe>
+
++++
+@title[]
+
+
+
+<iframe src=""></iframe>
+
++++
+@title[]
+
+
+
+<iframe src=""></iframe>
+
+---
 @title[Theme Switcher]
 
 ## Slideshow Theme Switcher
