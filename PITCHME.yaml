@@ -1,6 +1,6 @@
 theme: black
-background : assets/bg.jpg
-logo : assets/logo.png
+# background : assets/bg.jpg
+# logo : assets/logo.png
 theme-override : assets/css/PITCHME.css
 background-size : cover
 highlight : railscasts
