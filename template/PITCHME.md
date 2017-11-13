@@ -10,6 +10,10 @@
 ## Links
 
 +++
+<section data-background-iframe="https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/" data-background-interactive>
+</section>
+
++++
 @title[ML Links]
 
 [Digest ML/NLP/CV/CG reading materials](https://github.com/utensil/utensil.github.io/issues/83)

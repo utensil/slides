@@ -19,3 +19,10 @@ function openExternalLinksInNewTab(selector) {
 document.addEventListener("DOMContentLoaded", function(event) {
   openExternalLinksInNewTab();
 });
+
+/*
+Reveal.configure({
+  showNotes: true,
+  previewLinks: true,
+});
+*/
