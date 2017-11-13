@@ -16,4 +16,6 @@ function openExternalLinksInNewTab(selector) {
   });
 }
 
-openExternalLinksInNewTab();
+document.addEventListener("DOMContentLoaded", function(event) {
+  openExternalLinksInNewTab();
+});
