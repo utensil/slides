@@ -13,9 +13,9 @@
 [Digest ML/NLP/CV/CG reading materials](https://github.com/utensil/utensil.github.io/issues/83)
 
 +++
-@title[Jupyter Notebooks]
+@title[My Jupyter Notebooks about ML]
 
-https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/
+[My Jupyter Notebooks about ML](https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/)
 
 <iframe src="https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/"></iframe>
 
