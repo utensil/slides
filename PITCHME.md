@@ -3,6 +3,23 @@
 ##### <span style="font-family:Helvetica Neue; font-weight:bold">A <span style="color:#e49436">Git</span>Pitch Feature Tour</span>
 
 ---
+@title[Links]
+
+## Links
+
++++
+@title[ML Links]
+
+[Digest ML/NLP/CV/CG reading materials](https://github.com/utensil/utensil.github.io/issues/83)
+
++++
+@title[My Jupyter Notebooks about ML]
+
+[My Jupyter Notebooks about ML](https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/)
+
+<iframe src="https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/"></iframe>
+
+---
 @title[Theme Switcher]
 
 ## Slideshow Theme Switcher
@@ -140,7 +157,7 @@ Step through GIST source code within
 
 Present Jupyter Notebook(`\(\sqrt{3x-1}+(1+x)^2\)`)
 
-<iframe style="height: 550px;width: 100%;" src="https://nbviewer.jupyter.org/github/lightning-viz/lightning-example-notebooks/blob/master/index.ipynb"></iframe>
+<iframe src="https://nbviewer.jupyter.org/github/lightning-viz/lightning-example-notebooks/blob/master/index.ipynb"></iframe>
 
 ---
 @title[Embed Images]
