@@ -140,7 +140,7 @@ Step through GIST source code within
 
 Present Jupyter Notebook(`\(\sqrt{3x-1}+(1+x)^2\)`)
 
-<iframe style="height: 550px;width: 100%;" src="https://nbviewer.jupyter.org/github/lightning-viz/lightning-example-notebooks/blob/master/index.ipynb"></iframe>
+<iframe src="https://nbviewer.jupyter.org/github/lightning-viz/lightning-example-notebooks/blob/master/index.ipynb"></iframe>
 
 ---
 @title[Embed Images]
