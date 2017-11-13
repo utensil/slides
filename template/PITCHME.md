@@ -2,6 +2,8 @@
 ## The Kitchen Sink
 ##### <span style="font-family:Helvetica Neue; font-weight:bold">A <span style="color:#e49436">Git</span>Pitch Feature Tour</span>
 
+<script type="text/javascript" src="https://raw.githubusercontent.com/utensil/slides/master/assets/js/common.js"></script>
+
 ---
 @title[Links]
 
