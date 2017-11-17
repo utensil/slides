@@ -2,7 +2,18 @@
 
 [1]:javascript:Reveal.configure({previewLinks:true})
 
+<div>
+<script type="text/javascript" src="https://raw.githubusercontent.com/utensil/slides/master/assets/js/common.js"></script>
+<script type="text/javascript">
+  alert('It works!');
+</script>
+</div>
+
 ---
+
+### Draft
+
++++
 
 ### The Origin
 
@@ -13,17 +24,372 @@
 - [Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
 - Keras (2016)
 
----
++++
 
 ### Traditional Machine Learning Methods
 
++++
+
+### Why Go Deep? 
+
+- http://slides.com/beamandrew/deep-learning-101#/
+- http://donsoft.io/intro-to-deeplearning
+
 ---
 
-### Why Go Deep?  
+<section>
+  <h3>scikit-learn User Guide</h3>
+
+  <p>http://scikit-learn.org/stable/user_guide.html</p>
+</section>
+
+<section data-background-iframe="http://scikit-learn.org/stable/user_guide.html" data-background-interactive>
+</section>
+
+---
+
+<section>
+  <h3>Deep Learning - The Straight Dope</h3>
+
+  <p>http://gluon.mxnet.io/</p>
+</section>
+
+<section>
+  <h4>Simple Networks</h4>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter02_supervised-learning/linear-regression-scratch.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter02_supervised-learning/perceptron.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter02_supervised-learning/softmax-regression-scratch.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter03_deep-neural-networks/mlp-scratch.html" data-background-interactive>
+</section>
+
+<section>
+  <h4>More than Networks</h4>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter02_supervised-learning/regularization-scratch.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter02_supervised-learning/environment.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter03_deep-neural-networks/mlp-dropout-scratch.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/cheatsheets/kaggle-gluon-kfold.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter18_variational-methods-and-uncertainty/bayes-by-backprop.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter06_optimization/optimization-intro.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter06_optimization/gd-sgd.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter06_optimization/sgd-momentum.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter08_computer-vision/fine-tuning.html" data-background-interactive>
+</section>
+
+<section>
+  <h4>Deep Learning Networks</h4>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter04_convolutional-neural-networks/cnn-scratch.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter04_convolutional-neural-networks/cnn-batch-norm-scratch.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter05_recurrent-neural-networks/simple-rnn.html" data-background-interactive>
+</section>
+<section data-background-iframe="http://gluon.mxnet.io/chapter05_recurrent-neural-networks/lstm-scratch.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter05_recurrent-neural-networks/gru-scratch.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter14_generative-adversarial-networks/gan-intro.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter14_generative-adversarial-networks/pixel2pixel.html" data-background-interactive>
+</section>
+
+<section>
+  <h4>Applications</h4>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter08_computer-vision/object-detection.html" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://gluon.mxnet.io/chapter08_computer-vision/visual-question-answer.html" data-background-interactive>
+</section>
+
+---
+
+<section>
+  <h3>
+    TensorFlow Exercises
+    <p><small>focusing on the comparison with NumPy</small></p>
+  </h3>
+
+  <p>https://github.com/Kyubyong/tensorflow-exercises</p>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Constants_Sequences_and_Random_Values_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Graph_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Variables_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Reading_Data_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Tensor_Transformations_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part1_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part2_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part3_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Control_Flow_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Sparse_Tensors-Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Neural_Network_Part1_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Neural_Network_Part2_Solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Seq2Seq_solutions.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Audio_Processing.ipynb" data-background-interactive>
+</section>
+
+---
+
+<section>
+  <h3>
+    TensorFlow Tutorial
+    <p><small>used by Nvidia</small></p>
+  </h3>
+
+  <p>https://github.com/alrojo/tensorflow-tutorial</p>
+</section>
+
+<section data-background-iframe="http://nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab1_FFN/lab1_FFN.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab2_CNN/lab2_CNN.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab3_RNN/lab3_RNN.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab4_Kaggle/lab4_Kaggle.ipynb" data-background-interactive>
+</section>
+
+<section data-background-iframe="http://nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab5_AE/lab5_AE.ipynb" data-background-interactive>
+</section>
+
+---
+
+### Math Foundation
+
+- neuroscience narrative, drawing analogies to biology
+- representations narrative, centered on transformations of data and the manifold hypothesis
+- probabilistic narrative, which interprets neural networks as finding latent variables
+- deep learning studies a connection between optimization and functional programming
+  - the representations narrative in deep learning corresponds to type theory in functional programming
+- http://colah.github.io/posts/2015-09-NN-Types-FP/
+
++++
+
+- http://mathworld.wolfram.com/VectorNorm.html
+- https://github.com/utensil/utensil.github.io/issues/15
+
+
+---
+
+### Libs
+
+- https://simplestatistics.org/docs/
+
+---
+
+### DLib
+
+![](http://dlib.net/ml_guide.svg)
+
+- http://dlib.net/ml.html
+
+---
+
+### Tensorflow
+
+- https://github.com/donnemartin/data-science-ipython-notebooks#tensor-flow-tutorials
+- https://github.com/jtoy/awesome-tensorflow
+- https://github.com/sjchoi86/Tensorflow-101
+- https://github.com/vahidk/EffectiveTensorflow
+- https://github.com/nlintz/TensorFlow-Tutorials
+
+---
+
+### Xgboost
+
+- https://xgboost.readthedocs.io/en/latest/model.html
+- https://homes.cs.washington.edu/~tqchen/pdf/BoostedTree.pdf
+- https://machinelearningmastery.com/gentle-introduction-xgboost-applied-machine-learning/
+- http://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf
+
++++
+
+### Higgs Boson
+
+- http://nbviewer.jupyter.org/urls/www.lri.fr/~kegl/HiggsML/StartingKit/startingKitHiggsKegl.ipynb
+- https://www.kaggle.com/c/higgs-boson/discussion/13143
+- http://opendata.cern.ch/record/329
+- http://cs229.stanford.edu/proj2015/017_report.pdf
+- http://cs231n.stanford.edu/reports/2016/pdfs/300_Report.pdf
+- https://www.researchgate.net/publication/287742463_Searching_for_higgs_boson_decay_modes_with_deep_learning
+- https://arxiv.org/pdf/1402.4735.pdf
+- https://no2147483647.wordpress.com/2014/09/17/winning-solution-of-kaggle-higgs-competition-what-a-single-model-can-do/
+
+---
+
+### Datasets
+
+- All
+  - https://github.com/caesar0301/awesome-public-datasets
+  - http://academictorrents.com/
+- CV
+  - http://deeplearning.net/datasets
+- Go
+  - https://github.com/yenw/computer-go-dataset
+- NLP
+  - http://universaldependencies.org/
+  - https://github.com/Breakend/DialogDatasets
+
++++
+
+Notebooks:
+
+- http://scikit-learn.org/dev/_static/ml_map.png
+- https://github.com/donnemartin/data-science-ipython-notebooks
+- https://github.com/jakevdp/PythonDataScienceHandbook
+
+Foundation:
+
+- https://github.com/rushter/MLAlgorithms/
+- https://github.com/eriklindernoren/ML-From-Scratch
+- https://github.com/ujjwalkarn/Machine-Learning-Tutorials
+
++++
+
+- https://en.wikipedia.org/wiki/Arg_max
+- https://tex.stackexchange.com/questions/5223/command-for-argmin-or-argmax
+- https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics
+- https://www.cs.ubc.ca/~schmidtm/Documents/2016_540_Argmax.pdf
+- https://raw.githubusercontent.com/scikit-learn/scikit-learn/master/doc/modules/linear_model.rst
+
+---
+
+### Visualization
+
+- http://playground.tensorflow.org
+- https://deeplearnjs.org/demos/model-builder/
+- http://cs.stanford.edu/people/karpathy/convnetjs/
+- http://cs231n.github.io/neural-networks-3/
+- http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/
+- http://colah.github.io/
+
++++
+
+- http://colah.github.io/posts/2015-09-NN-Types-FP/
+- http://colah.github.io/posts/2015-01-Visualizing-Representations/
+- http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
+- http://colah.github.io/posts/2014-10-Visualizing-MNIST/
+
+---
+
+<section>
+  <h3>Understanding LSTM Networks</h3>
+
+  <p>http://colah.github.io/posts/2015-08-Understanding-LSTMs/</p>
+  <p>https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714</p>
+</section>
+
+<section data-background-iframe="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" data-background-interactive>
+</section>
+
+---
+
+### New Links
+
++++
+
+* https://github.com/karpathy/convnetjs
+* http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html
+* http://www.cs.ubc.ca/~van/papers/2016-TOG-deepRL/index.html
+* https://github.com/janesjanes/sketchy
+* http://scs.ryerson.ca/~aharley/vis/conv/
+* http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html
+* https://deepart.io/
+
++++
+
+* https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU
+* https://www.youtube.com/playlist?list=PLE6Wd9FR--EfW8dtjAuPoTuPcqmOV53Fu
+* http://swanintelligence.com/first-steps-with-neural-nets-in-keras.html
+* http://neuralnetworksanddeeplearning.com/
+* http://www.deeplearningbook.org/
+* http://boxcar2d.com/index.html
+
++++
+
+* https://www.flickr.com/photos/syntopia/6791724773/in/photostream/
+* http://blog.hvidtfeldts.net/index.php/2012/01/knots-and-polyhedra/
+* http://blog.mathteachersresource.com/?p=670
+* http://www.gitxiv.com/
+* http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/
+* https://github.com/colah/Visualizing-Deep-Learning
+
++++
+
+* https://distill.pub/2017/feature-visualization/
+* https://github.com/ChristosChristofidis/awesome-deep-learning#videos-and-lectures
+* https://github.com/guillaume-chevalier/Awesome-Deep-Learning-Resources#youtube
+* https://github.com/kjw0612/awesome-deep-vision#videos
 
 ---
 
 ### Links
+
 
 +++
 
@@ -32,10 +398,8 @@
 - [Deep Learning School 2016: Individual Talks](https://www.youtube.com/playlist?list=PLrAXtmErZgOfMuxkACrYnD2fTgbzk2THW)
 - [Online Course on Neural Networks](http://info.usherbrooke.ca/hlarochelle/neural_networks/content.html)
 - https://github.com/fchollet/keras-resources
-- http://scikit-learn.org/stable/user_guide.html
 - https://github.com/lamblin/bayareadlschool
 - http://deeplearning.net/datasets
-- https://github.com/alrojo/tensorflow-tutorial
 
 +++
 
@@ -159,6 +523,7 @@ Others:
 - https://github.com/Kivy-CN/Duke-STA-663-CN
 - https://github.com/Kivy-CN/ml-for-humans-zh
 - https://github.com/Kivy-CN/Stanford-CS-229-CN
+- https://github.com/CuprousIodide/Poinchinski-Memories
 - https://foolbox.readthedocs.io/en/latest/user/examples.html
 - https://hub.docker.com/r/utensil/dl/
 
@@ -166,3 +531,47 @@ Others:
 
 - https://github.com/utensil/utensil.github.io/issues/83
 - [My Jupyter Notebooks about ML](https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/)
+
+---
+
+<section>
+  <h3>Test Iframe Background</h3>
+</section>
+
+<section data-background-iframe="https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/" data-background-interactive>
+</section>
+
+---
+
+### Nupic
+
++++
+
+Videos
+
+TODO
+
++++
+
+Papers:
+
+- [Continuous online sequence learning with an unsupervised neural network model](http://arxiv.org/abs/1512.05463)
+- [Search for the right paper about HTM](https://discourse.numenta.org/t/search-for-the-right-paper-about-htm/274)
+
++++
+
+Algorithm
+
+- [Spatial Pooler Algorithm Implementation and Pseudocode](http://numenta.com/assets/pdf/biological-and-machine-intelligence/0.4/BaMI-Spatial-Pooler.pdf)
+- [Temporal Memory Algorithm Implementation and Pseudocode](http://numenta.com/assets/pdf/biological-and-machine-intelligence/0.4/BaMI-Temporal-Memory.pdf)
+- [HTM CLA Flow Chart Diagrams](https://discourse.numenta.org/t/htm-cla-flow-chart-diagrams/713)
+
++++
+
+Implementations
+
+- [NuPIC](https://github.com/numenta/nupic) [<i class="fa fa-code-fork"></i>](https://github.com/numenta/nupic/pulls?utf8=%E2%9C%93&q=author%3Autensil)
+- [NuPIC Core](https://github.com/numenta/nupic.core) [<i class="fa fa-code-fork"></i>](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil)
+- [HTM.Julia](https://github.com/htm-community/HTM.Julia)
+- [Bare-Bone HTM](http://ifni.co/bbHTM.html)
+
