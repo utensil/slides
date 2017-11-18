@@ -1,8 +1,8 @@
 {
   "theme": "black",
-  "highlight-theme": "railscasts",
-  "separator": "^---\n",
-  "verticalSeparator": "^\\+\\+\\+\n",
+  "highlightTheme": "railscasts",
+  "separator": "^---[\r]?\n",
+  "verticalSeparator": "^\\+\\+\\+[\r]?\n",
   "css": "./css/common.css",
   "scripts": "./js/common.js",
   "preprocessor": "./js/preproc.js"
