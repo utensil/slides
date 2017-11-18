@@ -48,7 +48,7 @@
       var openTags = [], reHtmlTag = /<(\/?)span(?:\s+(?:class=(['"])hljs-.*?\2)?\s*|\s*)>/g;
       element.innerHTML = element.innerHTML.replace(/(.*?)\r?\n/g, function(_, string) {
         if (!string) {
-          return '<span class=line>&nbsp;</span>';
+          return '<span class="line">&nbsp;</span>';
         }
         var openTag, stringPrepend;
         // Re-open all tags that were previously closed.
@@ -74,7 +74,7 @@
         if (stringPrepend) {
           string = stringPrepend + string;
         }
-        return '<span class=line>' + string + '</span>';
+        return '<span class="line">' + string + '\n</span>';
       });
     });
 
@@ -120,6 +120,10 @@
 
   // Remove
   function clearPreviousFocus() {
+    forEach(currentSlide.querySelectorAll('pre code'), function(code) {
+      code.classList.remove('focus');
+    });
+
     forEach(currentSlide.querySelectorAll('pre code .line.focus'), function(line) {
       line.classList.remove('focus');
     });
@@ -130,6 +134,10 @@
     if (!fragment) {
       return;
     }
+
+    forEach(currentSlide.querySelectorAll('pre code'), function(code) {
+      code.classList.add('focus');
+    });
 
     var lines = fragment.getAttribute('data-code-focus');
     if (!lines) {

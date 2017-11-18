@@ -1,6 +1,7 @@
 iframe {
   height: 550px;
   width: 100%;
+  background-color: white;
 }
 
 .reveal h1,
@@ -10,4 +11,24 @@ iframe {
 .reveal h5,
 .reveal h6 {
   text-transform: none;
+}
+
+.reveal .hljs .line { 
+  font-family: Fira Code, Fantasque Sans Mono, DejaVu Mono, Consolas, 'Courier New', monospace, Microsoft YaHei;
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.reveal .hljs .line.focus { opacity: 1; }
+.reveal .hljs.focus .line:not(.focus) { opacity: 0.2; }
+.reveal .hljs .line:hover { opacity: 1; }
+
+.reveal .slides section .fragment.current-only.current-fragment {
+  display: block;
+}
+
+.reveal .slides section .fragment.current-only {
+  visibility: visible;
+  display: none;
 }

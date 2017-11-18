@@ -1,18 +1,56 @@
-## A Machine Learning Tour [<i class="fa fa-train"></i>][1]
-
-[1]:javascript:Reveal.configure({previewLinks:true})
-
-<div>
-<script type="text/javascript" src="https://raw.githubusercontent.com/utensil/slides/master/assets/js/common.js"></script>
-<script type="text/javascript">
-  alert('It works!');
-</script>
-</div>
+## A Machine Learning Tour
 
 ---
 
 ### Draft
 
++++
+
+```python
+from time import localtime
+ 
+activities = {8: 'Sleeping', 9: 'Commuting', 17: 'Working',
+              18: 'Commuting', 20: 'Eating', 22: 'Resting' }
+ 
+time_now = localtime()
+hour = time_now.tm_hour
+ 
+for activity_time in sorted(activities.keys()):
+    if hour < activity_time:
+        print activities[activity_time]
+        break
+else:
+    print 'Unknown, AFK or sleeping!'
+```
+
++++
+
+```python
+from time import localtime
+ 
+activities = {8: 'Sleeping', 9: 'Commuting', 17: 'Working',
+              18: 'Commuting', 20: 'Eating', 22: 'Resting' }
+ 
+time_now = localtime()
+hour = time_now.tm_hour
+ 
+for activity_time in sorted(activities.keys()):
+    if hour < activity_time:
+        print activities[activity_time]
+        break
+else:
+    print 'Unknown, AFK or sleeping!'
+```
+
+<p class="fragment current-only" data-code-focus="1">
+  comment 1
+</p>
+<p class="fragment current-only" data-code-focus="3-4">
+  comment 2
+</p>
+<p class="fragment current-only" data-code-focus="9-14">
+  comment 3
+</p>
 +++
 
 ### The Origin
@@ -37,185 +75,263 @@
 
 ---
 
-<section>
-  <h3>scikit-learn User Guide</h3>
+### scikit-learn User Guide
 
-  <p>http://scikit-learn.org/stable/user_guide.html</p>
-</section>
+http://scikit-learn.org/stable/user_guide.html
 
-<section data-background-iframe="//scikit-learn.org/stable/user_guide.html" data-background-interactive>
-</section>
++++
 
----
-
-<section>
-  <h3>Deep Learning - The Straight Dope</h3>
-
-  <p>http://gluon.mxnet.io/</p>
-</section>
-
-<section>
-  <h4>Simple Networks</h4>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter02_supervised-learning/linear-regression-scratch.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter02_supervised-learning/perceptron.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter02_supervised-learning/softmax-regression-scratch.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter03_deep-neural-networks/mlp-scratch.html" data-background-interactive>
-</section>
-
-<section>
-  <h4>More than Networks</h4>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter02_supervised-learning/regularization-scratch.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter02_supervised-learning/environment.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter03_deep-neural-networks/mlp-dropout-scratch.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/cheatsheets/kaggle-gluon-kfold.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter18_variational-methods-and-uncertainty/bayes-by-backprop.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter06_optimization/optimization-intro.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter06_optimization/gd-sgd.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter06_optimization/sgd-momentum.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter08_computer-vision/fine-tuning.html" data-background-interactive>
-</section>
-
-<section>
-  <h4>Deep Learning Networks</h4>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter04_convolutional-neural-networks/cnn-scratch.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter04_convolutional-neural-networks/cnn-batch-norm-scratch.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter05_recurrent-neural-networks/simple-rnn.html" data-background-interactive>
-</section>
-<section data-background-iframe="//gluon.mxnet.io/chapter05_recurrent-neural-networks/lstm-scratch.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter05_recurrent-neural-networks/gru-scratch.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter14_generative-adversarial-networks/gan-intro.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter14_generative-adversarial-networks/pixel2pixel.html" data-background-interactive>
-</section>
-
-<section>
-  <h4>Applications</h4>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter08_computer-vision/object-detection.html" data-background-interactive>
-</section>
-
-<section data-background-iframe="//gluon.mxnet.io/chapter08_computer-vision/visual-question-answer.html" data-background-interactive>
-</section>
+<!-- .slide: data-background-iframe="//scikit-learn.org/stable/user_guide.html" data-background-interactive -->
 
 ---
 
-<section>
-  <h3>
-    TensorFlow Exercises
-    <p><small>focusing on the comparison with NumPy</small></p>
-  </h3>
+### Deep Learning - The Straight Dope
 
-  <p>https://github.com/Kyubyong/tensorflow-exercises</p>
-</section>
+http://gluon.mxnet.io/
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Constants_Sequences_and_Random_Values_Solutions.ipynb" data-background-interactive>
-</section>
++++
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Graph_Solutions.ipynb" data-background-interactive>
-</section>
+#### Simple Networks
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Variables_Solutions.ipynb" data-background-interactive>
-</section>
++++
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Reading_Data_Solutions.ipynb" data-background-interactive>
-</section>
+- Generalized Linear Models: $ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $
+- Ordinary Least Squares: $ \underset{w}{min\,} {|| X w - y||_2}^2 $
+- Ridge Regression: $ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $
+- Lasso: $ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $
+- Elastic Net:  $ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Tensor_Transformations_Solutions.ipynb" data-background-interactive>
-</section>
++++
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part1_Solutions.ipynb" data-background-interactive>
-</section>
+<table style="width: 80%; overflow-y: scroll">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Generalized Linear Models</td>
+    <td>$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $</td>
+    <td>25</td>
+  </tr>
+  <tr class="fragment">
+    <td>Elastic Net</td>
+    <td>$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $</td>
+    <td>94</td>
+  </tr>
+  <tr class="fragment">
+    <td>John</td>
+    <td>Doe</td>
+    <td>43</td>
+  </tr>
+</table>
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part2_Solutions.ipynb" data-background-interactive>
-</section>
++++
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part3_Solutions.ipynb" data-background-interactive>
-</section>
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter02_supervised-learning/linear-regression-scratch.html" data-background-interactive -->
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Control_Flow_Solutions.ipynb" data-background-interactive>
-</section>
++++
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Sparse_Tensors-Solutions.ipynb" data-background-interactive>
-</section>
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter02_supervised-learning/perceptron.html" data-background-interactive -->
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Neural_Network_Part1_Solutions.ipynb" data-background-interactive>
-</section>
++++
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Neural_Network_Part2_Solutions.ipynb" data-background-interactive>
-</section>
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter02_supervised-learning/softmax-regression-scratch.html" data-background-interactive -->
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Seq2Seq_solutions.ipynb" data-background-interactive>
-</section>
++++
 
-<section data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Audio_Processing.ipynb" data-background-interactive>
-</section>
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter03_deep-neural-networks/mlp-scratch.html" data-background-interactive -->
+
++++
+
+#### More than Networks
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter02_supervised-learning/regularization-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter02_supervised-learning/environment.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter03_deep-neural-networks/mlp-dropout-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter18_variational-methods-and-uncertainty/bayes-by-backprop.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter06_optimization/optimization-intro.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter06_optimization/gd-sgd-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter06_optimization/momentum-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter06_optimization/adagrad-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter06_optimization/rmsprop-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter06_optimization/rmsprop-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter06_optimization/adam-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter08_computer-vision/fine-tuning.html" data-background-interactive -->
+
++++
+
+#### Deep Learning Networks
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter04_convolutional-neural-networks/cnn-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter04_convolutional-neural-networks/cnn-batch-norm-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter05_recurrent-neural-networks/simple-rnn.html" data-background-interactive -->
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter05_recurrent-neural-networks/lstm-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter05_recurrent-neural-networks/gru-scratch.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter14_generative-adversarial-networks/gan-intro.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter14_generative-adversarial-networks/dcgan.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter14_generative-adversarial-networks/pixel2pixel.html" data-background-interactive -->
+
++++
+
+#### Applications
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter08_computer-vision/object-detection.html" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter08_computer-vision/visual-question-answer.html" data-background-interactive -->
 
 ---
 
-<section>
-  <h3>
-    TensorFlow Tutorial
-    <p><small>used by Nvidia</small></p>
-  </h3>
+### TensorFlow Exercises
 
-  <p>https://github.com/alrojo/tensorflow-tutorial</p>
-</section>
+<small>focusing on the comparison with NumPy</small>
 
-<section data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab1_FFN/lab1_FFN.ipynb" data-background-interactive>
-</section>
+https://github.com/Kyubyong/tensorflow-exercises
 
-<section data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab2_CNN/lab2_CNN.ipynb" data-background-interactive>
-</section>
++++
 
-<section data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab3_RNN/lab3_RNN.ipynb" data-background-interactive>
-</section>
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Constants_Sequences_and_Random_Values_Solutions.ipynb" data-background-interactive -->
 
-<section data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab4_Kaggle/lab4_Kaggle.ipynb" data-background-interactive>
-</section>
++++
 
-<section data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab5_AE/lab5_AE.ipynb" data-background-interactive>
-</section>
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Graph_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Variables_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Reading_Data_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Tensor_Transformations_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part1_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part2_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part3_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Control_Flow_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Sparse_Tensors-Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Neural_Network_Part1_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Neural_Network_Part2_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Seq2Seq_solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Audio_Processing.ipynb" data-background-interactive -->
+
+---
+
+### TensorFlow Tutorial
+
+<small>used by Nvidia</small>
+
+https://github.com/alrojo/tensorflow-tutorial
+
++++
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab1_FFN/lab1_FFN.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab2_CNN/lab2_CNN.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab3_RNN/lab3_RNN.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab4_Kaggle/lab4_Kaggle.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab5_AE/lab5_AE.ipynb" data-background-interactive -->
 
 ---
 
@@ -338,15 +454,14 @@ Foundation:
 
 ---
 
-<section>
-  <h3>Understanding LSTM Networks</h3>
+### Understanding LSTM Networks
 
-  <p>http://colah.github.io/posts/2015-08-Understanding-LSTMs/</p>
-  <p>https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714</p>
-</section>
+- http://colah.github.io/posts/2015-08-Understanding-LSTMs
+- https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714
 
-<section data-background-iframe="//colah.github.io/posts/2015-08-Understanding-LSTMs/" data-background-interactive>
-</section>
++++
+
+<!-- .slide: data-background-iframe="//colah.github.io/posts/2015-08-Understanding-LSTMs/" data-background-interactive -->
 
 ---
 
@@ -532,15 +647,6 @@ Others:
 
 - https://github.com/utensil/utensil.github.io/issues/83
 - [My Jupyter Notebooks about ML](https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/)
-
----
-
-<section>
-  <h3>Test Iframe Background</h3>
-</section>
-
-<section data-background-iframe="https://nbviewer.jupyter.org/github/utensil/julia-playground/tree/master/dl/" data-background-interactive>
-</section>
 
 ---
 
