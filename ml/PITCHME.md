@@ -257,6 +257,7 @@
 - https://github.com/sjchoi86/Tensorflow-101
 - https://github.com/vahidk/EffectiveTensorflow
 - https://github.com/nlintz/TensorFlow-Tutorials
+- https://github.com/lawlite19/MachineLearning_TensorFlow
 
 ---
 
