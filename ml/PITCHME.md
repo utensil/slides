@@ -51,56 +51,6 @@ else:
   comment 3
 </p>
 
----
-
-### The Origin
-
-- [Robot Movies](https://www.pastemagazine.com/articles/2015/11/the-100-greatest-movie-robots-of-all-time.html?a=1)
-- [Amazing Ants](https://book.douban.com/subject/1044309/) (2002)
-- [Neural Networks](https://book.douban.com/subject/1115600/) (2002)
-- [NuPIC](https://github.com/numenta/nupic) and [NuPIC Core](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)
-- [Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
-- Keras (2016)
-
-+++
-
-### Traditional Machine Learning Methods
-
-+++
-
-### Why Go Deep? 
-
-- http://slides.com/beamandrew/deep-learning-101#/
-- http://donsoft.io/intro-to-deeplearning
-
----
-
-### scikit-learn User Guide
-
-http://scikit-learn.org/stable/user_guide.html
-
-+++
-
-<!-- .slide: data-background-iframe="//scikit-learn.org/stable/user_guide.html" data-background-interactive -->
-
----
-
-### Deep Learning - The Straight Dope
-
-http://gluon.mxnet.io/
-
-+++
-
-#### Simple Networks
-
-+++
-
-- Generalized Linear Models: $ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $
-- Ordinary Least Squares: $ \underset{w}{min\,} {|| X w - y||_2}^2 $
-- Ridge Regression: $ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $
-- Lasso: $ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $
-- Elastic Net:  $ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $
-
 +++
 
 <table style="width: 80%; overflow-y: scroll">
@@ -125,6 +75,70 @@ http://gluon.mxnet.io/
     <td>43</td>
   </tr>
 </table>
+
+---
+
+### The Origin
+
+- [Robot Movies](https://www.pastemagazine.com/articles/2015/11/the-100-greatest-movie-robots-of-all-time.html?a=1)
+- [Amazing Ants](https://book.douban.com/subject/1044309/) (2002)
+- [Neural Networks](https://book.douban.com/subject/1115600/) (2002)
+- [NuPIC](https://github.com/numenta/nupic) and [NuPIC Core](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)
+- [Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
+- Keras (2016)
+
+---
+
+### Traditional Machine Learning Methods
+
++++
+
+### scikit-learn User Guide
+
+http://scikit-learn.org/stable/user_guide.html
+
++++
+
+#### Generalized Linear Models
+
+$$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $$
+
++++
+
+#### Naive Objective
+
+Ordinary Least Squares
+
+$$ \underset{w}{min\,} {|| X w - y||_2}^2 $$
+
++++
+
+#### Objective with Regulation
+
+- Ridge Regression: $$ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $$
+- Lasso: $$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$
+- Elastic Net:  $$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$
+
++++
+
+<!-- .slide: data-background-iframe="//scikit-learn.org/stable/user_guide.html" data-background-interactive -->
+
+---
+
+### Why Go Deep? 
+
+- http://slides.com/beamandrew/deep-learning-101#/
+- http://donsoft.io/intro-to-deeplearning
+
+---
+
+### Deep Learning - The Straight Dope
+
+http://gluon.mxnet.io/
+
++++
+
+#### Simple Networks
 
 +++
 
