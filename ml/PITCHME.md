@@ -374,6 +374,13 @@ Foundation:
 - http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
 - http://colah.github.io/posts/2014-10-Visualizing-MNIST/
 
++++
+
+- https://github.com/ethereon/netscope
+- https://www.zhihu.com/question/26006703/answer/135825424
+- http://josephpcohen.com/w/visualizing-cnn-architectures-side-by-side-with-mxnet/
+
+
 ---
 
 ### Understanding LSTM Networks
