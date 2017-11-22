@@ -51,6 +51,15 @@ else:
 <p class="fragment current-only" data-code-focus="9-14">
   comment 3
 </p>
+
++++
+
+<!-- .slide: data-background-iframe="https://www.youtube.com/embed/gn4nRCC9TwQ" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4" -->
+
 +++
 
 ### The Origin
