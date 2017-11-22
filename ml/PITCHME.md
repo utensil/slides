@@ -1,5 +1,4 @@
 ## A Machine Learning Tour
-
 ---
 
 ### Draft
@@ -62,56 +61,6 @@ else:
 
 +++
 
-### The Origin
-
-- [Robot Movies](https://www.pastemagazine.com/articles/2015/11/the-100-greatest-movie-robots-of-all-time.html?a=1)
-- [Amazing Ants](https://book.douban.com/subject/1044309/) (2002)
-- [Neural Networks](https://book.douban.com/subject/1115600/) (2002)
-- [NuPIC](https://github.com/numenta/nupic) and [NuPIC Core](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)
-- [Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
-- Keras (2016)
-
-+++
-
-### Traditional Machine Learning Methods
-
-+++
-
-### Why Go Deep? 
-
-- http://slides.com/beamandrew/deep-learning-101#/
-- http://donsoft.io/intro-to-deeplearning
-
----
-
-### scikit-learn User Guide
-
-http://scikit-learn.org/stable/user_guide.html
-
-+++
-
-<!-- .slide: data-background-iframe="//scikit-learn.org/stable/user_guide.html" data-background-interactive -->
-
----
-
-### Deep Learning - The Straight Dope
-
-http://gluon.mxnet.io/
-
-+++
-
-#### Simple Networks
-
-+++
-
-- Generalized Linear Models: $ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $
-- Ordinary Least Squares: $ \underset{w}{min\,} {|| X w - y||_2}^2 $
-- Ridge Regression: $ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $
-- Lasso: $ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $
-- Elastic Net:  $ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $
-
-+++
-
 <table style="width: 80%; overflow-y: scroll">
   <tr>
     <th>Firstname</th>
@@ -134,6 +83,70 @@ http://gluon.mxnet.io/
     <td>43</td>
   </tr>
 </table>
+
+---
+
+### The Origin
+
+- [Robot Movies](https://www.pastemagazine.com/articles/2015/11/the-100-greatest-movie-robots-of-all-time.html?a=1)
+- [Amazing Ants](https://book.douban.com/subject/1044309/) (2002)
+- [Neural Networks](https://book.douban.com/subject/1115600/) (2002)
+- [NuPIC](https://github.com/numenta/nupic) and [NuPIC Core](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)
+- [Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
+- Keras (2016)
+
+---
+
+### Traditional Machine Learning Methods
+
++++
+
+### scikit-learn User Guide
+
+http://scikit-learn.org/stable/user_guide.html
+
++++
+
+#### Generalized Linear Models
+
+$$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $$
+
++++
+
+#### Naive Objective
+
+Ordinary Least Squares
+
+$$ \underset{w}{min\,} {|| X w - y||_2}^2 $$
+
++++
+
+#### Objective with Regulation
+
+- Ridge Regression: $$ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $$
+- Lasso: $$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$
+- Elastic Net:  $$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$
+
++++
+
+<!-- .slide: data-background-iframe="//scikit-learn.org/stable/user_guide.html" data-background-interactive -->
+
+---
+
+### Why Go Deep? 
+
+- http://slides.com/beamandrew/deep-learning-101#/
+- http://donsoft.io/intro-to-deeplearning
+
+---
+
+### Deep Learning - The Straight Dope
+
+http://gluon.mxnet.io/
+
++++
+
+#### Simple Networks
 
 +++
 
@@ -249,98 +262,6 @@ http://gluon.mxnet.io/
 +++
 
 <!-- .slide: data-background-iframe="//gluon.mxnet.io/chapter08_computer-vision/visual-question-answer.html" data-background-interactive -->
-
----
-
-### TensorFlow Exercises
-
-<small>focusing on the comparison with NumPy</small>
-
-https://github.com/Kyubyong/tensorflow-exercises
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Constants_Sequences_and_Random_Values_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Graph_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Variables_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Reading_Data_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Tensor_Transformations_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part1_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part2_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part3_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Control_Flow_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Sparse_Tensors-Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Neural_Network_Part1_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Neural_Network_Part2_Solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Seq2Seq_solutions.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Audio_Processing.ipynb" data-background-interactive -->
-
----
-
-### TensorFlow Tutorial
-
-<small>used by Nvidia</small>
-
-https://github.com/alrojo/tensorflow-tutorial
-
-+++
-
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab1_FFN/lab1_FFN.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab2_CNN/lab2_CNN.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab3_RNN/lab3_RNN.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab4_Kaggle/lab4_Kaggle.ipynb" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab5_AE/lab5_AE.ipynb" data-background-interactive -->
 
 ---
 
@@ -461,6 +382,13 @@ Foundation:
 - http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
 - http://colah.github.io/posts/2014-10-Visualizing-MNIST/
 
++++
+
+- https://github.com/ethereon/netscope
+- https://www.zhihu.com/question/26006703/answer/135825424
+- http://josephpcohen.com/w/visualizing-cnn-architectures-side-by-side-with-mxnet/
+
+
 ---
 
 ### Understanding LSTM Networks
@@ -471,6 +399,11 @@ Foundation:
 +++
 
 <!-- .slide: data-background-iframe="//colah.github.io/posts/2015-08-Understanding-LSTMs/" data-background-interactive -->
+
+
+---
+
+APPENDIX
 
 ---
 
@@ -690,4 +623,98 @@ Implementations
 - [NuPIC Core](https://github.com/numenta/nupic.core) [<i class="fa fa-code-fork"></i>](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil)
 - [HTM.Julia](https://github.com/htm-community/HTM.Julia)
 - [Bare-Bone HTM](http://ifni.co/bbHTM.html)
+
+---
+
+### TensorFlow Exercises
+
+<small>focusing on the comparison with NumPy</small>
+
+https://github.com/Kyubyong/tensorflow-exercises
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Constants_Sequences_and_Random_Values_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Graph_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Variables_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Reading_Data_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Tensor_Transformations_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part1_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part2_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Math_Part3_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Control_Flow_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Sparse_Tensors-Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Neural_Network_Part1_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Neural_Network_Part2_Solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Seq2Seq_solutions.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/Kyubyong/tensorflow-exercises/blob/master/Audio_Processing.ipynb" data-background-interactive -->
+
+---
+
+### TensorFlow Tutorial
+
+<small>used by Nvidia</small>
+
+https://github.com/alrojo/tensorflow-tutorial
+
++++
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab1_FFN/lab1_FFN.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab2_CNN/lab2_CNN.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab3_RNN/lab3_RNN.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab4_Kaggle/lab4_Kaggle.ipynb" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab5_AE/lab5_AE.ipynb" data-background-interactive -->
+
+
 
