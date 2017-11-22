@@ -444,6 +444,48 @@ APPENDIX
 * https://github.com/guillaume-chevalier/Awesome-Deep-Learning-Resources#youtube
 * https://github.com/kjw0612/awesome-deep-vision#videos
 
++++
+
+https://hackernoon.com/learning-ai-if-you-suck-at-math-p5-deep-learning-and-convolutional-neural-nets-in-plain-english-cda79679bbe3
+http://cs231n.github.io/neural-networks-1/
+https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/
+http://cs231n.github.io/convolutional-networks/
+http://www.deeplearningbook.org/
+https://nbviewer.jupyter.org/github/makeyourownneuralnetwork/makeyourownneuralnetwork/
+https://petewarden.com/2016/02/28/tensorflow-for-poets/
+http://blog.otoro.net/2017/01/01/recurrent-neural-network-artist/
+https://github.com/hardmaru/rnn-tutorial
+https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0
+https://medium.freecodecamp.org/if-you-want-to-learn-data-science-start-with-one-of-these-programming-classes-fb694ffe780c
+
++++
+
+https://www.docker-cn.com/registry-mirror
+https://www.daocloud.io/mirror
+https://www.datasciencecentral.com/profiles/blogs/matrix-multiplication-in-neural-networks
+https://www.quora.com/What-is-the-best-way-to-multiply-two-matrices-in-C++/answer/Jan-Christian-Meyer
+http://arainhyy.github.io/#
+http://www.cmsoft.com.br/opencl-tutorial/case-study-matrix-multiplication/
+https://www.linkedin.com/pulse/lets-untangle-mesh-accelerate-deep-learning-collective-chien-ping-lu
+https://eli.thegreenplace.net/2015/visualizing-matrix-multiplication-as-a-linear-combination/
+https://www.mathsisfun.com/algebra/matrix-multiplying.html
+http://www.cs.uvm.edu/~icdm/algorithms/10Algorithms-08.pdf
+https://twitter.com/demografia_csic/status/536576442495410177
+https://startupsventurecapital.com/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5
+https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463
+http://www.asimovinstitute.org/neural-network-zoo/
+https://en.wikipedia.org/wiki/Radial_basis_function
+http://thinkzone.wlonk.com/
+https://i.pinimg.com/originals/90/a1/87/90a187e216dbf0ba03941a63c17cdcb3.png
+https://blog.adioma.com/how-to-think-visually-using-visual-analogies-infographic/#_=_
+https://medium.com/@shaha/azure-machine-learning-10e0ab2b2c68
+https://www.slideshare.net/andrewssobral/machine-learning-for-dummies-without-mathematics
+https://www.slideshare.net/aaalm/2016-01-27-a-gentle-and-structured-introduction-to-machine-learning-v105-for-release-58329371
+https://docs.microsoft.com/en-us/azure/machine-learning/studio/algorithm-cheat-sheet
+https://www.safaribooksonline.com/library/view/deep-learning/9781491924570/ch04.html
+https://arxiv.org/pdf/1503.04069.pdf
+http://proceedings.mlr.press/v37/jozefowicz15.pdf
+
 ---
 
 ### Links
