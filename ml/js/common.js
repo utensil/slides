@@ -22,7 +22,18 @@
 
 // console.log("Hello");
 
+// var markdownRenderer = new marked.Renderer();
+
+// markdownRenderer.em = function (str) {
+//   return '_' + str + '_';
+// };
+
+// marked.setOptions({
+//   renderer: markdownRenderer
+// });
+
 Reveal.addEventListener('ready', function () {
+
   head.load('./_assets/js/reveal-code-focus-modified.js', function () {
     console.log(window);
     console.log(window.hljs);
