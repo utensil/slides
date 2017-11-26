@@ -1,4 +1,4 @@
-## A Machine Learning Tour
+# A Machine Learning Tour
 ---
 
 ### Draft
@@ -88,7 +88,7 @@ else:
 
 ### The Origin
 
-- [Robot Movies](https://www.pastemagazine.com/articles/2015/11/the-100-greatest-movie-robots-of-all-time.html?a=1)
+- [Robot Movies](https://www.ranker.com/list/best-artificial-intelligence-movies-list/all-genre-movies-lists)
 - [Amazing Ants](https://book.douban.com/subject/1044309/) (2002)
 - [Neural Networks](https://book.douban.com/subject/1115600/) (2002)
 - [NuPIC](https://github.com/numenta/nupic) and [NuPIC Core](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)

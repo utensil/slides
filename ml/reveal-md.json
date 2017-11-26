@@ -1,4 +1,5 @@
 {
+  "title": "A Machine Learning Tour",
   "theme": "black",
   "highlightTheme": "railscasts",
   "separator": "^---[\r]?\n",
