@@ -381,6 +381,8 @@ Foundation:
 - http://colah.github.io/posts/2015-01-Visualizing-Representations/
 - http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
 - http://colah.github.io/posts/2014-10-Visualizing-MNIST/
+- https://zhuanlan.zhihu.com/p/27204291
+- https://blog.jakuba.net/2017/05/30/tensorflow-visualization.html
 
 +++
 
@@ -484,6 +486,7 @@ https://www.slideshare.net/aaalm/2016-01-27-a-gentle-and-structured-introduction
 https://docs.microsoft.com/en-us/azure/machine-learning/studio/algorithm-cheat-sheet
 https://www.safaribooksonline.com/library/view/deep-learning/9781491924570/ch04.html
 https://arxiv.org/pdf/1503.04069.pdf
+https://arxiv.org/pdf/1506.00019.pdf
 http://proceedings.mlr.press/v37/jozefowicz15.pdf
 
 ---
