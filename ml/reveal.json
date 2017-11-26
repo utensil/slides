@@ -2,9 +2,5 @@
   "controls": true,
   "progress": true,
   "previewLinks": true,
-  "transition": "slide",
-  "parallaxBackgroundImage": "./images/-Space-PNG-Pic.png",
-  "parallaxBackgroundSize": "",
-  "parallaxBackgroundHorizontal": 200,
-  "parallaxBackgroundVertical": 50
+  "transition": "slide"
 }

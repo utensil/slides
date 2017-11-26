@@ -1,131 +1,145 @@
-## A Machine Learning Tour
----
-
-### Draft
-
-+++
-
-```python
-from time import localtime
- 
-activities = {8: 'Sleeping', 9: 'Commuting', 17: 'Working',
-              18: 'Commuting', 20: 'Eating', 22: 'Resting' }
- 
-time_now = localtime()
-hour = time_now.tm_hour
- 
-for activity_time in sorted(activities.keys()):
-    if hour < activity_time:
-        print activities[activity_time]
-        break
-else:
-    print 'Unknown, AFK or sleeping!'
-```
-
-+++
-
-```python
-from time import localtime
- 
-activities = {8: 'Sleeping', 9: 'Commuting', 17: 'Working',
-              18: 'Commuting', 20: 'Eating', 22: 'Resting' }
- 
-time_now = localtime()
-hour = time_now.tm_hour
- 
-for activity_time in sorted(activities.keys()):
-    if hour < activity_time:
-        print activities[activity_time]
-        break
-else:
-    print 'Unknown, AFK or sleeping!'
-```
-
-<p class="fragment current-only" data-code-focus="1">
-  comment 1
-</p>
-<p class="fragment current-only" data-code-focus="3-4">
-  comment 2
-</p>
-<p class="fragment current-only" data-code-focus="9-14">
-  comment 3
-</p>
-
-+++
-
-<!-- .slide: data-background-iframe="https://www.youtube.com/embed/gn4nRCC9TwQ" data-background-interactive -->
-
-+++
-
-<!-- .slide: data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4" -->
-
-+++
-
-<table style="width: 80%; overflow-y: scroll">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Generalized Linear Models</td>
-    <td>$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $</td>
-    <td>25</td>
-  </tr>
-  <tr class="fragment">
-    <td>Elastic Net</td>
-    <td>$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $</td>
-    <td>94</td>
-  </tr>
-  <tr class="fragment">
-    <td>John</td>
-    <td>Doe</td>
-    <td>43</td>
-  </tr>
-</table>
+# A Machine Learning Tour
 
 ---
 
 ### The Origin
 
-- [Robot Movies](https://www.pastemagazine.com/articles/2015/11/the-100-greatest-movie-robots-of-all-time.html?a=1)
-- [Amazing Ants](https://book.douban.com/subject/1044309/) (2002)
 - [Neural Networks](https://book.douban.com/subject/1115600/) (2002)
 - [NuPIC](https://github.com/numenta/nupic) and [NuPIC Core](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)
 - [Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
-- Keras (2016)
+- Dive in (2016)
 
 ---
 
-### Traditional Machine Learning Methods
+## Traditional Machine Learning Methods
+
++++
+
+### The Objective
+
+![minimal](https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Extrema_example_original.svg/330px-Extrema_example_original.svg.png) <!-- .element: style="background-color: white" -->
+
+`$$ \underset{x}{\operatorname{arg\,min}} \, f(x) := \{x \mid x\in S \wedge \forall y \in S : f(y) \ge f(x)\} $$`
+
+Note:
+
+- https://en.wikipedia.org/wiki/Arg_max
+- [Argmax and Max Calculus](https://www.cs.ubc.ca/~schmidtm/Documents/2016_540_Argmax.pdf) 
+
++++
+#### Generalized Linear Models
+
+`$$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $$`
+
+For $p$ features and $n$ samples: <!-- .element: class="fragment" -->
+
+`$$ \left(
+  \begin{array}{c}
+    y_1 \\
+    \vdots \\
+    y_n
+  \end{array}
+\right)
+= \left(
+  \begin{array}{c}
+    \mathbf{x}^\top_1 \\
+    \vdots \\
+    \mathbf{x}^\top_n
+  \end{array}
+\right) \left(
+  \begin{array}{c}
+    w_1 \\
+    \vdots \\
+    w_p
+  \end{array}
+\right) + \left(
+  \begin{array}{c}
+    b_1 \\
+    \vdots \\
+    b_n
+  \end{array}
+\right) $$` <!-- .element: class="fragment current-only" style="font-size:smaller" -->
+
+`$$ \left(
+  \begin{array}{c}
+    y_1 \\
+    \vdots \\
+    y_n
+  \end{array}
+\right)
+= \left(
+  \begin{array}{cccc}
+    1 & x_{11} & \ldots & x_{1p}\\
+    1 & \vdots & \ddots & \vdots\\
+    1 & x_{n1} & \ldots & x_{np}
+  \end{array}
+\right) \left(
+  \begin{array}{c}
+    w_0 \\
+    \vdots \\
+    w_p
+  \end{array}
+\right) + \left(
+  \begin{array}{c}
+    b_1 \\
+    \vdots \\
+    b_n
+  \end{array}
+\right) $$` <!-- .element: class="fragment current-only" style="font-size:smaller" -->
+
++++
+
+#### Ordinary Least Squares
+
+![](http://gluon.mxnet.io/_images/linear-regression.png)
+
+`$$ \underset{w}{min\,} {|| X w - y||_2}^2 $$`
+
++++
+
+#### Outliners
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/638px-Anscombe%27s_quartet_3.svg.png)
+
+Source: [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_regression)
+
++++
+
+#### Anscombe's quartet
+
+```python
+x1 = [10.0, 8.0,  13.0,  9.0,  11.0, 14.0, 6.0,  4.0,  12.0,  7.0,  5.0]
+y1 = [8.04, 6.95, 7.58,  8.81, 8.33, 9.96, 7.24, 4.26, 10.84, 4.82, 5.68]
+
+x2 = [10.0, 8.0,  13.0,  9.0,  11.0, 14.0, 6.0,  4.0,  12.0,  7.0,  5.0]
+y2 = [9.14, 8.14, 8.74,  8.77, 9.26, 8.10, 6.13, 3.10, 9.13,  7.26, 4.74]
+
+x3 = [10.0, 8.0,  13.0,  9.0,  11.0, 14.0, 6.0,  4.0,  12.0,  7.0,  5.0]
+y3 = [7.46, 6.77, 12.74, 7.11, 7.81, 8.84, 6.08, 5.39, 8.15,  6.42, 5.73]
+
+x4 = [8.0,  8.0,  8.0,   8.0,  8.0,  8.0,  8.0,  19.0,  8.0,  8.0,  8.0]
+y4 = [6.58, 5.76, 7.71,  8.84, 8.47, 7.04, 5.25, 12.50, 5.56, 7.91, 6.89]
+```
+Note:
+
+- https://gist.github.com/endolith/3299951
+- https://seaborn.pydata.org/examples/anscombes_quartet.html
+
++++
+
+#### Regulations
+
+<!-- .slide: style="font-size:smaller" -->
+
+- Ridge: `$$ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $$`
+- Lasso: `$$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$`
+- Elastic Net:  `$$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$`
 
 +++
 
 ### scikit-learn User Guide
 
 http://scikit-learn.org/stable/user_guide.html
-
-+++
-
-#### Generalized Linear Models
-
-$$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $$
-
-+++
-
-#### Naive Objective
-
-Ordinary Least Squares
-
-$$ \underset{w}{min\,} {|| X w - y||_2}^2 $$
-
-+++
-
-#### Objective with Regulation
-
-- Ridge Regression: $$ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $$
-- Lasso: $$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$
-- Elastic Net:  $$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$
 
 +++
 
@@ -390,6 +404,16 @@ Foundation:
 - https://www.zhihu.com/question/26006703/answer/135825424
 - http://josephpcohen.com/w/visualizing-cnn-architectures-side-by-side-with-mxnet/
 
++++
+
+http://nbviewer.jupyter.org/github/stephencwelch/Neural-Networks-Demystified/tree/master/
+https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/
+http://www.scipy-lectures.org/intro/numpy/numpy.html#indexing-and-slicing
+http://scikit-learn.org/stable/modules/tree.html
+https://distill.pub/2017/momentum/
+https://github.com/distillpub/post--feature-visualization
+https://distill.pub/2017/feature-visualization/
+https://bondifrench.github.io/ml-in-js/
 
 ---
 
@@ -464,13 +488,22 @@ https://medium.freecodecamp.org/if-you-want-to-learn-data-science-start-with-one
 
 https://www.docker-cn.com/registry-mirror
 https://www.daocloud.io/mirror
+
++++
+
+https://www.mathsisfun.com/algebra/matrix-multiplying.html
+https://eli.thegreenplace.net/2015/visualizing-matrix-multiplication-as-a-linear-combination/
 https://www.datasciencecentral.com/profiles/blogs/matrix-multiplication-in-neural-networks
+
++++
+
 https://www.quora.com/What-is-the-best-way-to-multiply-two-matrices-in-C++/answer/Jan-Christian-Meyer
 http://arainhyy.github.io/#
 http://www.cmsoft.com.br/opencl-tutorial/case-study-matrix-multiplication/
 https://www.linkedin.com/pulse/lets-untangle-mesh-accelerate-deep-learning-collective-chien-ping-lu
-https://eli.thegreenplace.net/2015/visualizing-matrix-multiplication-as-a-linear-combination/
-https://www.mathsisfun.com/algebra/matrix-multiplying.html
+
++++
+
 http://www.cs.uvm.edu/~icdm/algorithms/10Algorithms-08.pdf
 https://twitter.com/demografia_csic/status/536576442495410177
 https://startupsventurecapital.com/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5
@@ -671,6 +704,14 @@ Implementations
 
 ---
 
+### Further
+
++++
+
+- [Capsule Networks (CapsNets) – Tutorial](https://www.youtube.com/watch?v=pPN8d0E3900&index=14&list=PLKUPUQTsIILCRLQvILCL-VCsg5x3zQiTU)
+
+---
+
 ### TensorFlow Exercises
 
 <small>focusing on the comparison with NumPy</small>
@@ -760,6 +801,89 @@ https://github.com/alrojo/tensorflow-tutorial
 +++
 
 <!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab5_AE/lab5_AE.ipynb" data-background-interactive -->
+
+### Draft
+
++++
+
+```python
+from time import localtime
+ 
+activities = {8: 'Sleeping', 9: 'Commuting', 17: 'Working',
+              18: 'Commuting', 20: 'Eating', 22: 'Resting' }
+ 
+time_now = localtime()
+hour = time_now.tm_hour
+ 
+for activity_time in sorted(activities.keys()):
+    if hour < activity_time:
+        print activities[activity_time]
+        break
+else:
+    print 'Unknown, AFK or sleeping!'
+```
+
++++
+
+```python
+from time import localtime
+ 
+activities = {8: 'Sleeping', 9: 'Commuting', 17: 'Working',
+              18: 'Commuting', 20: 'Eating', 22: 'Resting' }
+ 
+time_now = localtime()
+hour = time_now.tm_hour
+ 
+for activity_time in sorted(activities.keys()):
+    if hour < activity_time:
+        print activities[activity_time]
+        break
+else:
+    print 'Unknown, AFK or sleeping!'
+```
+
+<p class="fragment current-only" data-code-focus="1">
+  comment 1
+</p>
+<p class="fragment current-only" data-code-focus="3-4">
+  comment 2
+</p>
+<p class="fragment current-only" data-code-focus="9-14">
+  comment 3
+</p>
+
++++
+
+<!-- .slide: data-background-iframe="https://www.youtube.com/embed/gn4nRCC9TwQ" data-background-interactive -->
+
++++
+
+<!-- .slide: data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4" -->
+
++++
+
+<table style="width: 80%; overflow-y: scroll">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Generalized Linear Models</td>
+    <td>$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $</td>
+    <td>25</td>
+  </tr>
+  <tr class="fragment">
+    <td>Elastic Net</td>
+    <td>$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $</td>
+    <td>94</td>
+  </tr>
+  <tr class="fragment">
+    <td>John</td>
+    <td>Doe</td>
+    <td>43</td>
+  </tr>
+</table>
 
 
 
