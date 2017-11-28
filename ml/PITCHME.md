@@ -19,7 +19,7 @@
 
 ![minimal](https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Extrema_example_original.svg/330px-Extrema_example_original.svg.png) <!-- .element: style="background-color: white" -->
 
-`$$ \underset{x}{\operatorname{arg\,min}} \, f(x) := \{x \mid x\in S \wedge \forall y \in S : f(y) \ge f(x)\} $$`
+`$$ \underset{x \in D}{\operatorname{arg\,min}} \, f(x) := \{x \mid \forall y \in D : f(y) \ge f(x)\} $$`
 
 Note:
 
@@ -27,6 +27,7 @@ Note:
 - [Argmax and Max Calculus](https://www.cs.ubc.ca/~schmidtm/Documents/2016_540_Argmax.pdf) 
 
 +++
+
 #### Generalized Linear Models
 
 `$$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $$`
@@ -89,41 +90,33 @@ For $p$ features and $n$ samples: <!-- .element: class="fragment" -->
 
 +++
 
+#### A.k.a
+
+`$$ y_i = \alpha + \beta x_i + \varepsilon $$`  <!-- .element: class="fragment current-only" -->
+
+`$$ y_i = \beta_0 + \beta x_i + \varepsilon $$`  <!-- .element: class="fragment current-only" -->
+
++++
+
 #### Ordinary Least Squares
 
 ![](http://gluon.mxnet.io/_images/linear-regression.png)
 
 `$$ \underset{w}{min\,} {|| X w - y||_2}^2 $$`
 
+Note:
+
+https://image.slidesharecdn.com/simplelinearregressionfinal-121101072438-phpapp02/95/simple-linear-regression-final-8-638.jpg?cb=1507030484
+
+https://www.slideshare.net/harshupadhyay/simple-linear-regression-final?next_slideshow=1
+
 +++
 
 #### Outliners
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/638px-Anscombe%27s_quartet_3.svg.png)
+![Anscombe's quartet](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/638px-Anscombe%27s_quartet_3.svg.png)
 
 Source: [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_regression)
-
-+++
-
-#### Anscombe's quartet
-
-```python
-x1 = [10.0, 8.0,  13.0,  9.0,  11.0, 14.0, 6.0,  4.0,  12.0,  7.0,  5.0]
-y1 = [8.04, 6.95, 7.58,  8.81, 8.33, 9.96, 7.24, 4.26, 10.84, 4.82, 5.68]
-
-x2 = [10.0, 8.0,  13.0,  9.0,  11.0, 14.0, 6.0,  4.0,  12.0,  7.0,  5.0]
-y2 = [9.14, 8.14, 8.74,  8.77, 9.26, 8.10, 6.13, 3.10, 9.13,  7.26, 4.74]
-
-x3 = [10.0, 8.0,  13.0,  9.0,  11.0, 14.0, 6.0,  4.0,  12.0,  7.0,  5.0]
-y3 = [7.46, 6.77, 12.74, 7.11, 7.81, 8.84, 6.08, 5.39, 8.15,  6.42, 5.73]
-
-x4 = [8.0,  8.0,  8.0,   8.0,  8.0,  8.0,  8.0,  19.0,  8.0,  8.0,  8.0]
-y4 = [6.58, 5.76, 7.71,  8.84, 8.47, 7.04, 5.25, 12.50, 5.56, 7.91, 6.89]
-```
-Note:
-
-- https://gist.github.com/endolith/3299951
-- https://seaborn.pydata.org/examples/anscombes_quartet.html
 
 +++
 
@@ -134,6 +127,66 @@ Note:
 - Ridge: `$$ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $$`
 - Lasso: `$$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$`
 - Elastic Net:  `$$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$`
+
++++
+
+#### Selection: Find the best `$\alpha$`
+
+![](https://image.slidesharecdn.com/linearregressionshared-151203162938-lva1-app6891/95/linear-regression-31-638.jpg?cb=1449160851)
+
+MP: Matching Pursuit
+
+Note:
+
+https://www.slideshare.net/ansrivas21/linear-regression-shared
+
++++
+
+#### Selection: Find the best `$\alpha$`
+
+![](https://image.slidesharecdn.com/linearregressionshared-151203162938-lva1-app6891/95/linear-regression-32-638.jpg?cb=1449160851)
+
+OMP: Orthogonal Matching Pursuit
+
++++
+
+#### Selection: Find the best `$\alpha$`
+
+![](https://image.slidesharecdn.com/linearregressionshared-151203162938-lva1-app6891/95/linear-regression-33-638.jpg?cb=1449160851)
+
+LARS: Least Angle Regression
+
+<small>L1-regularized problems put a penalty weight `$\alpha$` on having nonzero parameter values. Least Angle Regression is a method for starting from `$\alpha=0$` parameters (the easy to solve, unregularized version), and increasing `$\alpha$` till it reaches the desired value. </small>
+
+Note:
+
+https://www.quora.com/What-is-Least-Angle-Regression-and-when-should-it-be-used
+
++++
+
+<!-- .slide: style="font-size:smaller" -->
+
+#### Bayes Regression
+
+`$$ y_i = \beta_0 + \beta x_i + \varepsilon \Leftrightarrow \begin{cases}
+  \mu_i =  \beta_0 + \beta x_i \\
+  y_i \sim \mathcal{N}(\mu_i, \sigma)
+\end{cases}
+$$`
+
+`$$
+\DeclareMathOperator*{\argmax}{arg\,max} \argmax_{\beta_0,\,\beta,\,\sigma} \prod_{i=1}^n \mathcal{N}(y_i; \beta_0 + \beta x_i, \sigma)
+$$`
+
+`$$
+\underbrace{f(\beta_0,\beta,\sigma\mid Y,X)}_{\text{posterior} \; P(A \mid B) } \propto \underbrace{\prod_{i=1}^n \mathcal{N}(y_i\mid \beta_0 + \beta x_i, \sigma)}_{\text{likelihood} \; P(B \mid A) } \times \underbrace{f_{\beta_0}(\beta_0) \, f_{\beta}(\beta) \, f_{\sigma}(\sigma)}_{\text{priors}  \; \frac{P(A)}{P(B)} }
+$$`
+
+Note:
+
+you could, for example assume normal distributions parametrized by some hyperparameters, or tt-distribution if you want to assume heavier tails, or uniform distribution if you do not want to make much assumptions.
+
+https://stats.stackexchange.com/a/252608/186362
 
 +++
 
