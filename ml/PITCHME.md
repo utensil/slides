@@ -156,7 +156,7 @@ OMP: Orthogonal Matching Pursuit
 
 LARS: Least Angle Regression
 
-<small>L1-regularized problems put a penalty weight `$\alpha$` on having nonzero parameter values. Least Angle Regression is a method for starting from `$\alpha=0$` parameters (the easy to solve, unregularized version), and increasing `$\alpha$` till it reaches the desired value. </small>
+<small>L1-regularized problems have a nonzero penalty weight `$\alpha$`. Least Angle Regression starts from `$\alpha=0$` parameters (the easy to solve, unregularized version), and increase `$\alpha$` till it reaches the desired value. </small>
 
 Note:
 
