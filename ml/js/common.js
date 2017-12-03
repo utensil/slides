@@ -41,6 +41,29 @@ Reveal.addEventListener('ready', function () {
   });
 });
 
+Reveal.addEventListener('slidechanged', function (event) {
+  console.log(event);
+  var cur = event.currentSlide;
+  var url = cur.getAttribute('data-background-iframe');
+
+  var iframeSource = document.querySelector('.iframe-source');
+  if (iframeSource == null) {
+    iframeSource = document.createElement('div');
+    iframeSource.className = 'iframe-source';
+    iframeSource.style.display = "none";
+    document.body.appendChild(iframeSource);
+  }
+
+  if(/^(https?:)?\/\//.test(url)) {
+    iframeSource.innerHTML = '<div class="iframe-source">Source: <a target="_blank" href="' + url + '">' 
+                              + url + '</a></div>';
+    iframeSource.style.display = "block";
+  } else {
+    iframeSource.innerHTML = "";
+    iframeSource.style.display = "none";
+  }
+})
+
 /*
 Reveal.configure({
   showNotes: true,

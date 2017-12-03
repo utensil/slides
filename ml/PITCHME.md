@@ -9,9 +9,22 @@
 - [Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
 - Dive in (2016)
 
+Note:
+
+- [Robot Movies](https://www.ranker.com/list/best-artificial-intelligence-movies-list/all-genre-movies-lists)
+  - http://www.artofthetitle.com/title/eva/
+- [Amazing Ants](https://book.douban.com/subject/1044309/) (2002)
+
+Dive in inclues Julia, Geometric Algebra, Keras and Risk Control.
+
 ---
 
 ## Traditional Machine Learning Methods
+
+Note:
+
+http://detexify.kirelabs.org/classify.html
+http://shapecatcher.com/
 
 +++
 
@@ -30,7 +43,7 @@ Note:
 
 #### Generalized Linear Models
 
-`$$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $$`
+`$$ \boldsymbol{y} = X \boldsymbol{w} + \boldsymbol{b} $$`
 
 For $p$ features and $n$ samples: <!-- .element: class="fragment" -->
 
@@ -53,13 +66,7 @@ For $p$ features and $n$ samples: <!-- .element: class="fragment" -->
     \vdots \\
     w_p
   \end{array}
-\right) + \left(
-  \begin{array}{c}
-    b_1 \\
-    \vdots \\
-    b_n
-  \end{array}
-\right) $$` <!-- .element: class="fragment current-only" style="font-size:smaller" -->
+\right) + b $$` <!-- .element: class="fragment current-only" style="font-size:smaller" -->
 
 `$$ \left(
   \begin{array}{c}
@@ -80,21 +87,17 @@ For $p$ features and $n$ samples: <!-- .element: class="fragment" -->
     \vdots \\
     w_p
   \end{array}
-\right) + \left(
-  \begin{array}{c}
-    b_1 \\
-    \vdots \\
-    b_n
-  \end{array}
 \right) $$` <!-- .element: class="fragment current-only" style="font-size:smaller" -->
 
-+++
+Note:
 
-#### A.k.a
+https://en.wikipedia.org/wiki/Linear_regression
 
-`$$ y_i = \alpha + \beta x_i + \varepsilon $$`  <!-- .element: class="fragment current-only" -->
+A.k.a
 
-`$$ y_i = \beta_0 + \beta x_i + \varepsilon $$`  <!-- .element: class="fragment current-only" -->
+`$$ y_i = \alpha + \beta x_i + \varepsilon $$`
+
+`$$ y_i = \beta_0 + \beta x_i + \varepsilon $$`
 
 +++
 
@@ -102,7 +105,7 @@ For $p$ features and $n$ samples: <!-- .element: class="fragment" -->
 
 ![](http://gluon.mxnet.io/_images/linear-regression.png)
 
-`$$ \underset{w}{min\,} {|| X w - y||_2}^2 $$`
+`$$ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} {|| X \boldsymbol{w} - \boldsymbol{y}||_2}^2 $$`
 
 Note:
 
@@ -112,11 +115,21 @@ https://www.slideshare.net/harshupadhyay/simple-linear-regression-final?next_sli
 
 +++
 
-#### Outliners
+#### Outliers
 
 ![Anscombe's quartet](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/638px-Anscombe%27s_quartet_3.svg.png)
 
 Source: [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_regression)
+
++++
+
+#### Vector Norms
+
+`$$ ||x||_p=(\sum_i |x_i|^p)^{1/p} $$`
+
+- `$\ell_1$`-Norm: `$$ ||x||_1=\sum_i x_i $$`
+- `$\ell_2$`-Norm: `$$ ||x||_2=\sqrt{\sum_i^{\phantom{n}} |x_i|^2} $$`
+- `$\ell_\infty$`-Norm: `$$ ||x||_\infty=\max_i |x_i| $$`
 
 +++
 
@@ -130,7 +143,7 @@ Source: [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_
 
 +++
 
-#### Selection: Find the best `$\alpha$`
+#### Feature Selection
 
 ![](https://image.slidesharecdn.com/linearregressionshared-151203162938-lva1-app6891/95/linear-regression-31-638.jpg?cb=1449160851)
 
@@ -142,7 +155,7 @@ https://www.slideshare.net/ansrivas21/linear-regression-shared
 
 +++
 
-#### Selection: Find the best `$\alpha$`
+#### Feature Selection
 
 ![](https://image.slidesharecdn.com/linearregressionshared-151203162938-lva1-app6891/95/linear-regression-32-638.jpg?cb=1449160851)
 
@@ -150,17 +163,20 @@ OMP: Orthogonal Matching Pursuit
 
 +++
 
-#### Selection: Find the best `$\alpha$`
+#### Feature Selection
 
 ![](https://image.slidesharecdn.com/linearregressionshared-151203162938-lva1-app6891/95/linear-regression-33-638.jpg?cb=1449160851)
 
 LARS: Least Angle Regression
 
-<small>L1-regularized problems have a nonzero penalty weight `$\alpha$`. Least Angle Regression starts from `$\alpha=0$` parameters (the easy to solve, unregularized version), and increase `$\alpha$` till it reaches the desired value. </small>
-
 Note:
 
 https://www.quora.com/What-is-Least-Angle-Regression-and-when-should-it-be-used
+
+More:
+
+http://docs.pymc.io/notebooks/GLM-robust-with-outlier-detection.html
+
 
 +++
 
@@ -187,6 +203,28 @@ Note:
 you could, for example assume normal distributions parametrized by some hyperparameters, or tt-distribution if you want to assume heavier tails, or uniform distribution if you do not want to make much assumptions.
 
 https://stats.stackexchange.com/a/252608/186362
+
+https://en.wikipedia.org/wiki/Conjugate_prior
+
++++
+
+#### SGD
+
+Note:
+
+https://nathanbrixius.wordpress.com/2016/07/29/stochastic-and-batch-methods-for-machine-learning/
+
+https://www.slideshare.net/diannepatricia/martin-takac-solving-largescale-machine-learning-problems-in-a-distributed-way
+
+http://andrew.gibiansky.com/blog/machine-learning/hessian-free-optimization/
+
+http://www.cs.toronto.edu/~jmartens/docs/Momentum_Deep.pdf
+
+http://runopti.github.io/blog/2016/07/07/HessianComp/
+
+http://scikit-learn.org/stable/modules/sgd.html
+
+[Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf)
 
 +++
 
@@ -346,7 +384,6 @@ http://gluon.mxnet.io/
 - http://mathworld.wolfram.com/VectorNorm.html
 - https://github.com/utensil/utensil.github.io/issues/15
 
-
 ---
 
 ### Libs
@@ -444,6 +481,10 @@ Foundation:
 
 +++
 
+<!-- .slide: data-background-iframe="https://distill.pub/2017/momentum/" data-background-interactive -->
+
++++
+
 - http://colah.github.io/posts/2015-09-NN-Types-FP/
 - http://colah.github.io/posts/2015-01-Visualizing-Representations/
 - http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
@@ -477,7 +518,7 @@ https://bondifrench.github.io/ml-in-js/
 
 +++
 
-<!-- .slide: data-background-iframe="//colah.github.io/posts/2015-08-Understanding-LSTMs/" data-background-interactive -->
+<!-- #####.slide: data-background-iframe="//colah.github.io/posts/2015-08-Understanding-LSTMs/" data-background-interactive -->
 
 
 ---
@@ -574,6 +615,11 @@ https://www.safaribooksonline.com/library/view/deep-learning/9781491924570/ch04.
 https://arxiv.org/pdf/1503.04069.pdf
 https://arxiv.org/pdf/1506.00019.pdf
 http://proceedings.mlr.press/v37/jozefowicz15.pdf
+
++++
+
+http://nbviewer.jupyter.org/github/aalind0/GAN-auto-write/blob/master/auto_write.ipynb
+http://drorbn.net/AcademicPensieve/About.html
 
 ---
 
@@ -854,6 +900,8 @@ https://github.com/alrojo/tensorflow-tutorial
 +++
 
 <!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab5_AE/lab5_AE.ipynb" data-background-interactive -->
+
+---
 
 ### Draft
 
