@@ -1,12 +1,13 @@
-# A Machine Learning Tour
+# A Machine Learning Tutorial
 
 ---
 
 ### The Origin
 
+- [Mathematica](https://www.wolfram.com/mathematica/) (2000) [✯](https://github.com/utensil/mathematica-notebooks)
 - [Neural Networks](https://book.douban.com/subject/1115600/) (2002)
 - [NuPIC](https://github.com/numenta/nupic) and [NuPIC Core](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)
-- [Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
+- [kaggle: Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
 - Dive in (2016)
 
 Note:
@@ -45,7 +46,10 @@ Note:
 
 `$$ \boldsymbol{y} = X \boldsymbol{w} + \boldsymbol{b} $$`
 
-For $p$ features and $n$ samples: <!-- .element: class="fragment" -->
+
++++
+
+#### For $p$ features and $n$ samples:
 
 `$$ \left(
   \begin{array}{c}
@@ -66,7 +70,7 @@ For $p$ features and $n$ samples: <!-- .element: class="fragment" -->
     \vdots \\
     w_p
   \end{array}
-\right) + b $$` <!-- .element: class="fragment current-only" style="font-size:smaller" -->
+\right) + b $$` <!-- .element: class="" style="font-size:smaller" --> 
 
 `$$ \left(
   \begin{array}{c}
@@ -87,17 +91,21 @@ For $p$ features and $n$ samples: <!-- .element: class="fragment" -->
     \vdots \\
     w_p
   \end{array}
-\right) $$` <!-- .element: class="fragment current-only" style="font-size:smaller" -->
+\right) $$` <!-- .element: class="fragment" style="font-size:smaller" -->
+
+`$$\text{a.k.a.} \quad y_i = \beta_0 + \beta x_i + \varepsilon $$`  <!-- .element: class="fragment" style="font-size:smaller" -->
 
 Note:
 
 https://en.wikipedia.org/wiki/Linear_regression
 
-A.k.a
++++
 
-`$$ y_i = \alpha + \beta x_i + \varepsilon $$`
+#### Bias trick
 
-`$$ y_i = \beta_0 + \beta x_i + \varepsilon $$`
+![](http://cs231n.github.io/assets/wb.jpeg)
+
+Source: [CS231n Convolutional Neural Networks for Visual Recognition: Linear classification](http://cs231n.github.io/linear-classify/)
 
 +++
 
@@ -123,11 +131,15 @@ Source: [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_
 
 +++
 
-#### Vector Norms
+#### Vector Norms ( 范数 )
 
 `$$ ||x||_p=(\sum_i |x_i|^p)^{1/p} $$`
 
-- `$\ell_1$`-Norm: `$$ ||x||_1=\sum_i x_i $$`
++++
+
+#### Typical Vector Norms
+
+- `$\ell_1$`-Norm: `$$ ||x||_1=\sum_i |x_i| $$`
 - `$\ell_2$`-Norm: `$$ ||x||_2=\sqrt{\sum_i^{\phantom{n}} |x_i|^2} $$`
 - `$\ell_\infty$`-Norm: `$$ ||x||_\infty=\max_i |x_i| $$`
 
@@ -195,7 +207,7 @@ $$`
 $$`
 
 `$$
-\underbrace{f(\beta_0,\beta,\sigma\mid Y,X)}_{\text{posterior} \; P(A \mid B) } \propto \underbrace{\prod_{i=1}^n \mathcal{N}(y_i\mid \beta_0 + \beta x_i, \sigma)}_{\text{likelihood} \; P(B \mid A) } \times \underbrace{f_{\beta_0}(\beta_0) \, f_{\beta}(\beta) \, f_{\sigma}(\sigma)}_{\text{priors}  \; \frac{P(A)}{P(B)} }
+\underbrace{f(\beta_0,\beta,\sigma\mid Y,X)}_{\text{Posterior density}  } \propto \underbrace{\prod_{i=1}^n \mathcal{N}(y_i\mid \beta_0 + \beta x_i, \sigma)}_{\text{Likelihood}} \times \underbrace{f_{\beta_0}(\beta_0) \, f_{\beta}(\beta) \, f_{\sigma}(\sigma)}_{\text{Prior density}}
 $$`
 
 Note:
@@ -204,11 +216,122 @@ you could, for example assume normal distributions parametrized by some hyperpar
 
 https://stats.stackexchange.com/a/252608/186362
 
+https://stats200.stanford.edu/Lecture20.pdf
+
 https://en.wikipedia.org/wiki/Conjugate_prior
 
 +++
 
-#### SGD
+#### Multiclass Support Vector Machine (SVM)
+
+![](https://kernelmachine.github.io/public/20170304/svm.png) <!-- .element: style="height: 340px" -->
+
+`$$
+\text{Hinge Loss:}\quad L_i = \sum_{j\neq y_i} \max(0, s_j - s_{y_i} + \Delta)
+$$`
+
+Note:
+
+https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/
+
++++
+
+#### Sigmoid Function
+
+![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/sigmoid.png)  <!-- .element: style="height: 300px; background-color: white" -->
+
+`$$ sigmoid(x)=\frac{1}{1+e^{-x}} $$`
+
+Note:
+
+https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/
+
++++
+
+#### Hyperbolic Tangent (tanh) Function
+
+![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/tanh.png)  <!-- .element: style="height: 300px; background-color: white" -->
+
+`$$ tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}} $$`
+
++++
+
+#### Softmax Function
+
+![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/softmax.png)  <!-- .element: style="height: 300px; background-color: white" -->
+
+`$$ \text{Cross-Entropy Loss:}\quad L_i = -\log\left(\frac{e^{f_{y_i}}}{ \sum\limits_j e^{f_j} }\right)  $$`
+
++++
+
+#### Sigmoid Function v.s. Softmax Function
+
+Sigmoid: two-class logistic regression
+
+`$$
+\begin{align}
+\Pr(Y_i=0) &= \frac{e^{-\boldsymbol\beta \cdot \mathbf{X}_i}} {1 +e^{-\boldsymbol\beta_0 \cdot \mathbf{X}_i}} \, \\
+\Pr(Y_i=1) &= 1 - \Pr(Y_i=0) = \frac{1} {1 +e^{-\boldsymbol\beta \cdot \mathbf{X}_i}}
+\end{align}
+$$`
+
+Softmax: multiple-class logistic regression
+
+`$$ 
+\Pr(Y_i=k) = \frac{e^{\boldsymbol\beta_k \cdot \mathbf{X}_i}} {\sum\limits_{0 \leq c \leq K} {e^{\boldsymbol\beta_c \cdot \mathbf{X}_i}}}
+$$`
+
++++
+
+<!-- .slide: style="font-size:smaller" -->
+
+#### Linear Regression v.s. Logistic Regression
+
+![](https://cdn-images-1.medium.com/max/1000/1*Oy6O6OdzTXbp_Czi_k4mRg.png)
+
+Source: [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54) 
+
++++
+
+#### Linear Regression v.s. Logistic Regression (Cont.)
+
+![](https://cdn-images-1.medium.com/max/1000/1*1L4lmdLXtcfXbS6urKOKrw.png) 
+
+Source: [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54) 
+
++++
+
+#### Coordinate Descent
+
+![](http://hduongtrong.github.io/assets/gradient_descent/coordinate_descent.gif)
+
+Source: http://hduongtrong.github.io/2015/11/23/coordinate-descent/
+
++++
+
+#### Gradient Descent
+
++++
+
+#### Stochastic Gradient Descent
+
+![](http://hduongtrong.github.io/assets/gradient_descent/all.gif) 
+
++++
+
+#### Stochastic Gradient Descent
+
+![](https://phyblas.hinaboshi.com/rup/nayuki/2017/e15.gif) 
+
++++
+
+#### Escape from Saddle Point
+
+![](https://phyblas.hinaboshi.com/rup/nayuki/2017/e16.gif)
+
+
+
+Source: 
 
 Note:
 
