@@ -131,7 +131,7 @@ Source: [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_
 
 +++
 
-#### Vector Norms ( 范数 )
+#### Vector Norms
 
 `$$ ||x||_p=(\sum_i |x_i|^p)^{1/p} $$`
 
