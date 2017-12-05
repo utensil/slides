@@ -390,6 +390,25 @@ http://scikit-learn.org/stable/user_guide.html
 
 ---
 
+### CV
+
++++
+
+https://github.com/utensil/julia-playground/blob/master/dl/train_captcha.py
+https://keras.io/getting-started/faq/#how-can-i-use-keras-with-datasets-that-dont-fit-in-memory
+https://github.com/fchollet/keras/issues/7729
+https://github.com/fchollet/keras/issues/1711
+https://blog.sigopt.com/posts/common-problems-in-hyperparameter-optimization
+https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
+https://github.com/thuijskens/bayesian-optimization
+https://elitedatascience.com/overfitting-in-machine-learning#how-to-prevent
+http://dswalter.github.io/blog/overfitting-regularization-hyperparameters/
+http://scikit-learn.org/stable/modules/classes.html#module-sklearn.model_selection
+https://stackoverflow.com/questions/40854232/keras-scikit-learn-using-fit-generator-with-cross-validation
+https://github.com/fchollet/keras/issues/4278#issuecomment-264665803
+
+---
+
 ### Why Go Deep? 
 
 - http://slides.com/beamandrew/deep-learning-101#/
@@ -719,6 +738,9 @@ http://cs231n.github.io/neural-networks-1/
 https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/
 http://cs231n.github.io/convolutional-networks/
 http://www.deeplearningbook.org/
+
++++
+
 https://nbviewer.jupyter.org/github/makeyourownneuralnetwork/makeyourownneuralnetwork/
 https://petewarden.com/2016/02/28/tensorflow-for-poets/
 http://blog.otoro.net/2017/01/01/recurrent-neural-network-artist/
@@ -754,6 +776,9 @@ http://www.asimovinstitute.org/neural-network-zoo/
 https://en.wikipedia.org/wiki/Radial_basis_function
 http://thinkzone.wlonk.com/
 https://i.pinimg.com/originals/90/a1/87/90a187e216dbf0ba03941a63c17cdcb3.png
+
++++
+
 https://blog.adioma.com/how-to-think-visually-using-visual-analogies-infographic/#_=_
 https://medium.com/@shaha/azure-machine-learning-10e0ab2b2c68
 https://www.slideshare.net/andrewssobral/machine-learning-for-dummies-without-mathematics
@@ -768,6 +793,10 @@ http://proceedings.mlr.press/v37/jozefowicz15.pdf
 
 http://nbviewer.jupyter.org/github/aalind0/GAN-auto-write/blob/master/auto_write.ipynb
 http://drorbn.net/AcademicPensieve/About.html
+
++++
+
+https://github.com/BAILOOL/DoYouEvenLearn
 
 ---
 
