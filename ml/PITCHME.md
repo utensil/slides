@@ -93,7 +93,7 @@ Note:
   \end{array}
 \right) $$` <!-- .element: class="fragment" style="font-size:smaller" -->
 
-`$$\text{a.k.a.} \quad y_i = \beta_0 + \beta x_i + \varepsilon $$`  <!-- .element: class="fragment" style="font-size:smaller" -->
+`$$\quad y_i = \beta_0 + \beta x_i + \varepsilon $$`  <!-- .element: class="fragment" style="font-size:smaller" -->
 
 Note:
 
@@ -236,7 +236,7 @@ https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/
 
 +++
 
-#### Sigmoid Function
+#### Sigmoid
 
 ![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/sigmoid.png)  <!-- .element: style="height: 300px; background-color: white" -->
 
@@ -248,7 +248,7 @@ https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Ne
 
 +++
 
-#### Hyperbolic Tangent (tanh) Function
+#### Hyperbolic Tangent (tanh)
 
 ![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/tanh.png)  <!-- .element: style="height: 300px; background-color: white" -->
 
@@ -256,7 +256,7 @@ https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Ne
 
 +++
 
-#### Softmax Function
+#### Softmax
 
 ![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/softmax.png)  <!-- .element: style="height: 300px; background-color: white" -->
 
@@ -264,7 +264,7 @@ https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Ne
 
 +++
 
-#### Sigmoid Function v.s. Softmax Function
+#### Sigmoid v.s. Softmax
 
 Sigmoid: two-class logistic regression
 
@@ -303,39 +303,58 @@ Source: [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.co
 
 #### Coordinate Descent
 
-![](http://hduongtrong.github.io/assets/gradient_descent/coordinate_descent.gif)
+![](http://hduongtrong.github.io/assets/gradient_descent/coordinate_descent.gif) <!-- .element: style="height: 300px; background-color: white" -->
+`$$
+  w_{k+1} \gets w_k - \alpha_k \nabla_{i_k} F(w_k) e_{i_k}
+$$`
 
-Source: http://hduongtrong.github.io/2015/11/23/coordinate-descent/
+`$$
+  \ \ \text{where}\ \ \nabla_{i_k} F(w_k) := \frac{\partial F}{\partial w^{i_k}}(w_k)
+$$` <!-- .element: class="fragment" style="font-size: smaller" -->
+
+Note:
+
+`$$ \underset{w}{\operatorname{arg\,min}} \, F : \mathbb{R}^{d} \to \mathbb{R} $$`
+
+$w^{i_k}$ represents the $i_k$-th element of the parameter vector, and $e_{i_k}$ represents the $i_k$-th coordinate vector for some $i_k \in \{1,\dots,d\}$.  In other words, the solution estimates $w_{k+1}$ and $w_k$ differ only in their $i_k$-th element as a result of a move in the $i_k$-th coordinate from $w_k$.
+
+Image Source: http://hduongtrong.github.io/2015/11/23/coordinate-descent/
 
 +++
 
-#### Gradient Descent
+#### Gradient Descent (GD)
+
+`$$
+\text{Stochastic: }\quad w_{k+1} \gets w_k - \alpha_k \nabla f_{i_k}(w_k)
+$$`
+
+`$$
+\text{Batch: }\quad  w_{k+1} \gets w_k - \frac{\alpha_k}{n} \sum_{i=1}^n \nabla f_i(w_k)
+$$`
 
 +++
 
-#### Stochastic Gradient Descent
+#### SGD Example
 
 ![](http://hduongtrong.github.io/assets/gradient_descent/all.gif) 
 
 +++
 
-#### Stochastic Gradient Descent
+#### SGD Example (Cont.)
 
 ![](https://phyblas.hinaboshi.com/rup/nayuki/2017/e15.gif) 
 
 +++
 
-#### Escape from Saddle Point
+#### SGD Example: Escape from Saddle Point
 
 ![](https://phyblas.hinaboshi.com/rup/nayuki/2017/e16.gif)
-
-
-
-Source: 
 
 Note:
 
 https://nathanbrixius.wordpress.com/2016/07/29/stochastic-and-batch-methods-for-machine-learning/
+
+http://bair.berkeley.edu/blog/2017/08/31/saddle-efficiency/
 
 https://www.slideshare.net/diannepatricia/martin-takac-solving-largescale-machine-learning-problems-in-a-distributed-way
 
@@ -347,7 +366,17 @@ http://runopti.github.io/blog/2016/07/07/HessianComp/
 
 http://scikit-learn.org/stable/modules/sgd.html
 
-[Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf)
++++
+
+#### Beyond SG: Noise Reduction and Second-Order Methods
+
+![](images/beyond_sgd.png) <!-- .element: style="height: 300px" -->
+
+Source: [Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf)
+
++++
+
+<!-- .slide: data-background-iframe="https://distill.pub/2017/momentum/" data-background-interactive -->
 
 +++
 
@@ -601,10 +630,6 @@ Foundation:
 - http://cs231n.github.io/neural-networks-3/
 - http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/
 - http://colah.github.io/
-
-+++
-
-<!-- .slide: data-background-iframe="https://distill.pub/2017/momentum/" data-background-interactive -->
 
 +++
 
