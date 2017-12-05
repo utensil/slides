@@ -4,7 +4,7 @@
 
 ### The Origin
 
-- [Mathematica](https://www.wolfram.com/mathematica/) (2000) [✯](https://github.com/utensil/mathematica-notebooks)
+- [Mathematica](https://www.wolfram.com/mathematica/)[*](https://github.com/utensil/mathematica-notebooks) (2000) 
 - [Neural Networks](https://book.douban.com/subject/1115600/) (2002)
 - [NuPIC](https://github.com/numenta/nupic) and [NuPIC Core](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)
 - [kaggle: Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
