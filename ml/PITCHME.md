@@ -397,7 +397,11 @@ http://scikit-learn.org/stable/user_guide.html
 
 +++
 
+Note:
 
+https://www.zhihu.com/question/26006703
+http://www.holehouse.org/mlclass/index.html
+https://github.com/jatinshah/ufldl_tutorial
 
 ---
 
