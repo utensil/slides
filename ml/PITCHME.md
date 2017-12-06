@@ -370,9 +370,16 @@ http://scikit-learn.org/stable/modules/sgd.html
 
 #### Beyond SG: Noise Reduction and Second-Order Methods
 
-![](images/beyond_sgd.png) <!-- .element: style="height: 300px" -->
+![](images/beyond_sgd.png) <!-- .element: style="height: 300px" --> [Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf) <!-- .element: class="figcaption" -->
 
-Source: [Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf)
++++
+
+#### Beyond SG: Noise Reduction and Second-Order Methods
+
+<figure>
+<img src="images/beyond_sgd.png" alt="......" height="300">
+<figcaption>Source: [Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf)</figcaption>
+</figure>
 
 +++
 
@@ -387,6 +394,10 @@ http://scikit-learn.org/stable/user_guide.html
 +++
 
 <!-- .slide: data-background-iframe="//scikit-learn.org/stable/user_guide.html" data-background-interactive -->
+
++++
+
+
 
 ---
 
@@ -649,6 +660,7 @@ Foundation:
 - http://cs231n.github.io/neural-networks-3/
 - http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/
 - http://colah.github.io/
+- https://colah.github.io/posts/2014-07-Understanding-Convolutions/
 
 +++
 
