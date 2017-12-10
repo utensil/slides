@@ -304,7 +304,7 @@ Due to the large initial gradient, velocity based techniques shoot off and bounc
 
 Algos that scale gradients/step sizes like adadelta and RMSProp proceed more like accelerated SGD and handle large gradients with more stability.
 
-![](https://phyblas.hinaboshi.com/rup/nayuki/2017/e15.gif) 
+https://phyblas.hinaboshi.com/rup/nayuki/2017/e15.gif
 
 ***
 
@@ -320,7 +320,7 @@ NAG/Momentum again like to explore around, almost taking a different path.
 
 Adadelta/Adagrad/RMSProp proceed like accelerated SGD.
 
-![](https://phyblas.hinaboshi.com/rup/nayuki/2017/e16.gif)
+https://phyblas.hinaboshi.com/rup/nayuki/2017/e16.gif
 
 Note:
 
