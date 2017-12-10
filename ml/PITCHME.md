@@ -138,7 +138,7 @@ https://www.slideshare.net/harshupadhyay/simple-linear-regression-final?next_sli
 
 ***
 
-#### Outliers
+#### Outliers: Anscombe's quartet
 
 ![Anscombe's quartet](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/638px-Anscombe%27s_quartet_3.svg.png) [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_regression) <!-- .element: class="figcaption" -->
 
@@ -156,11 +156,95 @@ https://www.slideshare.net/harshupadhyay/simple-linear-regression-final?next_sli
 
 #### Multiclass Support Vector Machine (SVM)
 
-![](https://kernelmachine.github.io/public/20170304/svm.png) <!-- .element: style="height: 340px" --> [Crash Course on Support Vector Machines](https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/) <!-- .element: class="figcaption" -->
+![](https://kernelmachine.github.io/public/20170304/svm.png)  <!-- .element: style="height: 400px" -->
+ [Crash Course on Support Vector Machines](https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/) <!-- .element: class="figcaption" -->
+
+***
+
+#### SVM: Objective
+
+The SVM amounts to finding hyperplanes such that
 
 `$$
-\text{Hinge Loss:}\quad L_i = \sum_{j\neq y_i} \max(0, s_j - s_{y_i} + \Delta)
+w^T_{j}x_i - w^T_{y_i}x_i  - b  \ge \delta \text{   } \forall  \text{   }  j \neq y_i
 $$`
+
+`$ \delta $` is called the margin.
+
+***
+
+#### SVM: Hinge Loss
+
+`$$
+L_i = \sum_{j\neq y_i} \max(0, s_j - s_{y_i} + \delta)
+$$` <!-- .element: class="fragment current-only" -->
+
+`$$
+L_i = \sum\limits_{j \neq y_i} max (0, w^T_{j}x_i - w^T_{y_i}x_i + \delta)
+$$` <!-- .element: class="fragment current-only" -->
+
+`$$
+L = \frac{1}{N}\sum\limits_i\sum\limits_{j \neq y_i} max (0, w^T_{j}x_i - w^T_{y_i}x_i + \delta) \\ + \lambda\sum\limits_{i}\sum\limits_{j}W_{ij}^2
+$$` <!-- .element: class="fragment" -->
+
+***
+
+#### Soft margin SVM
+
+![](https://qph.ec.quoracdn.net/main-qimg-be899c45024583fbcce41af30e0acd98.webp) [In layman's terms, how does SVM work?](https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal?srid=xQkR)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Kernel Functions in SVM
+
+![](http://i.imgur.com/WuxyO.png) [
+Rahul Agarwal's Answer: What are kernels in machine learning and SVM and why do we need them?](https://www.quora.com/What-are-kernels-in-machine-learning-and-SVM-and-why-do-we-need-them/answer/Rahul-Agarwal-10?srid=xQkR) <!-- .element: class="figcaption" -->
+
+Note:
+
+https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal
+https://www.quora.com/What-is-a-radial-basis-function
+[Kernel Methods for Deep Learning](http://cseweb.ucsd.edu/~saul/papers/nips09_kernel.pdf)
+https://isaacchanghau.github.io/2017/08/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%91%A8%E5%BF%97%E5%8D%8E-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/
+
+***
+
+#### Kernel Functions in SVM
+
+- Linear: `$ K(x, y) = x^\top y $`
+- Polynomial: `$ K(x, y) = (x^\top y + 1)^d $`
+- Sigmoid: `$ K(x, y) = tanh(a x^\top y + b) $`
+- Radial basis func(RBF): `$ K(x, y) = \exp(-\gamma \| x - y\|^2) $`
+
+[How do I select SVM kernels?](https://www.quora.com/How-do-I-select-SVM-kernels/answer/Prasoon-Goyal)  <!-- .element: class="figcaption" -->
+
+***
+
+<!-- .slide: style="font-size:24px; text-align: left" -->
+
+#### SVM: Pros and Cons
+
+Pros:
+
+- Effective when 
+  - `$ D_\text{features} $` is high-dimensional
+  - `$ D_\text{features} \gt N_\text{samples}$`
+- Memory Efficient:
+  - uses support vectors in the decision function -- a subset of training points
+- Versatile:
+  - different Kernel functions can be specified for the decision function.
+
+Cons:
+
+- `$ D_\text{features} \gg N_\text{samples}$`
+  - Over-fitting
+  - Choosing Kernel `$ \phi(x, y) $`and Regularization `$ C $` is crucial 
+- No probability estimates
+  - Except using an expensive k-fold CV.
+- Complexity:
+  - `$ \mathcal{O}(D_\text{features} N_\text{samples}^{2 \sim 3}) $`
+
+[scikit-learn User Guide: Support Vector Machines](http://scikit-learn.org/stable/modules/svm.html)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -169,6 +253,12 @@ $$`
 ![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/sigmoid.png)  <!-- .element: style="height: 300px; background-color: white" --> [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
 
 `$$ sigmoid(x)=\frac{1}{1+e^{-x}} $$`
+
+Note:
+
+https://stats.stackexchange.com/questions/115258/comprehensive-list-of-activation-functions-in-neural-networks-with-pros-cons
+https://www.kdnuggets.com/2016/08/role-activation-function-neural-network.html
+https://en.wikipedia.org/wiki/Activation_function
 
 ***
 
@@ -184,7 +274,7 @@ $$`
 
 ![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/softmax.png)  <!-- .element: style="height: 300px; background-color: white" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
 
-`$$ \text{Cross-Entropy Loss:}\quad L_i = -\log\left(\frac{e^{f_{y_i}}}{ \sum\limits_j e^{f_j} }\right)  $$`
+`$$ \text{Cross-Entropy Loss:}\quad L_i = -\log\left(\frac{e^{f_{y_i}}}{ \sum\limits_j e^{f_j} }\right)  $$`  <!-- .element: style="font-size: 36px" -->
 
 ***
 
@@ -272,6 +362,7 @@ Comparison of a few optimization methods (animation by Alec Radford). The star d
 
 [Using convolutional neural nets to detect facial keypoints tutorial](http://danielnouri.org/notes/category/machine-learning/#testing-it-out)
 [Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)
+[Test functions for optimization](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
 
 ***
 
@@ -322,8 +413,6 @@ Adadelta/Adagrad/RMSProp proceed like accelerated SGD.
 
 https://phyblas.hinaboshi.com/rup/nayuki/2017/e16.gif
 
-Note:
-
 https://nathanbrixius.wordpress.com/2016/07/29/stochastic-and-batch-methods-for-machine-learning/
 http://bair.berkeley.edu/blog/2017/08/31/saddle-efficiency/
 https://www.slideshare.net/diannepatricia/martin-takac-solving-largescale-machine-learning-problems-in-a-distributed-way
@@ -338,9 +427,176 @@ http://scikit-learn.org/stable/modules/sgd.html
 
 ***
 
-### scikit-learn User Guide
+#### Nesterov Momentum
 
-http://scikit-learn.org/stable/user_guide.html
+![](http://cs231n.github.io/assets/nn3/nesterov.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](http://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Nearest Neighbors Classification
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_001.png)  <!-- .element: style="float:left; width: 49%" -->
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_002.png)  <!-- .element: style="float:right; width: 49%" -->
+
+[scikit-learn User Guide: Nearest Neighbors Classification Example](http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Nearest Neighbors regression
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_regression_001.png)
+
+[scikit-learn User Guide: Nearest Neighbors regression Example](http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Nearest Centroid Classification
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_nearest_centroid_001.png)  <!-- .element: style="float:left; width: 49%" -->
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_nearest_centroid_002.png)  <!-- .element: style="float:right; width: 49%" -->
+
+[scikit-learn User Guide: Nearest Centroid Classification](http://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Nearest Neighbor Algorithms
+
+<table style="width: 80%; overflow-y: scroll">
+  <tr>
+    <th>Algorithm</th>
+    <th>Complexity</th> 
+  </tr>
+  <tr>
+    <td>Brute Force</td>
+    <td>`$ \mathcal{O}(D_\text{features} N_\text{samples}^2) $`</td>
+  </tr>
+  <tr class="">
+    <td>K-D Tree</td>
+    <td>`$ \begin{cases} \mathcal{O}( D_\text{features} \log{N_\text{samples}} ) & \mbox{if } D_\text{features} \sim 20 \\[1ex] \mathcal{O}(D_\text{features} N_\text{samples}) & \mbox{if } D_\text{features} \gg 20 \end{cases} $`</td>
+  </tr>
+  <tr class="">
+    <td>Ball Tree</td>
+    <td>`$ \mathcal{O}( D_\text{features} \log{N_\text{samples} )} $`</td>
+  </tr>
+</table>
+
+***
+
+<!-- .slide: style="font-size:36px; text-align: left" -->
+
+####  Gaussian process (GP)
+
+A GP is the generalization of a Gaussian distribution to a distribution over functions, instead of random variables.
+
+Just as a Gaussian distribution is completely specified by its mean `$ \mu $` and variance `$ \sigma $`, 
+
+a GP is completely specified by its **mean function** `$ m(x) $`, and covariance function `$ k(x,x′) $`.
+
+***
+
+#### Gaussian Process Classification (GPC) on Iris dataset
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_gpc_iris_001.png)
+
+[scikit-learn User Guide: Gaussian process classification (GPC) on iris dataset](http://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Bayes’ theorem
+
+`$$
+\mbox{posterior} = \frac{\mbox{prior} \times \mbox{likelihood}}{\mbox{evidence}}
+$$`
+
+`$$
+P(y \mid x_1, \dots, x_n) = \frac{P(y) \times P(x_1, \dots x_n \mid y)} {P(x_1, \dots, x_n)}
+$$`
+
+***
+
+#### Naive Bayes
+
+Using Naive independence assumption:
+
+`$$
+P(x_i | y, x_1, \dots, x_{i-1}, x_{i+1}, \dots, x_n) = P(x_i | y)
+$$`
+
+`$$
+P(y \mid x_1, \dots, x_n) = \frac{P(y) \times \prod_{i=1}^{n} P(x_i \mid y)} {P(x_1, \dots, x_n)}
+$$`   <!-- .element: class="fragment current-only" -->
+
+`$$
+P(y \mid x_1, \dots, x_n) \propto P(y) \prod_{i=1}^{n} P(x_i \mid y) 
+$$`   <!-- .element: class="fragment current-only" -->
+
+`$$
+\hat{y} = \arg\max_y P(y) \prod_{i=1}^{n} P(x_i \mid y)
+$$`   <!-- .element: class="fragment" -->
+
+***
+
+#### Decision Trees
+
+![](http://scikit-learn.org/stable/_images/iris.svg)   <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Trees](http://scikit-learn.org/stable/modules/tree.html)   <!-- .element: class="figcaption" -->
+
+***
+
+#### Decision surface of a decision tree on the iris dataset
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_iris_0011.png) <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Plot the decision surface of a decision tree on the iris dataset](http://scikit-learn.org/stable/auto_examples/tree/plot_iris.html)   <!-- .element: class="figcaption" -->
+
+***
+
+#### Decision Tree Regression 
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_tree_regression_001.png)  <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Tree Regression](http://scikit-learn.org/stable/auto_examples/tree/plot_tree_regression.html)   <!-- .element: class="figcaption" -->
+
+***
+
+#### Tree algorithms
+
+<table style="width: 80%; overflow-y: scroll">
+  <tr>
+    <th>Algorithm</th>
+    <th>Features</th> 
+  </tr>
+  <tr>
+    <td>ID3 <small>(Iterative Dichotomiser 3)</small></td>
+    <td style="font-size: 24px">
+- categorical feature <br />
+- yield the largest information gain  <br />
+- a pruning step is usually applied for generalization  <br />
+    </td>
+  </tr>
+  <tr class="">
+    <td>C4.5</td>
+    <td style="font-size: 24px">
+- supports numerical variables by partitioning into a discrete set of intervals  <br />
+- converts the trained trees into sets of if-then rules  <br />
+- pruning by removing precondition
+    </td>
+  </tr>
+  <!-- <tr class="">
+    <td>C5.0</td>
+    <td style="font-size: 24px">
+- proprietary  <br />
+- less memory  <br />
+- smaller rulesets  <br />
+- more accurate  <br />
+    </td>
+  </tr> -->
+  <tr class="">
+    <td>CART <small>(Classification and Regression Trees)</small></td>
+    <td style="font-size: 24px">
+- similar to C4.5  <br />
+- supports numerical target variables (regression)  <br />
+- does not compute rule sets  <br />
+    </td>
+  </tr>
+</table>
 
 ***
 
@@ -348,10 +604,18 @@ http://scikit-learn.org/stable/user_guide.html
 
 ***
 
+<!-- .slide: data-background-iframe="http://www.holehouse.org/mlclass/index.html" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial" data-background-interactive -->
+
+***
+
 Note:
 
 https://www.zhihu.com/question/26006703
-http://www.holehouse.org/mlclass/index.html
+
 https://github.com/jatinshah/ufldl_tutorial
 
 ---
@@ -372,6 +636,18 @@ http://dswalter.github.io/blog/overfitting-regularization-hyperparameters/
 http://scikit-learn.org/stable/modules/classes.html#module-sklearn.model_selection
 https://stackoverflow.com/questions/40854232/keras-scikit-learn-using-fit-generator-with-cross-validation
 https://github.com/fchollet/keras/issues/4278#issuecomment-264665803
+
+***
+
+#### Learning Rates
+
+![](http://cs231n.github.io/assets/nn3/learningrates.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](http://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Training/Validation accuracy
+
+![](http://cs231n.github.io/assets/nn3/accuracies.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](http://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
 
 ---
 
