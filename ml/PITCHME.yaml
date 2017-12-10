@@ -1,3 +1,5 @@
+horz-delim: "---"
+vert-delim: "***"
 theme: black
 # background : assets/bg.jpg
 # logo : assets/logo.png
