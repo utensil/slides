@@ -78,3 +78,16 @@ iframe {
   text-shadow: none;
   border: none; 
 }
+
+.reveal a.figcaption {
+  font-size: 14px;
+  text-align: center;
+  display: block;
+}
+
+.reveal .figcaption:before {
+  content: "Source: ";
+  color: rgb(109,109,109);
+  font-size: 14px;
+  text-align: center;
+}
