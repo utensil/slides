@@ -44,8 +44,17 @@ Note:
 
 #### Generalized Linear Models
 
-`$$ \boldsymbol{y} = X \boldsymbol{w} + \boldsymbol{b} $$`
+Assumption:
 
+`$$ y_i = \beta_0 + \beta x_i + \varepsilon $$`
+
+Model:
+
+`$$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + \boldsymbol{b} $$`
+
+Note:
+
+https://en.wikipedia.org/wiki/Linear_regression
 
 +++
 
@@ -53,9 +62,9 @@ Note:
 
 `$$ \left(
   \begin{array}{c}
-    y_1 \\
+    \hat{y}_1 \\
     \vdots \\
-    y_n
+    \hat{y}_n
   \end{array}
 \right)
 = \left(
@@ -74,9 +83,9 @@ Note:
 
 `$$ \left(
   \begin{array}{c}
-    y_1 \\
+    \hat{y}_1 \\
     \vdots \\
-    y_n
+    \hat{y}_n
   \end{array}
 \right)
 = \left(
@@ -93,41 +102,25 @@ Note:
   \end{array}
 \right) $$` <!-- .element: class="fragment" style="font-size:smaller" -->
 
-`$$\quad y_i = \beta_0 + \beta x_i + \varepsilon $$`  <!-- .element: class="fragment" style="font-size:smaller" -->
-
-Note:
-
-https://en.wikipedia.org/wiki/Linear_regression
-
 +++
 
 #### Bias trick
 
-![](http://cs231n.github.io/assets/wb.jpeg)
-
-Source: [CS231n Convolutional Neural Networks for Visual Recognition: Linear classification](http://cs231n.github.io/linear-classify/)
+![](http://cs231n.github.io/assets/wb.jpeg) [CS231n Convolutional Neural Networks for Visual Recognition: Linear classification](http://cs231n.github.io/linear-classify/)  <!-- .element: class="figcaption" -->
 
 +++
 
 #### Ordinary Least Squares
 
-![](http://gluon.mxnet.io/_images/linear-regression.png)
+![](http://gluon.mxnet.io/_images/linear-regression.png) [Linear regression from scratch](http://gluon.mxnet.io/chapter02_supervised-learning/linear-regression-scratch.html) <!-- .element: class="figcaption" -->
 
-`$$ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} {|| X \boldsymbol{w} - \boldsymbol{y}||_2}^2 $$`
+`$$ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \ell_2(\hat{y}, y) = {|| X \boldsymbol{w} - \boldsymbol{y}||_2}^2 $$`
 
 Note:
 
 https://image.slidesharecdn.com/simplelinearregressionfinal-121101072438-phpapp02/95/simple-linear-regression-final-8-638.jpg?cb=1507030484
 
 https://www.slideshare.net/harshupadhyay/simple-linear-regression-final?next_slideshow=1
-
-+++
-
-#### Outliers
-
-![Anscombe's quartet](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/638px-Anscombe%27s_quartet_3.svg.png)
-
-Source: [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_regression)
 
 +++
 
@@ -142,6 +135,12 @@ Source: [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_
 - `$\ell_1$`-Norm: `$$ ||x||_1=\sum_i |x_i| $$`
 - `$\ell_2$`-Norm: `$$ ||x||_2=\sqrt{\sum_i^{\phantom{n}} |x_i|^2} $$`
 - `$\ell_\infty$`-Norm: `$$ ||x||_\infty=\max_i |x_i| $$`
+
++++
+
+#### Outliers
+
+![Anscombe's quartet](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/638px-Anscombe%27s_quartet_3.svg.png) [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_regression) <!-- .element: class="figcaption" -->
 
 +++
 
@@ -164,6 +163,7 @@ MP: Matching Pursuit
 Note:
 
 https://www.slideshare.net/ansrivas21/linear-regression-shared
+https://stats.stackexchange.com/questions/218208/what-are-the-advantages-of-stepwise-regression
 
 +++
 
@@ -224,33 +224,25 @@ https://en.wikipedia.org/wiki/Conjugate_prior
 
 #### Multiclass Support Vector Machine (SVM)
 
-![](https://kernelmachine.github.io/public/20170304/svm.png) <!-- .element: style="height: 340px" -->
+![](https://kernelmachine.github.io/public/20170304/svm.png) <!-- .element: style="height: 340px" --> [Crash Course on Support Vector Machines](https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/) <!-- .element: class="figcaption" -->
 
 `$$
 \text{Hinge Loss:}\quad L_i = \sum_{j\neq y_i} \max(0, s_j - s_{y_i} + \Delta)
 $$`
 
-Note:
-
-https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/
-
 +++
 
 #### Sigmoid
 
-![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/sigmoid.png)  <!-- .element: style="height: 300px; background-color: white" -->
+![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/sigmoid.png)  <!-- .element: style="height: 300px; background-color: white" --> [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
 
 `$$ sigmoid(x)=\frac{1}{1+e^{-x}} $$`
-
-Note:
-
-https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/
 
 +++
 
 #### Hyperbolic Tangent (tanh)
 
-![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/tanh.png)  <!-- .element: style="height: 300px; background-color: white" -->
+![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/tanh.png)  <!-- .element: style="height: 300px; background-color: white" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
 
 `$$ tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}} $$`
 
@@ -258,7 +250,7 @@ https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Ne
 
 #### Softmax
 
-![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/softmax.png)  <!-- .element: style="height: 300px; background-color: white" -->
+![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/softmax.png)  <!-- .element: style="height: 300px; background-color: white" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
 
 `$$ \text{Cross-Entropy Loss:}\quad L_i = -\log\left(\frac{e^{f_{y_i}}}{ \sum\limits_j e^{f_j} }\right)  $$`
 
@@ -287,23 +279,20 @@ $$`
 
 #### Linear Regression v.s. Logistic Regression
 
-![](https://cdn-images-1.medium.com/max/1000/1*Oy6O6OdzTXbp_Czi_k4mRg.png)
-
-Source: [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54) 
+![](https://cdn-images-1.medium.com/max/1000/1*Oy6O6OdzTXbp_Czi_k4mRg.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54)  <!-- .element: class="figcaption" -->
 
 +++
 
 #### Linear Regression v.s. Logistic Regression (Cont.)
 
-![](https://cdn-images-1.medium.com/max/1000/1*1L4lmdLXtcfXbS6urKOKrw.png) 
-
-Source: [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54) 
+![](https://cdn-images-1.medium.com/max/1000/1*1L4lmdLXtcfXbS6urKOKrw.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54) <!-- .element: class="figcaption" -->
 
 +++
 
 #### Coordinate Descent
 
-![](http://hduongtrong.github.io/assets/gradient_descent/coordinate_descent.gif) <!-- .element: style="height: 300px; background-color: white" -->
+![](http://hduongtrong.github.io/assets/gradient_descent/coordinate_descent.gif) <!-- .element: style="height: 300px; background-color: white" --> [Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)  <!-- .element: class="figcaption" -->
+
 `$$
   w_{k+1} \gets w_k - \alpha_k \nabla_{i_k} F(w_k) e_{i_k}
 $$`
@@ -317,8 +306,6 @@ Note:
 `$$ \underset{w}{\operatorname{arg\,min}} \, F : \mathbb{R}^{d} \to \mathbb{R} $$`
 
 $w^{i_k}$ represents the $i_k$-th element of the parameter vector, and $e_{i_k}$ represents the $i_k$-th coordinate vector for some $i_k \in \{1,\dots,d\}$.  In other words, the solution estimates $w_{k+1}$ and $w_k$ differ only in their $i_k$-th element as a result of a move in the $i_k$-th coordinate from $w_k$.
-
-Image Source: http://hduongtrong.github.io/2015/11/23/coordinate-descent/
 
 +++
 
@@ -334,52 +321,84 @@ $$`
 
 +++
 
-#### SGD Example
+#### Beyond SGD: Noise Reduction and Second-Order Methods
 
-![](http://hduongtrong.github.io/assets/gradient_descent/all.gif) 
+![](images/beyond_sgd.png) <!-- .element: style="height: 300px" -->
+
+[Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf) <!-- .element: class="figcaption" -->
 
 +++
 
-#### SGD Example (Cont.)
+#### GD Optimization Algorithms: Noisy Moons
+
+![](http://hduongtrong.github.io/assets/gradient_descent/all.gif) [Alec Radford](https://www.reddit.com/r/MachineLearning/comments/2gopfa/visualizing_gradient_optimization_techniques/cklhott/
+)  <!-- .element: class="figcaption" -->
+
+Note:
+
+Comparison of a few optimization methods (animation by Alec Radford). The star denotes the global minimum on the error surface. Notice that stochastic gradient descent (SGD) without momentum is the slowest method to converge in this example.
+
+[Using convolutional neural nets to detect facial keypoints tutorial](http://danielnouri.org/notes/category/machine-learning/#testing-it-out)
+[Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)
+
++++
+
+#### GD Optimization Algorithms: Long Valley
+
+![](https://i.imgur.com/2dKCQHh.gif) [Alec Radford: Visualizing Optimization Algorithms](https://imgur.com/a/Hqolp) <!-- .element: class="figcaption" -->
+
+Note:
+
+Algos without scaling based on gradient information really struggle to break symmetry here - SGD gets no where and Nesterov Accelerated Gradient / Momentum exhibits oscillations until they build up velocity in the optimization direction.
+
+Algos that scale step size based on the gradient quickly break symmetry and begin descent.
+
+http://ruder.io/optimizing-gradient-descent/
+http://cs231n.github.io/neural-networks-3/
+http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf
+https://www.quora.com/What-are-differences-between-update-rules-like-AdaDelta-RMSProp-AdaGrad-and-AdaM
+https://github.com/robertsdionne/bouncingball
+http://blog.mrtz.org/2013/09/07/the-zen-of-gradient-descent.html
+
++++
+
+#### GD Optimization Algorithms: Beale's function
+
+![](https://i.imgur.com/pD0hWu5.gif) [Alec Radford: Visualizing Optimization Algorithms](https://imgur.com/a/Hqolp) <!-- .element: class="figcaption" -->
+
+Note:
+
+Due to the large initial gradient, velocity based techniques shoot off and bounce around - adagrad almost goes unstable for the same reason.
+
+Algos that scale gradients/step sizes like adadelta and RMSProp proceed more like accelerated SGD and handle large gradients with more stability.
 
 ![](https://phyblas.hinaboshi.com/rup/nayuki/2017/e15.gif) 
 
 +++
 
-#### SGD Example: Escape from Saddle Point
+#### GD Optimization Algorithms: Saddle Point
+
+![](https://i.imgur.com/NKsFHJb.gif) [Alec Radford: Visualizing Optimization Algorithms](https://imgur.com/a/Hqolp) <!-- .element: class="figcaption" -->
+
+Note:
+
+Behavior around a saddle point.
+
+NAG/Momentum again like to explore around, almost taking a different path. 
+
+Adadelta/Adagrad/RMSProp proceed like accelerated SGD.
 
 ![](https://phyblas.hinaboshi.com/rup/nayuki/2017/e16.gif)
 
 Note:
 
 https://nathanbrixius.wordpress.com/2016/07/29/stochastic-and-batch-methods-for-machine-learning/
-
 http://bair.berkeley.edu/blog/2017/08/31/saddle-efficiency/
-
 https://www.slideshare.net/diannepatricia/martin-takac-solving-largescale-machine-learning-problems-in-a-distributed-way
-
 http://andrew.gibiansky.com/blog/machine-learning/hessian-free-optimization/
-
 http://www.cs.toronto.edu/~jmartens/docs/Momentum_Deep.pdf
-
 http://runopti.github.io/blog/2016/07/07/HessianComp/
-
 http://scikit-learn.org/stable/modules/sgd.html
-
-+++
-
-#### Beyond SG: Noise Reduction and Second-Order Methods
-
-![](images/beyond_sgd.png) <!-- .element: style="height: 300px" --> [Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf) <!-- .element: class="figcaption" -->
-
-+++
-
-#### Beyond SG: Noise Reduction and Second-Order Methods
-
-<figure>
-<img src="images/beyond_sgd.png" alt="......" height="300">
-<figcaption>Source: [Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf)</figcaption>
-</figure>
 
 +++
 
