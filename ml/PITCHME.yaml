@@ -3,7 +3,7 @@ vert-delim: "\\*\\*\\*"
 theme: black
 # background : assets/bg.jpg
 # logo : assets/logo.png
-theme-override : assets/css/common.css
+theme-override : ml/css/common.css
 background-size : cover
 highlight : railscasts
 mathjax : TeX-AMS_HTML-full
