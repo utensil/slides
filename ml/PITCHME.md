@@ -27,6 +27,10 @@ Note:
 http://detexify.kirelabs.org/classify.html
 http://shapecatcher.com/
 
+---
+
+### GLM
+
 ***
 
 ### The Objective
@@ -152,6 +156,10 @@ https://www.slideshare.net/harshupadhyay/simple-linear-regression-final?next_sli
 - Lasso: `$$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$`
 - Elastic Net:  `$$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$`
 
+---
+
+### SVM
+
 ***
 
 #### Multiclass Support Vector Machine (SVM)
@@ -246,6 +254,10 @@ Cons:
 
 [scikit-learn User Guide: Support Vector Machines](http://scikit-learn.org/stable/modules/svm.html)  <!-- .element: class="figcaption" -->
 
+---
+
+### Logistic Regression
+
 ***
 
 #### Sigmoid
@@ -308,6 +320,10 @@ $$`
 #### Linear Regression v.s. Logistic Regression (Cont.)
 
 ![](https://cdn-images-1.medium.com/max/1000/1*1L4lmdLXtcfXbS6urKOKrw.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54) <!-- .element: class="figcaption" -->
+
+---
+
+### Optimization Methods
 
 ***
 
@@ -431,110 +447,9 @@ http://scikit-learn.org/stable/modules/sgd.html
 
 ![](http://cs231n.github.io/assets/nn3/nesterov.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](http://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
 
-***
+---
 
-#### Nearest Neighbors Classification
-
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_001.png)  <!-- .element: style="float:left; width: 49%" -->
-
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_002.png)  <!-- .element: style="float:right; width: 49%" -->
-
-[scikit-learn User Guide: Nearest Neighbors Classification Example](http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
-
-***
-
-#### Nearest Neighbors regression
-
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_regression_001.png)
-
-[scikit-learn User Guide: Nearest Neighbors regression Example](http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
-
-***
-
-#### Nearest Centroid Classification
-
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_nearest_centroid_001.png)  <!-- .element: style="float:left; width: 49%" -->
-
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_nearest_centroid_002.png)  <!-- .element: style="float:right; width: 49%" -->
-
-[scikit-learn User Guide: Nearest Centroid Classification](http://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
-
-***
-
-#### Nearest Neighbor Algorithms
-
-<table style="width: 80%; overflow-y: scroll">
-  <tr>
-    <th>Algorithm</th>
-    <th>Complexity</th> 
-  </tr>
-  <tr>
-    <td>Brute Force</td>
-    <td>`$ \mathcal{O}(D_\text{features} N_\text{samples}^2) $`</td>
-  </tr>
-  <tr class="">
-    <td>K-D Tree</td>
-    <td>`$ \begin{cases} \mathcal{O}( D_\text{features} \log{N_\text{samples}} ) & \mbox{if } D_\text{features} \sim 20 \\[1ex] \mathcal{O}(D_\text{features} N_\text{samples}) & \mbox{if } D_\text{features} \gg 20 \end{cases} $`</td>
-  </tr>
-  <tr class="">
-    <td>Ball Tree</td>
-    <td>`$ \mathcal{O}( D_\text{features} \log{N_\text{samples} )} $`</td>
-  </tr>
-</table>
-
-***
-
-<!-- .slide: style="font-size:36px; text-align: left" -->
-
-####  Gaussian process (GP)
-
-A GP is the generalization of a Gaussian distribution to a distribution over functions, instead of random variables.
-
-Just as a Gaussian distribution is completely specified by its mean `$ \mu $` and variance `$ \sigma $`, 
-
-a GP is completely specified by its **mean function** `$ m(x) $`, and covariance function `$ k(x,x′) $`.
-
-***
-
-#### Gaussian Process Classification (GPC) on Iris dataset
-
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_gpc_iris_001.png)
-
-[scikit-learn User Guide: Gaussian process classification (GPC) on iris dataset](http://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
-
-***
-
-#### Bayes’ theorem
-
-`$$
-\mbox{posterior} = \frac{\mbox{prior} \times \mbox{likelihood}}{\mbox{evidence}}
-$$`
-
-`$$
-P(y \mid x_1, \dots, x_n) = \frac{P(y) \times P(x_1, \dots x_n \mid y)} {P(x_1, \dots, x_n)}
-$$`
-
-***
-
-#### Naive Bayes
-
-Using Naive independence assumption:
-
-`$$
-P(x_i | y, x_1, \dots, x_{i-1}, x_{i+1}, \dots, x_n) = P(x_i | y)
-$$`
-
-`$$
-P(y \mid x_1, \dots, x_n) = \frac{P(y) \times \prod_{i=1}^{n} P(x_i \mid y)} {P(x_1, \dots, x_n)}
-$$`   <!-- .element: class="fragment current-only" -->
-
-`$$
-P(y \mid x_1, \dots, x_n) \propto P(y) \prod_{i=1}^{n} P(x_i \mid y) 
-$$`   <!-- .element: class="fragment current-only" -->
-
-`$$
-\hat{y} = \arg\max_y P(y) \prod_{i=1}^{n} P(x_i \mid y)
-$$`   <!-- .element: class="fragment" -->
+### Tree Based Learning Algorithms
 
 ***
 
@@ -597,6 +512,123 @@ $$`   <!-- .element: class="fragment" -->
     </td>
   </tr>
 </table>
+
+---
+
+### Nearest Neighbors
+
+***
+
+#### Nearest Neighbors Classification
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_001.png)  <!-- .element: style="float:left; width: 49%" -->
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_002.png)  <!-- .element: style="float:right; width: 49%" -->
+
+[scikit-learn User Guide: Nearest Neighbors Classification Example](http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Nearest Neighbors regression
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_regression_001.png)
+
+[scikit-learn User Guide: Nearest Neighbors regression Example](http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Nearest Centroid Classification
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_nearest_centroid_001.png)  <!-- .element: style="float:left; width: 49%" -->
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_nearest_centroid_002.png)  <!-- .element: style="float:right; width: 49%" -->
+
+[scikit-learn User Guide: Nearest Centroid Classification](http://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Nearest Neighbor Algorithms
+
+<table style="width: 80%; overflow-y: scroll; font-size: 28px">
+  <tr>
+    <th>Algorithm</th>
+    <th>Complexity</th> 
+  </tr>
+  <tr>
+    <td>Brute Force</td>
+    <td>`$ \mathcal{O}(D_\text{features} N_\text{samples}^2) $`</td>
+  </tr>
+  <tr class="">
+    <td>K-D Tree</td>
+    <td>`$ \begin{cases} \mathcal{O}( D_\text{features} \log{N_\text{samples}} ) & \mbox{if } D_\text{features} \sim 20 \\[1ex] \mathcal{O}(D_\text{features} N_\text{samples}) & \mbox{if } D_\text{features} \gg 20 \end{cases} $`</td>
+  </tr>
+  <tr class="">
+    <td>Ball Tree</td>
+    <td>`$ \mathcal{O}( D_\text{features} \log{N_\text{samples} )} $`</td>
+  </tr>
+</table>
+
+---
+
+### Other Probability Related Methods
+
+***
+
+<!-- .slide: style="font-size:36px; text-align: left" -->
+
+####  Gaussian process (GP)
+
+A GP is the generalization of a Gaussian distribution to a distribution over functions, instead of random variables.
+
+Just as a Gaussian distribution is completely specified by its mean `$ \mu $` and variance `$ \sigma $`, 
+
+a GP is completely specified by its **mean function** `$ m(x) $`, and covariance function `$ k(x,x′) $`.
+
+***
+
+#### Gaussian Process Classification (GPC) on Iris dataset
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_gpc_iris_001.png)
+
+[scikit-learn User Guide: Gaussian process classification (GPC) on iris dataset](http://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Bayes’ theorem
+
+`$$
+\mbox{posterior} = \frac{\mbox{prior} \times \mbox{likelihood}}{\mbox{evidence}}
+$$`
+
+`$$
+P(y \mid x_1, \dots, x_n) = \frac{P(y) \times P(x_1, \dots x_n \mid y)} {P(x_1, \dots, x_n)}
+$$`
+
+***
+
+#### Naive Bayes
+
+Using Naive independence assumption:
+
+`$$
+P(x_i | y, x_1, \dots, x_{i-1}, x_{i+1}, \dots, x_n) = P(x_i | y)
+$$`
+
+`$$
+P(y \mid x_1, \dots, x_n) = \frac{P(y) \times \prod_{i=1}^{n} P(x_i \mid y)} {P(x_1, \dots, x_n)}
+$$`   <!-- .element: class="fragment current-only" -->
+
+`$$
+P(y \mid x_1, \dots, x_n) \propto P(y) \prod_{i=1}^{n} P(x_i \mid y) 
+$$`   <!-- .element: class="fragment current-only" -->
+
+`$$
+\hat{y} = \arg\max_y P(y) \prod_{i=1}^{n} P(x_i \mid y)
+$$`   <!-- .element: class="fragment" -->
+
+---
+
+### Links (Temp)
 
 ***
 
@@ -1381,30 +1413,6 @@ else:
 
 <!-- .slide: data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4" -->
 
-***
-
-<table style="width: 80%; overflow-y: scroll">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Generalized Linear Models</td>
-    <td>$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + b $</td>
-    <td>25</td>
-  </tr>
-  <tr class="fragment">
-    <td>Elastic Net</td>
-    <td>$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $</td>
-    <td>94</td>
-  </tr>
-  <tr class="fragment">
-    <td>John</td>
-    <td>Doe</td>
-    <td>43</td>
-  </tr>
-</table>
 
 
 
