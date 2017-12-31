@@ -32,6 +32,10 @@ iframe {
   display: none;
 }
 
+/* .slide-background.present iframe {
+  height: 99vh;
+} */
+
 .iframe-source {
   position: fixed;
   bottom: 0px;
@@ -78,6 +82,31 @@ iframe {
   text-shadow: none;
   border: none; 
 }
+
+.print-pdf .iframe-source {
+  position: absolute;
+  bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: 0px;
+  width: 100%;
+  text-align: center;
+  padding: 7px 7px 7px 7px;
+  /* background-color: #BED4EB;
+  background-color: hsl(200, 60%, 15%); */
+  background-color: #222222;
+  font-size: 12px;
+  color: white;
+  z-index: 20; /* .progress is 10 and .controls is 30 */
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* .print-pdf .iframe-source a {
+  bottom: 0px;
+} */
 
 .reveal a.figcaption {
   font-size: 14px;
