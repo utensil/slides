@@ -60,3 +60,6 @@ typings/
 **/local
 
 .DS_Store
+
+# custom
+ml/images/bgs
