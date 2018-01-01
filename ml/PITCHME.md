@@ -275,21 +275,95 @@ http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture2.pdf
 
 ***
 
+#### Implementing Linear Regression
+
 <!-- .slide: style="font-size: 32px;" -->
 
 ```python
-def nn(x, w): return x * w
-def cost(y, t): return ((y - t)**2).sum()
-def gradient(w, x, t): return 2 * (nn(x, w) - t) * x
-def delta_w(w, x, t, learning_rate):
-    return learning_rate * gradient(w, x, t).sum()
+def nn(x, w):
+    return x * w
+def cost(y, t):
+    return ((y - t)**2).sum()
 
 nb_of_samples = 20
 x = numpy.random.uniform(0, 1, nb_of_samples)
 t = 3 * x + numpy.random.normal(0, 0.2, nb_of_samples)
 
-w = 0.1; learning_rate = 0.1; nb_of_iterations = 10;
+# And then...
+```
 
+<p class="fragment current-only" data-code-focus="1-2">
+  `$ \boldsymbol{\hat{y}} = X \boldsymbol{w} $`
+</p>
+<p class="fragment current-only" data-code-focus="3-4">
+  `$ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \xi(\hat{y}, t) = {|| \hat{y} - t||_2}^2 $`
+</p>
+<p class="fragment current-only" data-code-focus="6-8" style="font-size: 24px">
+  `$$
+    x \sim {\mathcal {U}}(0, 1) \\
+    t = 3 x + \varepsilon \\
+    \varepsilon \sim N(\mu, \sigma^2) \; \text{with} \; \mu = 0, \sigma = 0.2
+  $$`
+</p>
+<p class="fragment current-only" data-code-focus="10" style="">
+  How to optimize?
+</p>
+---
+
+### Optimization Methods
+
+***
+
+#### Coordinate Descent
+
+![](http://hduongtrong.github.io/assets/gradient_descent/coordinate_descent.gif) <!-- .element: style="height: 300px; background-color: white" --> [Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)  <!-- .element: class="figcaption" -->
+
+`$$
+  w_{k+1} \gets w_k - \alpha_k \nabla_{i_k} F(w_k) e_{i_k}
+$$`
+
+`$$
+  \ \ \text{where}\ \ \nabla_{i_k} F(w_k) := \frac{\partial F}{\partial w^{i_k}}(w_k)
+$$` <!-- .element: class="fragment" style="font-size: smaller" -->
+
+Note:
+
+`$$ \underset{w}{\operatorname{arg\,min}} \, F : \mathbb{R}^{d} \to \mathbb{R} $$`
+
+$w^{i_k}$ represents the $i_k$-th element of the parameter vector, and $e_{i_k}$ represents the $i_k$-th coordinate vector for some $i_k \in \{1,\dots,d\}$.  In other words, the solution estimates $w_{k+1}$ and $w_k$ differ only in their $i_k$-th element as a result of a move in the $i_k$-th coordinate from $w_k$.
+
+***
+
+#### Gradient Descent (GD)
+
+![](https://sebastianraschka.com/images/faq/closed-form-vs-gd/ball.png)   <!-- .element: class="img-300" --> [Machine Learning FAQ by Sebastian Raschka](https://sebastianraschka.com/faq/docs/closed-form-vs-gd.html)   <!-- .element: class="figcaption" -->
+
+`$$
+\text{Stochastic: }\quad w_{k+1} \gets w_k - \alpha_k \nabla f_{i_k}(w_k)
+$$`
+
+`$$
+\text{Batch: }\quad  w_{k+1} \gets w_k - \frac{\alpha_k}{n} \sum_{i=1}^n \nabla f_i(w_k)
+$$`
+
+***
+
+#### Implementing Linear Regression
+
+<!-- .slide: style="font-size: 32px;" -->
+
+```python
+def nn(x, w): return x * w
+def cost(y, t): return ((y - t)**2).sum()
+nb_of_samples = 20
+x = numpy.random.uniform(0, 1, nb_of_samples)
+t = 3 * x + numpy.random.normal(0, 0.2, nb_of_samples)
+
+def gradient(w, x, t): return 2 * (nn(x, w) - t) * x
+def delta_w(w, x, t, learning_rate):
+    return learning_rate * gradient(w, x, t).sum()
+
+w = 0.1; learning_rate = 0.1; nb_of_iterations = 10;
 w_cost = [(w, cost(nn(x, w), t))]
 for i in range(nb_of_iterations):
     w = w - delta_w(w, x, t, learning_rate)
@@ -302,25 +376,132 @@ for i in range(nb_of_iterations):
 <p class="fragment current-only" data-code-focus="2">
   `$ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \xi(\hat{y}, t) = {|| \hat{y} - t||_2}^2 $`
 </p>
-<p class="fragment current-only" data-code-focus="3" style="font-size: 24px">
-  `$$
-      \frac{\partial \xi(\hat{y}, t)}{\partial w} = \frac{\partial \xi}{\partial \hat{y}} \frac{\partial \hat{y}}{\partial w}
-    = \frac{\partial (\hat{y} - t)^2}{\partial \hat{y}} \frac{\partial (x w)}{\partial w} \\
-    = - 2 (\hat{y} - t) x = - 2 (x w - t) x
-  $$`
-</p>
-<p class="fragment current-only" data-code-focus="4-5" style="font-size: 24px">
-  `$$
-    \Delta w = \mu \sum_{i=1}^{N} \frac{\partial \xi_i(\hat{y}_i, t_i)}{\partial w}
-  $$`
-</p>
-<p class="fragment current-only" data-code-focus="7-9" style="font-size: 24px">
+<p class="fragment current-only" data-code-focus="3-5" style="font-size: 24px">
   `$$
     x \sim {\mathcal {U}}(0, 1) \\
     t = 3 x + \varepsilon \\
     \varepsilon \sim N(\mu, \sigma^2) \; \text{with} \; \mu = 0, \sigma = 0.2
   $$`
 </p>
+<p class="fragment current-only" data-code-focus="7" style="font-size: 24px">
+  `$$
+      \frac{\partial \xi(\hat{y}, t)}{\partial w} = \frac{\partial \xi}{\partial \hat{y}} \frac{\partial \hat{y}}{\partial w}
+    = \frac{\partial (\hat{y} - t)^2}{\partial \hat{y}} \frac{\partial (x w)}{\partial w} \\
+    = - 2 (\hat{y} - t) x = - 2 (x w - t) x
+  $$`
+</p>
+<p class="fragment current-only" data-code-focus="8-9" style="font-size: 24px">
+  `$$
+    \Delta w = \mu \sum_{i=1}^{N} \frac{\partial \xi_i(\hat{y}_i, t_i)}{\partial w}
+  $$`
+</p>
+<p class="fragment current-only" data-code-focus="11-15" style="">
+  `$$
+    w_{k+1} \gets w_k - \alpha_k \Delta w
+  $$`
+</p>
+
+***
+
+<!-- .slide: data-background-iframe="http://nbviewer.jupyter.org/github/peterroelants/peterroelants.github.io/blob/master/notebooks/neural_net_implementation/neural_network_implementation_part01.ipynb" data-background-interactive -->
+
+***
+
+#### Beyond SGD: Noise Reduction and Second-Order Methods
+
+![](images/beyond_sgd.png) <!-- .element: style="height: 300px" -->
+
+[Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf) <!-- .element: class="figcaption" -->
+
+***
+
+#### GD Optimization Algorithms: Noisy Moons
+
+![](http://hduongtrong.github.io/assets/gradient_descent/all.gif) [Alec Radford](https://www.reddit.com/r/MachineLearning/comments/2gopfa/visualizing_gradient_optimization_techniques/cklhott/
+)  <!-- .element: class="figcaption" -->
+
+Note:
+
+Comparison of a few optimization methods (animation by Alec Radford). The star denotes the global minimum on the error surface. Notice that stochastic gradient descent (SGD) without momentum is the slowest method to converge in this example.
+
+[Using convolutional neural nets to detect facial keypoints tutorial](http://danielnouri.org/notes/category/machine-learning/#testing-it-out)
+[Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)
+[**Test functions for optimization**](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
+
+***
+
+#### GD Optimization Algorithms: Long Valley
+
+![](https://i.imgur.com/2dKCQHh.gif) [Alec Radford: Visualizing Optimization Algorithms](https://imgur.com/a/Hqolp) <!-- .element: class="figcaption" -->
+
+Note:
+
+Algos without scaling based on gradient information really struggle to break symmetry here - SGD gets no where and Nesterov Accelerated Gradient / Momentum exhibits oscillations until they build up velocity in the optimization direction.
+
+Algos that scale step size based on the gradient quickly break symmetry and begin descent.
+
+http://ruder.io/optimizing-gradient-descent/
+http://cs231n.github.io/neural-networks-3/
+http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf
+https://www.quora.com/What-are-differences-between-update-rules-like-AdaDelta-RMSProp-AdaGrad-and-AdaM
+https://github.com/robertsdionne/bouncingball
+http://blog.mrtz.org/2013/09/07/the-zen-of-gradient-descent.html
+
+***
+
+#### GD Optimization Algorithms: Beale's function
+
+![](https://i.imgur.com/pD0hWu5.gif) [Alec Radford: Visualizing Optimization Algorithms](https://imgur.com/a/Hqolp) <!-- .element: class="figcaption" -->
+
+Note:
+
+Due to the large initial gradient, velocity based techniques shoot off and bounce around - adagrad almost goes unstable for the same reason.
+
+Algos that scale gradients/step sizes like adadelta and RMSProp proceed more like accelerated SGD and handle large gradients with more stability.
+
+https://phyblas.hinaboshi.com/rup/nayuki/2017/e15.gif
+
+***
+
+#### GD Optimization Algorithms: Saddle Point
+
+![](https://i.imgur.com/NKsFHJb.gif) [Alec Radford: Visualizing Optimization Algorithms](https://imgur.com/a/Hqolp) <!-- .element: class="figcaption" -->
+
+Note:
+
+Behavior around a saddle point.
+
+NAG/Momentum again like to explore around, almost taking a different path. 
+
+Adadelta/Adagrad/RMSProp proceed like accelerated SGD.
+
+https://phyblas.hinaboshi.com/rup/nayuki/2017/e16.gif
+
+https://nathanbrixius.wordpress.com/2016/07/29/stochastic-and-batch-methods-for-machine-learning/
+http://bair.berkeley.edu/blog/2017/08/31/saddle-efficiency/
+https://www.slideshare.net/diannepatricia/martin-takac-solving-largescale-machine-learning-problems-in-a-distributed-way
+http://andrew.gibiansky.com/blog/machine-learning/hessian-free-optimization/
+http://www.cs.toronto.edu/~jmartens/docs/Momentum_Deep.pdf
+http://runopti.github.io/blog/2016/07/07/HessianComp/
+http://scikit-learn.org/stable/modules/sgd.html
+
+***
+
+<!-- .slide: data-background-iframe="https://distill.pub/2017/momentum/" data-background-interactive -->
+
+***
+
+#### Nesterov Momentum
+
+![](http://cs231n.github.io/assets/nn3/nesterov.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](http://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Adam = SDG + Adaptive + Momentum
+
+* [SGD, SGD-M, NAG, AdaGrad, AdaDelta/RMSProp, Adam, Nadam](https://zhuanlan.zhihu.com/p/32230623)
+* [Why not just use Adam?](https://zhuanlan.zhihu.com/p/32262540)
+* [Adam -> SGD](https://zhuanlan.zhihu.com/p/32338983)
 
 ---
 
@@ -422,112 +603,6 @@ Note:
 
 https://towardsdatascience.com/the-surprising-longevity-of-the-z-score-a8d4f65f64a0
 http://xaktly.com/ProbStat_Distributions.html
-
-
----
-
-### SVM
-
-***
-
-#### Support Vector Machine (SVM)
-
-![](https://kernelmachine.github.io/public/20170304/svm.png)  <!-- .element: style="height: 400px" -->
- [Crash Course on Support Vector Machines](https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/) <!-- .element: class="figcaption" -->
-
-Note:
-
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~utensil/5.embed"></iframe>
-
-[Logistic Regression – Geometric Intuition](https://florianhartl.com/logistic-regression-geometric-intuition.html)   <!-- .element: class="figcaption" -->
-
-***
-
-#### SVM: Objective
-
-![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_07.png?raw=true) [Python Machine Learning: Chapter 3 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
-
-Note:
-
-The SVM amounts to finding hyperplanes such that `$ w^T_{j}x_i - w^T_{y_i}x_i  - b  \ge \delta \text{   } \forall  \text{   }  j \neq y_i
-$` where `$ \delta $` is called the margin. 
-
-***
-
-<!-- .slide: data-background-iframe="http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/" data-background-interactive -->
-
-***
-
-#### SVM: Hinge Loss
-
-`$$
-\min_{\mathbf{w}}\ C\underset{Hinge-Loss}{\underbrace{\sum_{i=1}^{n}max[1-y_{i}\underset{h({\mathbf{x}_i})}{\underbrace{(w^{\top}{\mathbf{x}_i}+b)}},0]}}+\underset{l_{2}-Regularizer}{\underbrace{\left\Vert w\right\Vert _{z}^{2}}}
-$$`
-
-***
-
-#### Hinge Loss is "Soft" Zero-One Loss
-
-![](http://www.cs.cornell.edu/courses/cs4780/2015fa/web/lecturenotes/pngPic/c4/classificationlosses.png) <!-- .element: class="img-450" --> [Machine Learning CS4780/CS5780: Empirical Risk Minimization](http://www.cs.cornell.edu/courses/cs4780/2015fa/page4/index.html)  <!-- .element: class="figcaption" -->
-
-***
-
-#### Soft margin SVM
-
-![](https://qph.ec.quoracdn.net/main-qimg-be899c45024583fbcce41af30e0acd98.webp)  [In layman's terms, how does SVM work?](https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal?srid=xQkR)  <!-- .element: class="figcaption" -->
-
-***
-
-#### Kernel Functions in SVM
-
-![](http://i.imgur.com/WuxyO.png) [
-Rahul Agarwal's Answer: What are kernels in machine learning and SVM and why do we need them?](https://www.quora.com/What-are-kernels-in-machine-learning-and-SVM-and-why-do-we-need-them/answer/Rahul-Agarwal-10?srid=xQkR) <!-- .element: class="figcaption" -->
-
-Note:
-
-https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal
-https://www.quora.com/What-is-a-radial-basis-function
-[Kernel Methods for Deep Learning](http://cseweb.ucsd.edu/~saul/papers/nips09_kernel.pdf)
-https://isaacchanghau.github.io/2017/08/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%91%A8%E5%BF%97%E5%8D%8E-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/
-
-***
-
-#### Kernel Functions in SVM
-
-- Linear: `$ K(x, y) = x^\top y $`
-- Polynomial: `$ K(x, y) = (x^\top y + 1)^d $`
-- Sigmoid: `$ K(x, y) = tanh(a x^\top y + b) $`
-- Radial basis func(RBF): `$ K(x, y) = \exp(-\gamma \| x - y\|^2) $`
-
-[How do I select SVM kernels?](https://www.quora.com/How-do-I-select-SVM-kernels/answer/Prasoon-Goyal)  <!-- .element: class="figcaption" -->
-
-***
-
-<!-- .slide: style="font-size:24px; text-align: left" -->
-
-#### SVM: Pros and Cons
-
-Pros:
-
-- Effective when 
-  - `$ D_\text{features} $` is high-dimensional
-  - `$ D_\text{features} \gt N_\text{samples}$`
-- Memory Efficient:
-  - uses support vectors in the decision function -- a subset of training points
-- Versatile:
-  - different Kernel functions can be specified for the decision function.
-
-Cons:
-
-- `$ D_\text{features} \gg N_\text{samples}$`
-  - Over-fitting
-  - Choosing Kernel `$ \phi(x, y) $`and Regularization `$ C $` is crucial 
-- No probability estimates
-  - Except using an expensive k-fold CV.
-- Complexity:
-  - `$ \mathcal{O}(D_\text{features} N_\text{samples}^{2 \sim 3}) $`
-
-[scikit-learn User Guide: Support Vector Machines](http://scikit-learn.org/stable/modules/svm.html)  <!-- .element: class="figcaption" -->
 
 ---
 
@@ -690,131 +765,108 @@ $$`
 
 ---
 
-### Optimization Methods
+### SVM
 
 ***
 
-#### Coordinate Descent
+#### Support Vector Machine (SVM)
 
-![](http://hduongtrong.github.io/assets/gradient_descent/coordinate_descent.gif) <!-- .element: style="height: 300px; background-color: white" --> [Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)  <!-- .element: class="figcaption" -->
+![](https://kernelmachine.github.io/public/20170304/svm.png)  <!-- .element: style="height: 400px" -->
+ [Crash Course on Support Vector Machines](https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/) <!-- .element: class="figcaption" -->
+
+Note:
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~utensil/5.embed"></iframe>
+
+[Logistic Regression – Geometric Intuition](https://florianhartl.com/logistic-regression-geometric-intuition.html)   <!-- .element: class="figcaption" -->
+
+***
+
+#### SVM: Objective
+
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_07.png?raw=true) [Python Machine Learning: Chapter 3 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
+
+Note:
+
+The SVM amounts to finding hyperplanes such that `$ w^T_{j}x_i - w^T_{y_i}x_i  - b  \ge \delta \text{   } \forall  \text{   }  j \neq y_i
+$` where `$ \delta $` is called the margin. 
+
+***
+
+<!-- .slide: data-background-iframe="http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/" data-background-interactive -->
+
+***
+
+#### SVM: Hinge Loss
 
 `$$
-  w_{k+1} \gets w_k - \alpha_k \nabla_{i_k} F(w_k) e_{i_k}
+\min_{\mathbf{w}}\ C\underset{Hinge-Loss}{\underbrace{\sum_{i=1}^{n}max[1-y_{i}\underset{h({\mathbf{x}_i})}{\underbrace{(w^{\top}{\mathbf{x}_i}+b)}},0]}}+\underset{l_{2}-Regularizer}{\underbrace{\left\Vert w\right\Vert _{z}^{2}}}
 $$`
 
-`$$
-  \ \ \text{where}\ \ \nabla_{i_k} F(w_k) := \frac{\partial F}{\partial w^{i_k}}(w_k)
-$$` <!-- .element: class="fragment" style="font-size: smaller" -->
+***
+
+#### Hinge Loss is "Soft" Zero-One Loss
+
+![](http://www.cs.cornell.edu/courses/cs4780/2015fa/web/lecturenotes/pngPic/c4/classificationlosses.png) <!-- .element: class="img-450" --> [Machine Learning CS4780/CS5780: Empirical Risk Minimization](http://www.cs.cornell.edu/courses/cs4780/2015fa/page4/index.html)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Soft margin SVM
+
+![](https://qph.ec.quoracdn.net/main-qimg-be899c45024583fbcce41af30e0acd98.webp)  [In layman's terms, how does SVM work?](https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal?srid=xQkR)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Kernel Functions in SVM
+
+![](http://i.imgur.com/WuxyO.png) [
+Rahul Agarwal's Answer: What are kernels in machine learning and SVM and why do we need them?](https://www.quora.com/What-are-kernels-in-machine-learning-and-SVM-and-why-do-we-need-them/answer/Rahul-Agarwal-10?srid=xQkR) <!-- .element: class="figcaption" -->
 
 Note:
 
-`$$ \underset{w}{\operatorname{arg\,min}} \, F : \mathbb{R}^{d} \to \mathbb{R} $$`
-
-$w^{i_k}$ represents the $i_k$-th element of the parameter vector, and $e_{i_k}$ represents the $i_k$-th coordinate vector for some $i_k \in \{1,\dots,d\}$.  In other words, the solution estimates $w_{k+1}$ and $w_k$ differ only in their $i_k$-th element as a result of a move in the $i_k$-th coordinate from $w_k$.
-
-***
-
-#### Gradient Descent (GD)
-
-![](https://sebastianraschka.com/images/faq/closed-form-vs-gd/ball.png)   <!-- .element: class="img-300" --> [Machine Learning FAQ by Sebastian Raschka](https://sebastianraschka.com/faq/docs/closed-form-vs-gd.html)   <!-- .element: class="figcaption" -->
-
-`$$
-\text{Stochastic: }\quad w_{k+1} \gets w_k - \alpha_k \nabla f_{i_k}(w_k)
-$$`
-
-`$$
-\text{Batch: }\quad  w_{k+1} \gets w_k - \frac{\alpha_k}{n} \sum_{i=1}^n \nabla f_i(w_k)
-$$`
+https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal
+https://www.quora.com/What-is-a-radial-basis-function
+[Kernel Methods for Deep Learning](http://cseweb.ucsd.edu/~saul/papers/nips09_kernel.pdf)
+https://isaacchanghau.github.io/2017/08/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%91%A8%E5%BF%97%E5%8D%8E-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/
 
 ***
 
-#### Beyond SGD: Noise Reduction and Second-Order Methods
+#### Kernel Functions in SVM
 
-![](images/beyond_sgd.png) <!-- .element: style="height: 300px" -->
+- Linear: `$ K(x, y) = x^\top y $`
+- Polynomial: `$ K(x, y) = (x^\top y + 1)^d $`
+- Sigmoid: `$ K(x, y) = tanh(a x^\top y + b) $`
+- Radial basis func(RBF): `$ K(x, y) = \exp(-\gamma \| x - y\|^2) $`
 
-[Optimization Methods for Large-Scale Machine Learning](https://arxiv.org/pdf/1606.04838.pdf) <!-- .element: class="figcaption" -->
-
-***
-
-#### GD Optimization Algorithms: Noisy Moons
-
-![](http://hduongtrong.github.io/assets/gradient_descent/all.gif) [Alec Radford](https://www.reddit.com/r/MachineLearning/comments/2gopfa/visualizing_gradient_optimization_techniques/cklhott/
-)  <!-- .element: class="figcaption" -->
-
-Note:
-
-Comparison of a few optimization methods (animation by Alec Radford). The star denotes the global minimum on the error surface. Notice that stochastic gradient descent (SGD) without momentum is the slowest method to converge in this example.
-
-[Using convolutional neural nets to detect facial keypoints tutorial](http://danielnouri.org/notes/category/machine-learning/#testing-it-out)
-[Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)
-[**Test functions for optimization**](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
+[How do I select SVM kernels?](https://www.quora.com/How-do-I-select-SVM-kernels/answer/Prasoon-Goyal)  <!-- .element: class="figcaption" -->
 
 ***
 
-#### GD Optimization Algorithms: Long Valley
+<!-- .slide: style="font-size:24px; text-align: left" -->
 
-![](https://i.imgur.com/2dKCQHh.gif) [Alec Radford: Visualizing Optimization Algorithms](https://imgur.com/a/Hqolp) <!-- .element: class="figcaption" -->
+#### SVM: Pros and Cons
 
-Note:
+Pros:
 
-Algos without scaling based on gradient information really struggle to break symmetry here - SGD gets no where and Nesterov Accelerated Gradient / Momentum exhibits oscillations until they build up velocity in the optimization direction.
+- Effective when 
+  - `$ D_\text{features} $` is high-dimensional
+  - `$ D_\text{features} \gt N_\text{samples}$`
+- Memory Efficient:
+  - uses support vectors in the decision function -- a subset of training points
+- Versatile:
+  - different Kernel functions can be specified for the decision function.
 
-Algos that scale step size based on the gradient quickly break symmetry and begin descent.
+Cons:
 
-http://ruder.io/optimizing-gradient-descent/
-http://cs231n.github.io/neural-networks-3/
-http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf
-https://www.quora.com/What-are-differences-between-update-rules-like-AdaDelta-RMSProp-AdaGrad-and-AdaM
-https://github.com/robertsdionne/bouncingball
-http://blog.mrtz.org/2013/09/07/the-zen-of-gradient-descent.html
+- `$ D_\text{features} \gg N_\text{samples}$`
+  - Over-fitting
+  - Choosing Kernel `$ \phi(x, y) $`and Regularization `$ C $` is crucial 
+- No probability estimates
+  - Except using an expensive k-fold CV.
+- Complexity:
+  - `$ \mathcal{O}(D_\text{features} N_\text{samples}^{2 \sim 3}) $`
 
-***
-
-#### GD Optimization Algorithms: Beale's function
-
-![](https://i.imgur.com/pD0hWu5.gif) [Alec Radford: Visualizing Optimization Algorithms](https://imgur.com/a/Hqolp) <!-- .element: class="figcaption" -->
-
-Note:
-
-Due to the large initial gradient, velocity based techniques shoot off and bounce around - adagrad almost goes unstable for the same reason.
-
-Algos that scale gradients/step sizes like adadelta and RMSProp proceed more like accelerated SGD and handle large gradients with more stability.
-
-https://phyblas.hinaboshi.com/rup/nayuki/2017/e15.gif
-
-***
-
-#### GD Optimization Algorithms: Saddle Point
-
-![](https://i.imgur.com/NKsFHJb.gif) [Alec Radford: Visualizing Optimization Algorithms](https://imgur.com/a/Hqolp) <!-- .element: class="figcaption" -->
-
-Note:
-
-Behavior around a saddle point.
-
-NAG/Momentum again like to explore around, almost taking a different path. 
-
-Adadelta/Adagrad/RMSProp proceed like accelerated SGD.
-
-https://phyblas.hinaboshi.com/rup/nayuki/2017/e16.gif
-
-https://nathanbrixius.wordpress.com/2016/07/29/stochastic-and-batch-methods-for-machine-learning/
-http://bair.berkeley.edu/blog/2017/08/31/saddle-efficiency/
-https://www.slideshare.net/diannepatricia/martin-takac-solving-largescale-machine-learning-problems-in-a-distributed-way
-http://andrew.gibiansky.com/blog/machine-learning/hessian-free-optimization/
-http://www.cs.toronto.edu/~jmartens/docs/Momentum_Deep.pdf
-http://runopti.github.io/blog/2016/07/07/HessianComp/
-http://scikit-learn.org/stable/modules/sgd.html
-
-***
-
-<!-- .slide: data-background-iframe="https://distill.pub/2017/momentum/" data-background-interactive -->
-
-***
-
-#### Nesterov Momentum
-
-![](http://cs231n.github.io/assets/nn3/nesterov.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](http://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
+[scikit-learn User Guide: Support Vector Machines](http://scikit-learn.org/stable/modules/svm.html)  <!-- .element: class="figcaption" -->
 
 ---
 
