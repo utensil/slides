@@ -20,6 +20,69 @@ Dive in inclues Julia, Geometric Algebra, Keras and Risk Control.
 
 ---
 
+### Overview
+
+***
+
+#### Three Types of Machine Learning
+
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_01.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+
+Note:
+
+| Supervised Learning | Unsupervised Learning | Reinforcement Learning |
+|---------------------|-----------------------|------------------------|
+| ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_02.png?raw=true) | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_06.png?raw=true) | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_05.png?raw=true)
+
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Supervised Learning
+
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_02.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Supervised Learning (Cont.)
+
+| Classification | Regression |
+|---------------------|-----------------------|
+| ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_03.png?raw=true)  <!-- .element: class="img-300" -->  | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_04.png?raw=true)  <!-- .element: class="img-300" --> |
+
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Unsupervised Learning
+
+| Clustering | Dimensionality Reduction |
+|---------------------|-----------------------|
+| ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_06.png?raw=true)  <!-- .element: class="img-300" -->  | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_07.png?raw=true)  <!-- .element: class="img-300" --> |
+
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Reinforcement Learning
+
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_05.png?raw=true)
+
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+
+***
+
+<!-- .slide: data-background-iframe="https://www.youtube.com/embed/gn4nRCC9TwQ" data-background-interactive -->
+
+***
+
+#### A roadmap for building machine learning systems
+
+
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_09.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+
+---
+
 ## Traditional Machine Learning Methods
 
 Note:
@@ -27,42 +90,41 @@ Note:
 http://detexify.kirelabs.org/classify.html
 http://shapecatcher.com/
 
+https://towardsdatascience.com/machine-learning-quick-reference-card-cf92f6accd08
+[Essentials of Machine Learning Algorithms with Python and R Codes](https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/)
+[ The 10 Algorithms Machine Learning Engineers Need to Know](https://www.kdnuggets.com/2016/08/10-algorithms-machine-learning-engineers.html)
+
 ---
 
-### GLM
+### Linear Regression
 
 ***
 
-### The Objective
+#### Elements of Linear Relationships
 
-![minimal](https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Extrema_example_original.svg/330px-Extrema_example_original.svg.png) <!-- .element: style="background-color: white" -->
-
-`$$ \underset{x \in D}{\operatorname{arg\,min}} \, f(x) := \{x \mid \forall y \in D : f(y) \ge f(x)\} $$`
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch10/images/10_01.png)  <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 10 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch10/ch10.ipynb)  <!-- .element: class="figcaption" -->
 
 Note:
 
-- https://en.wikipedia.org/wiki/Arg_max
-- [Argmax and Max Calculus](https://www.cs.ubc.ca/~schmidtm/Documents/2016_540_Argmax.pdf) 
+https://rasbt.github.io/mlxtend/user_guide/regressor/LinearRegression/
+
+[Machine Learning FAQ by Sebastian Raschka](https://sebastianraschka.com/faq/docs/closed-form-vs-gd.html)
+
+![](https://imgs.xkcd.com/comics/linear_regression.png) [xkcd: Linear Regression](https://xkcd.com/1725/)  <!-- .element: class="figcaption" -->
 
 ***
 
-#### Generalized Linear Models
+#### Assumption `$$ y_i = \beta_0 + \beta x_i + \varepsilon $$`
 
-Assumption:
+![](https://image.slidesharecdn.com/simplelinearregressionpelatihan-090829234643-phpapp02/95/simple-linier-regression-9-728.jpg?cb=1251589640)   <!-- .element: class="img-450" --> [ by Department of Statistics, ITS Surabaya](https://www.slideshare.net/dessybudiyanti/simple-linier-regression)  <!-- .element: class="figcaption" -->
 
-`$$ y_i = \beta_0 + \beta x_i + \varepsilon $$`
+***
 
-Model:
+#### Linear Model in Matrix Form
 
 `$$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + \boldsymbol{b} $$`
 
-Note:
-
-https://en.wikipedia.org/wiki/Linear_regression
-
-***
-
-#### For $p$ features and $n$ samples:
+For $p$ features and $n$ samples: <!-- .element: style="font-size: 24px" -->
 
 `$$ \left(
   \begin{array}{c}
@@ -83,16 +145,9 @@ https://en.wikipedia.org/wiki/Linear_regression
     \vdots \\
     w_p
   \end{array}
-\right) + b $$` <!-- .element: class="" style="font-size:smaller" --> 
+\right) + b $$` <!-- .element: class="" style="font-size: smaller" --> 
 
-`$$ \left(
-  \begin{array}{c}
-    \hat{y}_1 \\
-    \vdots \\
-    \hat{y}_n
-  \end{array}
-\right)
-= \left(
+`$$ = \left(
   \begin{array}{cccc}
     1 & x_{11} & \ldots & x_{1p}\\
     1 & \vdots & \ddots & \vdots\\
@@ -104,7 +159,11 @@ https://en.wikipedia.org/wiki/Linear_regression
     \vdots \\
     w_p
   \end{array}
-\right) $$` <!-- .element: class="fragment" style="font-size:smaller" -->
+\right) $$` <!-- .element: class="fragment" style="font-size: smaller" -->
+
+Note:
+
+https://en.wikipedia.org/wiki/Linear_regression
 
 ***
 
@@ -114,17 +173,173 @@ https://en.wikipedia.org/wiki/Linear_regression
 
 ***
 
+### The Objective
+
+![minimal](https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Extrema_example_original.svg/330px-Extrema_example_original.svg.png)
+
+`$$ \underset{x \in D}{\operatorname{arg\,min}} \, f(x) := \{x \mid \forall y \in D : f(y) \ge f(x)\} $$`
+
+Note:
+
+- https://en.wikipedia.org/wiki/Arg_max
+- [Argmax and Max Calculus](https://www.cs.ubc.ca/~schmidtm/Documents/2016_540_Argmax.pdf) 
+
+***
+
 #### Ordinary Least Squares
 
 ![](http://gluon.mxnet.io/_images/linear-regression.png) [Linear regression from scratch](http://gluon.mxnet.io/chapter02_supervised-learning/linear-regression-scratch.html) <!-- .element: class="figcaption" -->
 
-`$$ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \ell_2(\hat{y}, y) = {|| X \boldsymbol{w} - \boldsymbol{y}||_2}^2 $$`
+`$$
+\underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \xi(\hat{y}, y) = \ell_2(\hat{y}, y) \\
+= {|| \hat{y} - y||_2}^2 = {|| X \boldsymbol{w} - \boldsymbol{y}||_2}^2 $$`
 
 Note:
 
 https://image.slidesharecdn.com/simplelinearregressionfinal-121101072438-phpapp02/95/simple-linear-regression-final-8-638.jpg?cb=1507030484
 
 https://www.slideshare.net/harshupadhyay/simple-linear-regression-final?next_slideshow=1
+
+https://www.jianshu.com/p/f71848c7aaf3
+
+Terms related to OLS
+
+- Ordinary Least Squares (OLS)
+- Least Squares Estimator (LSE)
+- Sum of Squared Errors (SSE)
+- Mean Squared Error (MSE)
+
+[Lecture Slides (Machine Learning, CS 6375)](http://www.hlt.utdallas.edu/~vgogate/ml/2015s/lectures.html)
+
+***
+
+#### Empirical Risk Minimization (ERM)
+
+![](images/10701/erm.png) <!-- .element: class="img-500" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
+
+***
+
+#### Bayes’ Theorem
+
+![](https://www.probabilisticworld.com/wp-content/uploads/2016/06/bayes-theorem-with-description-2.png) <!-- .element: style="width: 50%" --> [Frequentist And Bayesian Approaches In Statistics](https://www.probabilisticworld.com/frequentist-bayesian-approaches-inferential-statistics/) <!-- .element: class="figcaption" -->
+
+![](https://www.probabilisticworld.com/wp-content/uploads/2016/03/coin-bias-posterior.png) <!-- .element: style="width: 50%" --> [Calculating Coin Bias With Bayes’ Theorem](https://www.probabilisticworld.com/calculating-coin-bias-bayes-theorem/) <!-- .element: class="figcaption" -->
+
+Note:
+
+http://gandenberger.org/2014/07/28/intro-to-statistical-methods-2/
+![](http://gandenberger.org/wp-content/uploads/2014/07/Statistical_Methods.png)
+
+https://medium.com/data-science-group-iitr/naive-bayes-unfolded-b2ab036b42b1
+https://www.explainxkcd.com/wiki/index.php/795:_Conditional_Risk
+https://betterexplained.com/articles/an-intuitive-and-short-explanation-of-bayes-theorem/
+
+https://qph.ec.quoracdn.net/main-qimg-18b90ce3920e0913240c0b5b584e4d19.webp
+https://www.quora.com/Do-extraordinary-claims-require-extraordinary-evidence
+
+http://www.labtimes.org/labtimes/method/methods/img/2011_04b.jpg
+http://www.labtimes.org/labtimes/method/methods/2011_04.lasso
+
+***
+
+#### MLE v.s. MAP
+
+![](images/10701/mle_vs_map.png) <!-- .element: class="img-500" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 2](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture2.pdf) <!-- .element: class="figcaption" -->
+
+Maximum Likelihood Estimation v.s. Maximum A Posteriori Estimation  <!-- .element: style="font-size: 24px" -->
+
+***
+
+#### M(C)LE v.s. M(C)AP
+
+![](images/10701/mcle_vs_mcap.png) <!-- .element: class="img-500" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 2](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture2.pdf) <!-- .element: class="figcaption" -->
+
+***
+
+#### Least Squares and MLE
+
+![](images/10701/lse_mle.png) <!-- .element: class="img-500" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
+
+Least Square Estimate is same as Maximum Likelihood Estimate under a Gaussian model. <!-- .element: style="font-size: 24px" -->
+
+Note:
+
+Maximum A Posteriori Estimation
+
+http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture2.pdf
+
+***
+
+<!-- .slide: style="font-size: 32px;" -->
+
+```python
+def nn(x, w): return x * w
+def cost(y, t): return ((y - t)**2).sum()
+def gradient(w, x, t): return 2 * (nn(x, w) - t) * x
+def delta_w(w, x, t, learning_rate):
+    return learning_rate * gradient(w, x, t).sum()
+
+nb_of_samples = 20
+x = numpy.random.uniform(0, 1, nb_of_samples)
+t = 3 * x + numpy.random.normal(0, 0.2, nb_of_samples)
+
+w = 0.1; learning_rate = 0.1; nb_of_iterations = 10;
+
+w_cost = [(w, cost(nn(x, w), t))]
+for i in range(nb_of_iterations):
+    w = w - delta_w(w, x, t, learning_rate)
+    w_cost.append((w, cost(nn(x, w), t)))
+```
+
+<p class="fragment current-only" data-code-focus="1">
+  `$ \boldsymbol{\hat{y}} = X \boldsymbol{w} $`
+</p>
+<p class="fragment current-only" data-code-focus="2">
+  `$ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \xi(\hat{y}, t) = {|| \hat{y} - t||_2}^2 $`
+</p>
+<p class="fragment current-only" data-code-focus="3" style="font-size: 24px">
+  `$$
+      \frac{\partial \xi(\hat{y}, t)}{\partial w} = \frac{\partial \xi}{\partial \hat{y}} \frac{\partial \hat{y}}{\partial w}
+    = \frac{\partial (\hat{y} - t)^2}{\partial \hat{y}} \frac{\partial (x w)}{\partial w} \\
+    = - 2 (\hat{y} - t) x = - 2 (x w - t) x
+  $$`
+</p>
+<p class="fragment current-only" data-code-focus="4-5" style="font-size: 24px">
+  `$$
+    \Delta w = \mu \sum_{i=1}^{N} \frac{\partial \xi_i(\hat{y}_i, t_i)}{\partial w}
+  $$`
+</p>
+<p class="fragment current-only" data-code-focus="7-9" style="font-size: 24px">
+  `$$
+    x \sim {\mathcal {U}}(0, 1) \\
+    t = 3 x + \varepsilon \\
+    \varepsilon \sim N(\mu, \sigma^2) \; \text{with} \; \mu = 0, \sigma = 0.2
+  $$`
+</p>
+
+---
+
+### Regulations
+
+***
+
+#### Overfitting
+
+![](images/overfitting.gif)
+
+[Over-fitting and Regularization](https://towardsdatascience.com/over-fitting-and-regularization-64d16100f45c)   <!-- .element: class="figcaption" -->
+
+***
+
+#### Outliers: Anscombe's quartet
+
+![Anscombe's quartet](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/638px-Anscombe%27s_quartet_3.svg.png) [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_regression) <!-- .element: class="figcaption" -->
+
+***
+
+#### Find Good Compromise
+
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_06.png?raw=true) [Python Machine Learning: Chapter 3 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -136,15 +351,29 @@ https://www.slideshare.net/harshupadhyay/simple-linear-regression-final?next_sli
 
 #### Typical Vector Norms
 
-- `$\ell_1$`-Norm: `$$ ||x||_1=\sum_i |x_i| $$`
-- `$\ell_2$`-Norm: `$$ ||x||_2=\sqrt{\sum_i^{\phantom{n}} |x_i|^2} $$`
-- `$\ell_\infty$`-Norm: `$$ ||x||_\infty=\max_i |x_i| $$`
+|                 |               |                                      |
+|-----------------|---------------|--------------------------------------|
+| `$\ell_0$`-Norm | `$ ∣∣x∣∣_0 $` | `$ \#(i \mid x_i \neq 0) $` |
+| `$\ell_1$`-Norm | `$ ∣∣x∣∣_1 $` | `$ \sum_i ∣x_i∣ $` |
+| `$\ell_2$`-Norm | `$ ∣∣x∣∣_2 $` | `$ \sqrt{\sum_i^{\phantom{n}} ∣x_i∣^2} $` |
+| `$\ell_\infty$`-Norm | `$ ∣∣x∣∣_\infty $` | `$ \max_i ∣x_i∣ $` |
+
+[l0-Norm, l1-Norm, l2-Norm, … , l-infinity Norm](https://rorasa.wordpress.com/2012/05/13/l0-norm-l1-norm-l2-norm-l-infinity-norm/)  <!-- .element: class="figcaption see-also" -->
 
 ***
 
-#### Outliers: Anscombe's quartet
+#### Typical Vector Norms
 
-![Anscombe's quartet](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/638px-Anscombe%27s_quartet_3.svg.png) [Linear regression From Wikipedia](https://en.wikipedia.org/wiki/Linear_regression) <!-- .element: class="figcaption" -->
+![](http://www.stat.ucla.edu/~ybzhao/teaching/stat101c/im/lpball.png)
+
+[Introduction to Statistical Models and Data Mining
+](http://www.stat.ucla.edu/~ybzhao/teaching/stat101c/) <!-- .element: class="figcaption" -->
+
+Note:
+
+https://www.quora.com/What-is-the-difference-between-L1-and-L2-regularization-How-does-it-solve-the-problem-of-overfitting-Which-regularizer-to-use-and-when
+http://blog.shakirm.com/2016/04/learning-in-brains-and-machines-2/
+https://cnx.org/contents/U4hLPGQD@5/Compressible-signals#uid10
 
 ***
 
@@ -156,50 +385,91 @@ https://www.slideshare.net/harshupadhyay/simple-linear-regression-final?next_sli
 - Lasso: `$$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$`
 - Elastic Net:  `$$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$`
 
+***
+
+#### Sparsity
+
+| Ridge                                  | Lasso                               |
+|----------------------------------------|-------------------------------------|
+| ![](https://rasbt.github.io/mlxtend/user_guide/general_concepts/regularization-linear_files/l2.png) | ![](https://rasbt.github.io/mlxtend/user_guide/general_concepts/regularization-linear_files/l1.png)  |
+
+[Regularization of Generalized Linear Models by Sebastian Raschka](https://rasbt.github.io/mlxtend/user_guide/general_concepts/regularization-linear/) <!-- .element: class="figcaption" -->
+
+Note:
+
+![](images/10701/l0_l1_l2.png)  <!-- .element: style="height: 500px" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
+
+[What are the main regularization methods used in machine learning? -- Somdeb Sarkhel's answer](https://www.quora.com/What-are-the-main-regularization-methods-used-in-machine-learning/answer/Somdeb-Sarkhel?srid=xQkR)  <!-- .element: class="figcaption see-also" -->
+
+https://stats.stackexchange.com/questions/45643/why-l1-norm-for-sparse-models
+
+***
+
+#### Prior
+
+| Ridge: Gaussian                        | Lasso: Laplace                      |
+|----------------------------------------|-------------------------------------|
+| ![](images/10701/map_ridge.png)        |![](images/10701/map_lasso.png)      |
+
+[Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
+
+Note:
+
+https://towardsdatascience.com/the-surprising-longevity-of-the-z-score-a8d4f65f64a0
+http://xaktly.com/ProbStat_Distributions.html
+
+
 ---
 
 ### SVM
 
 ***
 
-#### Multiclass Support Vector Machine (SVM)
+#### Support Vector Machine (SVM)
 
 ![](https://kernelmachine.github.io/public/20170304/svm.png)  <!-- .element: style="height: 400px" -->
  [Crash Course on Support Vector Machines](https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/) <!-- .element: class="figcaption" -->
+
+Note:
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~utensil/5.embed"></iframe>
+
+[Logistic Regression – Geometric Intuition](https://florianhartl.com/logistic-regression-geometric-intuition.html)   <!-- .element: class="figcaption" -->
 
 ***
 
 #### SVM: Objective
 
-The SVM amounts to finding hyperplanes such that
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_07.png?raw=true) [Python Machine Learning: Chapter 3 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
 
-`$$
-w^T_{j}x_i - w^T_{y_i}x_i  - b  \ge \delta \text{   } \forall  \text{   }  j \neq y_i
-$$`
+Note:
 
-`$ \delta $` is called the margin.
+The SVM amounts to finding hyperplanes such that `$ w^T_{j}x_i - w^T_{y_i}x_i  - b  \ge \delta \text{   } \forall  \text{   }  j \neq y_i
+$` where `$ \delta $` is called the margin. 
+
+***
+
+<!-- .slide: data-background-iframe="http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/" data-background-interactive -->
 
 ***
 
 #### SVM: Hinge Loss
 
 `$$
-L_i = \sum_{j\neq y_i} \max(0, s_j - s_{y_i} + \delta)
-$$` <!-- .element: class="fragment current-only" -->
+\min_{\mathbf{w}}\ C\underset{Hinge-Loss}{\underbrace{\sum_{i=1}^{n}max[1-y_{i}\underset{h({\mathbf{x}_i})}{\underbrace{(w^{\top}{\mathbf{x}_i}+b)}},0]}}+\underset{l_{2}-Regularizer}{\underbrace{\left\Vert w\right\Vert _{z}^{2}}}
+$$`
 
-`$$
-L_i = \sum\limits_{j \neq y_i} max (0, w^T_{j}x_i - w^T_{y_i}x_i + \delta)
-$$` <!-- .element: class="fragment current-only" -->
+***
 
-`$$
-L = \frac{1}{N}\sum\limits_i\sum\limits_{j \neq y_i} max (0, w^T_{j}x_i - w^T_{y_i}x_i + \delta) \\ + \lambda\sum\limits_{i}\sum\limits_{j}W_{ij}^2
-$$` <!-- .element: class="fragment" -->
+#### Hinge Loss is "Soft" Zero-One Loss
+
+![](http://www.cs.cornell.edu/courses/cs4780/2015fa/web/lecturenotes/pngPic/c4/classificationlosses.png) <!-- .element: class="img-450" --> [Machine Learning CS4780/CS5780: Empirical Risk Minimization](http://www.cs.cornell.edu/courses/cs4780/2015fa/page4/index.html)  <!-- .element: class="figcaption" -->
 
 ***
 
 #### Soft margin SVM
 
-![](https://qph.ec.quoracdn.net/main-qimg-be899c45024583fbcce41af30e0acd98.webp) [In layman's terms, how does SVM work?](https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal?srid=xQkR)  <!-- .element: class="figcaption" -->
+![](https://qph.ec.quoracdn.net/main-qimg-be899c45024583fbcce41af30e0acd98.webp)  [In layman's terms, how does SVM work?](https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal?srid=xQkR)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -260,11 +530,41 @@ Cons:
 
 ***
 
-#### Sigmoid
+#### Logistic Regression is Linear Classification
 
-![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/sigmoid.png)  <!-- .element: style="height: 300px; background-color: white" --> [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
+![](images/lr.png) [Logistic Regression – Geometric Intuition](https://florianhartl.com/logistic-regression-geometric-intuition.html)   <!-- .element: class="figcaption" -->
 
-`$$ sigmoid(x)=\frac{1}{1+e^{-x}} $$`
+***
+
+#### Logistic Regression is Linear Classification
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~utensil/1.embed"></iframe>
+
+[Logistic Regression – Geometric Intuition](https://florianhartl.com/logistic-regression-geometric-intuition.html)   <!-- .element: class="figcaption" -->
+
+***
+
+#### Logistic Regression with 2 Features
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~utensil/3.embed"></iframe>
+
+[Logistic Regression – Geometric Intuition](https://florianhartl.com/logistic-regression-geometric-intuition.html)   <!-- .element: class="figcaption" -->
+
+***
+
+#### Schematic of Logistic Regression
+
+![](http://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression_files/logistic_regression_schematic.png) [Logistic Regression by Sebastian Raschka](http://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression/)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Logistic Function ( a.k.a Sigmoid )
+
+![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/sigmoid.png) <!-- .element: class="img-300" --> [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
+
+`$$ \sigma(x)=\frac{1}{1+e^{-x}} $$`   <!-- .element: class="fragment current-only" -->
+
+`$$ \hat{y} = \sigma(X \boldsymbol{w}) = \frac{1}{1+e^{-X \boldsymbol{w}}} $$`   <!-- .element: class="fragment current-only" -->
 
 Note:
 
@@ -272,21 +572,89 @@ https://stats.stackexchange.com/questions/115258/comprehensive-list-of-activatio
 https://www.kdnuggets.com/2016/08/role-activation-function-neural-network.html
 https://en.wikipedia.org/wiki/Activation_function
 
-***
-
 #### Hyperbolic Tangent (tanh)
 
-![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/tanh.png)  <!-- .element: style="height: 300px; background-color: white" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
+![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/tanh.png)   <!-- .element: class="img-300" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
 
 `$$ tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}} $$`
 
 ***
 
+#### Cross-Entropy Loss
+
+![](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/img/1d8fc59e6a674f1c.png)   <!-- .element: class="img-300" -->  [TensorFlow and deep learning, without a PhD
+](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/#4)  <!-- .element: class="figcaption" -->
+
+`$$ \xi(y,\hat{y}) = - \sum_{i=1}^{n} \left[ y_i log(\hat{y}_i) + (1-y_i)log(1-\hat{y}_i) \right] $$`
+
+Note:
+
+http://peterroelants.github.io/posts/neural_network_implementation_part02/
+
+***
+
+#### Minimizing Cross-Entropy Loss Maximizes the Right Probability
+
+![](https://image.slidesharecdn.com/gentlestintrototensorflowpart3-160629045311/95/gentlest-introduction-to-tensorflow-part-3-66-638.jpg?cb=1486266200) <!-- .element: class="img-left" -->
+
+![](https://image.slidesharecdn.com/gentlestintrototensorflowpart3-160629045311/95/gentlest-introduction-to-tensorflow-part-3-67-638.jpg?cb=1486266200) <!-- .element: class="img-right" -->
+
+[Gentlest Introduction to Tensorflow - Part 3](https://www.slideshare.net/KhorSoonHin/gentlest-introduction-to-tensorflow-part-3)   <!-- .element: class="figcaption" -->
+
+Note:
+
+![](https://image.slidesharecdn.com/gentlestintrototensorflowpart3-160629045311/95/gentlest-introduction-to-tensorflow-part-3-68-638.jpg?cb=1486266200) 
+
+***
+
+<!-- .slide: style="font-size:smaller" -->
+
+#### Linear Regression v.s. Logistic Regression
+
+![](https://cdn-images-1.medium.com/max/1000/1*Oy6O6OdzTXbp_Czi_k4mRg.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Linear Regression v.s. Logistic Regression (Cont.)
+
+![](https://cdn-images-1.medium.com/max/1000/1*1L4lmdLXtcfXbS6urKOKrw.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54) <!-- .element: class="figcaption" -->
+
+---
+
+### Softmax Regression
+
+***
+
 #### Softmax
 
-![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/softmax.png)  <!-- .element: style="height: 300px; background-color: white" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
+`$$ y_c = \varsigma(\mathbf{x})_c = \frac{e^{x_c}}{\sum_{i=1}^C e^{x_i}} \quad \text{for} \; c = 1 \cdots C $$`
 
-`$$ \text{Cross-Entropy Loss:}\quad L_i = -\log\left(\frac{e^{f_{y_i}}}{ \sum\limits_j e^{f_j} }\right)  $$`  <!-- .element: style="font-size: 36px" -->
+where `$ \mathbf{x} , y \in \mathbb{R}^C, y_c \in [0, 1], \sum\limits_{c=1}^C y_c = 1$`
+
+Softmax is a soft version of arg max :  <!-- .element: class="fragment" -->
+
+`$$ \operatorname{arg\,max} ([3, 5, 0]) = [0, 1, 0] $$`  <!-- .element: class="fragment" -->
+
+`$$ \operatorname{softmax} ([3, 5, 0]) \approx [0.12, 0.88, 0] $$`   <!-- .element: class="fragment current-only" -->
+
+`$$ \operatorname{soft\,arg\,max} ([3, 5, 0]) \approx [0.12, 0.88, 0] $$`   <!-- .element: class="fragment current-only" -->
+
+Note:
+
+http://peterroelants.github.io/posts/neural_network_implementation_intermezzo02/
+https://www.quora.com/Why-is-softmax-activate-function-called-softmax
+
+***
+
+#### Softmax Predicts Probability
+
+![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/softmax.png)  <!-- .element: class="img-450" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Schematic of Softmax Regression
+
+![](http://rasbt.github.io/mlxtend/user_guide/classifier/SoftmaxRegression_files/softmax_schematic_1.png)  <!-- .element: class="img-450" -->  [Softmax Regression by Sebastian Raschka](http://rasbt.github.io/mlxtend/user_guide/classifier/SoftmaxRegression/)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -306,20 +674,6 @@ Softmax: multiple-class logistic regression
 `$$ 
 \Pr(Y_i=k) = \frac{e^{\boldsymbol\beta_k \cdot \mathbf{X}_i}} {\sum\limits_{0 \leq c \leq K} {e^{\boldsymbol\beta_c \cdot \mathbf{X}_i}}}
 $$`
-
-***
-
-<!-- .slide: style="font-size:smaller" -->
-
-#### Linear Regression v.s. Logistic Regression
-
-![](https://cdn-images-1.medium.com/max/1000/1*Oy6O6OdzTXbp_Czi_k4mRg.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54)  <!-- .element: class="figcaption" -->
-
-***
-
-#### Linear Regression v.s. Logistic Regression (Cont.)
-
-![](https://cdn-images-1.medium.com/max/1000/1*1L4lmdLXtcfXbS6urKOKrw.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54) <!-- .element: class="figcaption" -->
 
 ---
 
@@ -348,6 +702,8 @@ $w^{i_k}$ represents the $i_k$-th element of the parameter vector, and $e_{i_k}$
 ***
 
 #### Gradient Descent (GD)
+
+![](https://sebastianraschka.com/images/faq/closed-form-vs-gd/ball.png)   <!-- .element: class="img-300" --> [Machine Learning FAQ by Sebastian Raschka](https://sebastianraschka.com/faq/docs/closed-form-vs-gd.html)   <!-- .element: class="figcaption" -->
 
 `$$
 \text{Stochastic: }\quad w_{k+1} \gets w_k - \alpha_k \nabla f_{i_k}(w_k)
@@ -453,9 +809,28 @@ http://scikit-learn.org/stable/modules/sgd.html
 
 ***
 
+#### Tree
+
+![](https://www.analyticsvidhya.com/wp-content/uploads/2016/04/111.png) [A Complete Tutorial on Tree Based Modeling from Scratch (in R & Python)](https://www.analyticsvidhya.com/blog/2016/04/complete-tutorial-tree-based-modeling-scratch-in-python/) <!-- .element: class="figcaption" -->
+
+***
+
 #### Decision Trees
 
+![](images/decision_tree_for_credit.png) [A Practical Guide to Tree Based Learning Algorithms](https://sadanand-singh.github.io/posts/treebasedmodels/) <!-- .element: class="figcaption" -->
+
+***
+
+#### Decision Trees with Details
+
 ![](http://scikit-learn.org/stable/_images/iris.svg)   <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Trees](http://scikit-learn.org/stable/modules/tree.html)   <!-- .element: class="figcaption" -->
+
+***
+
+#### Decision Surface
+
+![](http://efavdb.com/wp-content/uploads/2015/03/tree1.jpg) [Machine Learning Methods: Decision trees and forests](http://efavdb.com/notes-on-trees/) <!-- .element: class="figcaption" -->
+
 
 ***
 
@@ -519,31 +894,39 @@ http://scikit-learn.org/stable/modules/sgd.html
 
 ***
 
+#### K-nearest Neighbors
+
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_20.png?raw=true)   <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 3 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
+
+***
+
 #### Nearest Neighbors Classification
 
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_001.png)  <!-- .element: style="float:left; width: 49%" -->
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_001.png)  <!-- .element: class="img-left" -->
 
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_002.png)  <!-- .element: style="float:right; width: 49%" -->
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_002.png)  <!-- .element: class="img-right" -->
 
 [scikit-learn User Guide: Nearest Neighbors Classification Example](http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
 
 ***
 
-#### Nearest Neighbors regression
+#### Nearest Neighbors Regression
 
 ![](http://scikit-learn.org/stable/_images/sphx_glr_plot_regression_001.png)
 
 [scikit-learn User Guide: Nearest Neighbors regression Example](http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
 
+
+
 ***
 
 #### Nearest Centroid Classification
 
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_nearest_centroid_001.png)  <!-- .element: style="float:left; width: 49%" -->
+![](https://image.slidesharecdn.com/luccasummerschooltextmininghandouts-121112082043-phpapp02/95/text-and-text-stream-mining-tutorial-23-638.jpg?cb=1352708688)  <!-- .element: style="float:left; width: 49%" -->
 
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_nearest_centroid_002.png)  <!-- .element: style="float:right; width: 49%" -->
+![](https://image.slidesharecdn.com/luccasummerschooltextmininghandouts-121112082043-phpapp02/95/text-and-text-stream-mining-tutorial-24-638.jpg?cb=1352708688)  <!-- .element: style="float:right; width: 49%" -->
 
-[scikit-learn User Guide: Nearest Centroid Classification](http://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
+[Text and text stream mining tutorial](https://www.slideshare.net/mgrcar/text-and-text-stream-mining-tutorial-15137759)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -567,6 +950,10 @@ http://scikit-learn.org/stable/modules/sgd.html
     <td>`$ \mathcal{O}( D_\text{features} \log{N_\text{samples} )} $`</td>
   </tr>
 </table>
+
+***
+
+<!-- .slide: data-background-iframe="http://vision.stanford.edu/teaching/cs231n-demos/knn/" data-background-interactive -->
 
 ---
 
@@ -656,6 +1043,17 @@ https://github.com/jatinshah/ufldl_tutorial
 
 ***
 
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_01.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb) 
+
+Also 7 Assembling
+
+***
+
+https://en.wikipedia.org/wiki/Correlation_and_dependence
+https://en.wikipedia.org/wiki/Instrumental_variables_estimation
+
+***
+
 https://github.com/utensil/julia-playground/blob/master/dl/train_captcha.py
 https://keras.io/getting-started/faq/#how-can-i-use-keras-with-datasets-that-dont-fit-in-memory
 https://github.com/fchollet/keras/issues/7729
@@ -687,6 +1085,10 @@ https://github.com/fchollet/keras/issues/4278#issuecomment-264665803
 
 - http://slides.com/beamandrew/deep-learning-101#/
 - http://donsoft.io/intro-to-deeplearning
+
+***
+
+<!-- .slide: data-background-iframe="http://cs231n.github.io/assets/conv-demo/index.html" data-background-interactive -->
 
 ---
 
@@ -1404,10 +1806,6 @@ else:
 <p class="fragment current-only" data-code-focus="9-14">
   comment 3
 </p>
-
-***
-
-<!-- .slide: data-background-iframe="https://www.youtube.com/embed/gn4nRCC9TwQ" data-background-interactive -->
 
 ***
 
