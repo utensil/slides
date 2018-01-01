@@ -63,3 +63,4 @@ typings/
 
 # custom
 ml/images/bgs
+ml/*.pdf
