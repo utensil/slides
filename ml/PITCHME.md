@@ -62,6 +62,10 @@ Note:
 
 [Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
+Note:
+
+http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html
+
 ***
 
 #### Reinforcement Learning
@@ -89,6 +93,7 @@ Note:
 
 http://detexify.kirelabs.org/classify.html
 http://shapecatcher.com/
+https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
 
 https://towardsdatascience.com/machine-learning-quick-reference-card-cf92f6accd08
 [Essentials of Machine Learning Algorithms with Python and R Codes](https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/)
@@ -552,6 +557,20 @@ Cons:
 
 ***
 
+<!-- .slide: style="font-size:smaller" -->
+
+#### Linear Regression v.s. Logistic Regression
+
+![](https://cdn-images-1.medium.com/max/1000/1*Oy6O6OdzTXbp_Czi_k4mRg.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Linear Regression v.s. Logistic Regression (Cont.)
+
+![](https://cdn-images-1.medium.com/max/1000/1*1L4lmdLXtcfXbS6urKOKrw.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54) <!-- .element: class="figcaption" -->
+
+***
+
 #### Schematic of Logistic Regression
 
 ![](http://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression_files/logistic_regression_schematic.png) [Logistic Regression by Sebastian Raschka](http://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression/)  <!-- .element: class="figcaption" -->
@@ -562,7 +581,7 @@ Cons:
 
 ![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/sigmoid.png) <!-- .element: class="img-300" --> [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
 
-`$$ \sigma(x)=\frac{1}{1+e^{-x}} $$`   <!-- .element: class="fragment current-only" -->
+`$$ \sigma(x) = \frac{1}{1+e^{-x}} $$`   <!-- .element: class="fragment current-only" -->
 
 `$$ \hat{y} = \sigma(X \boldsymbol{w}) = \frac{1}{1+e^{-X \boldsymbol{w}}} $$`   <!-- .element: class="fragment current-only" -->
 
@@ -572,11 +591,19 @@ https://stats.stackexchange.com/questions/115258/comprehensive-list-of-activatio
 https://www.kdnuggets.com/2016/08/role-activation-function-neural-network.html
 https://en.wikipedia.org/wiki/Activation_function
 
+***
+
 #### Hyperbolic Tangent (tanh)
 
 ![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/tanh.png)   <!-- .element: class="img-300" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
 
-`$$ tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}} $$`
+`$$
+tanh(x) = \frac{1-e^{-2x}}{1+e^{-2x}} = 2\sigma (2x)-1 
+$$`
+
+`$$
+tanh(x) \in (-1, 1) \; \text{while} \; \sigma (x) \in (0,1)
+$$`  <!-- .element: class="fragment" -->
 
 ***
 
@@ -604,20 +631,6 @@ http://peterroelants.github.io/posts/neural_network_implementation_part02/
 Note:
 
 ![](https://image.slidesharecdn.com/gentlestintrototensorflowpart3-160629045311/95/gentlest-introduction-to-tensorflow-part-3-68-638.jpg?cb=1486266200) 
-
-***
-
-<!-- .slide: style="font-size:smaller" -->
-
-#### Linear Regression v.s. Logistic Regression
-
-![](https://cdn-images-1.medium.com/max/1000/1*Oy6O6OdzTXbp_Czi_k4mRg.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54)  <!-- .element: class="figcaption" -->
-
-***
-
-#### Linear Regression v.s. Logistic Regression (Cont.)
-
-![](https://cdn-images-1.medium.com/max/1000/1*1L4lmdLXtcfXbS6urKOKrw.png) [Gentlest Intro to Tensorflow #4: Logistic Regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-4-logistic-regression-2afd0cabc54) <!-- .element: class="figcaption" -->
 
 ---
 
@@ -734,7 +747,7 @@ Comparison of a few optimization methods (animation by Alec Radford). The star d
 
 [Using convolutional neural nets to detect facial keypoints tutorial](http://danielnouri.org/notes/category/machine-learning/#testing-it-out)
 [Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)
-[Test functions for optimization](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
+[**Test functions for optimization**](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
 
 ***
 
@@ -1013,6 +1026,16 @@ $$`   <!-- .element: class="fragment current-only" -->
 \hat{y} = \arg\max_y P(y) \prod_{i=1}^{n} P(x_i \mid y)
 $$`   <!-- .element: class="fragment" -->
 
+Note:
+
+https://en.wikipedia.org/wiki/Naive_Bayes_classifier
+https://stackoverflow.com/questions/10059594/a-simple-explanation-of-naive-bayes-classification
+
+***
+
+[Remove Stepwise Regression and Bayes Regression for now](https://github.com/utensil/slides/commit/9b78364e0c5dff3c2ffee056c60039ac6d0ff6bf#diff-37928793727600d98cc6e6c8a0075033)
+https://en.wikipedia.org/wiki/Principal_component_analysis
+
 ---
 
 ### Links (Temp)
@@ -1059,6 +1082,7 @@ https://keras.io/getting-started/faq/#how-can-i-use-keras-with-datasets-that-don
 https://github.com/fchollet/keras/issues/7729
 https://github.com/fchollet/keras/issues/1711
 https://blog.sigopt.com/posts/common-problems-in-hyperparameter-optimization
+https://scikit-optimize.github.io/
 https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
 https://github.com/thuijskens/bayesian-optimization
 https://elitedatascience.com/overfitting-in-machine-learning#how-to-prevent
