@@ -87,6 +87,21 @@ http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.htm
 
 ---
 
+### Basic Concepts in Data Science
+
+***
+
+#### Confusion Matrix
+
+|          |                                       |              |
+|----------|---------------------------------------|--------------|
+| Accuracy | (True Positive + True Negative) / All |  right       |
+| Precision | True Positive / All Positive | positive and right |
+| Recall/Sensitivity | True Positive / All Real (= True Positive + False Negative) | real and right |
+| Specificity | True Negative / All NOT Real (= True Negative + False Positive)  | not real and right |
+
+---
+
 ## Traditional Machine Learning Methods
 
 Note:
