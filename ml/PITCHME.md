@@ -91,6 +91,55 @@ http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.htm
 
 ***
 
+#### What is Data Science?
+
+![](https://i2.wp.com/blog.operasolutions.com/Portals/213893/images/OS_SignalCentral%20What%20Is%20Data%20Science_GP_2014_V1.2_Venn%20Diagram.jpg?zoom=2)   <!-- .element: class="img-500" --> [DATA SCIENCE & SCIENTISTS](https://science2knowledge.wordpress.com/data-science-scientists/)   <!-- .element: class="figcaption" -->
+
+***
+
+#### Epicycles of Analysis <!-- .element: style="font-size: 42px" -->
+
+![](https://i0.wp.com/blog.operasolutions.com/Portals/213893/images/OS_SignalCentral%20What%20Is%20Data%20Science_GP_2014_V1.2_The%20Data%20Science%20Process.jpg?zoom=2)   <!-- .element: class="img-550" -->  [DATA SCIENCE & SCIENTISTS](https://science2knowledge.wordpress.com/data-science-scientists/)   <!-- .element: class="figcaption" -->
+
+Note:
+
+- Stating and refining the question
+- Exploring the data
+- Building formal statistical models
+- Interpreting the results
+- Communicating the results
+
+https://gohighbrow.com/the-data-analysis-epicycle/
+https://bookdown.org/rdpeng/artofdatascience/epicycle-of-analysis.html
+
+![](https://4cawmi2va33i3w6dek1d7y1m-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/2_1_Full_Intro-to-Data-Science-e1486482232872-776x1024.jpg) [The Data Analysis Epicycle](https://gohighbrow.com/the-data-analysis-epicycle/)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Six Types of Analyses
+
+- Descriptive
+- Exploratory
+- Inferential
+- Predictive
+- Causal
+- Mechanistic
+
+<div style="float: right;width: 70%;">
+[Course Introduction - Advanced Data Science by Jeff Leek](http://jtleek.com/advdatasci/slides/01-introduction-slides.html#38)  <!-- .element: class="figcaption" -->
+<iframe src="http://jtleek.com/advdatasci/slides/01-introduction-slides.html#38" />
+</div>
+
+Note:
+
+https://bookdown.org/rdpeng/artofdatascience/types-of-questions.html
+https://datascientistinsights.com/2013/01/29/six-types-of-analyses-every-data-scientist-should-know/
+https://www.coursera.org/specializations/jhu-data-science
+https://www.pinterest.com.au/pin/572520171368225895/
+http://www.caperay.com/blog/index.php/2015/ask-the-right-questions/
+
+***
+
 <!-- .slide: style="font-size: 16px" -->
 
 #### Confusion Matrix <!-- .element: style="font-size: 42px" -->

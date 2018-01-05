@@ -27,7 +27,11 @@ iframe {
 }
 
 .reveal section img.img-500 {
-  height: 450px;
+  height: 500px;
+}
+
+.reveal section img.img-550 {
+  height: 550px;
 }
 
 .reveal section img.img-left {
