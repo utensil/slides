@@ -196,7 +196,7 @@ negative</td>
 </tr>
 </tbody></table>
 
-[Sensitivity and specificity From Wikipedia](https://en.wikipedia.org/wiki/Sensitivity_and_specificity) <!-- .element: class="figcaption" -->
+[Wikipedia: Sensitivity and specificity](https://en.wikipedia.org/wiki/Sensitivity_and_specificity) <!-- .element: class="figcaption" -->
 
 ***
 
@@ -474,7 +474,7 @@ $$`
 
 ***
 
-#### Implementing Linear Regression
+#### Implementing Linear Regression with GD
 
 <!-- .slide: style="font-size: 32px;" -->
 
@@ -786,6 +786,8 @@ http://xaktly.com/ProbStat_Distributions.html
 
 `$$ \hat{y} = \sigma(X \boldsymbol{w}) = \frac{1}{1+e^{-X \boldsymbol{w}}} $$`   <!-- .element: class="fragment current-only" -->
 
+`$$ \hat{y} = \sigma(X \boldsymbol{w}) = \frac{1}{2}(\tanh(X \boldsymbol{w}) + 1)$$`   <!-- .element: class="fragment current-only" -->
+
 Note:
 
 https://stats.stackexchange.com/questions/115258/comprehensive-list-of-activation-functions-in-neural-networks-with-pros-cons
@@ -799,11 +801,11 @@ https://en.wikipedia.org/wiki/Activation_function
 ![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/tanh.png)   <!-- .element: class="img-300" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
 
 `$$
-tanh(x) = \frac{1-e^{-2x}}{1+e^{-2x}} = 2\sigma (2x)-1 
+\tanh(x) = \frac{1-e^{-2x}}{1+e^{-2x}} = 2\sigma (2x)-1 
 $$`
 
 `$$
-tanh(x) \in (-1, 1) \; \text{while} \; \sigma (x) \in (0,1)
+\tanh(x) \in (-1, 1) \; \text{while} \; \sigma (x) \in (0,1)
 $$`  <!-- .element: class="fragment" -->
 
 ***
@@ -815,23 +817,47 @@ $$`  <!-- .element: class="fragment" -->
 
 `$$ \xi(y,\hat{y}) = - \sum_{i=1}^{n} \left[ y_i log(\hat{y}_i) + (1-y_i)log(1-\hat{y}_i) \right] $$`
 
-Note:
+***
 
-http://peterroelants.github.io/posts/neural_network_implementation_part02/
+<!-- .slide: style="font-size:smaller" -->
+
+#### Impelementing Logistic Regression
+
+```python
+def logistic(z): 
+    return 1 / (1 + np.exp(-z))
+
+def nn(x, w): 
+    return logistic(x.dot(w.T))
+
+def nn_predict(x,w): 
+    return np.around(nn(x,w))
+
+def cost(t, y):
+    return - np.sum(
+      np.multiply(t, np.log(y)) + 
+      np.multiply((1-t), np.log(1-y))
+    )
+```
+
+<p class="fragment current-only" data-code-focus="1-2">
+`$$ \sigma(z) = \frac{1}{1+e^{-z}} $$`
+</p>
+<p class="fragment current-only" data-code-focus="4-5">
+`$$ y = \sigma(X \boldsymbol{w}) $$`
+</p>
+<p class="fragment current-only" data-code-focus="7-8">
+`$$ \hat{y} = \left\lfloor y + 0.5 \right\rfloor = -\left\lceil -y - 0.5 \right\rceil $$`
+
+[Wikipedia: Rounding](https://en.wikipedia.org/wiki/Rounding)  <!-- .element: class="figcaption" -->
+</p>
+<p class="fragment current-only" data-code-focus="10-14">
+`$$ \xi(t,\hat{y}) = - \sum_{i=1}^{n} \left[ t_i log(\hat{y}_i) + (1-t_i)log(1-\hat{y}_i) \right] $$`
+</p>
 
 ***
 
-#### Minimizing Cross-Entropy Loss Maximizes the Right Probability
-
-![](https://image.slidesharecdn.com/gentlestintrototensorflowpart3-160629045311/95/gentlest-introduction-to-tensorflow-part-3-66-638.jpg?cb=1486266200) <!-- .element: class="img-left" -->
-
-![](https://image.slidesharecdn.com/gentlestintrototensorflowpart3-160629045311/95/gentlest-introduction-to-tensorflow-part-3-67-638.jpg?cb=1486266200) <!-- .element: class="img-right" -->
-
-[Gentlest Introduction to Tensorflow - Part 3](https://www.slideshare.net/KhorSoonHin/gentlest-introduction-to-tensorflow-part-3)   <!-- .element: class="figcaption" -->
-
-Note:
-
-![](https://image.slidesharecdn.com/gentlestintrototensorflowpart3-160629045311/95/gentlest-introduction-to-tensorflow-part-3-68-638.jpg?cb=1486266200) 
+<!-- .slide: data-background-iframe="http://nbviewer.jupyter.org/github/peterroelants/peterroelants.github.io/blob/master/notebooks/neural_net_implementation/neural_network_implementation_part02.ipynb" data-background-interactive -->
 
 ---
 
@@ -872,6 +898,31 @@ https://www.quora.com/Why-is-softmax-activate-function-called-softmax
 
 ***
 
+#### Cross-Entropy Loss for Softmax
+
+`$$ \underset{\theta}{\operatorname{arg\,max}}\; \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) $$`
+
+`$$ = \underset{\theta}{\operatorname{arg\,min}} \; - log \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) = \xi(\mathbf{t},\mathbf{z}) \\
+= - log \prod_{i=c}^{C} y_c^{t_c} = - \sum_{i=c}^{C} t_c \cdot log(y_c) $$`
+
+[How to implement Softmax Classification](http://peterroelants.github.io/posts/neural_network_implementation_intermezzo02/)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Minimizing Cross-Entropy Loss Maximizes the Right Probability
+
+![](https://image.slidesharecdn.com/gentlestintrototensorflowpart3-160629045311/95/gentlest-introduction-to-tensorflow-part-3-66-638.jpg?cb=1486266200) <!-- .element: class="img-left" -->
+
+![](https://image.slidesharecdn.com/gentlestintrototensorflowpart3-160629045311/95/gentlest-introduction-to-tensorflow-part-3-67-638.jpg?cb=1486266200) <!-- .element: class="img-right" -->
+
+[Gentlest Introduction to Tensorflow - Part 3](https://www.slideshare.net/KhorSoonHin/gentlest-introduction-to-tensorflow-part-3)   <!-- .element: class="figcaption" -->
+
+Note:
+
+![](https://image.slidesharecdn.com/gentlestintrototensorflowpart3-160629045311/95/gentlest-introduction-to-tensorflow-part-3-68-638.jpg?cb=1486266200) 
+
+***
+
 #### Sigmoid v.s. Softmax
 
 Sigmoid: two-class logistic regression
@@ -888,6 +939,17 @@ Softmax: multiple-class logistic regression
 `$$ 
 \Pr(Y_i=k) = \frac{e^{\boldsymbol\beta_k \cdot \mathbf{X}_i}} {\sum\limits_{0 \leq c \leq K} {e^{\boldsymbol\beta_c \cdot \mathbf{X}_i}}}
 $$`
+
+***
+
+#### Implementing Softmax Regression
+
+```python
+def softmax(z):
+    return np.exp(z) / np.sum(np.exp(z))
+
+
+```
 
 ---
 
