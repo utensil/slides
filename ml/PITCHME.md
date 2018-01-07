@@ -412,8 +412,8 @@ def cost(y, t):
     return ((y - t)**2).sum()
 
 nb_of_samples = 20
-x = numpy.random.uniform(0, 1, nb_of_samples)
-t = 3 * x + numpy.random.normal(0, 0.2, nb_of_samples)
+x = np.random.uniform(0, 1, nb_of_samples)
+t = 3 * x + np.random.normal(0, 0.2, nb_of_samples)
 
 # And then...
 ```
@@ -482,8 +482,8 @@ $$`
 def nn(x, w): return x * w
 def cost(y, t): return ((y - t)**2).sum()
 nb_of_samples = 20
-x = numpy.random.uniform(0, 1, nb_of_samples)
-t = 3 * x + numpy.random.normal(0, 0.2, nb_of_samples)
+x = np.random.uniform(0, 1, nb_of_samples)
+t = 3 * x + np.random.normal(0, 0.2, nb_of_samples)
 
 def gradient(w, x, t): return 2 * (nn(x, w) - t) * x
 def delta_w(w, x, t, learning_rate):
@@ -810,7 +810,7 @@ $$`  <!-- .element: class="fragment" -->
 
 ***
 
-#### Cross-Entropy Loss
+#### Binary Cross-Entropy Loss
 
 ![](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/img/1d8fc59e6a674f1c.png)   <!-- .element: class="img-300" -->  [TensorFlow and deep learning, without a PhD
 ](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/#4)  <!-- .element: class="figcaption" -->
@@ -945,12 +945,42 @@ $$`
 #### Implementing Softmax Regression
 
 ```python
+z = [
+  [30, 60, 90],
+  [1, 3, 4.5]
+]
+
+def softmax_naive(z):
+    return np.exp(z) / np.sum(np.exp(z), axis=1, keepdims=True)
+
 def softmax(z):
-    return np.exp(z) / np.sum(np.exp(z))
-
-
+    # Avoid numerical overflow by removing max
+    e = np.exp(z - np.amax(z, axis=1, keepdims=True))
+    return e / np.sum(e, axis=1, keepdims=True)
 ```
 
+***
+
+#### Try it out
+
+```python
+>>> softmax_naive(z)
+array([[  8.75651076e-27,   9.35762297e-14,   1.00000000e+00],
+       [  2.40937683e-02,   1.78030206e-01,   7.97876026e-01]])
+>>> np.argmax(softmax_naive(z))
+2
+>>> np.around(softmax_naive(z))
+array([[ 0.,  0.,  1.],
+       [ 0.,  0.,  1.]])
+>>> softmax(z)
+array([[  8.75651076e-27,   9.35762297e-14,   1.00000000e+00],
+       [  2.40937683e-02,   1.78030206e-01,   7.97876026e-01]])
+>>> np.argmax(softmax(z))
+2
+>>> np.around(softmax(z))
+array([[ 0.,  0.,  1.],
+       [ 0.,  0.,  1.]])
+```
 ---
 
 ### SVM
