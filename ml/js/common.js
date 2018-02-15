@@ -54,6 +54,14 @@ var observeDOM = (function(){
   };
 })();
 
+head.load('./_assets/css/vendor/mermaid.forest.css');
+head.load('./_assets/js/vendor/mermaidAPI.js', function () {
+  mermaidAPI.initialize({
+    startOnLoad: false,
+    cloneCssStyles: false
+  });
+});
+
 Reveal.addEventListener('ready', function () {
 
   head.load('./_assets/js/reveal-code-focus-modified.js', function () {
@@ -62,35 +70,35 @@ Reveal.addEventListener('ready', function () {
     RevealCodeFocus();
   });
 
-  if(window.location.search.match( /print-pdf/gi )) {
-    var timeOfLastUpdate = new Date();
-    var idleTime = 10000 /* ms */;
+  // if(window.location.search.match( /print-pdf/gi )) {
+  //   var timeOfLastUpdate = new Date();
+  //   var idleTime = 10000 /* ms */;
 
-    observeDOM(document.querySelector('.reveal'), function () {
-      // console.log('observeDOM', Date.now() - timeOfLastUpdate);
+  //   observeDOM(document.querySelector('.reveal'), function () {
+  //     // console.log('observeDOM', Date.now() - timeOfLastUpdate);
 
-      timeOfLastUpdate = Date.now();
+  //     timeOfLastUpdate = Date.now();
 
-      setTimeout(function () {
-        if (Date.now() - timeOfLastUpdate > idleTime) {
-          var allBgs = document.querySelectorAll('.print-pdf .pdf-page .slide-background');
+  //     setTimeout(function () {
+  //       if (Date.now() - timeOfLastUpdate > idleTime) {
+  //         var allBgs = document.querySelectorAll('.print-pdf .pdf-page .slide-background');
           
-          allBgs.forEach(function (bg) {
-            var iframeBg = bg.querySelector('iframe');
-            if(iframeBg != null) {
-              var url = iframeBg.getAttribute('src');
-              iframeSource = document.createElement('div');
-              iframeSource.innerHTML = '<div class="iframe-source">Source: <a target="_blank" href="' + url + '">' 
-              + url + '</a></div>';
-              bg.appendChild(iframeSource);
-            }
-          });
+  //         allBgs.forEach(function (bg) {
+  //           var iframeBg = bg.querySelector('iframe');
+  //           if(iframeBg != null) {
+  //             var url = iframeBg.getAttribute('src');
+  //             iframeSource = document.createElement('div');
+  //             iframeSource.innerHTML = '<div class="iframe-source">Source: <a target="_blank" href="' + url + '">' 
+  //             + url + '</a></div>';
+  //             bg.appendChild(iframeSource);
+  //           }
+  //         });
   
-          console.log('iframe source added!');
-        }
-      }, idleTime);      
-    });
-  }
+  //         console.log('iframe source added!');
+  //       }
+  //     }, idleTime);      
+  //   });
+  // }
 });
 
 Reveal.addEventListener('slidechanged', function (event) {
@@ -114,7 +122,92 @@ Reveal.addEventListener('slidechanged', function (event) {
     iframeSource.innerHTML = "";
     iframeSource.style.display = "none";
   }
-})
+});
+
+function renderMermaid(cur) {
+  var diagramCodeTag = cur.querySelector('code.mermaid');
+  var renderedDiagram = cur.querySelector('.mermaidSvg');
+
+  // window.debugLocal = {
+  //   diagramCodeTag: diagramCodeTag,
+  //   mermaidAPI: mermaidAPI
+  // };
+
+  if(diagramCodeTag != null && mermaidAPI != null) {
+    // console.log(diagramCodeTag);
+    var diagramSource = diagramCodeTag.textContent;
+    // console.log(diagramSource);
+    var id = Math.floor(Math.random() * 1000).toString();
+
+    // cur.classList.add("mermaidSlide"); 
+
+    mermaidAPI.render('mermaid-diagram-' + id, diagramSource, function (svgCode, bindFunctions) {
+      // console.log(svgCode);
+    
+      var svgDiv = document.createElement('div');
+      svgDiv.className = 'mermaidSvg';
+      svgDiv.innerHTML = svgCode;
+
+      diagramCodeTag.style.display = "none";
+      if(renderedDiagram != null) {
+        renderedDiagram.remove();
+      }
+      
+      cur.appendChild(svgDiv);
+    });
+  }
+}
+
+Reveal.addEventListener('slidechanged', function (event) {
+  var cur = event.currentSlide;
+  renderMermaid(cur);
+});
+
+if (window.location.search.match( /print-pdf/gi )) {
+  Reveal.addEventListener('ready', function () {
+    var slides = document.querySelectorAll('.reveal .slides section');
+    slides.forEach(function (cur) {
+      renderMermaid(cur);
+
+      var codeComments = cur.querySelectorAll('.fragment[data-code-focus]');
+
+      if (codeComments) {
+        var codeFocus = cur.querySelectorAll('code.focus');
+        codeFocus.forEach(function (c) {
+            c.style.zoom = 0.5;
+        });
+      }
+      
+      codeComments.forEach(function (codeComment) {
+        var codeLineSpec = codeComment.getAttribute('data-code-focus');
+        codeComment.classList.remove('fragment');
+        codeComment.style.zoom = 1 / (codeComments.length || 2) * 2;
+        var codeLineSpecSpan = document.createElement('span');
+        codeLineSpecSpan.textContent = 'line ' + codeLineSpec + ': ';
+        codeLineSpecSpan.style.cssFloat = 'left';
+        codeLineSpecSpan.style.marginLeft = '10%';
+        codeComment.insertBefore(codeLineSpecSpan, codeComment.firstChild);
+      });
+
+      if (cur.hasAttribute('data-background-iframe')) {
+        // console.log(cur);
+
+        var iframeSource = document.createElement('div');
+        iframeSource.className = 'iframe-source';
+
+        var url = cur.getAttribute('data-background-iframe');
+
+        var maxLen = 100;
+
+        iframeSource.innerHTML = 'Source: <a target="_blank" href="' + url + '">' 
+                              + ( url.length > maxLen ? (url.substr(0, maxLen) + '...') : url) + '</a>';
+        iframeSource.style.display = "block";
+        cur.appendChild(iframeSource);
+      }
+      
+    });
+  });
+}
 
 /*
 Reveal.configure({
