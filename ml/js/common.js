@@ -58,7 +58,11 @@ head.load('./_assets/css/vendor/mermaid.forest.css');
 head.load('./_assets/js/vendor/mermaidAPI.js', function () {
   mermaidAPI.initialize({
     startOnLoad: false,
-    cloneCssStyles: false
+    cloneCssStyles: false,
+    sequenceDiagram: {
+      height: 30,
+      mirrorActors: false
+    }
   });
 });
 
@@ -69,36 +73,6 @@ Reveal.addEventListener('ready', function () {
     console.log(window.hljs);
     RevealCodeFocus();
   });
-
-  // if(window.location.search.match( /print-pdf/gi )) {
-  //   var timeOfLastUpdate = new Date();
-  //   var idleTime = 10000 /* ms */;
-
-  //   observeDOM(document.querySelector('.reveal'), function () {
-  //     // console.log('observeDOM', Date.now() - timeOfLastUpdate);
-
-  //     timeOfLastUpdate = Date.now();
-
-  //     setTimeout(function () {
-  //       if (Date.now() - timeOfLastUpdate > idleTime) {
-  //         var allBgs = document.querySelectorAll('.print-pdf .pdf-page .slide-background');
-          
-  //         allBgs.forEach(function (bg) {
-  //           var iframeBg = bg.querySelector('iframe');
-  //           if(iframeBg != null) {
-  //             var url = iframeBg.getAttribute('src');
-  //             iframeSource = document.createElement('div');
-  //             iframeSource.innerHTML = '<div class="iframe-source">Source: <a target="_blank" href="' + url + '">' 
-  //             + url + '</a></div>';
-  //             bg.appendChild(iframeSource);
-  //           }
-  //         });
-  
-  //         console.log('iframe source added!');
-  //       }
-  //     }, idleTime);      
-  //   });
-  // }
 });
 
 Reveal.addEventListener('slidechanged', function (event) {
@@ -125,21 +99,15 @@ Reveal.addEventListener('slidechanged', function (event) {
 });
 
 function renderMermaid(cur) {
-  var diagramCodeTag = cur.querySelector('code.mermaid');
+  var diagramCodeTag = cur.querySelector('code.lang-mermaid');
   var renderedDiagram = cur.querySelector('.mermaidSvg');
-
-  // window.debugLocal = {
-  //   diagramCodeTag: diagramCodeTag,
-  //   mermaidAPI: mermaidAPI
-  // };
 
   if(diagramCodeTag != null && mermaidAPI != null) {
     // console.log(diagramCodeTag);
     var diagramSource = diagramCodeTag.textContent;
     // console.log(diagramSource);
-    var id = Math.floor(Math.random() * 1000).toString();
 
-    // cur.classList.add("mermaidSlide"); 
+    var id = Math.floor(Math.random() * 1000).toString();
 
     mermaidAPI.render('mermaid-diagram-' + id, diagramSource, function (svgCode, bindFunctions) {
       // console.log(svgCode);
@@ -148,12 +116,13 @@ function renderMermaid(cur) {
       svgDiv.className = 'mermaidSvg';
       svgDiv.innerHTML = svgCode;
 
+      cur.insertBefore(svgDiv, diagramCodeTag.parentNode);
+
       diagramCodeTag.style.display = "none";
+
       if(renderedDiagram != null) {
         renderedDiagram.remove();
       }
-      
-      cur.appendChild(svgDiv);
     });
   }
 }
@@ -208,10 +177,3 @@ if (window.location.search.match( /print-pdf/gi )) {
     });
   });
 }
-
-/*
-Reveal.configure({
-  showNotes: true,
-  previewLinks: true,
-});
-*/
