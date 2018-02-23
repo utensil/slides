@@ -1023,6 +1023,40 @@ $$`
 
 ***
 
+#### SVM: Hinge Loss ( Another Form )
+
+`$$
+\underset{Hinge-Loss}{\underbrace{\ \sum_{i=1}^n\big(1-y_i \langle x_i,w \rangle\big)_+}} + \underset{w}{min}\ \lambda\underset{l_{2}-Regularizer}{\underbrace{\parallel w\parallel^2}}
+$$`
+
+[A Support Vector Machine in just a few Lines of Python Code](https://maviccprp.github.io/a-support-vector-machine-in-just-a-few-lines-of-python-code/)  <!-- .element: class="figcaption" -->
+
+***
+
+#### SVM: Hinge Loss ( The Derivatives )
+
+`$$
+\frac{\partial}{\partial w_k} \lambda\parallel w\parallel^2 \ = 2 \lambda w_k
+$$`
+
+`$$
+\frac{\partial}{\partial w_k} \big(1-y_i \langle x_i,w \rangle\big)_+ \ = \begin{cases}
+    0,                       & y_i \langle x_i,w \rangle\geq 1\\
+    -y_ix_{ik},              & \text{otherwise}
+\end{cases}
+$$`
+
+`$$
+\implies \Delta w = \begin{cases}
+    2\lambda w - y_ix_i,     & y_i \langle x_i,w \rangle\lt 1\\
+    2\lambda w,              & \text{otherwise}
+\end{cases}
+$$`
+
+[A Support Vector Machine in just a few Lines of Python Code](https://maviccprp.github.io/a-support-vector-machine-in-just-a-few-lines-of-python-code/)  <!-- .element: class="figcaption" -->
+
+***
+
 #### Hinge Loss is "Soft" Zero-One Loss
 
 ![](http://www.cs.cornell.edu/courses/cs4780/2015fa/web/lecturenotes/pngPic/c4/classificationlosses.png) <!-- .element: class="img-450" --> [Machine Learning CS4780/CS5780: Empirical Risk Minimization](http://www.cs.cornell.edu/courses/cs4780/2015fa/page4/index.html)  <!-- .element: class="figcaption" -->
@@ -1057,6 +1091,33 @@ https://isaacchanghau.github.io/2017/08/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-
 - Radial basis func(RBF): `$ K(x, y) = \exp(-\gamma \| x - y\|^2) $`
 
 [How do I select SVM kernels?](https://www.quora.com/How-do-I-select-SVM-kernels/answer/Prasoon-Goyal)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Impelementing SVM
+
+```python
+def nn(x, w): np.sign(np.dot(x, w)).astype(int)
+def cost(y, t): return ?
+nb_of_samples = 20
+x = np.random.uniform(0, 1, nb_of_samples)
+t = ?
+
+def gradient(w, x, t, ld): 
+  return np.multiply(t, x) + ld * 2 * w if np.multiply(t, np.dot(x, w)) < 1 else ld * 2 * w
+def delta_w(w, x, t, learning_rate):
+    return learning_rate * gradient(w, x, t)
+
+w = 0.1; learning_rate = 0.1; nb_of_iterations = 10;
+w_cost = [(w, cost(nn(x, w), t))]
+for i in range(nb_of_iterations):
+    w = w - delta_w(w, x, t, learning_rate)
+    w_cost.append((w, cost(nn(x, w), t)))
+```
+
+<p class="fragment current-only" data-code-focus="1">
+  `$ $`
+</p>
 
 ***
 
