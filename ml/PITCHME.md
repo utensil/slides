@@ -1026,7 +1026,7 @@ $$`
 #### SVM: Hinge Loss ( Another Form )
 
 `$$
-\underset{Hinge-Loss}{\underbrace{\ \sum_{i=1}^n\big(1-y_i \langle x_i,w \rangle\big)_+}} + \underset{w}{min}\ \lambda\underset{l_{2}-Regularizer}{\underbrace{\parallel w\parallel^2}}
+\underset{w}{min}\ \underset{Hinge-Loss}{\underbrace{\ \sum_{i=1}^n\big(1-y_i \langle x_i,w \rangle\big)_+}} + \lambda\underset{l_{2}-Regularizer}{\underbrace{\parallel w\parallel^2}}
 $$`
 
 [A Support Vector Machine in just a few Lines of Python Code](https://maviccprp.github.io/a-support-vector-machine-in-just-a-few-lines-of-python-code/)  <!-- .element: class="figcaption" -->
