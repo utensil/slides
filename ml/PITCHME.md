@@ -942,14 +942,11 @@ $$`
 
 ***
 
+<!-- .slide: style="font-size: 80%" -->
+
 #### Implementing Softmax Regression
 
 ```python
-z = [
-  [30, 60, 90],
-  [1, 3, 4.5]
-]
-
 def softmax_naive(z):
     return np.exp(z) / np.sum(np.exp(z), axis=1, keepdims=True)
 
@@ -959,28 +956,73 @@ def softmax(z):
     return e / np.sum(e, axis=1, keepdims=True)
 ```
 
+<p class="fragment current-only" data-code-focus="1-7">
+`$$ 
+\Pr(Y_i=k) = \frac{e^{\boldsymbol\beta_k \cdot \mathbf{X}_i}} {\sum\limits_{0 \leq c \leq K} {e^{\boldsymbol\beta_c \cdot \mathbf{X}_i}}}
+$$`
+</p>
+
 ***
+
+<!-- .slide: style="font-size: 60%" -->
 
 #### Try it out
 
 ```python
+>>> z = [
+  [30, 60, 90],
+  [1, 3, 4.5]
+]
 >>> softmax_naive(z)
 array([[  8.75651076e-27,   9.35762297e-14,   1.00000000e+00],
        [  2.40937683e-02,   1.78030206e-01,   7.97876026e-01]])
->>> np.argmax(softmax_naive(z))
-2
+>>> np.argmax(softmax_naive(z), axis=1)
+array([2, 2], dtype=int64)
 >>> np.around(softmax_naive(z))
 array([[ 0.,  0.,  1.],
        [ 0.,  0.,  1.]])
 >>> softmax(z)
 array([[  8.75651076e-27,   9.35762297e-14,   1.00000000e+00],
        [  2.40937683e-02,   1.78030206e-01,   7.97876026e-01]])
->>> np.argmax(softmax(z))
-2
+>>> np.argmax(softmax(z), axis=1)
+array([2, 2], dtype=int64)
 >>> np.around(softmax(z))
 array([[ 0.,  0.,  1.],
        [ 0.,  0.,  1.]])
 ```
+
+***
+
+<!-- .slide: style="font-size: 60%" -->
+
+#### Try it out (Cont.)
+
+```python
+>>> z = [
+  [30, 60, 10000000000000],
+  [1, 3, 4.5]
+]
+>>> softmax_naive(z)
+__main__:2: RuntimeWarning: overflow encountered in exp
+__main__:2: RuntimeWarning: invalid value encountered in true_divide
+array([[ 0.        ,  0.        ,         nan],
+       [ 0.02409377,  0.17803021,  0.79787603]])
+>>> np.argmax(softmax_naive(z), axis=1)
+array([2, 2], dtype=int64)
+>>> np.around(softmax_naive(z))
+array([[  0.,   0.,  nan],
+       [  0.,   0.,   1.]])
+>>> softmax(z)
+array([[ 0.        ,  0.        ,  1.        ],
+       [ 0.02409377,  0.17803021,  0.79787603]])
+>>> np.argmax(softmax(z), axis=1)
+array([2, 2], dtype=int64)
+>>> np.around(softmax(z))
+array([[ 0.,  0.,  1.],
+       [ 0.,  0.,  1.]])
+```
+
+
 ---
 
 ### SVM
@@ -1094,30 +1136,69 @@ https://isaacchanghau.github.io/2017/08/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-
 
 ***
 
-#### Impelementing SVM
+<!-- .slide: style="font-size: 60%" -->
+
+#### Implementing SVM
 
 ```python
-def nn(x, w): np.sign(np.dot(x, w)).astype(int)
-def cost(y, t): return ?
-nb_of_samples = 20
-x = np.random.uniform(0, 1, nb_of_samples)
-t = ?
+x = np.array([[-2,4,-1], [4,1,-1], [1, 6, -1], [2, 4, -1], [6, 2, -1]])
+t = np.array([-1, -1, 1, 1, 1])
+learning_rate = 1; nb_of_iterations = 100000; n_samples, n_features = x.shape; w = np.zeros(n_features)
 
-def gradient(w, x, t, ld): 
-  return np.multiply(t, x) + ld * 2 * w if np.multiply(t, np.dot(x, w)) < 1 else ld * 2 * w
-def delta_w(w, x, t, learning_rate):
-    return learning_rate * gradient(w, x, t)
+def nn(x, w): return np.sign(np.dot(x, w)).astype(int)
+def cost(w, x, t, ld): return max(1 - t * np.dot(x, w), 0) + ld * (np.linalg.norm(w, ord=2) ** 2)
+def is_misclassified(w, x, t): return (t * np.dot(x, w) < 1).astype(int)
+def gradient(w, x, t, ld): return 2 * ld * w - x * t * is_misclassified(w, x, t)
 
-w = 0.1; learning_rate = 0.1; nb_of_iterations = 10;
-w_cost = [(w, cost(nn(x, w), t))]
-for i in range(nb_of_iterations):
-    w = w - delta_w(w, x, t, learning_rate)
-    w_cost.append((w, cost(nn(x, w), t)))
+# costs = []
+for epoch in range(1, nb_of_iterations):
+    ld = 1 / epoch; error = 0
+    for i, x_ in enumerate(x):              
+        w = w - learning_rate * gradient(w, x[i], t[i], ld)
+        # if is_misclassified(w, x[i], t[i]): error = 1
+        error = cost(w, x[i], t[i], ld)
+    # costs.append(error)
 ```
 
-<p class="fragment current-only" data-code-focus="1">
-  `$ $`
+<p class="fragment current-only" data-code-focus="1-2">
+  ![](images/svm_sample_plot.png) <!-- .element: class="img-code" -->
+  Data points.
 </p>
+<p class="fragment current-only" data-code-focus="3">
+  Parameter initialization.
+</p>
+<p class="fragment current-only" data-code-focus="5">
+  `$$
+  \operatorname{sgn}(w^{\top} \mathbf{x}) = \begin{cases}
+      +1,     & \text{Positive} \\
+      -1,    & \text{Negative}
+  \end{cases}
+  $$`
+</p>
+<p class="fragment current-only" data-code-focus="6">
+  `$$
+  \min_{\mathbf{w}}\ C\underset{Hinge-Loss}{\underbrace{\sum_{i=1}^{n}max[1-y_{i}\underset{h({\mathbf{x}_i})}{\underbrace{(w^{\top}{\mathbf{x}_i}+b)}},0]}}+\underset{l_{2}-Regularizer}{\underbrace{\left\Vert w\right\Vert _{z}^{2}}}
+  $$`
+</p>
+<p class="fragment current-only" data-code-focus="7-8">
+  `$$
+  \Delta w = \begin{cases}
+      2\lambda w - y_ix_i,     & y_i \langle x_i,w \rangle\lt 1\\
+      2\lambda w,              & \text{otherwise}
+  \end{cases}
+  $$`
+</p>
+<p class="fragment current-only" data-code-focus="10-17">
+  Training.
+
+  ![](images/svm_train_plot.png) <!-- .element: class="img-code" -->
+</p>
+
+Note:
+
+```python
+def cost(y, t, w, ld): return is_misclassified(w, x, t) + ld * (np.linalg.norm(w, ord=2) ** 2)
+```
 
 ***
 

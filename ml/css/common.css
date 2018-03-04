@@ -43,6 +43,18 @@ iframe {
   float: right;
   width: 49%;
 }
+
+.reveal section img.img-code {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  float: right;
+  max-width: 30%;
+}
+
+.print-pdf .reveal section img.img-code {
+  display: none;
+}
   
 
 /* .reveal section .img-h-50 img {
