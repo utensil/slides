@@ -54,6 +54,7 @@ var observeDOM = (function(){
   };
 })();
 
+head.load('./_assets/js/vendor/fontawesome-all.min.js');
 head.load('./_assets/css/vendor/mermaid.forest.css');
 head.load('./_assets/js/vendor/mermaidAPI.js', function () {
   mermaidAPI.initialize({
@@ -69,14 +70,14 @@ head.load('./_assets/js/vendor/mermaidAPI.js', function () {
 Reveal.addEventListener('ready', function () {
 
   head.load('./_assets/js/reveal-code-focus-modified.js', function () {
-    console.log(window);
-    console.log(window.hljs);
+    // console.log(window);
+    // console.log(window.hljs);
     RevealCodeFocus();
   });
 });
 
 Reveal.addEventListener('slidechanged', function (event) {
-  console.log(event);
+  // console.log(event);
   var cur = event.currentSlide;
   var url = cur.getAttribute('data-background-iframe');
 
@@ -177,3 +178,68 @@ if (window.location.search.match( /print-pdf/gi )) {
     });
   });
 }
+
+var revealConfig = Reveal.getConfig();
+
+// console.log('Reveal.getConfig():', revealConfig);
+
+revealConfig.markdown = revealConfig.markdown || {};
+
+Object.defineProperty(revealConfig.markdown, "renderer", { get: function () {
+    var customRenderer = new marked.Renderer();
+
+    // quick test:
+    // customRenderer.heading = function (text, level) {
+    //   return `<h${level}>
+    //             ${text} ^_^
+    //           </h${level}>`;
+    // }
+
+    function escape(html, encode) {
+      return html
+        .replace(!encode ? /&(?!#?\w+;)/g : /&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    var origCode = customRenderer.code;
+
+    customRenderer.code = function (code, lang, escaped) {
+      if (lang != 'xxx') {
+        return origCode(code, lang, escaped);
+      } else {
+        return '<pre>xxx: TODO</pre>';
+      }
+
+      // origCode:
+      // if (this.options.highlight) {
+      //   var out = this.options.highlight(code, lang);
+      //   if (out != null && out !== code) {
+      //     escaped = true;
+      //     code = out;
+      //   }
+      // }
+    
+      // if (!lang) {
+      //   return '<pre><code>'
+      //     + (escaped ? code : escape(code, true))
+      //     + '\n</code></pre>';
+      // }
+    
+      // return '<pre><code class="'
+      //   + this.options.langPrefix
+      //   + escape(lang, true)
+      //   + '">'
+      //   + (escaped ? code : escape(code, true))
+      //   + '\n</code></pre>\n';
+    }
+
+    return customRenderer;
+  },
+  set: function (v) {
+    this._renderer = v;
+  },
+  enumerable: true
+});
