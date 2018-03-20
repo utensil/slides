@@ -1,14 +1,15 @@
-/*
-> findNextCodeInLanguage('lang', 'abc```lang xxxxxx ```asdf```lang ijbieiuh ```sxdede')
-{ start: 10, stop: 18 }
-> 'abc```lang xxxxxx ```asdf```lang ijbieiuh ```sxdede'.substring(10, 18)
-' xxxxxx '
+function testfindNextCodeInLanguage() {
+  var lang = 'lang';
+  var md = 'abc```lang\nxxxxxx\n```asdf```lang\nijbieiuh\n```sxdede';
+  var found = findNextCodeInLanguage(lang, md);
+  console.log(md.substring(found.start, found.stop));
+  console.log(md.substring(found.outerStart, found.outerStop));
 
-> findNextCodeInLanguage('lang', 'abc```lang xxxxxx ```asdf```lang ijbieiuh ```sxdede', 18)
-{ start: 32, stop: 42 }
-> 'abc```lang xxxxxx ```asdf```lang ijbieiuh ```sxdede'.substring(32, 42)
-' ijbieiuh '
- */
+  found = findNextCodeInLanguage(lang, md, found.outerStop);
+  console.log(md.substring(found.start, found.stop));
+  console.log(md.substring(found.outerStart, found.outerStop));
+}
+
 function findNextCodeInLanguage(lang, str, start) {
   var ret = {};
   start = start || 0;
@@ -21,6 +22,8 @@ function findNextCodeInLanguage(lang, str, start) {
     ret.start = start + LANG_BEGIN.length;
     ret.stop = str.indexOf(LANG_END, ret.start);
     if (ret.start != -1 && ret.stop != -1) {
+      ret.outerStart = start;
+      ret.outerStop = ret.stop + LANG_END.length;
       return ret;
     } else {
       return null;
@@ -40,3 +43,5 @@ module.exports = (markdown, options) => {
   //   return (is_vertical ? '+++\n' : '---\n') + line.replace('#^', '#');
   // }).join('\n');
 }
+
+testfindNextCodeInLanguage();
