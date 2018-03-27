@@ -15,7 +15,7 @@ iframe {
 
 .reveal section img {
   border: 0;
-  background-color: white;
+  background-color: #eeeeee;
 }
 
 .reveal section img.img-300 {
@@ -73,6 +73,10 @@ iframe {
 .reveal .hljs .line.focus { opacity: 1; }
 .reveal .hljs.focus .line:not(.focus) { opacity: 0.2; }
 .reveal .hljs .line:hover { opacity: 1; }
+
+.print-pdf .reveal pre code {
+  min-height: 550px;
+}
 
 /* .reveal .slides section .fragment {
   visibility: visible;
@@ -152,9 +156,13 @@ iframe {
   font-family: Microsoft YaHei;
 }
 
-.reveal .slides section div.mermaidSvg {
+.reveal .slides section .mermaidSvg {
   font-size: 13px;
   line-height: 100%;
+}
+
+.print-pdf .reveal .slides section .mermaidSvg {
+  transform: scale(0.70);
 }
 
 /* .reveal .slides section div.mermaidSvg object, .reveal .slides section div.mermaidSvg foreignObject, .reveal .slides section div.mermaidSvg embed {
@@ -222,4 +230,41 @@ iframe {
 
 .reveal .figcaption.see-also:before {
   content: "See also: ";
+}
+
+.img-ref {
+  /* position: relative; */
+}
+
+.img-ref:hover {
+  cursor: pointer;
+}
+
+.img-pop {
+  position: absolute;
+  visibility: hidden;
+  right: 10vw;
+  top: 10vh;
+  min-width: 15vw;
+  width: 50vw;
+  height: 80vh;
+  float: right;
+}
+.img-ref:hover + .img-pop {
+  visibility: visible;
+}
+
+.reveal-fancybox .fancybox-slide .fancybox-image-wrap {
+  background: #eeeeee;
+  font-size: 13px;
+  line-height: 100%;
+}
+
+.reveal a[data-fancybox] {
+  color:inherit;
+  transition: none;
+}
+
+.reveal a[data-fancybox]:hover {
+  color:inherit;
 }

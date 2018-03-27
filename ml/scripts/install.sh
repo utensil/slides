@@ -8,3 +8,6 @@ npm install -g mathjax-node-cli
 
 # http://ogom.github.io/draw_uml/plantuml/
 npm install -g node-plantuml
+
+# Add `npm root -g` to NODE_PATH
+export NODE_PATH=$NODE_PATH:`npm root -g`

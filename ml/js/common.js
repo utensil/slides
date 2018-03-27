@@ -54,12 +54,34 @@ var observeDOM = (function(){
   };
 })();
 
+// https://stereochro.me/ideas/detecting-broken-images-js
+function isImageOk(img) {
+  // During the onload event, IE correctly identifies any images that
+  // weren't downloaded as not complete. Others should too. Gecko-based
+  // browsers act like NS4 in that they report this incorrectly.
+  if (!img.complete) {
+      return false;
+  }
+
+  // However, they do have two very useful properties: naturalWidth and
+  // naturalHeight. These give the true size of the image. If it failed
+  // to load, either of these should be zero.
+  if (typeof img.naturalWidth != "undefined" && img.naturalWidth == 0) {
+      return false;
+  }
+
+  // No other way of checking: assume it's ok.
+  return true;
+}
+
+var dependencies = [];
+
 head.load('./_assets/js/vendor/fontawesome-all.min.js');
 head.load('./_assets/css/vendor/mermaid.forest.css');
 head.load('./_assets/js/vendor/mermaidAPI.js', function () {
   mermaidAPI.initialize({
     startOnLoad: false,
-    cloneCssStyles: false,
+    cloneCssStyles: true,
     sequenceDiagram: {
       height: 30,
       mirrorActors: false
@@ -67,20 +89,80 @@ head.load('./_assets/js/vendor/mermaidAPI.js', function () {
   });
 });
 
-Reveal.addEventListener('ready', function () {
+var fancyboxOptions = {
+  baseClass : 'reveal-fancybox',
+  buttons : [
+    'slideShow',
+    'fullScreen',
+    'thumbs',
+    'download',
+    'zoom',
+    'close'
+  ],
+  smallBtn : false,
+  afterShow: function (instance, slide) {
+    console.info(instance, slide);
+    $(slide.$slide[0]).scrollTop($(slide.$content[0]).offset().top);
+  },
+  afterClose: function (instance, slide) {
+    // console.info( slide.opts.$orig );
+    slide.opts.$orig.each(function (i, a) {
+      console.log(a);
+      $('svg', a).show();
+    });
+    Reveal.layout();
+  }    
+};
+
+// head.load('./_assets/css/vendor/jquery.fancybox.min.css');
+// dependencies.push({src: './_assets/js/vendor/jquery-3.3.1.min.js'});
+// dependencies.push({src: './_assets/js/vendor/jquery.fancybox.min.js'});
+
+function funcyboxifyImages(cur) {
+  if (!$) {
+    return;
+  }
+
+  var imgs = $('img', cur || document);
+  imgs.each(function (i, img) {
+    if ($(img).parent().is('[data-fancybox]') || $(img).fancybox == null) {
+      console.log('ignored', img);
+      return;
+    }
+
+    $(img).wrap('<a href="' + $(img).attr('src') + '" data-fancybox="images"></a>');
+  });
+}
+
+Reveal.addEventListener('ready', function (event) {
 
   head.load('./_assets/js/reveal-code-focus-modified.js', function () {
     // console.log(window);
     // console.log(window.hljs);
     RevealCodeFocus();
   });
+
+  head.load('./_assets/js/vendor/jquery-3.3.1.min.js', function() {
+    head.load([
+      './_assets/css/vendor/jquery.fancybox.min.css',
+      './_assets/js/vendor/jquery.fancybox.min.js'], function () {
+        funcyboxifyImages();
+        $("[data-fancybox]").fancybox(fancyboxOptions);
+    });
+  });
+
+  var cur = event.currentSlide;
+  decorateSlide(cur, event);
 });
 
 Reveal.addEventListener('slidechanged', function (event) {
-  // console.log(event);
-  var cur = event.currentSlide;
-  var url = cur.getAttribute('data-background-iframe');
+    var cur = event.currentSlide;    
+    decorateSlide(cur, event);
+});
 
+function renderIframeSource(cur) {
+  var url = cur.getAttribute('data-background-iframe');
+  
   var iframeSource = document.querySelector('.iframe-source');
   if (iframeSource == null) {
     iframeSource = document.createElement('div');
@@ -97,7 +179,36 @@ Reveal.addEventListener('slidechanged', function (event) {
     iframeSource.innerHTML = "";
     iframeSource.style.display = "none";
   }
-});
+}
+
+function decorateSlide(cur, event) {
+    // console.log(event);
+    console.log(event.indexh, event.indexv);
+
+    renderIframeSource(cur);
+    renderMermaid(cur);
+
+    // Refresh broken image once
+    var curImages = cur.querySelectorAll('img');
+    for (var i = 0; i < curImages.length; i++) {
+      if (!isImageOk(curImages[i])) {
+        curImages[i].src = curImages[i].src + '#' + new Date().getTime();
+      }
+    }
+
+    // funcyboxifyImages(cur);
+
+    // // Ensure fancybox works
+    // if($) {
+    //   var fancybox = $("[data-fancybox]", cur);    
+    //   if(fancybox.fancybox) {
+    //     fancybox.fancybox(fancyboxOptions);
+    //   }
+    // }
+  
+    // Ensure the layout is correct
+    Reveal.layout();
+}
 
 function renderMermaid(cur) {
   var diagramCodeTag = cur.querySelector('code.lang-mermaid');
@@ -109,12 +220,16 @@ function renderMermaid(cur) {
     // console.log(diagramSource);
 
     var id = Math.floor(Math.random() * 1000).toString();
+    var fullId = 'mermaid-diagram-' + id;
 
-    mermaidAPI.render('mermaid-diagram-' + id, diagramSource, function (svgCode, bindFunctions) {
+    mermaidAPI.render(fullId, diagramSource, function (svgCode, bindFunctions) {
       // console.log(svgCode);
     
-      var svgDiv = document.createElement('div');
+      var svgDiv = document.createElement('a');
       svgDiv.className = 'mermaidSvg';
+      svgDiv.setAttribute('data-fancybox', 'images');
+      svgDiv.setAttribute('data-src', '#' + fullId);
+
       svgDiv.innerHTML = svgCode;
 
       cur.insertBefore(svgDiv, diagramCodeTag.parentNode);
@@ -124,14 +239,33 @@ function renderMermaid(cur) {
       if(renderedDiagram != null) {
         renderedDiagram.remove();
       }
+
+      return;
+
+      var svgElement = cur.querySelector('svg#' + fullId);
+      // https://css-tricks.com/using-svg/
+      var svgPrefix = 'data:image/svg+xml,';
+      svgElement.href = svgPrefix + svgCode.replace(/<br>/g, '<br />');
+      // encodeURIComponent(svgCode).replace(/</g, '%3C').replace(/>/g, '%3E')
+      // .replace(/#/g, '%23').replace(/"/g, "%22")      
+      console.log(svgElement);
+      // https://stackoverflow.com/questions/34904306/svg-with-inline-css-to-image-data-uri
+      // get svg data
+      // var xml = new XMLSerializer().serializeToString(svgElement);
+      // // make it base64
+      // var svg64 = btoa(xml);
+      // var image64 = 'data:image/svg+xml;base64,' + svg64;
+
+      svgDiv = svgElement.parentNode;
+      // svgDiv.href = image64;
+      var bbox = svgElement.getBBox()
+      svgDiv.setAttribute('width', bbox.width);
+      svgDiv.setAttribute('height', bbox.height);   
+      
+      Reveal.layout();
     });
   }
 }
-
-Reveal.addEventListener('slidechanged', function (event) {
-  var cur = event.currentSlide;
-  renderMermaid(cur);
-});
 
 if (window.location.search.match( /print-pdf/gi )) {
   Reveal.addEventListener('ready', function () {
@@ -181,6 +315,8 @@ if (window.location.search.match( /print-pdf/gi )) {
 
 var revealConfig = Reveal.getConfig();
 
+revealConfig.dependencies = (revealConfig.dependencies || []).concat(dependencies);
+
 // console.log('Reveal.getConfig():', revealConfig);
 
 revealConfig.markdown = revealConfig.markdown || {};
@@ -204,8 +340,7 @@ Object.defineProperty(revealConfig.markdown, "renderer", { get: function () {
         .replace(/'/g, '&#39;');
     }
 
-    var origCode = customRenderer.code;
-
+    var origCode = customRenderer.code.bind(customRenderer);
     customRenderer.code = function (code, lang, escaped) {
       if (lang != 'xxx') {
         return origCode(code, lang, escaped);
