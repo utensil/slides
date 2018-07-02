@@ -5,6 +5,5 @@
   "separator": "^---[\r]?\n",
   "verticalSeparator": "^\\*\\*\\*[\r]?\n",
   "css": "./css/common.css",
-  "scripts": "./js/common.js",
-  "preprocessor": "./js/preproc.js"
+  "scripts": "./js/common.js"
 }
