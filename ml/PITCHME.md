@@ -1313,6 +1313,78 @@ Cons:
   </tr>
 </table>
 
+***
+
+<!-- .slide: style="font-size:24px;" -->
+
+#### Gini Index VS Information Gain
+
+| Algorithm / <br /> Split Criterion       	| Description	 | Tree Type |
+|-------------------------------------------|--------------|-----------|
+| Gini Split / <br /> Gini Index	          | Favors larger partitions. <br /> Very simple to implement.	 | CART |
+| Information Gain / <br /> Entropy        	| Favors partitions that have small counts <br /> but many distinct values. |	 ID3 / C4.5 |
+
+[Decision-Tree Learning](http://www.ke.tu-darmstadt.de/lehre/archiv/ws0809/mldm/dt.pdf) <!-- .element: class="figcaption see-also" -->
+
+***
+
+<!-- .slide: data-background-iframe="http://www.learnbymarketing.com/481/decision-tree-flavors-gini-info-gain/" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/josiahdavis/DecisionTrees/blob/master/DecisionTrees.ipynb" data-background-interactive -->
+
+
+***
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/gregtam/interpreting-decision-trees-and-random-forests/blob/master/Interpreting%20Decision%20Trees%20and%20Random%20Forests.ipynb" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/Vooban/Decision-Trees-For-Knowledge-Discovery/blob/master/Decision-Trees-For-Knowledge-Discovery-With-Scikit-Learn.ipynb" data-background-interactive -->
+
+***
+
+#### XGBoost
+
+- Introduction to Boosted Trees
+  - [doc](https://xgboost.readthedocs.io/en/latest/model.html)
+  - [slide](https://homes.cs.washington.edu/~tqchen/pdf/BoostedTree.pdf)
+- [A Gentle Introduction to XGBoost for Applied Machine Learning](https://machinelearningmastery.com/gentle-introduction-xgboost-applied-machine-learning/)
+- [gradient boosting decision tree algorithm](https://en.wikipedia.org/wiki/Gradient_boosting)
+- [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754)
+- [Awesome XGBoost](https://github.com/dmlc/xgboost/tree/master/demo)
+
+***
+
+<!-- .slide: style="font-size:28px;" -->
+
+#### Higgs Boson ML Challenge
+
+- [Starting kit for the Higgs boson machine learning challenge](http://nbviewer.jupyter.org/urls/www.lri.fr/~kegl/HiggsML/StartingKit/startingKitHiggsKegl.ipynb)
+- XGBoost
+  - [Winning solution of Kaggle Higgs competition: what a single model can do?](https://no2147483647.wordpress.com/2014/09/17/winning-solution-of-kaggle-higgs-competition-what-a-single-model-can-do/)
+  - [Higgs Boson Discovery with Boosted Trees](http://proceedings.mlr.press/v42/chen14.pdf)
+- DL
+  - [Classification of Higgs Boson Tau-Tau decays using GPU accelerated Neural Networks](http://cs229.stanford.edu/proj2015/017_report.pdf)
+  - [Identifying the Higgs Boson with Convolutional Neural Networks](http://cs231n.stanford.edu/reports/2016/pdfs/300_Report.pdf)
+  - [Searching for higgs boson decay modes with deep learning](https://www.researchgate.net/publication/287742463_Searching_for_higgs_boson_decay_modes_with_deep_learning)
+  - [Searching for Exotic Particles in High-Energy Physics with Deep Learning](https://arxiv.org/pdf/1402.4735.pdf)
+
+Note:
+
+- [Dataset permanently released at CERN](https://www.kaggle.com/c/higgs-boson/discussion/13143)
+  - [Data](http://opendata.cern.ch/record/329)
+
+***
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/Vooban/Decision-Trees-For-Knowledge-Discovery/blob/master/Decision-Trees-For-Knowledge-Discovery-With-XGBoost.ipynb" data-background-interactive -->
+
+
+***
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/utensil/julia-playground/blob/master/dl/hello_higgs.ipynb" data-background-interactive -->
+
 ---
 
 ### Nearest Neighbors
@@ -1694,28 +1766,6 @@ http://gluon.mxnet.io/
 
 ---
 
-### Xgboost
-
-- https://xgboost.readthedocs.io/en/latest/model.html
-- https://homes.cs.washington.edu/~tqchen/pdf/BoostedTree.pdf
-- https://machinelearningmastery.com/gentle-introduction-xgboost-applied-machine-learning/
-- http://www.kdd.org/kdd2016/papers/files/rfp0697-chenAemb.pdf
-
-***
-
-### Higgs Boson
-
-- http://nbviewer.jupyter.org/urls/www.lri.fr/~kegl/HiggsML/StartingKit/startingKitHiggsKegl.ipynb
-- https://www.kaggle.com/c/higgs-boson/discussion/13143
-- http://opendata.cern.ch/record/329
-- http://cs229.stanford.edu/proj2015/017_report.pdf
-- http://cs231n.stanford.edu/reports/2016/pdfs/300_Report.pdf
-- https://www.researchgate.net/publication/287742463_Searching_for_higgs_boson_decay_modes_with_deep_learning
-- https://arxiv.org/pdf/1402.4735.pdf
-- https://no2147483647.wordpress.com/2014/09/17/winning-solution-of-kaggle-higgs-competition-what-a-single-model-can-do/
-
----
-
 ### Datasets
 
 - All
@@ -1777,6 +1827,7 @@ Foundation:
 - https://github.com/ethereon/netscope
 - https://www.zhihu.com/question/26006703/answer/135825424
 - http://josephpcohen.com/w/visualizing-cnn-architectures-side-by-side-with-mxnet/
+- https://github.com/apache/incubator-mxnet/tree/master/example/image-classification
 
 ***
 
