@@ -1,6 +1,9 @@
 {
   "controls": true,
+  "controlsTutorial": true,
+  "help": true,
   "progress": true,
   "previewLinks": true,
-  "transition": "slide"
+  "transition": "slide",
+  "#showNotes": "separate-page"
 }
