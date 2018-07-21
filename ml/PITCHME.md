@@ -14,6 +14,7 @@ Note:
 
 - [Robot Movies](https://www.ranker.com/list/best-artificial-intelligence-movies-list/all-genre-movies-lists)
   - http://www.artofthetitle.com/title/eva/
+- [A SiFi novel about a boy and an android](https://book.douban.com/subject/3986607/) (2000)
 - [Amazing Ants](https://book.douban.com/subject/1044309/) (2002)
 
 Dive in inclues Julia, Geometric Algebra, Keras and Risk Control.
@@ -1390,12 +1391,16 @@ Cons:
 #### XGBoost
 
 - Introduction to Boosted Trees
-  - [doc](https://xgboost.readthedocs.io/en/latest/model.html)
+  - [doc](https://xgboost.readthedocs.io/en/latest/tutorials/model.html)
   - [slide](https://homes.cs.washington.edu/~tqchen/pdf/BoostedTree.pdf)
 - [A Gentle Introduction to XGBoost for Applied Machine Learning](https://machinelearningmastery.com/gentle-introduction-xgboost-applied-machine-learning/)
 - [gradient boosting decision tree algorithm](https://en.wikipedia.org/wiki/Gradient_boosting)
 - [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754)
 - [Awesome XGBoost](https://github.com/dmlc/xgboost/tree/master/demo)
+
+***
+
+<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/Vooban/Decision-Trees-For-Knowledge-Discovery/blob/master/Decision-Trees-For-Knowledge-Discovery-With-XGBoost.ipynb" data-background-interactive -->
 
 ***
 
@@ -1417,11 +1422,6 @@ Note:
 
 - [Dataset permanently released at CERN](https://www.kaggle.com/c/higgs-boson/discussion/13143)
   - [Data](http://opendata.cern.ch/record/329)
-
-***
-
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/Vooban/Decision-Trees-For-Knowledge-Discovery/blob/master/Decision-Trees-For-Knowledge-Discovery-With-XGBoost.ipynb" data-background-interactive -->
-
 
 ***
 
@@ -1560,62 +1560,65 @@ https://stackoverflow.com/questions/10059594/a-simple-explanation-of-naive-bayes
 ***
 
 [Remove Stepwise Regression and Bayes Regression for now](https://github.com/utensil/slides/commit/9b78364e0c5dff3c2ffee056c60039ac6d0ff6bf#diff-37928793727600d98cc6e6c8a0075033)
-https://en.wikipedia.org/wiki/Principal_component_analysis
+
+***
+
+### [Principal Component Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis)
+
+***
+
+<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/tirthajyoti/PythonMachineLearning/blob/master/Principal%20Component%20Analysis.ipynb" data-background-interactive -->
 
 ---
 
-### Links (Temp)
+### Cross Validation etc.
 
 ***
 
-<!-- .slide: data-background-iframe="//scikit-learn.org/stable/user_guide.html" data-background-interactive -->
+#### Combining transformers and estimators in a pipeline
+
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_01.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" --> 
 
 ***
 
-<!-- .slide: data-background-iframe="http://www.holehouse.org/mlclass/index.html" data-background-interactive -->
+#### The holdout method
+
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_02.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" --> 
 
 ***
 
-<!-- .slide: data-background-iframe="http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial" data-background-interactive -->
+#### K-fold cross-validation
+
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_03.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" --> 
 
 ***
 
-Note:
+#### Algorithm selection with nested cross-validation
 
-https://www.zhihu.com/question/26006703
-
-https://github.com/jatinshah/ufldl_tutorial
-
----
-
-### CV
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_07.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
-![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_01.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb) 
+#### An example of CV
 
-Also 7 Assembling
+- [train_captcha.py](https://github.com/utensil/julia-playground/blob/master/dl/train_captcha.py)
+  - [How can I use Keras with datasets that don't fit in memory?](https://keras.io/getting-started/faq/#how-can-i-use-keras-with-datasets-that-dont-fit-in-memory)
+  - [How to batch train with fit_generator()?](https://github.com/fchollet/keras/issues/7729)
+  - [Cross Validation in Keras](https://github.com/fchollet/keras/issues/1711)
+  - [keras/scikit-learn: using fit_generator() with cross validation](https://stackoverflow.com/questions/40854232/keras-scikit-learn-using-fit-generator-with-cross-validation)
+  - [How to pass callbacks to scikit_learn wrappers (e.g. KerasClassifier)](https://github.com/fchollet/keras/issues/4278#issuecomment-264665803)
 
 ***
 
-https://en.wikipedia.org/wiki/Correlation_and_dependence
-https://en.wikipedia.org/wiki/Instrumental_variables_estimation
+#### Learning with ensembles
+
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch07/images/07_02.png) [Python Machine Learning: Chapter 7 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch07/ch07.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
-https://github.com/utensil/julia-playground/blob/master/dl/train_captcha.py
-https://keras.io/getting-started/faq/#how-can-i-use-keras-with-datasets-that-dont-fit-in-memory
-https://github.com/fchollet/keras/issues/7729
-https://github.com/fchollet/keras/issues/1711
-https://blog.sigopt.com/posts/common-problems-in-hyperparameter-optimization
-https://scikit-optimize.github.io/
-https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
-https://github.com/thuijskens/bayesian-optimization
-https://elitedatascience.com/overfitting-in-machine-learning#how-to-prevent
-http://dswalter.github.io/blog/overfitting-regularization-hyperparameters/
-http://scikit-learn.org/stable/modules/classes.html#module-sklearn.model_selection
-https://stackoverflow.com/questions/40854232/keras-scikit-learn-using-fit-generator-with-cross-validation
-https://github.com/fchollet/keras/issues/4278#issuecomment-264665803
+#### Bagging
+
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch07/images/07_06.png) <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 7 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch07/ch07.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1628,6 +1631,25 @@ https://github.com/fchollet/keras/issues/4278#issuecomment-264665803
 #### Training/Validation accuracy
 
 ![](http://cs231n.github.io/assets/nn3/accuracies.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](http://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Correlation
+
+- [Correlation and dependence](https://en.wikipedia.org/wiki/Correlation_and_dependence)
+- [IV (Instrumental variables) estimation](https://en.wikipedia.org/wiki/Instrumental_variables_estimation)
+
+***
+
+#### Hyperparameter Optimization 
+
+- [Overfitting, Regularization, and Hyperparameters](https://dswalter.github.io/overfitting-regularization-hyperparameters.html)
+- [Common Problems in Hyperparameter Optimization](https://blog.sigopt.com/posts/common-problems-in-hyperparameter-optimization)
+- [scikit-optimize](https://scikit-optimize.github.io/)
+https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
+- [Bayesian optimization with scikit-learn](https://github.com/thuijskens/bayesian-optimization)
+- [Overfitting in Machine Learning: What It Is and How to Prevent It](https://elitedatascience.com/overfitting-in-machine-learning#how-to-prevent)
+- [sklearn.model_selection: Model Selection](http://scikit-learn.org/stable/modules/classes.html#module-sklearn.model_selection)
 
 ---
 
@@ -1897,6 +1919,30 @@ https://bondifrench.github.io/ml-in-js/
 ---
 
 APPENDIX
+
+---
+
+### Links (Temp)
+
+***
+
+<!-- .slide: data-background-iframe="//scikit-learn.org/stable/user_guide.html" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="http://www.holehouse.org/mlclass/index.html" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="http://ufldl.stanford.edu/wiki/index.php/UFLDL_Tutorial" data-background-interactive -->
+
+***
+
+Note:
+
+https://www.zhihu.com/question/26006703
+
+https://github.com/jatinshah/ufldl_tutorial
 
 ---
 
