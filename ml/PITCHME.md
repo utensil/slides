@@ -4,7 +4,7 @@
 
 ### The Origin
 
-- [Mathematica](https://www.wolfram.com/mathematica/)[*](https://github.com/utensil/mathematica-notebooks) (2000) 
+- [Mathematica](https://www.wolfram.com/mathematica/)[*](https://github.com/utensil/mathematica-notebooks)[*](http://www.wolframalpha.com/examples/pro-features/step-by-step-solutions/) (2000) 
 - [Neural Networks](https://book.douban.com/subject/1115600/) (2002)
 - [NuPIC](https://github.com/numenta/nupic) and [NuPIC Core](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)
 - [kaggle: Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
@@ -215,7 +215,7 @@ negative</td>
 | Legend    |                             |                               |
 |-----------|-----------------------------|-------------------------------|
 | Actual    | `$ \color{green}{●} $` Real | `$ \color{red}{●} $` NOT Real |
-| Predicted | ✔ Positive                  | ✖ Negative                   | 
+| Predicted | ✔ Positive                  | ✖ Negative                   |
 
 Note:
 
@@ -260,7 +260,7 @@ https://rasbt.github.io/mlxtend/user_guide/regressor/LinearRegression/
 
 ***
 
-#### Assumption `$$ y_i = \beta_0 + \beta x_i + \varepsilon $$`
+#### Assumption `$$ y_i = \beta_0 + \beta x_i + \varepsilon $$` 
 
 ![](https://image.slidesharecdn.com/simplelinearregressionpelatihan-090829234643-phpapp02/95/simple-linier-regression-9-728.jpg?cb=1251589640)   <!-- .element: class="img-450" --> [ by Department of Statistics, ITS Surabaya](https://www.slideshare.net/dessybudiyanti/simple-linier-regression)  <!-- .element: class="figcaption" -->
 
@@ -1291,14 +1291,13 @@ Cons:
 
 #### Decision Trees with Details
 
-![](http://scikit-learn.org/stable/_images/iris.svg)   <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Trees](http://scikit-learn.org/stable/modules/tree.html)   <!-- .element: class="figcaption" -->
+![](http://scikit-learn.org/stable/_images/iris.png)   <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Trees](http://scikit-learn.org/stable/modules/tree.html)   <!-- .element: class="figcaption" -->
 
 ***
 
 #### Decision Surface
 
 ![](http://efavdb.com/wp-content/uploads/2015/03/tree1.jpg) [Machine Learning Methods: Decision trees and forests](http://efavdb.com/notes-on-trees/) <!-- .element: class="figcaption" -->
-
 
 ***
 
@@ -1311,6 +1310,10 @@ Cons:
 #### Decision Tree Regression 
 
 ![](http://scikit-learn.org/stable/_images/sphx_glr_plot_tree_regression_001.png)  <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Tree Regression](http://scikit-learn.org/stable/auto_examples/tree/plot_tree_regression.html)   <!-- .element: class="figcaption" -->
+
+***
+
+<!-- .slide: data-background-iframe="http://www.r2d3.us/visual-intro-to-machine-learning-part-1/" data-background-interactive -->
 
 ***
 
@@ -1328,16 +1331,16 @@ Cons:
 - yield the largest information gain  <br />
 - a pruning step is usually applied for generalization  <br />
     </td>
-  </tr>
-  <tr class="">
+    </tr>
+    <tr class="">
     <td>C4.5</td>
     <td style="font-size: 24px">
 - supports numerical variables by partitioning into a discrete set of intervals  <br />
 - converts the trained trees into sets of if-then rules  <br />
 - pruning by removing precondition
     </td>
-  </tr>
-  <!-- <tr class="">
+    </tr>
+    <!-- <tr class="">
     <td>C5.0</td>
     <td style="font-size: 24px">
 - proprietary  <br />
@@ -1345,15 +1348,15 @@ Cons:
 - smaller rulesets  <br />
 - more accurate  <br />
     </td>
-  </tr> -->
-  <tr class="">
+    </tr> -->
+    <tr class="">
     <td>CART <small>(Classification and Regression Trees)</small></td>
     <td style="font-size: 24px">
 - similar to C4.5  <br />
 - supports numerical target variables (regression)  <br />
 - does not compute rule sets  <br />
     </td>
-  </tr>
+    </tr>
 </table>
 
 ***
@@ -1376,7 +1379,6 @@ Cons:
 ***
 
 <!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/josiahdavis/DecisionTrees/blob/master/DecisionTrees.ipynb" data-background-interactive -->
-
 
 ***
 
@@ -1401,6 +1403,18 @@ Cons:
 ***
 
 <!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/Vooban/Decision-Trees-For-Knowledge-Discovery/blob/master/Decision-Trees-For-Knowledge-Discovery-With-XGBoost.ipynb" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-image="http://donsoft.io/intro-to-deeplearning/images/large_hadron_collider.jpg" data-background-interactive style="font-size: 60px"-->
+
+Large Hadron Collider <!-- .element class="fragment" -->
+
+***
+
+<!-- .slide: data-background-image="http://donsoft.io/intro-to-deeplearning/images/higgs_boson.jpg" data-background-interactive style="font-size: 60px"-->
+
+Higgs Boson Detection <!-- .element class="fragment" -->
 
 ***
 
@@ -1653,14 +1667,152 @@ https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
 
 ---
 
-### Why Go Deep? 
+### Going Deep
+
+note:
 
 - http://slides.com/beamandrew/deep-learning-101#/
 - http://donsoft.io/intro-to-deeplearning
+- https://github.com/kristjankorjus/applied-deep-learning-resources
+- https://github.com/m2dsupsdlclass/lectures-labs
+- https://github.com/InfolabAI/DeepLearning
+- https://github.com/roboticcam/machine-learning-notes
+- https://www.slideshare.net/JrgenSandig/neural-networks-and-deep-learning
+
+***
+
+<!-- .slide: data-background-iframe="http://slides.com/beamandrew/deep-learning-101-10#/3" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="http://slides.com/beamandrew/deep-learning-101#/35" data-background-interactive -->
 
 ***
 
 <!-- .slide: data-background-iframe="http://cs231n.github.io/assets/conv-demo/index.html" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="https://m2dsupsdlclass.github.io/lectures-labs/slides/01_intro_to_deep_learning/" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="https://m2dsupsdlclass.github.io/lectures-labs/slides/02_backprop/" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="https://m2dsupsdlclass.github.io/lectures-labs/slides/03_recommender_systems" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="https://m2dsupsdlclass.github.io/lectures-labs/slides/04_conv_nets" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="https://m2dsupsdlclass.github.io/lectures-labs/slides/05_conv_nets_2" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="https://m2dsupsdlclass.github.io/lectures-labs/slides/06_deep_nlp" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="https://m2dsupsdlclass.github.io/lectures-labs/slides/07_deep_nlp_2" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="https://m2dsupsdlclass.github.io/lectures-labs/slides/08_expressivity_optimization_generalization" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="https://m2dsupsdlclass.github.io/lectures-labs/slides/09_imbalanced_classif_metric_learning" data-background-interactive -->
+
+<!-- .slide: data-background-iframe="https://m2dsupsdlclass.github.io/lectures-labs/slides/10_unsupervised_generative_models" data-background-interactive -->
+
+---
+
+### Different Ways to understand Deep Learning
+
+***
+
+<!-- .slide: style="font-size:32px;" -->
+
+#### Three major narratives to understand Deep Learning
+
+- **Neuroscience Narrative**: drawing analogies to biology
+- **Probabilistic Narrative**: interprets neural networks as finding latent variables
+- **Representations Narrative**: centered on transformations of data and the manifold hypothesis
+  - deep learning studies a connection between optimization and functional programming
+    - the representations narrative in deep learning corresponds to type theory in functional programming
+
+[Neural Networks, Types, and Functional Programming](http://colah.github.io/posts/2015-09-NN-Types-FP/) <!-- .element: class="figcaption" -->
+
+***
+
+<!-- .slide: style="font-size:32px;" -->
+
+#### More ways to understand Deep Learning
+
+
+- [New Theory Cracks Open the Black Box of Deep Learning](https://www.wired.com/story/new-theory-deep-learning/)
+  - [Chinese Version](https://zhuanlan.zhihu.com/p/29579424)
+- [The Holographic Principle: Why Deep Learning Works](https://medium.com/intuitionmachine/the-holographic-principle-and-deep-learning-52c2d6da8d9)
+  - [Chinese Version](https://cloud.tencent.com/developer/article/1164216)
+- [Deep Learning and Quantum Entanglement: Fundamental Connections with Implications to Network Design](https://arxiv.org/abs/1704.01552)
+  - [Chinese Version](http://www.sohu.com/a/133017705_465975)
+
+Note:
+
+Source: https://www.zhihu.com/question/54902742/answer/300037431
+
+***
+
+<!-- .slide: data-background-video="http://donsoft.io/intro-to-deeplearning/videos/neuron.mp4" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-video="http://donsoft.io/intro-to-deeplearning/videos/neural_networks.mp4" data-background-interactive -->
+
+***
+
+#### Neuroscience Narrative
+
+![1940's 1950's - Dedicated vs. universal - Analog vs. digital - Decimal vs. binary - Wired vs. memory-based programming - S...](https://image.slidesharecdn.com/20141030ibmforretaping-150210111659-conversion-gate01/95/what-the-brain-says-about-machine-intelligence-2-638.jpg?cb=1424713709) 
+
+[What the Brain says about Machine Intelligence](https://www.slideshare.net/numenta/what-the-brain-says-about-machine-intelligence) <!-- .element: class="figcaption see-also" -->
+
+***
+
+#### Neuroscience Narrative (Cont.)
+
+![2010's 2020's The Birth of Machine Intelligence - Specific vs. universal algorithms - Mathematical vs. memory-based - Batc...](https://image.slidesharecdn.com/20141030ibmforretaping-150210111659-conversion-gate01/95/what-the-brain-says-about-machine-intelligence-3-638.jpg?cb=1424713709) 
+
+[What the Brain says about Machine Intelligence](https://www.slideshare.net/numenta/what-the-brain-says-about-machine-intelligence) <!-- .element: class="figcaption see-also" -->
+
+***
+
+<!-- .slide: data-background-iframe="//www.slideshare.net/slideshow/embed_code/key/A6pXGOUXNgDYrx" data-background-interactive -->
+
+note:
+
+https://www.slideshare.net/numenta/2014-10-17-numenta-workshop
+
+***
+
+<!-- .slide: style="font-size:32px;" -->
+
+#### Probabilistic Narrative
+
+- [Geometric Understanding of Deep Learning](https://arxiv.org/abs/1805.10451)
+  - [I:  Manifold distribution law](https://mp.weixin.qq.com/s/onqVbGBdS5pfM3itdBP8eQ)
+  - [II:Upper limit of learning ability](https://mp.weixin.qq.com/s/zqXqDI6aV8gv6KOUPQB84Q)
+  - [III: Geometric View of probability transformation](https://mp.weixin.qq.com/s/z1caI6P34xUI7UC9mHjI-A)
+- [A Geometric View of Optimal Transportation and Generative Model](https://arxiv.org/abs/1710.05488)
+  - [GAN with the wind](https://mp.weixin.qq.com/s/7O0AKIUVYK7HRyvdRbUVkg)
+  - [See through the black box of W-GAN I](https://mp.weixin.qq.com/s/trvMOTXNs7L6fSmTkZXwsA)
+  - [See through the black box of W-GAN II](https://mp.weixin.qq.com/s/thcxsBVttSIEzVNLQlAVCA)
+  - [See through the black box of W-GAN III](https://mp.weixin.qq.com/s/Jx0o17CwlIVcRV22PXk4wQ)
+  - [Related Zhihu Question](https://www.zhihu.com/question/67080147)
 
 ---
 
@@ -1789,14 +1941,7 @@ http://gluon.mxnet.io/
 
 ---
 
-### Math Foundation
-
-- neuroscience narrative, drawing analogies to biology
-- representations narrative, centered on transformations of data and the manifold hypothesis
-- probabilistic narrative, which interprets neural networks as finding latent variables
-- deep learning studies a connection between optimization and functional programming
-  - the representations narrative in deep learning corresponds to type theory in functional programming
-- http://colah.github.io/posts/2015-09-NN-Types-FP/
+### Misc
 
 ***
 
@@ -1876,6 +2021,8 @@ Foundation:
 - http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/
 - http://colah.github.io/
 - https://colah.github.io/posts/2014-07-Understanding-Convolutions/
+- https://github.com/keplr-io/hera
+- https://github.com/awslabs/mxboard
 
 ***
 
@@ -1914,7 +2061,6 @@ https://bondifrench.github.io/ml-in-js/
 ***
 
 <!-- #####.slide: data-background-iframe="//colah.github.io/posts/2015-08-Understanding-LSTMs/" data-background-interactive -->
-
 
 ---
 
@@ -2054,7 +2200,6 @@ https://github.com/BAILOOL/DoYouEvenLearn
 
 ### Links
 
-
 ***
 
 #### ML Top
@@ -2151,7 +2296,7 @@ https://github.com/BAILOOL/DoYouEvenLearn
 - https://github.com/rasbt/python-machine-learning-book
 - https://github.com/terryum/awesome-deep-learning-papers
 - https://github.com/sjchoi86/dl_tutorials
-- http://mp.weixin.qq.com/s?__biz=MzA3MTU0MzcyMQ==&mid=2447602671&idx=1&sn=700ffa7c1a01daa9b5550cc173609925&scene=1&
+- [Neural Fictitious Self Play: From Game Theory to Deep Learning](https://mp.weixin.qq.com/s/jT1CH_sx10nF-u4BS4gYtg)
 - https://zhuanlan.zhihu.com/p/22308032
 - https://zhuanlan.zhihu.com/p/22107715
 - https://www.quora.com/What-are-the-best-resources-to-learn-about-deep-learning
