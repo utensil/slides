@@ -240,6 +240,14 @@ https://towardsdatascience.com/machine-learning-quick-reference-card-cf92f6accd0
 [Essentials of Machine Learning Algorithms with Python and R Codes](https://www.analyticsvidhya.com/blog/2017/09/common-machine-learning-algorithms/)
 [ The 10 Algorithms Machine Learning Engineers Need to Know](https://www.kdnuggets.com/2016/08/10-algorithms-machine-learning-engineers.html)
 
+***
+
+<!-- .slide: data-background-image="http://scikit-learn.org/dev/_static/ml_map.png" data-background-size="contain" -->
+
+***
+
+<!-- .slide: data-background-image="http://dlib.net/ml_guide.svg" data-background-size="contain" -->
+
 ---
 
 ### Linear Regression
@@ -329,6 +337,9 @@ Note:
 
 - https://en.wikipedia.org/wiki/Arg_max
 - [Argmax and Max Calculus](https://www.cs.ubc.ca/~schmidtm/Documents/2016_540_Argmax.pdf) 
+- https://tex.stackexchange.com/questions/5223/command-for-argmin-or-argmax
+- https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics
+- https://raw.githubusercontent.com/scikit-learn/scikit-learn/master/doc/modules/linear_model.rst
 
 ***
 
@@ -707,9 +718,11 @@ The L0 norm is the number of non-zero elements in a vector.
 
 Note:
 
-https://www.quora.com/What-is-the-difference-between-L1-and-L2-regularization-How-does-it-solve-the-problem-of-overfitting-Which-regularizer-to-use-and-when
-http://blog.shakirm.com/2016/04/learning-in-brains-and-machines-2/
-https://cnx.org/contents/U4hLPGQD@5/Compressible-signals#uid10
+- https://www.quora.com/What-is-the-difference-between-L1-and-L2-regularization-How-does-it-solve-the-problem-of-overfitting-Which-regularizer-to-use-and-when
+- http://blog.shakirm.com/2016/04/learning-in-brains-and-machines-2/
+- https://cnx.org/contents/U4hLPGQD@5/Compressible-signals#uid10
+- http://mathworld.wolfram.com/VectorNorm.html
+
 
 ***
 
@@ -1941,78 +1954,109 @@ http://gluon.mxnet.io/
 
 ---
 
-### Misc
+### Libs
 
 ***
 
-- http://mathworld.wolfram.com/VectorNorm.html
-- https://github.com/utensil/utensil.github.io/issues/15
+<!-- .slide: style="font-size: 28px" -->
+
+#### Tensorflow
+
+- [Data science Python notebooks: TensorFlow Tutorials](https://github.com/donnemartin/data-science-ipython-notebooks#tensor-flow-tutorials)
+- [Tensorflow Tutorials using Jupyter Notebook](https://github.com/sjchoi86/Tensorflow-101)
+- [Effective TensorFlow](https://github.com/vahidk/EffectiveTensorflow)
+- [TensorFlow-Tutorials: From LR to GAN](https://github.com/nlintz/TensorFlow-Tutorials)
+- [TensorFlow in Chinese](https://github.com/lawlite19/MachineLearning_TensorFlow)
+- [Awesome TensorFlow](https://github.com/jtoy/awesome-tensorflow)
+
+***
+
+<!-- .slide: style="font-size: 28px" -->
+
+#### Other than Tensorflow
+
+- [PyTorch](https://github.com/pytorch/pytorch)
+- [MXNet](https://github.com/apache/incubator-mxnet)
+- [PaddlePaddle](https://github.com/PaddlePaddle/Paddle)
+- [DLib](http://dlib.net/ml.html)
+- [Caffe2](https://github.com/caffe2/caffe2)
+- [Deep Learning Framework Examples](https://github.com/ilkarman/DeepLearningFrameworks)
+
+***
+
+<!-- .slide: style="font-size: 28px" -->
+
+#### Toolkits
+
+- [mxnet-finetuner](https://github.com/knjcode/mxnet-finetuner)
+- [ImageAI](https://github.com/OlafenwaMoses/ImageAI)
+- [GluonCV — Deep Learning Toolkit for Computer Vision](https://medium.com/apache-mxnet/gluoncv-deep-learning-toolkit-for-computer-vision-9218a907e8da)
+- [GluonNLP — Deep Learning Toolkit for Natural Language Processing](https://medium.com/apache-mxnet/gluonnlp-deep-learning-toolkit-for-natural-language-processing-98e684131c8a)
 
 ---
 
-### Libs
+### Resources
 
-- https://simplestatistics.org/docs/
+***
 
----
+<!-- .slide: style="font-size: 28px" -->
 
-### DLib
-
-![](http://dlib.net/ml_guide.svg)
-
-- http://dlib.net/ml.html
-
----
-
-### Tensorflow
-
-- https://github.com/donnemartin/data-science-ipython-notebooks#tensor-flow-tutorials
-- https://github.com/jtoy/awesome-tensorflow
-- https://github.com/sjchoi86/Tensorflow-101
-- https://github.com/vahidk/EffectiveTensorflow
-- https://github.com/nlintz/TensorFlow-Tutorials
-- https://github.com/lawlite19/MachineLearning_TensorFlow
-
----
-
-### Datasets
+#### Datasets
 
 - All
   - https://github.com/caesar0301/awesome-public-datasets
   - http://academictorrents.com/
 - CV
   - http://deeplearning.net/datasets
-- Go
-  - https://github.com/yenw/computer-go-dataset
 - NLP
   - http://universaldependencies.org/
   - https://github.com/Breakend/DialogDatasets
+- Go
+  - https://github.com/yenw/computer-go-dataset
 
 ***
 
-Notebooks:
+<!-- .slide: style="font-size: 28px" -->
 
-- http://scikit-learn.org/dev/_static/ml_map.png
-- https://github.com/donnemartin/data-science-ipython-notebooks
-- https://github.com/jakevdp/PythonDataScienceHandbook
+#### Notebooks
 
-Foundation:
-
-- https://github.com/rushter/MLAlgorithms/
-- https://github.com/eriklindernoren/ML-From-Scratch
-- https://github.com/ujjwalkarn/Machine-Learning-Tutorials
+- [TensorFlow Exercises: focusing on the comparison with NumPy](https://github.com/Kyubyong/tensorflow-exercises)
+- [TensorFlow Tutorial - used by Nvidia](https://github.com/alrojo/tensorflow-tutorial)
+- [Python Machine Learning Notebooks](https://github.com/tirthajyoti/PythonMachineLearning)
+- [Data science Python notebooks](https://github.com/donnemartin/data-science-ipython-notebooks)
+- [Python Data Science Handbook: full text in Jupyter Notebooks](https://github.com/jakevdp/PythonDataScienceHandbook)
+- [Machine Learning & Deep Learning Tutorials](https://github.com/ujjwalkarn/Machine-Learning-Tutorials)
 
 ***
 
-- https://en.wikipedia.org/wiki/Arg_max
-- https://tex.stackexchange.com/questions/5223/command-for-argmin-or-argmax
-- https://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics
-- https://www.cs.ubc.ca/~schmidtm/Documents/2016_540_Argmax.pdf
-- https://raw.githubusercontent.com/scikit-learn/scikit-learn/master/doc/modules/linear_model.rst
+<!-- .slide: style="font-size: 28px" -->
+
+#### Implementations
+
+- [Minimal Machine learning algorithms](https://github.com/rushter/MLAlgorithms/)
+- [Machine Learning From Scratc](https://github.com/eriklindernoren/ML-From-Scratch)
+- [tiny-dnn](https://github.com/tiny-dnn/tiny-dnn) & [MiniDNN](https://github.com/yixuan/MiniDNN)
+
+***
+
+<!-- .slide: style="font-size: 28px" -->
+
+#### Docker Images
+
+- https://github.com/waleedka/modern-deep-learning-docker
+- https://github.com/ufoym/deepo
+- https://github.com/bethgelab/docker
+- https://github.com/utensil/dockerfiles
+- https://www.docker-cn.com/registry-mirror
+- https://www.daocloud.io/mirror
 
 ---
 
 ### Visualization
+
+***
+
+<!-- .slide: style="font-size: 28px" -->
 
 - http://playground.tensorflow.org
 - https://deeplearnjs.org/demos/model-builder/
@@ -2026,6 +2070,8 @@ Foundation:
 
 ***
 
+<!-- .slide: style="font-size: 28px" -->
+
 - http://colah.github.io/posts/2015-09-NN-Types-FP/
 - http://colah.github.io/posts/2015-01-Visualizing-Representations/
 - http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/
@@ -2035,6 +2081,8 @@ Foundation:
 
 ***
 
+<!-- .slide: style="font-size: 28px" -->
+
 - https://github.com/ethereon/netscope
 - https://www.zhihu.com/question/26006703/answer/135825424
 - http://josephpcohen.com/w/visualizing-cnn-architectures-side-by-side-with-mxnet/
@@ -2042,25 +2090,16 @@ Foundation:
 
 ***
 
-http://nbviewer.jupyter.org/github/stephencwelch/Neural-Networks-Demystified/tree/master/
-https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/
-http://www.scipy-lectures.org/intro/numpy/numpy.html#indexing-and-slicing
-http://scikit-learn.org/stable/modules/tree.html
-https://distill.pub/2017/momentum/
-https://github.com/distillpub/post--feature-visualization
-https://distill.pub/2017/feature-visualization/
-https://bondifrench.github.io/ml-in-js/
+<!-- .slide: style="font-size: 28px" -->
 
----
-
-### Understanding LSTM Networks
-
-- http://colah.github.io/posts/2015-08-Understanding-LSTMs
-- https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714
-
-***
-
-<!-- #####.slide: data-background-iframe="//colah.github.io/posts/2015-08-Understanding-LSTMs/" data-background-interactive -->
+- http://nbviewer.jupyter.org/github/stephencwelch/Neural-Networks-Demystified/tree/master/
+- https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/
+- http://www.scipy-lectures.org/intro/numpy/numpy.html#indexing-and-slicing
+- http://scikit-learn.org/stable/modules/tree.html
+- https://distill.pub/2017/momentum/
+- https://github.com/distillpub/post--feature-visualization
+- https://distill.pub/2017/feature-visualization/
+- https://bondifrench.github.io/ml-in-js/
 
 ---
 
@@ -2096,6 +2135,8 @@ https://github.com/jatinshah/ufldl_tutorial
 
 ***
 
+<!-- .slide: style="font-size: 28px" -->
+
 * https://github.com/karpathy/convnetjs
 * http://cs.stanford.edu/people/karpathy/convnetjs/demo/classify2d.html
 * http://www.cs.ubc.ca/~van/papers/2016-TOG-deepRL/index.html
@@ -2106,6 +2147,8 @@ https://github.com/jatinshah/ufldl_tutorial
 
 ***
 
+<!-- .slide: style="font-size: 28px" -->
+
 * https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU
 * https://www.youtube.com/playlist?list=PLE6Wd9FR--EfW8dtjAuPoTuPcqmOV53Fu
 * http://swanintelligence.com/first-steps-with-neural-nets-in-keras.html
@@ -2114,6 +2157,8 @@ https://github.com/jatinshah/ufldl_tutorial
 * http://boxcar2d.com/index.html
 
 ***
+
+<!-- .slide: style="font-size: 28px" -->
 
 * https://www.flickr.com/photos/syntopia/6791724773/in/photostream/
 * http://blog.hvidtfeldts.net/index.php/2012/01/knots-and-polyhedra/
@@ -2124,6 +2169,8 @@ https://github.com/jatinshah/ufldl_tutorial
 
 ***
 
+<!-- .slide: style="font-size: 28px" -->
+
 * https://distill.pub/2017/feature-visualization/
 * https://github.com/ChristosChristofidis/awesome-deep-learning#videos-and-lectures
 * https://github.com/guillaume-chevalier/Awesome-Deep-Learning-Resources#youtube
@@ -2131,31 +2178,33 @@ https://github.com/jatinshah/ufldl_tutorial
 
 ***
 
-https://hackernoon.com/learning-ai-if-you-suck-at-math-p5-deep-learning-and-convolutional-neural-nets-in-plain-english-cda79679bbe3
-http://cs231n.github.io/neural-networks-1/
-https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/
-http://cs231n.github.io/convolutional-networks/
-http://www.deeplearningbook.org/
+<!-- .slide: style="font-size: 28px" -->
+
+- https://hackernoon.com/learning-ai-if-you-suck-at-math-p5-deep-learning-and-convolutional-neural-nets-in-plain-english-cda79679bbe3
+- http://cs231n.github.io/neural-networks-1/
+- https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/
+- http://cs231n.github.io/convolutional-networks/
+- http://www.deeplearningbook.org/
 
 ***
 
-https://nbviewer.jupyter.org/github/makeyourownneuralnetwork/makeyourownneuralnetwork/
-https://petewarden.com/2016/02/28/tensorflow-for-poets/
-http://blog.otoro.net/2017/01/01/recurrent-neural-network-artist/
-https://github.com/hardmaru/rnn-tutorial
-https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0
-https://medium.freecodecamp.org/if-you-want-to-learn-data-science-start-with-one-of-these-programming-classes-fb694ffe780c
+<!-- .slide: style="font-size: 28px" -->
+
+- https://nbviewer.jupyter.org/github/makeyourownneuralnetwork/makeyourownneuralnetwork/
+- https://petewarden.com/2016/02/28/tensorflow-for-poets/
+- http://blog.otoro.net/2017/01/01/recurrent-neural-network-artist/
+- https://github.com/hardmaru/rnn-tutorial
+- https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-0-q-learning-with-tables-and-neural-networks-d195264329d0
+- https://medium.freecodecamp.org/if-you-want-to-learn-data-science-start-with-one-of-these-programming-classes-fb694ffe780c
+- https://simplestatistics.org/docs/
 
 ***
 
-https://www.docker-cn.com/registry-mirror
-https://www.daocloud.io/mirror
+<!-- .slide: style="font-size: 28px" -->
 
-***
-
-https://www.mathsisfun.com/algebra/matrix-multiplying.html
-https://eli.thegreenplace.net/2015/visualizing-matrix-multiplication-as-a-linear-combination/
-https://www.datasciencecentral.com/profiles/blogs/matrix-multiplication-in-neural-networks
+- https://www.mathsisfun.com/algebra/matrix-multiplying.html
+- https://eli.thegreenplace.net/2015/visualizing-matrix-multiplication-as-a-linear-combination/
+- https://www.datasciencecentral.com/profiles/blogs/matrix-multiplication-in-neural-networks
 
 ***
 
@@ -2474,6 +2523,17 @@ https://github.com/alrojo/tensorflow-tutorial
 ***
 
 <!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/alrojo/tensorflow-tutorial/blob/master/lab5_AE/lab5_AE.ipynb" data-background-interactive -->
+
+---
+
+### Understanding LSTM Networks
+
+- http://colah.github.io/posts/2015-08-Understanding-LSTMs
+- https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714
+
+***
+
+<!-- #####.slide: data-background-iframe="//colah.github.io/posts/2015-08-Understanding-LSTMs/" data-background-interactive -->
 
 ---
 
