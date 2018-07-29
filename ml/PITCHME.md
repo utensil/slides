@@ -847,6 +847,11 @@ $$`
 \tanh(x) \in (-1, 1) \; \text{while} \; \sigma (x) \in (0,1)
 $$`  <!-- .element: class="fragment" -->
 
+note:
+
+- https://stats.stackexchange.com/questions/142348/tanh-vs-sigmoid-in-neural-net
+- https://stats.stackexchange.com/questions/101560/tanh-activation-function-vs-sigmoid-activation-function
+
 ***
 
 #### Binary Cross-Entropy Loss
@@ -1399,7 +1404,15 @@ Cons:
 
 ***
 
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/Vooban/Decision-Trees-For-Knowledge-Discovery/blob/master/Decision-Trees-For-Knowledge-Discovery-With-Scikit-Learn.ipynb" data-background-interactive -->
+<!-- .slide: data-background-iframe="http://gabrielelanaro.github.io/blog/2016/03/03/decision-trees.html" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="http://gabrielelanaro.github.io/blog/2016/03/03/decision-trees.html" data-background-interactive -->
+
+***
+
+<!-- .slide: data-background-iframe="https://machinelearningmastery.com/implement-decision-tree-algorithm-scratch-python/" data-background-interactive -->
 
 ***
 
@@ -2100,6 +2113,7 @@ http://gluon.mxnet.io/
 - https://github.com/distillpub/post--feature-visualization
 - https://distill.pub/2017/feature-visualization/
 - https://bondifrench.github.io/ml-in-js/
+- http://nbviewer.jupyter.org/github/lightning-viz/lightning-example-notebooks/blob/master/index.ipynb
 
 ---
 
@@ -2319,6 +2333,11 @@ https://github.com/BAILOOL/DoYouEvenLearn
 - https://github.com/eriklindernoren/ML-From-Scratch
 - https://github.com/stanfordnlp/cs224n-winter17-notes
 - https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78#.7tyqpjz6q
+
+***
+
+- [Efficient BackProp](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf)
+- https://github.com/IsaacChanghau/DL-NLP-Readings
 
 ***
 
