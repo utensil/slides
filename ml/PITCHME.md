@@ -1377,6 +1377,10 @@ Cons:
     </tr>
 </table>
 
+note:
+
+- [Top 10 algorithms in data mining](http://www.cs.uvm.edu/~icdm/algorithms/10Algorithms-08.pdf)
+
 ***
 
 <!-- .slide: style="font-size:24px;" -->
@@ -1388,7 +1392,11 @@ Cons:
 | Gini Split / <br /> Gini Index	          | Favors larger partitions. <br /> Very simple to implement.	 | CART |
 | Information Gain / <br /> Entropy        	| Favors partitions that have small counts <br /> but many distinct values. |	 ID3 / C4.5 |
 
-[Decision-Tree Learning](http://www.ke.tu-darmstadt.de/lehre/archiv/ws0809/mldm/dt.pdf) <!-- .element: class="figcaption see-also" -->
+[A Complete Tutorial on Tree Based Modeling from Scratch (in R & Python)](https://www.analyticsvidhya.com/blog/2016/04/complete-tutorial-tree-based-modeling-scratch-in-python/)  <!-- .element: class="figcaption see-also" -->
+
+note:
+
+[Decision-Tree Learning](http://www.ke.tu-darmstadt.de/lehre/archiv/ws0809/mldm/dt.pdf)
 
 ***
 
@@ -1416,6 +1424,40 @@ Cons:
 
 ***
 
+#### Learning with ensembles
+
+***
+
+#### Bagging
+
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch07/images/07_06.png) <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 7 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch07/ch07.ipynb)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Adaptive Boosting
+
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch07/images/07_09.png) <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 7 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch07/ch07.ipynb)  <!-- .element: class="figcaption" -->
+
+***
+
+#### Random Forests
+
+![](https://qph.ec.quoracdn.net/main-qimg-132ee5828d1938659e493d902991cca5.webp)
+
+[What are the differences between bagged trees and random forests? - Prashanth Ravindran's answer](https://www.quora.com/What-are-the-differences-between-bagged-trees-and-random-forests/answer/Prashanth-Ravindran)  <!-- .element: class="figcaption" -->
+
+[Python Machine Learning: Chapter 10 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch10/ch10.ipynb#Random-forest-regression)  <!-- .element: class="figcaption see-also" -->
+
+***
+
+####  Level-wise and leaf-wise growth
+
+![](https://i0.wp.com/mlexplained.com/wp-content/uploads/2018/01/DecisionTrees_3_thumb.png?w=1024)
+
+[LightGBM and XGBoost Explained](http://mlexplained.com/2018/01/05/lightgbm-and-xgboost-explained/)  <!-- .element: class="figcaption" -->
+
+***
+
 #### XGBoost
 
 - Introduction to Boosted Trees
@@ -1425,6 +1467,25 @@ Cons:
 - [gradient boosting decision tree algorithm](https://en.wikipedia.org/wiki/Gradient_boosting)
 - [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754)
 - [Awesome XGBoost](https://github.com/dmlc/xgboost/tree/master/demo)
+
+***
+
+#### XGBoost is like Golf
+
+![](http://explained.ai/gradient-boosting/images/golf-MSE.png) <!-- .element: class="img-450" -->
+
+[How to explain gradient boosting](http://explained.ai/gradient-boosting/index.html)  <!-- .element: class="figcaption" -->
+
+note:
+
+- [Gradient Boosting from scratch](https://medium.com/mlreview/gradient-boosting-from-scratch-1e317ae4587d)
+- [What is an intuitive explanation of Gradient Boosting? - Charles Vr's answer](https://www.quora.com/What-is-an-intuitive-explanation-of-Gradient-Boosting/answer/Charles-Vr)
+
+***
+
+| Gradient descent | Gradient boosting |
+|------------------|-------------------|
+| `$ \vec x_t = \vec x_{t-1} - \eta \nabla f(\vec x_{t-1}) $` | `$\hat{\vec y}_m = \hat{\vec y}_{m-1} + \eta (- \nabla L(\vec y, \hat{\vec y}_{m-1}))$` |
 
 ***
 
@@ -1647,18 +1708,6 @@ https://stackoverflow.com/questions/10059594/a-simple-explanation-of-naive-bayes
   - [Cross Validation in Keras](https://github.com/fchollet/keras/issues/1711)
   - [keras/scikit-learn: using fit_generator() with cross validation](https://stackoverflow.com/questions/40854232/keras-scikit-learn-using-fit-generator-with-cross-validation)
   - [How to pass callbacks to scikit_learn wrappers (e.g. KerasClassifier)](https://github.com/fchollet/keras/issues/4278#issuecomment-264665803)
-
-***
-
-#### Learning with ensembles
-
-![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch07/images/07_02.png) [Python Machine Learning: Chapter 7 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch07/ch07.ipynb)  <!-- .element: class="figcaption" -->
-
-***
-
-#### Bagging
-
-![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch07/images/07_06.png) <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 7 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch07/ch07.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -2080,6 +2129,7 @@ http://gluon.mxnet.io/
 - https://colah.github.io/posts/2014-07-Understanding-Convolutions/
 - https://github.com/keplr-io/hera
 - https://github.com/awslabs/mxboard
+- https://github.com/slundberg/shap
 
 ***
 
