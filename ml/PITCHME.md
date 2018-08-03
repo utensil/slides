@@ -821,7 +821,7 @@ http://xaktly.com/ProbStat_Distributions.html
 
 #### Logistic Function ( a.k.a Sigmoid )
 
-![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/sigmoid.png) <!-- .element: class="img-300" --> [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
+![](https://isaacchanghau.github.io/img/deeplearning/activationfunction/sigmoid.png) <!-- .element: class="img-300" --> [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/post/activation_functions/)  <!-- .element: class="figcaption" -->
 
 `$$ \sigma(x) = \frac{1}{1+e^{-x}} $$`   <!-- .element: class="fragment current-only" -->
 
@@ -839,7 +839,7 @@ https://en.wikipedia.org/wiki/Activation_function
 
 #### Hyperbolic Tangent (tanh)
 
-![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/tanh.png)   <!-- .element: class="img-300" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
+![](https://isaacchanghau.github.io/img/deeplearning/activationfunction/tanh.png)   <!-- .element: class="img-300" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/post/activation_functions/)  <!-- .element: class="figcaption" -->
 
 `$$
 \tanh(x) = \frac{1-e^{-2x}}{1+e^{-2x}} = 2\sigma (2x)-1 
