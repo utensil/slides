@@ -1472,7 +1472,7 @@ note:
 
 ***
 
-#### XGBoost is like Golf
+#### Gradient Boosting is like Golf
 
 ![](http://explained.ai/gradient-boosting/images/golf-MSE.png) <!-- .element: class="img-450" -->
 
@@ -1485,9 +1485,15 @@ note:
 
 ***
 
+<!-- .slide: style="font-size:32px;" -->
+
 | Gradient descent | Gradient boosting |
 |------------------|-------------------|
-| `$ \vec x_t = \vec x_{t-1} - \eta \nabla f(\vec x_{t-1}) $` | `$\hat{\vec y}_m = \hat{\vec y}_{m-1} + \eta (- \nabla L(\vec y, \hat{\vec y}_{m-1}))$` |
+| `$ \vec w_t = \vec w_{t-1} - \eta \nabla f(\vec w_{t-1}) $` | `$\hat{\vec y}_m = \hat{\vec y}_{m-1} + \eta (- \nabla L(\vec y, \hat{\vec y}_{m-1}))$` |
+
+[How to explain gradient boosting](http://explained.ai/gradient-boosting/index.html)  <!-- .element: class="figcaption" -->
+
+[GBDT v.s. XGBoost](https://www.zhihu.com/question/41354392/answer/98658997)   <!-- .element: class="figcaption see-also" -->
 
 ***
 
@@ -1603,26 +1609,6 @@ Note:
 
 ***
 
-<!-- .slide: style="font-size:36px; text-align: left" -->
-
-####  Gaussian process (GP)
-
-A GP is the generalization of a Gaussian distribution to a distribution over functions, instead of random variables.
-
-Just as a Gaussian distribution is completely specified by its mean `$ \mu $` and variance `$ \sigma $`, 
-
-a GP is completely specified by its **mean function** `$ m(x) $`, and covariance function `$ k(x,x′) $`.
-
-***
-
-#### Gaussian Process Classification (GPC) on Iris dataset
-
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_gpc_iris_001.png)
-
-[scikit-learn User Guide: Gaussian process classification (GPC) on iris dataset](http://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
-
-***
-
 #### Bayes’ theorem
 
 `$$
@@ -1671,6 +1657,26 @@ https://stackoverflow.com/questions/10059594/a-simple-explanation-of-naive-bayes
 ***
 
 <!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/tirthajyoti/PythonMachineLearning/blob/master/Principal%20Component%20Analysis.ipynb" data-background-interactive -->
+
+***
+
+<!-- .slide: style="font-size:36px; text-align: left" -->
+
+####  Gaussian process (GP)
+
+A GP is the generalization of a Gaussian distribution to a distribution over functions, instead of random variables.
+
+Just as a Gaussian distribution is completely specified by its mean `$ \mu $` and variance `$ \sigma $`, 
+
+a GP is completely specified by its **mean function** `$ m(x) $`, and covariance function `$ k(x,x′) $`.
+
+***
+
+#### Gaussian Process Classification (GPC) on Iris dataset
+
+![](http://scikit-learn.org/stable/_images/sphx_glr_plot_gpc_iris_001.png)
+
+[scikit-learn User Guide: Gaussian process classification (GPC) on iris dataset](http://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
 
 ---
 
@@ -2113,6 +2119,38 @@ http://gluon.mxnet.io/
 - https://github.com/utensil/dockerfiles
 - https://www.docker-cn.com/registry-mirror
 - https://www.daocloud.io/mirror
+
+
+---
+
+#### Reinforcement Learning
+
+***
+
+<!-- .slide: style="font-size: 28px" -->
+
+#### Implementations
+
+- [Simple Beginner’s guide to Reinforcement Learning & its implementation](https://www.analyticsvidhya.com/blog/2017/01/introduction-to-reinforcement-learning-implementation/)
+- [Deep Deterministic Policy Gradient (DDPG) (Tensorflow)](https://morvanzhou.github.io/tutorials/machine-learning/reinforcement-learning/6-2-DDPG/)
+- [Reinforcement learning tutorial using Python and Keras](http://adventuresinmachinelearning.com/reinforcement-learning-tutorial-python-keras/)
+- [TensorForce](https://github.com/reinforceio/tensorforce)
+- [REINFORCEjs](https://github.com/karpathy/reinforcej)
+
+***
+
+<!-- .slide: style="font-size: 28px" -->
+
+#### Environments
+
+- [OpenAI Gym](https://github.com/openai/gym)
+  - CartPole-v0
+- [Retro Games in Gym](https://github.com/openai/retro)
+  - Airstriker
+- [PyGame Learning Environment (PLE)](http://pygame-learning-environment.readthedocs.io/en/latest/index.html)
+  - [Keras-FlappyBird](https://github.com/yanpanlau/Keras-FlappyBird)
+- [osim-rl](http://osim-rl.stanford.edu/docs/quickstart/)
+  - L2RunEnv
 
 ---
 
@@ -2601,6 +2639,7 @@ https://github.com/alrojo/tensorflow-tutorial
 
 - http://colah.github.io/posts/2015-08-Understanding-LSTMs
 - https://medium.com/mlreview/understanding-lstm-and-its-diagrams-37e2f46f1714
+- [LSTM and GRU -- Formula Summary](https://isaacchanghau.github.io/post/lstm-gru-formula/)
 
 ***
 
