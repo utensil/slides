@@ -6,11 +6,55 @@ Utensil Song @ 2017-2018
 
 ### The Origin
 
-- [Mathematica](https://www.wolfram.com/mathematica/)[*](https://github.com/utensil/mathematica-notebooks)[*](http://www.wolframalpha.com/examples/pro-features/step-by-step-solutions/) (2000) 
-- [Neural Networks](https://book.douban.com/subject/1115600/) (2002)
-- [NuPIC](https://github.com/numenta/nupic) and [NuPIC Core](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)
-- [kaggle: Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
-- Dive in (2016)
+***
+
+#### [Wolfram Mathematic](https://www.wolfram.com/mathematica/)  (2000) 
+
+![](http://www.wolfram.com/mathematica/online/images/mathematicaOnline-header.png)
+
+- [My Mathematica Notebooks](https://github.com/utensil/mathematica-notebooks)
+  - [DSolve](http://reference.wolfram.com/language/ref/DSolve.html) / [PhysicalSystemData](http://reference.wolfram.com/language/ref/PhysicalSystemData.html) / [Fit](http://reference.wolfram.com/language/ref/Fit.html)
+- [Wolfram Alpha Step-by-step Solutions](http://www.wolframalpha.com/examples/pro-features/step-by-step-solutions/)
+
+***
+
+#### First Book on Neural Networks (2002)
+
+[![](https://img3.doubanio.com/view/subject/l/public/s1581911.jpg) <!-- .element class="img-450" -->](https://book.douban.com/subject/1115600/)
+
+***
+
+#### [NuPIC](https://github.com/numenta/nupic)[*](https://github.com/numenta/nupic.core/pulls?utf8=%E2%9C%93&q=author%3Autensil)[*](https://github.com/numenta/htm.java/pulls?utf8=%E2%9C%93&q=author%3Autensil) (2014)
+
+- Sparse distributed representations
+- Encoders
+- Spatial Pooling
+- Hierarchical Temporal Memory
+
+note:
+
+- [Biological and Machine Intelligence (BAMI)](https://numenta.com/resources/biological-and-machine-intelligence/)
+- [HTM Studio](https://numenta.com/machine-intelligence-technology/htm-studio/)
+
+***
+
+#### [kaggle: Higgs Boson Machine Learning Challenge](https://www.kaggle.com/c/higgs-boson) (2014)
+
+***
+
+<!-- .slide: data-background-image="http://donsoft.io/intro-to-deeplearning/images/large_hadron_collider.jpg" data-background-interactive style="font-size: 60px"-->
+
+Large Hadron Collider <!-- .element class="fragment" -->
+
+***
+
+<!-- .slide: data-background-image="http://donsoft.io/intro-to-deeplearning/images/higgs_boson.jpg" data-background-interactive style="font-size: 60px"-->
+
+Higgs Boson Detection <!-- .element class="fragment" -->
+
+***
+
+#### Dive in (2016)
 
 Note:
 
@@ -1498,18 +1542,6 @@ note:
 ***
 
 <!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/Vooban/Decision-Trees-For-Knowledge-Discovery/blob/master/Decision-Trees-For-Knowledge-Discovery-With-XGBoost.ipynb" data-background-interactive -->
-
-***
-
-<!-- .slide: data-background-image="http://donsoft.io/intro-to-deeplearning/images/large_hadron_collider.jpg" data-background-interactive style="font-size: 60px"-->
-
-Large Hadron Collider <!-- .element class="fragment" -->
-
-***
-
-<!-- .slide: data-background-image="http://donsoft.io/intro-to-deeplearning/images/higgs_boson.jpg" data-background-interactive style="font-size: 60px"-->
-
-Higgs Boson Detection <!-- .element class="fragment" -->
 
 ***
 
