@@ -14,4 +14,4 @@ Local
 ` for Linux/Mac
 3. run `npm install -g reveal-md` to install reveal-md
 4. run `git clone https://github.com/utensil/slides` and `cd slides/ml`
-5. run `reveal-md -w PITCHME.md` to start serving the slide, the browser should automatically open the slide, if not, visit http://localhost:1948 .
+5. run `reveal-md -w ml.md` to start serving the slide, the browser should automatically open the slide, if not, visit http://localhost:1948 .
