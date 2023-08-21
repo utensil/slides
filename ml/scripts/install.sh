@@ -6,6 +6,8 @@ npm install -g mathjax-node-cli
 # https://graphviz.gitlab.io/_pages/Download/Download_windows.html
 # http://www.graphviz.org/Download..php
 # brew install graphviz
+sudo apt update
+sudo apt install -y graphviz
 
 # http://ogom.github.io/draw_uml/plantuml/
 npm install -g node-plantuml

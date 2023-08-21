@@ -76,9 +76,25 @@ function isImageOk(img) {
 
 var dependencies = [];
 
-head.load('./_assets/js/vendor/fontawesome-all.min.js');
-head.load('./_assets/css/vendor/mermaid.forest.css');
-head.load('./_assets/js/vendor/mermaidAPI.js', function () {
+function loadJs(url, callback) {
+  const script = document.createElement('script');
+  script.src = url;
+  script.onload = callback;
+  document.head.appendChild(script);
+}
+
+function loadCSS(url, callback) {
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = url;
+  link.onload = callback;
+  document.getElementsByTagName('head')[0].appendChild(link);
+}
+
+loadJs('./_assets/js/vendor/fontawesome-all.min.js');
+loadCSS('./_assets/css/vendor/mermaid.forest.css');
+loadJs('./_assets/js/vendor/mermaidAPI.js', function () {
   mermaidAPI.initialize({
     startOnLoad: false,
     cloneCssStyles: true,
@@ -114,10 +130,6 @@ var fancyboxOptions = {
   }    
 };
 
-// head.load('./_assets/css/vendor/jquery.fancybox.min.css');
-// dependencies.push({src: './_assets/js/vendor/jquery-3.3.1.min.js'});
-// dependencies.push({src: './_assets/js/vendor/jquery.fancybox.min.js'});
-
 function funcyboxifyImages(cur) {
   if (!$) {
     return;
@@ -136,19 +148,19 @@ function funcyboxifyImages(cur) {
 
 Reveal.addEventListener('ready', function (event) {
 
-  head.load('./_assets/js/reveal-code-focus-modified.js', function () {
+  loadJs('./_assets/js/reveal-code-focus-modified.js', function () {
     // console.log(window);
     // console.log(window.hljs);
     RevealCodeFocus();
   });
 
-  head.load('./_assets/js/vendor/jquery-3.3.1.min.js', function() {
-    head.load([
-      './_assets/css/vendor/jquery.fancybox.min.css',
-      './_assets/js/vendor/jquery.fancybox.min.js'], function () {
-        funcyboxifyImages();
-        $("[data-fancybox]").fancybox(fancyboxOptions);
-    });
+  loadJs('./_assets/js/vendor/jquery-3.3.1.min.js', function() {
+    loadCSS('./_assets/css/vendor/jquery.fancybox.min.css', function() {
+      loadJs('./_assets/js/vendor/jquery.fancybox.min.js', function () {
+          funcyboxifyImages();
+          $("[data-fancybox]").fancybox(fancyboxOptions);
+      })
+    })
   });
 
   var cur = event.currentSlide;

@@ -42,7 +42,7 @@
       }
 
       // Highlight code using highlight.js.
-      hljs.highlightBlock(element);
+      hljs.highlightElement(element);
 
       // Split highlighted code into lines.
       var openTags = [], reHtmlTag = /<(\/?)span(?:\s+(?:class=(['"])hljs-.*?\2)?\s*|\s*)>/g;
@@ -200,4 +200,4 @@
   }
 
   window.RevealCodeFocus = RevealCodeFocus;
-}(this, this.Reveal, this.hljs));
+}(this, this.Reveal, this.Reveal.getPlugin('highlight').hljs));

@@ -173,8 +173,10 @@ https://bookdown.org/rdpeng/artofdatascience/epicycle-of-analysis.html
 - Mechanistic
 
 <div style="float: right;width: 70%;">
-[Course Introduction - Advanced Data Science by Jeff Leek](http://jtleek.com/advdatasci/slides/01-introduction-slides.html#38)  <!-- .element: class="figcaption" -->
-<iframe src="http://jtleek.com/advdatasci/slides/01-introduction-slides.html#38" />
+
+[Course Introduction - Advanced Data Science by Jeff Leek](https://jtleek.com/advdatasci/slides/01-introduction-slides.html#38)  <!-- .element: class="figcaption" -->
+
+<iframe src="https://jtleek.com/advdatasci/slides/01-introduction-slides.html#38" />
 </div>
 
 Note:
@@ -253,24 +255,24 @@ negative</td>
 
 |  Term              |            Formula                                                                               |         Focus        |
 |--------------------|:------------------------------------------------------------------------------------------------:|----------------------|
-| Accuracy           | `$ \frac{\color{green}{✔} + \color{red}{✖}}{\text{All}(\color{green}{✔}+\color{green}{✖}+\color{red}{✔}+\color{red}{✖})} $`                           | Right                |
-| Precision          | `$ \frac{\color{green}{✔}}{\text{All Positive}(\color{green}{✔}+\color{red}{✔})} $`             | Right about Positive |
-| Sensitivity/Recall | `$ \frac{\color{green}{✔}}{\text{All Real}(\color{green}{✔}+\color{green}{✖})} $`               | Right about Real     |
-| Specificity        | `$ \frac{\color{red}{✖}}{\text{All NOT Real}(\color{red}{✔}+\color{red}{✖})} $`                 | Right about NOT Real |
+| Accuracy           | $ \frac{\color{green}{✔} + \color{red}{✖}}{\text{All}(\color{green}{✔}+\color{green}{✖}+\color{red}{✔}+\color{red}{✖})} $                           | Right                |
+| Precision          | $ \frac{\color{green}{✔}}{\text{All Positive}(\color{green}{✔}+\color{red}{✔})} $             | Right about Positive |
+| Sensitivity/Recall | $ \frac{\color{green}{✔}}{\text{All Real}(\color{green}{✔}+\color{green}{✖})} $               | Right about Real     |
+| Specificity        | $ \frac{\color{red}{✖}}{\text{All NOT Real}(\color{red}{✔}+\color{red}{✖})} $                 | Right about NOT Real |
 
 | Legend    |                             |                               |
 |-----------|-----------------------------|-------------------------------|
-| Actual    | `$ \color{green}{●} $` Real | `$ \color{red}{●} $` NOT Real |
+| Actual    | $ \color{green}{●} $ Real | $ \color{red}{●} $ NOT Real |
 | Predicted | ✔ Positive                  | ✖ Negative                   |
 
 Note:
 
 |  Term              |            Formula                                                                               |         Focus        |
 |--------------------|:------------------------------------------------------------------------------------------------:|----------------------|
-| Accuracy           | `$ \frac{(\text{True Positive} + \text{True Negative})}{\text{All}} $`                           | Right                |
-| Precision          | `$ \frac{\text{True Positive}}{\text{All Positive}} $`                                           | Right about Positive |
-| Sensitivity/Recall | `$ \frac{\text{True Positive}}{\text{All Real (= True Positive + False Negative)}} $`            | Right about Real     |
-| Specificity        | `$ \frac{\text{True Negative}}{\text{All NOT Real (= True Negative + False Positive)}} $`        | Right about NOT Real |
+| Accuracy           | $ \frac{(\text{True Positive} + \text{True Negative})}{\text{All}} $                           | Right                |
+| Precision          | $ \frac{\text{True Positive}}{\text{All Positive}} $                                           | Right about Positive |
+| Sensitivity/Recall | $ \frac{\text{True Positive}}{\text{All Real (= True Positive + False Negative)}} $            | Right about Real     |
+| Specificity        | $ \frac{\text{True Negative}}{\text{All NOT Real (= True Negative + False Positive)}} $        | Right about NOT Real |
 
 ---
 
@@ -314,7 +316,7 @@ https://rasbt.github.io/mlxtend/user_guide/regressor/LinearRegression/
 
 ***
 
-#### Assumption `$$ y_i = \beta_0 + \beta x_i + \varepsilon $$` 
+#### Assumption $$ y_i = \beta_0 + \beta x_i + \varepsilon $$ 
 
 ![](https://image.slidesharecdn.com/simplelinearregressionpelatihan-090829234643-phpapp02/95/simple-linier-regression-9-728.jpg?cb=1251589640)   <!-- .element: class="img-450" --> [ by Department of Statistics, ITS Surabaya](https://www.slideshare.net/dessybudiyanti/simple-linier-regression)  <!-- .element: class="figcaption" -->
 
@@ -322,11 +324,11 @@ https://rasbt.github.io/mlxtend/user_guide/regressor/LinearRegression/
 
 #### Linear Model in Matrix Form
 
-`$$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + \boldsymbol{b} $$`
+$$ \boldsymbol{\hat{y}} = X \boldsymbol{w} + \boldsymbol{b} $$
 
 For $p$ features and $n$ samples: <!-- .element: style="font-size: 24px" -->
 
-`$$ \left(
+$$ \left(
   \begin{array}{c}
     \hat{y}_1 \\
     \vdots \\
@@ -345,9 +347,9 @@ For $p$ features and $n$ samples: <!-- .element: style="font-size: 24px" -->
     \vdots \\
     w_p
   \end{array}
-\right) + b $$` <!-- .element: class="" style="font-size: smaller" --> 
+\right) + b $$ <!-- .element: class="" style="font-size: smaller" --> 
 
-`$$ = \left(
+$$ = \left(
   \begin{array}{cccc}
     1 & x_{11} & \ldots & x_{1p}\\
     1 & \vdots & \ddots & \vdots\\
@@ -359,7 +361,7 @@ For $p$ features and $n$ samples: <!-- .element: style="font-size: 24px" -->
     \vdots \\
     w_p
   \end{array}
-\right) $$` <!-- .element: class="fragment" style="font-size: smaller" -->
+\right) $$ <!-- .element: class="fragment" style="font-size: smaller" -->
 
 Note:
 
@@ -377,7 +379,7 @@ https://en.wikipedia.org/wiki/Linear_regression
 
 ![minimal](https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Extrema_example_original.svg/330px-Extrema_example_original.svg.png)
 
-`$$ \underset{x \in D}{\operatorname{arg\,min}} \, f(x) := \{x \mid \forall y \in D : f(y) \ge f(x)\} $$`
+$$ \underset{x \in D}{\operatorname{arg\,min}} \, f(x) := \{x \mid \forall y \in D : f(y) \ge f(x)\} $$
 
 Note:
 
@@ -393,9 +395,9 @@ Note:
 
 ![](http://gluon.mxnet.io/_images/linear-regression.png) [Linear regression from scratch](http://gluon.mxnet.io/chapter02_supervised-learning/linear-regression-scratch.html) <!-- .element: class="figcaption" -->
 
-`$$
+$$
 \underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \xi(\hat{y}, y) = \ell_2(\hat{y}, y) \\
-= {|| \hat{y} - y||_2}^2 = {|| X \boldsymbol{w} - \boldsymbol{y}||_2}^2 $$`
+= {|| \hat{y} - y||_2}^2 = {|| X \boldsymbol{w} - \boldsymbol{y}||_2}^2 $$
 
 Note:
 
@@ -494,17 +496,17 @@ t = 3 * x + np.random.normal(0, 0.2, nb_of_samples)
 ```
 
 <p class="fragment current-only" data-code-focus="1-2">
-  `$ \boldsymbol{\hat{y}} = X \boldsymbol{w} $`
+  $ \boldsymbol{\hat{y}} = X \boldsymbol{w} $
 </p>
 <p class="fragment current-only" data-code-focus="3-4">
-  `$ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \xi(\hat{y}, t) = {|| \hat{y} - t||_2}^2 $`
+  $ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \xi(\hat{y}, t) = {|| \hat{y} - t||_2}^2 $
 </p>
 <p class="fragment current-only" data-code-focus="6-8" style="font-size: 24px">
-  `$$
+  $$
     x \sim {\mathcal {U}}(0, 1) \\
     t = 3 x + \varepsilon \\
     \varepsilon \sim N(\mu, \sigma^2) \; \text{with} \; \mu = 0, \sigma = 0.2
-  $$`
+  $$
 </p>
 <p class="fragment current-only" data-code-focus="10" style="">
   How to optimize?
@@ -519,17 +521,17 @@ t = 3 * x + np.random.normal(0, 0.2, nb_of_samples)
 
 ![](http://hduongtrong.github.io/assets/gradient_descent/coordinate_descent.gif) <!-- .element: style="height: 300px; background-color: white" --> [Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)  <!-- .element: class="figcaption" -->
 
-`$$
+$$
   w_{k+1} \gets w_k - \alpha_k \nabla_{i_k} F(w_k) e_{i_k}
-$$`
+$$
 
-`$$
+$$
   \ \ \text{where}\ \ \nabla_{i_k} F(w_k) := \frac{\partial F}{\partial w^{i_k}}(w_k)
-$$` <!-- .element: class="fragment" style="font-size: smaller" -->
+$$ <!-- .element: class="fragment" style="font-size: smaller" -->
 
 Note:
 
-`$$ \underset{w}{\operatorname{arg\,min}} \, F : \mathbb{R}^{d} \to \mathbb{R} $$`
+$$ \underset{w}{\operatorname{arg\,min}} \, F : \mathbb{R}^{d} \to \mathbb{R} $$
 
 $w^{i_k}$ represents the $i_k$-th element of the parameter vector, and $e_{i_k}$ represents the $i_k$-th coordinate vector for some $i_k \in \{1,\dots,d\}$.  In other words, the solution estimates $w_{k+1}$ and $w_k$ differ only in their $i_k$-th element as a result of a move in the $i_k$-th coordinate from $w_k$.
 
@@ -539,13 +541,13 @@ $w^{i_k}$ represents the $i_k$-th element of the parameter vector, and $e_{i_k}$
 
 ![](https://sebastianraschka.com/images/faq/closed-form-vs-gd/ball.png)   <!-- .element: class="img-300" --> [Machine Learning FAQ by Sebastian Raschka](https://sebastianraschka.com/faq/docs/closed-form-vs-gd.html)   <!-- .element: class="figcaption" -->
 
-`$$
+$$
 \text{Stochastic: }\quad w_{k+1} \gets w_k - \alpha_k \nabla f_{i_k}(w_k)
-$$`
+$$
 
-`$$
+$$
 \text{Batch: }\quad  w_{k+1} \gets w_k - \frac{\alpha_k}{n} \sum_{i=1}^n \nabla f_i(w_k)
-$$`
+$$
 
 ***
 
@@ -572,34 +574,34 @@ for i in range(nb_of_iterations):
 ```
 
 <p class="fragment current-only" data-code-focus="1">
-  `$ \boldsymbol{\hat{y}} = X \boldsymbol{w} $`
+  $ \boldsymbol{\hat{y}} = X \boldsymbol{w} $
 </p>
 <p class="fragment current-only" data-code-focus="2">
-  `$ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \xi(\hat{y}, t) = {|| \hat{y} - t||_2}^2 $`
+  $ \underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \xi(\hat{y}, t) = {|| \hat{y} - t||_2}^2 $
 </p>
 <p class="fragment current-only" data-code-focus="3-5" style="font-size: 24px">
-  `$$
+  $$
     x \sim {\mathcal {U}}(0, 1) \\
     t = 3 x + \varepsilon \\
     \varepsilon \sim N(\mu, \sigma^2) \; \text{with} \; \mu = 0, \sigma = 0.2
-  $$`
+  $$
 </p>
 <p class="fragment current-only" data-code-focus="7" style="font-size: 24px">
-  `$$
+  $$
       \frac{\partial \xi(\hat{y}, t)}{\partial w} = \frac{\partial \xi}{\partial \hat{y}} \frac{\partial \hat{y}}{\partial w}
     = \frac{\partial (\hat{y} - t)^2}{\partial \hat{y}} \frac{\partial (x w)}{\partial w} \\
     = 2 (\hat{y} - t) x = 2 (x w - t) x
-  $$`
+  $$
 </p>
 <p class="fragment current-only" data-code-focus="8-9" style="font-size: 24px">
-  `$$
+  $$
     \Delta w = \mu \sum_{i=1}^{N} \frac{\partial \xi_i(\hat{y}_i, t_i)}{\partial w}
-  $$`
+  $$
 </p>
 <p class="fragment current-only" data-code-focus="11-15" style="">
-  `$$
+  $$
     w_{k+1} \gets w_k - \alpha_k \Delta w
-  $$`
+  $$
 </p>
 
 ***
@@ -734,7 +736,7 @@ http://scikit-learn.org/stable/modules/sgd.html
 
 #### Vector Norms
 
-`$$ ||x||_p=(\sum_i |x_i|^p)^{1/p} $$`
+$$ ||x||_p=(\sum_i |x_i|^p)^{1/p} $$
 
 ***
 
@@ -742,10 +744,10 @@ http://scikit-learn.org/stable/modules/sgd.html
 
 |                 |               |                                      |
 |-----------------|---------------|--------------------------------------|
-| `$\ell_0$`-Norm | `$ ∣∣x∣∣_0 $` | `$ \#(i \mid x_i \neq 0) $` |
-| `$\ell_1$`-Norm | `$ ∣∣x∣∣_1 $` | `$ \sum_i ∣x_i∣ $` |
-| `$\ell_2$`-Norm | `$ ∣∣x∣∣_2 $` | `$ \sqrt{\sum_i^{\phantom{n}} ∣x_i∣^2} $` |
-| `$\ell_\infty$`-Norm | `$ ∣∣x∣∣_\infty $` | `$ \max_i ∣x_i∣ $` |
+| $\ell_0$-Norm | $ ∣∣x∣∣_0 $ | $ \#(i \mid x_i \neq 0) $ |
+| $\ell_1$-Norm | $ ∣∣x∣∣_1 $ | $ \sum_i ∣x_i∣ $ |
+| $\ell_2$-Norm | $ ∣∣x∣∣_2 $ | $ \sqrt{\sum_i^{\phantom{n}} ∣x_i∣^2} $ |
+| $\ell_\infty$-Norm | $ ∣∣x∣∣_\infty $ | $ \max_i ∣x_i∣ $ |
 
 [l0-Norm, l1-Norm, l2-Norm, … , l-infinity Norm](https://rorasa.wordpress.com/2012/05/13/l0-norm-l1-norm-l2-norm-l-infinity-norm/)  <!-- .element: class="figcaption see-also" -->
 
@@ -776,9 +778,9 @@ Note:
 
 <!-- .slide: style="font-size:smaller" -->
 
-- Ridge: `$$ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $$`
-- Lasso: `$$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$`
-- Elastic Net:  `$$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$`
+- Ridge: $$ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $$
+- Lasso: $$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$
+- Elastic Net:  $$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$
 
 ***
 
@@ -867,11 +869,11 @@ http://xaktly.com/ProbStat_Distributions.html
 
 ![](https://isaacchanghau.github.io/img/deeplearning/activationfunction/sigmoid.png) <!-- .element: class="img-300" --> [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/post/activation_functions/)  <!-- .element: class="figcaption" -->
 
-`$$ \sigma(x) = \frac{1}{1+e^{-x}} $$`   <!-- .element: class="fragment current-only" -->
+$$ \sigma(x) = \frac{1}{1+e^{-x}} $$   <!-- .element: class="fragment current-only" -->
 
-`$$ \hat{y} = \sigma(X \boldsymbol{w}) = \frac{1}{1+e^{-X \boldsymbol{w}}} $$`   <!-- .element: class="fragment current-only" -->
+$$ \hat{y} = \sigma(X \boldsymbol{w}) = \frac{1}{1+e^{-X \boldsymbol{w}}} $$   <!-- .element: class="fragment current-only" -->
 
-`$$ \hat{y} = \sigma(X \boldsymbol{w}) = \frac{1}{2}(\tanh(X \boldsymbol{w}) + 1)$$`   <!-- .element: class="fragment current-only" -->
+$$ \hat{y} = \sigma(X \boldsymbol{w}) = \frac{1}{2}(\tanh(X \boldsymbol{w}) + 1)$$   <!-- .element: class="fragment current-only" -->
 
 Note:
 
@@ -885,13 +887,13 @@ https://en.wikipedia.org/wiki/Activation_function
 
 ![](https://isaacchanghau.github.io/img/deeplearning/activationfunction/tanh.png)   <!-- .element: class="img-300" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/post/activation_functions/)  <!-- .element: class="figcaption" -->
 
-`$$
+$$
 \tanh(x) = \frac{1-e^{-2x}}{1+e^{-2x}} = 2\sigma (2x)-1 
-$$`
+$$
 
-`$$
+$$
 \tanh(x) \in (-1, 1) \; \text{while} \; \sigma (x) \in (0,1)
-$$`  <!-- .element: class="fragment" -->
+$$  <!-- .element: class="fragment" -->
 
 note:
 
@@ -905,7 +907,7 @@ note:
 ![](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/img/1d8fc59e6a674f1c.png)   <!-- .element: class="img-300" -->  [TensorFlow and deep learning, without a PhD
 ](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/#4)  <!-- .element: class="figcaption" -->
 
-`$$ \xi(y,\hat{y}) = - \sum_{i=1}^{n} \left[ y_i log(\hat{y}_i) + (1-y_i)log(1-\hat{y}_i) \right] $$`
+$$ \xi(y,\hat{y}) = - \sum_{i=1}^{n} \left[ y_i log(\hat{y}_i) + (1-y_i)log(1-\hat{y}_i) \right] $$
 
 [What's an intuitive way to think of cross entropy?](https://www.quora.com/Whats-an-intuitive-way-to-think-of-cross-entropy/answer/Lili-Jiang)  <!-- .element: class="figcaption see-also" -->
 
@@ -933,18 +935,18 @@ def cost(t, y):
 ```
 
 <p class="fragment current-only" data-code-focus="1-2">
-`$$ \sigma(z) = \frac{1}{1+e^{-z}} $$`
+$$ \sigma(z) = \frac{1}{1+e^{-z}} $$
 </p>
 <p class="fragment current-only" data-code-focus="4-5">
-`$$ y = \sigma(X \boldsymbol{w}) $$`
+$$ y = \sigma(X \boldsymbol{w}) $$
 </p>
 <p class="fragment current-only" data-code-focus="7-8">
-`$$ \hat{y} = \left\lfloor y + 0.5 \right\rfloor = -\left\lceil -y - 0.5 \right\rceil $$`
+$$ \hat{y} = \left\lfloor y + 0.5 \right\rfloor = -\left\lceil -y - 0.5 \right\rceil $$
 
 [Wikipedia: Rounding](https://en.wikipedia.org/wiki/Rounding)  <!-- .element: class="figcaption" -->
 </p>
 <p class="fragment current-only" data-code-focus="10-14">
-`$$ \xi(t,\hat{y}) = - \sum_{i=1}^{n} \left[ t_i log(\hat{y}_i) + (1-t_i)log(1-\hat{y}_i) \right] $$`
+$$ \xi(t,\hat{y}) = - \sum_{i=1}^{n} \left[ t_i log(\hat{y}_i) + (1-t_i)log(1-\hat{y}_i) \right] $$
 </p>
 
 ***
@@ -959,17 +961,17 @@ def cost(t, y):
 
 #### Softmax
 
-`$$ y_c = \varsigma(\mathbf{x})_c = \frac{e^{x_c}}{\sum_{i=1}^C e^{x_i}} \quad \text{for} \; c = 1 \cdots C $$`
+$$ y_c = \varsigma(\mathbf{x})_c = \frac{e^{x_c}}{\sum_{i=1}^C e^{x_i}} \quad \text{for} \; c = 1 \cdots C $$
 
-where `$ \mathbf{x} , y \in \mathbb{R}^C, y_c \in [0, 1], \sum\limits_{c=1}^C y_c = 1$`
+where $ \mathbf{x} , y \in \mathbb{R}^C, y_c \in [0, 1], \sum\limits_{c=1}^C y_c = 1$
 
 Softmax is a soft version of arg max :  <!-- .element: class="fragment" -->
 
-`$$ \operatorname{arg\,max} ([3, 5, 0]) = [0, 1, 0] $$`  <!-- .element: class="fragment" -->
+$$ \operatorname{arg\,max} ([3, 5, 0]) = [0, 1, 0] $$  <!-- .element: class="fragment" -->
 
-`$$ \operatorname{softmax} ([3, 5, 0]) \approx [0.12, 0.88, 0] $$`   <!-- .element: class="fragment current-only" -->
+$$ \operatorname{softmax} ([3, 5, 0]) \approx [0.12, 0.88, 0] $$   <!-- .element: class="fragment current-only" -->
 
-`$$ \operatorname{soft\,arg\,max} ([3, 5, 0]) \approx [0.12, 0.88, 0] $$`   <!-- .element: class="fragment current-only" -->
+$$ \operatorname{soft\,arg\,max} ([3, 5, 0]) \approx [0.12, 0.88, 0] $$   <!-- .element: class="fragment current-only" -->
 
 Note:
 
@@ -992,10 +994,10 @@ https://www.quora.com/Why-is-softmax-activate-function-called-softmax
 
 #### Cross-Entropy Loss for Softmax
 
-`$$ \underset{\theta}{\operatorname{arg\,max}}\; \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) $$`
+$$ \underset{\theta}{\operatorname{arg\,max}}\; \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) $$
 
-`$$ = \underset{\theta}{\operatorname{arg\,min}} \; - log \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) = \xi(\mathbf{t},\mathbf{z}) \\
-= - log \prod_{i=c}^{C} y_c^{t_c} = - \sum_{i=c}^{C} t_c \cdot log(y_c) $$`
+$$ = \underset{\theta}{\operatorname{arg\,min}} \; - log \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) = \xi(\mathbf{t},\mathbf{z}) \\
+= - log \prod_{i=c}^{C} y_c^{t_c} = - \sum_{i=c}^{C} t_c \cdot log(y_c) $$
 
 [How to implement Softmax Classification](http://peterroelants.github.io/posts/neural_network_implementation_intermezzo02/)  <!-- .element: class="figcaption" -->
 
@@ -1019,18 +1021,18 @@ Note:
 
 Sigmoid: two-class logistic regression
 
-`$$
+$$
 \begin{align}
 \Pr(Y_i=0) &= \frac{e^{-\boldsymbol\beta \cdot \mathbf{X}_i}} {1 +e^{-\boldsymbol\beta_0 \cdot \mathbf{X}_i}} \, \\
 \Pr(Y_i=1) &= 1 - \Pr(Y_i=0) = \frac{1} {1 +e^{-\boldsymbol\beta \cdot \mathbf{X}_i}}
 \end{align}
-$$`
+$$
 
 Softmax: multiple-class logistic regression
 
-`$$ 
+$$ 
 \Pr(Y_i=k) = \frac{e^{\boldsymbol\beta_k \cdot \mathbf{X}_i}} {\sum\limits_{0 \leq c \leq K} {e^{\boldsymbol\beta_c \cdot \mathbf{X}_i}}}
-$$`
+$$
 
 ***
 
@@ -1049,16 +1051,16 @@ def softmax(z):
 ```
 
 <p class="fragment current-only" data-code-focus="1-2">
-`$$ 
+$$ 
 \Pr(Y_i=k) = \frac{e^{\boldsymbol\beta_k \cdot \mathbf{X}_i}} {\sum\limits_{0 \leq c \leq K} {e^{\boldsymbol\beta_c \cdot \mathbf{X}_i}}}
-$$`
+$$
 </p>
 <p class="fragment current-only" data-code-focus="4-7">
-`$$ 
+$$ 
 \frac{e^{f_{y_i}}}{\sum_j e^{f_j}}
 = \frac{Ce^{f_{y_i}}}{C\sum_j e^{f_j}}
 = \frac{e^{f_{y_i} + \log C}}{\sum_j e^{f_j + \log C}}
-$$`
+$$
 </p>
 
 ***
@@ -1155,8 +1157,8 @@ Note:
 
 Note:
 
-The SVM amounts to finding hyperplanes such that `$ w^T_{j}x_i - w^T_{y_i}x_i  - b  \ge \delta \text{   } \forall  \text{   }  j \neq y_i
-$` where `$ \delta $` is called the margin. 
+The SVM amounts to finding hyperplanes such that $ w^T_{j}x_i - w^T_{y_i}x_i  - b  \ge \delta \text{   } \forall  \text{   }  j \neq y_i
+$ where $ \delta $ is called the margin. 
 
 ***
 
@@ -1166,17 +1168,17 @@ $` where `$ \delta $` is called the margin.
 
 #### SVM: Hinge Loss
 
-`$$
+$$
 \min_{\mathbf{w}}\ C\underset{Hinge-Loss}{\underbrace{\sum_{i=1}^{n}max[1-y_{i}\underset{h({\mathbf{x}_i})}{\underbrace{(w^{\top}{\mathbf{x}_i}+b)}},0]}}+\underset{l_{2}-Regularizer}{\underbrace{\left\Vert w\right\Vert _{z}^{2}}}
-$$`
+$$
 
 ***
 
 #### SVM: Hinge Loss ( Another Form )
 
-`$$
+$$
 \underset{w}{min}\ \underset{Hinge-Loss}{\underbrace{\ \sum_{i=1}^n\big(1-y_i \langle x_i,w \rangle\big)_+}} + \lambda\underset{l_{2}-Regularizer}{\underbrace{\parallel w\parallel^2}}
-$$`
+$$
 
 [A Support Vector Machine in just a few Lines of Python Code](https://maviccprp.github.io/a-support-vector-machine-in-just-a-few-lines-of-python-code/)  <!-- .element: class="figcaption" -->
 
@@ -1184,23 +1186,23 @@ $$`
 
 #### SVM: Hinge Loss ( The Derivatives )
 
-`$$
+$$
 \frac{\partial}{\partial w_k} \lambda\parallel w\parallel^2 \ = 2 \lambda w_k
-$$`
+$$
 
-`$$
+$$
 \frac{\partial}{\partial w_k} \big(1-y_i \langle x_i,w \rangle\big)_+ \ = \begin{cases}
     0,                       & y_i \langle x_i,w \rangle\geq 1\\
     -y_ix_{ik},              & \text{otherwise}
 \end{cases}
-$$`
+$$
 
-`$$
+$$
 \implies \Delta w = \begin{cases}
     2\lambda w - y_ix_i,     & y_i \langle x_i,w \rangle\lt 1\\
     2\lambda w,              & \text{otherwise}
 \end{cases}
-$$`
+$$
 
 [A Support Vector Machine in just a few Lines of Python Code](https://maviccprp.github.io/a-support-vector-machine-in-just-a-few-lines-of-python-code/)  <!-- .element: class="figcaption" -->
 
@@ -1234,10 +1236,10 @@ https://isaacchanghau.github.io/2017/08/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-
 
 #### Kernel Functions in SVM
 
-- Linear: `$ K(x, y) = x^\top y $`
-- Polynomial: `$ K(x, y) = (x^\top y + 1)^d $`
-- Sigmoid: `$ K(x, y) = tanh(a x^\top y + b) $`
-- Radial basis func(RBF): `$ K(x, y) = \exp(-\gamma \| x - y\|^2) $`
+- Linear: $ K(x, y) = x^\top y $
+- Polynomial: $ K(x, y) = (x^\top y + 1)^d $
+- Sigmoid: $ K(x, y) = tanh(a x^\top y + b) $
+- Radial basis func(RBF): $ K(x, y) = \exp(-\gamma \| x - y\|^2) $
 
 [How do I select SVM kernels?](https://www.quora.com/How-do-I-select-SVM-kernels/answer/Prasoon-Goyal)  <!-- .element: class="figcaption" -->
 
@@ -1275,25 +1277,25 @@ for epoch in range(1, nb_of_iterations):
   Parameter initialization.
 </p>
 <p class="fragment current-only" data-code-focus="5">
-  `$$
+  $$
   \operatorname{sgn}(w^{\top} \mathbf{x}) = \begin{cases}
       +1,     & \text{Positive} \\
       -1,    & \text{Negative}
   \end{cases}
-  $$`
+  $$
 </p>
 <p class="fragment current-only" data-code-focus="6">
-  `$$
+  $$
   \min_{\mathbf{w}}\ C\underset{Hinge-Loss}{\underbrace{\sum_{i=1}^{n}max[1-y_{i}\underset{h({\mathbf{x}_i})}{\underbrace{(w^{\top}{\mathbf{x}_i}+b)}},0]}}+\underset{l_{2}-Regularizer}{\underbrace{\left\Vert w\right\Vert _{z}^{2}}}
-  $$`
+  $$
 </p>
 <p class="fragment current-only" data-code-focus="7-8">
-  `$$
+  $$
   \Delta w = \begin{cases}
       2\lambda w - y_ix_i,     & y_i \langle x_i,w \rangle\lt 1\\
       2\lambda w,              & \text{otherwise}
   \end{cases}
-  $$`
+  $$
 </p>
 <p class="fragment current-only" data-code-focus="10-17">
   Training.
@@ -1316,8 +1318,8 @@ def cost(y, t, w, ld): return is_misclassified(w, x, t) + ld * (np.linalg.norm(w
 Pros:
 
 - Effective when 
-  - `$ D_\text{features} $` is high-dimensional
-  - `$ D_\text{features} \gt N_\text{samples}$`
+  - $ D_\text{features} $ is high-dimensional
+  - $ D_\text{features} \gt N_\text{samples}$
 - Memory Efficient:
   - uses support vectors in the decision function -- a subset of training points
 - Versatile:
@@ -1325,13 +1327,13 @@ Pros:
 
 Cons:
 
-- `$ D_\text{features} \gg N_\text{samples}$`
+- $ D_\text{features} \gg N_\text{samples}$
   - Over-fitting
-  - Choosing Kernel `$ \phi(x, y) $`and Regularization `$ C $` is crucial 
+  - Choosing Kernel $ \phi(x, y) $and Regularization $ C $ is crucial 
 - No probability estimates
   - Except using an expensive k-fold CV.
 - Complexity:
-  - `$ \mathcal{O}(D_\text{features} N_\text{samples}^{2 \sim 3}) $`
+  - $ \mathcal{O}(D_\text{features} N_\text{samples}^{2 \sim 3}) $
 
 [scikit-learn User Guide: Support Vector Machines](http://scikit-learn.org/stable/modules/svm.html)  <!-- .element: class="figcaption" -->
 
@@ -1533,7 +1535,7 @@ note:
 
 | Gradient descent | Gradient boosting |
 |------------------|-------------------|
-| `$ \vec w_t = \vec w_{t-1} - \eta \nabla f(\vec w_{t-1}) $` | `$\hat{\vec y}_m = \hat{\vec y}_{m-1} + \eta (- \nabla L(\vec y, \hat{\vec y}_{m-1}))$` |
+| $ \vec w_t = \vec w_{t-1} - \eta \nabla f(\vec w_{t-1}) $ | $\hat{\vec y}_m = \hat{\vec y}_{m-1} + \eta (- \nabla L(\vec y, \hat{\vec y}_{m-1}))$ |
 
 [How to explain gradient boosting](http://explained.ai/gradient-boosting/index.html)  <!-- .element: class="figcaption" -->
 
@@ -1619,15 +1621,15 @@ Note:
   </tr>
   <tr>
     <td>Brute Force</td>
-    <td>`$ \mathcal{O}(D_\text{features} N_\text{samples}^2) $`</td>
+    <td>$ \mathcal{O}(D_\text{features} N_\text{samples}^2) $</td>
   </tr>
   <tr class="">
     <td>K-D Tree</td>
-    <td>`$ \begin{cases} \mathcal{O}( D_\text{features} \log{N_\text{samples}} ) & \mbox{if } D_\text{features} \sim 20 \\[1ex] \mathcal{O}(D_\text{features} N_\text{samples}) & \mbox{if } D_\text{features} \gg 20 \end{cases} $`</td>
+    <td>$ \begin{cases} \mathcal{O}( D_\text{features} \log{N_\text{samples}} ) & \mbox{if } D_\text{features} \sim 20 \\[1ex] \mathcal{O}(D_\text{features} N_\text{samples}) & \mbox{if } D_\text{features} \gg 20 \end{cases} $</td>
   </tr>
   <tr class="">
     <td>Ball Tree</td>
-    <td>`$ \mathcal{O}( D_\text{features} \log{N_\text{samples} )} $`</td>
+    <td>$ \mathcal{O}( D_\text{features} \log{N_\text{samples} )} $</td>
   </tr>
 </table>
 
@@ -1643,13 +1645,13 @@ Note:
 
 #### Bayes’ theorem
 
-`$$
+$$
 \mbox{posterior} = \frac{\mbox{prior} \times \mbox{likelihood}}{\mbox{evidence}}
-$$`
+$$
 
-`$$
+$$
 P(y \mid x_1, \dots, x_n) = \frac{P(y) \times P(x_1, \dots x_n \mid y)} {P(x_1, \dots, x_n)}
-$$`
+$$
 
 ***
 
@@ -1657,21 +1659,21 @@ $$`
 
 Using Naive independence assumption:
 
-`$$
+$$
 P(x_i | y, x_1, \dots, x_{i-1}, x_{i+1}, \dots, x_n) = P(x_i | y)
-$$`
+$$
 
-`$$
+$$
 P(y \mid x_1, \dots, x_n) = \frac{P(y) \times \prod_{i=1}^{n} P(x_i \mid y)} {P(x_1, \dots, x_n)}
-$$`   <!-- .element: class="fragment current-only" -->
+$$   <!-- .element: class="fragment current-only" -->
 
-`$$
+$$
 P(y \mid x_1, \dots, x_n) \propto P(y) \prod_{i=1}^{n} P(x_i \mid y) 
-$$`   <!-- .element: class="fragment current-only" -->
+$$   <!-- .element: class="fragment current-only" -->
 
-`$$
+$$
 \hat{y} = \arg\max_y P(y) \prod_{i=1}^{n} P(x_i \mid y)
-$$`   <!-- .element: class="fragment" -->
+$$   <!-- .element: class="fragment" -->
 
 Note:
 
@@ -1698,9 +1700,9 @@ https://stackoverflow.com/questions/10059594/a-simple-explanation-of-naive-bayes
 
 A GP is the generalization of a Gaussian distribution to a distribution over functions, instead of random variables.
 
-Just as a Gaussian distribution is completely specified by its mean `$ \mu $` and variance `$ \sigma $`, 
+Just as a Gaussian distribution is completely specified by its mean $ \mu $ and variance $ \sigma $, 
 
-a GP is completely specified by its **mean function** `$ m(x) $`, and covariance function `$ k(x,x′) $`.
+a GP is completely specified by its **mean function** $ m(x) $, and covariance function $ k(x,x′) $.
 
 ***
 

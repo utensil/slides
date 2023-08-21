@@ -1,7 +1,7 @@
 {
   "title": "A Machine Learning Tour",
   "theme": "black",
-  "highlightTheme": "railscasts",
+  "highlightTheme": "base16/railscasts",
   "separator": "^---[\r]?\n",
   "verticalSeparator": "^\\*\\*\\*[\r]?\n",
   "css": "./css/common.css",
