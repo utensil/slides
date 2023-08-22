@@ -81,13 +81,13 @@ Note:
 |---------------------|-----------------------|------------------------|
 | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_02.png?raw=true) | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_06.png?raw=true) | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_05.png?raw=true)
 
-[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
 #### Supervised Learning
 
-![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_02.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_02.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -97,7 +97,7 @@ Note:
 |---------------------|-----------------------|
 | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_03.png?raw=true)  <!-- .element: class="img-300" -->  | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_04.png?raw=true)  <!-- .element: class="img-300" --> |
 
-[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -107,7 +107,7 @@ Note:
 |---------------------|-----------------------|
 | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_06.png?raw=true)  <!-- .element: class="img-300" -->  | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_07.png?raw=true)  <!-- .element: class="img-300" --> |
 
-[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 Note:
 
@@ -119,7 +119,7 @@ https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.ht
 
 ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_05.png?raw=true)
 
-[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -130,7 +130,7 @@ https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.ht
 #### A roadmap for building machine learning systems
 
 
-![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_09.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_09.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 ---
 
@@ -307,7 +307,7 @@ The image is from http://dlib.net/ml_guide.svg .
 
 #### Elements of Linear Relationships
 
-![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch10/images/10_01.png)  <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 10 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch10/ch10.ipynb)  <!-- .element: class="figcaption" -->
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch10/images/10_01.png)  <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 10 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch10/ch10.ipynb)  <!-- .element: class="figcaption" -->
 
 Note:
 
@@ -396,7 +396,7 @@ Note:
 
 #### Ordinary Least Squares
 
-![](images/fit-linreg.svg) [Linear regression from scratch](http://gluon.ai/chapter_linear-regression/linear-regression.html#equation-eq-mse) <!-- .element: class="figcaption" -->
+![](images/fit-linreg.svg) [Linear regression from scratch](https://gluon.ai/chapter_linear-regression/linear-regression.html#equation-eq-mse) <!-- .element: class="figcaption" -->
 
 $$
 \underset{\boldsymbol{w}}{\operatorname{arg min}} \xi(\hat{y}, y) = \ell_2(\hat{y}, y) \\\\
@@ -423,7 +423,7 @@ Terms related to OLS
 
 #### Empirical Risk Minimization (ERM)
 
-![](images/10701/erm.png) <!-- .element: class="img-500" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
+![](images/10701/erm.png) <!-- .element: class="img-500" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](https://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
 
 ***
 
@@ -447,13 +447,13 @@ http://www.labtimes.org/labtimes/method/methods/2011_04.lasso
 
 ![](https://gandenberger.org/wp-content/uploads/2014/07/Statistical_Methods.png)  <!-- .element: class="img-450" -->
 
-[An Introduction to Likelihoodist, Bayesian, and Frequentist Methods](http://gandenberger.org/2014/07/28/intro-to-statistical-methods-2/)  <!-- .element: class="figcaption" -->
+[An Introduction to Likelihoodist, Bayesian, and Frequentist Methods](https://gandenberger.org/2014/07/28/intro-to-statistical-methods-2/)  <!-- .element: class="figcaption" -->
 
 ***
 
 #### MLE v.s. MAP
 
-![](images/10701/mle_vs_map.png) <!-- .element: class="img-450" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 2](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture2.pdf) <!-- .element: class="figcaption" -->
+![](images/10701/mle_vs_map.png) <!-- .element: class="img-450" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 2](https://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture2.pdf) <!-- .element: class="figcaption" -->
 
 Maximum Likelihood Estimation v.s. Maximum A Posteriori Estimation  <!-- .element: style="font-size: 24px" -->
 
@@ -463,13 +463,13 @@ Maximum Likelihood Estimation v.s. Maximum A Posteriori Estimation  <!-- .elemen
 
 #### M(C)LE v.s. M(C)AP
 
-![](images/10701/mcle_vs_mcap.png) <!-- .element: class="img-500" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 2](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture2.pdf) <!-- .element: class="figcaption" -->
+![](images/10701/mcle_vs_mcap.png) <!-- .element: class="img-500" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 2](https://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture2.pdf) <!-- .element: class="figcaption" -->
 
 ***
 
 #### Least Squares and MLE
 
-![](images/10701/lse_mle.png) <!-- .element: class="img-450" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
+![](images/10701/lse_mle.png) <!-- .element: class="img-450" --> [Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](https://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
 
 Least Square Estimate = Maximum Likelihood Estimate under a Gaussian model. <!-- .element: style="font-size: 24px" -->
 
@@ -609,7 +609,7 @@ for i in range(nb_of_iterations):
 
 ***
 
-<!-- .slide: data-background-iframe="http://nbviewer.jupyter.org/github/peterroelants/peterroelants.github.io/blob/master/notebooks/neural_net_implementation/neural_network_implementation_part01.ipynb" data-background-interactive -->
+<!-- .slide: data-background-iframe="http://nbviewer.org/github/peterroelants/peterroelants.github.io/blob/master/notebooks/neural_net_implementation/neural_network_implementation_part01.ipynb" data-background-interactive -->
 
 ***
 
@@ -733,7 +733,7 @@ https://scikit-learn.org/stable/modules/sgd.html
 
 #### Find Good Compromise
 
-![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_06.png?raw=true) [Python Machine Learning: Chapter 3 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_06.png?raw=true) [Python Machine Learning: Chapter 3 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -818,7 +818,7 @@ https://stats.stackexchange.com/questions/45643/why-l1-norm-for-sparse-models
 |----------------------------------------|-------------------------------------|
 | ![](images/10701/map_ridge.png)        |![](images/10701/map_lasso.png)      |
 
-[Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](http://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
+[Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](https://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
 
 Note:
 
@@ -1007,7 +1007,7 @@ $$ \underset{\theta}{\operatorname{arg max}} \mathcal{L}(\theta|\mathbf{t},\math
 $$ = \underset{\theta}{\operatorname{arg min}} - log \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) = \xi(\mathbf{t},\mathbf{z}) \\\\
 = - log \prod_{i=c}^{C} y_c^{t_c} = - \sum_{i=c}^{C} t_c \cdot log(y_c) $$
 
-[How to implement Softmax Classification](http://peterroelants.github.io/posts/neural_network_implementation_intermezzo02/)  <!-- .element: class="figcaption" -->
+[How to implement Softmax Classification](https://peterroelants.github.io/posts/cross-entropy-softmax/)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1137,7 +1137,7 @@ array([[ 0.,  0.,  1.],
 <p class="fragment current-only" data-code-focus="15-22">
   Numeric stability.
 
-  [CS231n: Softmax classifier](http://cs231n.github.io/linear-classify/#softmax)  <!-- .element: class="figcaption see-also" -->
+  [CS231n: Softmax classifier](https://cs231n.github.io/linear-classify/#softmax)  <!-- .element: class="figcaption see-also" -->
 </p>
 
 ---
@@ -1161,7 +1161,7 @@ Note:
 
 #### SVM: Objective
 
-![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_07.png?raw=true) [Python Machine Learning: Chapter 3 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_07.png?raw=true) [Python Machine Learning: Chapter 3 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
 
 Note:
 
@@ -1239,7 +1239,7 @@ Note:
 
 https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal
 https://www.quora.com/What-is-a-radial-basis-function
-[Kernel Methods for Deep Learning](http://cseweb.ucsd.edu/~saul/papers/nips09_kernel.pdf)
+[Kernel Methods for Deep Learning](https://cseweb.ucsd.edu/~saul/papers/nips09_kernel.pdf)
 https://isaacchanghau.github.io/2017/08/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E5%91%A8%E5%BF%97%E5%8D%8E-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-3/
 
 ***
@@ -1390,7 +1390,7 @@ Cons:
 
 #### Growing A Decision Tree
 
-![](images/r2d3-decision-tree.png)  <!-- .element: style="height: 500px" --> [A visual introduction to machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)   <!-- .element: class="figcaption" -->
+![](images/r2d3-decision-tree.png)  <!-- .element: style="height: 500px" --> [A visual introduction to machine learning](https://web.archive.org/web/20230814025440/http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)   <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1463,11 +1463,11 @@ note:
 
 ***
 
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/josiahdavis/DecisionTrees/blob/master/DecisionTrees.ipynb" data-background-interactive -->
+<!-- .slide: data-background-iframe="//nbviewer.org/github/josiahdavis/DecisionTrees/blob/master/DecisionTrees.ipynb" data-background-interactive -->
 
 ***
 
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/gregtam/interpreting-decision-trees-and-random-forests/blob/master/Interpreting%20Decision%20Trees%20and%20Random%20Forests.ipynb" data-background-interactive -->
+<!-- .slide: data-background-iframe="//nbviewer.org/github/gregtam/interpreting-decision-trees-and-random-forests/blob/master/Interpreting%20Decision%20Trees%20and%20Random%20Forests.ipynb" data-background-interactive -->
 
 ***
 
@@ -1485,13 +1485,13 @@ note:
 
 #### Bagging
 
-![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch07/images/07_06.png) <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 7 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch07/ch07.ipynb)  <!-- .element: class="figcaption" -->
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch07/images/07_06.png) <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 7 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch07/ch07.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
 #### Adaptive Boosting
 
-![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch07/images/07_09.png) <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 7 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch07/ch07.ipynb)  <!-- .element: class="figcaption" -->
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch07/images/07_09.png) <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 7 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch07/ch07.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1501,7 +1501,7 @@ note:
 
 [What are the differences between bagged trees and random forests? - Prashanth Ravindran's answer](https://www.quora.com/What-are-the-differences-between-bagged-trees-and-random-forests/answer/Prashanth-Ravindran)  <!-- .element: class="figcaption" -->
 
-[Python Machine Learning: Chapter 10 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch10/ch10.ipynb#Random-forest-regression)  <!-- .element: class="figcaption see-also" -->
+[Python Machine Learning: Chapter 10 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch10/ch10.ipynb#Random-forest-regression)  <!-- .element: class="figcaption see-also" -->
 
 ***
 
@@ -1548,13 +1548,13 @@ note:
 |------------------|-------------------|
 | $ \vec w_t = \vec w_{t-1} - \eta \nabla f(\vec w_{t-1}) $ | $\hat{\vec y}\_m = \hat{\vec y}\_{m-1} + \eta (- \nabla L(\vec y, \hat{\vec y}\_{m-1}))$ |
 
-[How to explain gradient boosting](http://explained.ai/gradient-boosting/index.html)  <!-- .element: class="figcaption" -->
+[How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html)  <!-- .element: class="figcaption" -->
 
 [GBDT v.s. XGBoost](https://www.zhihu.com/question/41354392/answer/98658997)   <!-- .element: class="figcaption see-also" -->
 
 ***
 
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/Vooban/Decision-Trees-For-Knowledge-Discovery/blob/master/Decision-Trees-For-Knowledge-Discovery-With-XGBoost.ipynb" data-background-interactive -->
+<!-- .slide: data-background-iframe="//nbviewer.org/github/Vooban/Decision-Trees-For-Knowledge-Discovery/blob/master/Decision-Trees-For-Knowledge-Discovery-With-XGBoost.ipynb" data-background-interactive -->
 
 ***
 
@@ -1565,9 +1565,9 @@ note:
 - [Starting kit for the Higgs boson machine learning challenge](https://github.com/utensil-star/kaggleHiggs/blob/b44bfc86b470c79048289372ea702cd8f645de1c/startingKitHiggsKegl.ipynb)
 - XGBoost
   - [Winning solution of Kaggle Higgs competition: what a single model can do?](https://no2147483647.wordpress.com/2014/09/17/winning-solution-of-kaggle-higgs-competition-what-a-single-model-can-do/)
-  - [Higgs Boson Discovery with Boosted Trees](http://proceedings.mlr.press/v42/chen14.pdf)
+  - [Higgs Boson Discovery with Boosted Trees](https://proceedings.mlr.press/v42/chen14.pdf)
 - DL
-  - [Classification of Higgs Boson Tau-Tau decays using GPU accelerated Neural Networks](http://cs229.stanford.edu/proj2015/017_report.pdf)
+  - [Classification of Higgs Boson Tau-Tau decays using GPU accelerated Neural Networks](https://cs229.stanford.edu/proj2015/017_report.pdf)
   - [Identifying the Higgs Boson with Convolutional Neural Networks](http://cs231n.stanford.edu/reports/2016/pdfs/300_Report.pdf)
   - [Searching for higgs boson decay modes with deep learning](https://www.researchgate.net/publication/287742463_Searching_for_higgs_boson_decay_modes_with_deep_learning)
   - [Searching for Exotic Particles in High-Energy Physics with Deep Learning](https://arxiv.org/pdf/1402.4735.pdf)
@@ -1575,11 +1575,11 @@ note:
 Note:
 
 - [Dataset permanently released at CERN](https://www.kaggle.com/c/higgs-boson/discussion/13143)
-  - [Data](http://opendata.cern.ch/record/329)
+  - [Data](https://opendata.cern.ch/record/329)
 
 ***
 
-<!-- .slide: data-background-iframe="//nbviewer.jupyter.org/github/utensil/julia-playground/blob/master/dl/hello_higgs.ipynb" data-background-interactive -->
+<!-- .slide: data-background-iframe="//nbviewer.org/github/utensil/julia-playground/blob/master/dl/hello_higgs.ipynb" data-background-interactive -->
 
 ---
 
@@ -1589,7 +1589,7 @@ Note:
 
 #### K-nearest Neighbors
 
-![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_20.png?raw=true)   <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 3 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch03/images/03_20.png?raw=true)   <!-- .element: class="img-450" --> [Python Machine Learning: Chapter 3 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch03/ch03.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1731,25 +1731,25 @@ a GP is completely specified by its **mean function** $ m(x) $, and covariance f
 
 #### Combining transformers and estimators in a pipeline
 
-![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_01.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" --> 
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_01.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" --> 
 
 ***
 
 #### The holdout method
 
-![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_02.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" --> 
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_02.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" --> 
 
 ***
 
 #### K-fold cross-validation
 
-![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_03.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" --> 
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_03.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" --> 
 
 ***
 
 #### Algorithm selection with nested cross-validation
 
-![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_07.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" -->
+![](https://raw.githubusercontent.com/rasbt/python-machine-learning-book/master/code/ch06/images/06_07.png) [Python Machine Learning: Chapter 6 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch06/ch06.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
