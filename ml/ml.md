@@ -20,7 +20,7 @@ Utensil Song @ 2017-2018
 
 #### First Book on Neural Networks (2002)
 
-[![](https://img3.doubanio.com/view/subject/l/public/s1581911.jpg) <!-- .element class="img-450" -->](https://book.douban.com/subject/1115600/)
+[![](https://img2.doubanio.com/view/subject/s/public/s1581911.jpg) <!-- .element class="img-450" -->](https://book.douban.com/subject/1115600/)
 
 ***
 
@@ -140,13 +140,13 @@ http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.htm
 
 #### What is Data Science?
 
-![](https://i2.wp.com/blog.operasolutions.com/Portals/213893/images/OS_SignalCentral%20What%20Is%20Data%20Science_GP_2014_V1.2_Venn%20Diagram.jpg?zoom=2)   <!-- .element: class="img-500" --> [DATA SCIENCE & SCIENTISTS](https://science2knowledge.wordpress.com/data-science-scientists/)   <!-- .element: class="figcaption" -->
+![](images/OS_SignalCentral%20What%20Is%20Data%20Science_GP_2014_V1.2_Venn%20Diagram.jpg)   <!-- .element: class="img-500" --> [DATA SCIENCE & SCIENTISTS](https://science2knowledge.wordpress.com/data-science-scientists/)   <!-- .element: class="figcaption" -->
 
 ***
 
 #### Epicycles of Analysis <!-- .element: style="font-size: 42px" -->
 
-![](https://i0.wp.com/blog.operasolutions.com/Portals/213893/images/OS_SignalCentral%20What%20Is%20Data%20Science_GP_2014_V1.2_The%20Data%20Science%20Process.jpg?zoom=2)   <!-- .element: class="img-550" -->  [DATA SCIENCE & SCIENTISTS](https://science2knowledge.wordpress.com/data-science-scientists/)   <!-- .element: class="figcaption" -->
+![](images/OS_SignalCentral%20What%20Is%20Data%20Science_GP_2014_V1.2_The%20Data%20Science%20Process.jpg)   <!-- .element: class="img-550" -->  [DATA SCIENCE & SCIENTISTS](https://science2knowledge.wordpress.com/data-science-scientists/)   <!-- .element: class="figcaption" -->
 
 Note:
 
@@ -159,7 +159,7 @@ Note:
 https://gohighbrow.com/the-data-analysis-epicycle/
 https://bookdown.org/rdpeng/artofdatascience/epicycle-of-analysis.html
 
-![](https://4cawmi2va33i3w6dek1d7y1m-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/2_1_Full_Intro-to-Data-Science-e1486482232872-776x1024.jpg) [The Data Analysis Epicycle](https://gohighbrow.com/the-data-analysis-epicycle/)  <!-- .element: class="figcaption" -->
+![](images/OS_SignalCentral%20What%20Is%20Data%20Science_GP_2014_V1.2_The%20Data%20Science%20Process.jpg) [The Data Analysis Epicycle](https://gohighbrow.com/the-data-analysis-epicycle/)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -294,7 +294,11 @@ https://towardsdatascience.com/machine-learning-quick-reference-card-cf92f6accd0
 
 ***
 
-<!-- .slide: data-background-image="http://dlib.net/ml_guide.svg" data-background-size="contain" -->
+<!-- .slide: data-background-image="images/ml_guide.svg" data-background-size="contain" -->
+
+Note:
+
+The image is from http://dlib.net/ml_guide.svg .
 
 ---
 
@@ -330,29 +334,29 @@ For $p$ features and $n$ samples: <!-- .element: style="font-size: 24px" -->
 
 $$ \left(
   \begin{array}{c}
-    \hat{y}_1 \\
-    \vdots \\
+    \hat{y}_1 \cr
+    \vdots \cr
     \hat{y}_n
   \end{array}
 \right)
 = \left(
   \begin{array}{c}
-    \mathbf{x}^\top_1 \\
-    \vdots \\
+    \mathbf{x}^\top_1 \cr
+    \vdots \cr
     \mathbf{x}^\top_n
   \end{array}
 \right) \left(
   \begin{array}{c}
-    w_1 \\
-    \vdots \\
+    w_1 \cr
+    \vdots \cr
     w_p
   \end{array}
 \right) + b $$ <!-- .element: class="" style="font-size: smaller" --> 
 
 $$ = \left(
   \begin{array}{cccc}
-    1 & x_{11} & \ldots & x_{1p}\\
-    1 & \vdots & \ddots & \vdots\\
+    1 & x_{11} & \ldots & x_{1p} \cr
+    1 & \vdots & \ddots & \vdots \cr
     1 & x_{n1} & \ldots & x_{np}
   \end{array}
 \right) \left(
@@ -379,7 +383,7 @@ https://en.wikipedia.org/wiki/Linear_regression
 
 ![minimal](https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Extrema_example_original.svg/330px-Extrema_example_original.svg.png)
 
-$$ \underset{x \in D}{\operatorname{arg\,min}} \, f(x) := \{x \mid \forall y \in D : f(y) \ge f(x)\} $$
+$$ \underset{x \in D}{\operatorname{arg min}} f(x) :=  \\{ x \mid \forall y \in D : f(y) \ge f(x)  \\} $$
 
 Note:
 
@@ -396,7 +400,7 @@ Note:
 ![](http://gluon.mxnet.io/_images/linear-regression.png) [Linear regression from scratch](http://gluon.mxnet.io/chapter02_supervised-learning/linear-regression-scratch.html) <!-- .element: class="figcaption" -->
 
 $$
-\underset{\boldsymbol{w}}{\operatorname{arg\,min}} \, \xi(\hat{y}, y) = \ell_2(\hat{y}, y) \\
+\underset{\boldsymbol{w}}{\operatorname{arg min}} \xi(\hat{y}, y) = \ell_2(\hat{y}, y) \\\\
 = {|| \hat{y} - y||_2}^2 = {|| X \boldsymbol{w} - \boldsymbol{y}||_2}^2 $$
 
 Note:
@@ -531,7 +535,7 @@ $$ <!-- .element: class="fragment" style="font-size: smaller" -->
 
 Note:
 
-$$ \underset{w}{\operatorname{arg\,min}} \, F : \mathbb{R}^{d} \to \mathbb{R} $$
+$$ \underset{w}{\operatorname{arg min}} \, F : \mathbb{R}^{d} \to \mathbb{R} $$
 
 $w^{i_k}$ represents the $i_k$-th element of the parameter vector, and $e_{i_k}$ represents the $i_k$-th coordinate vector for some $i_k \in \{1,\dots,d\}$.  In other words, the solution estimates $w_{k+1}$ and $w_k$ differ only in their $i_k$-th element as a result of a move in the $i_k$-th coordinate from $w_k$.
 
@@ -744,7 +748,7 @@ $$ ||x||_p=(\sum_i |x_i|^p)^{1/p} $$
 
 |                 |               |                                      |
 |-----------------|---------------|--------------------------------------|
-| $\ell_0$-Norm | $ ∣∣x∣∣_0 $ | $ \#(i \mid x_i \neq 0) $ |
+| $\ell_0$-Norm | $ ∣∣x∣∣_0 $ | $ \\#(i \mid x_i \neq 0) $ |
 | $\ell_1$-Norm | $ ∣∣x∣∣_1 $ | $ \sum_i ∣x_i∣ $ |
 | $\ell_2$-Norm | $ ∣∣x∣∣_2 $ | $ \sqrt{\sum_i^{\phantom{n}} ∣x_i∣^2} $ |
 | $\ell_\infty$-Norm | $ ∣∣x∣∣_\infty $ | $ \max_i ∣x_i∣ $ |
@@ -759,12 +763,17 @@ The L0 norm is the number of non-zero elements in a vector.
 
 #### Typical Vector Norms
 
+![](images/lpball-animation3d.gif)
+
+[Graphing the p-Norm Unit Ball in 3 Dimensions](https://mimmackk.github.io/unitball/) <!-- .element: class="figcaption" -->
+
+Note:
+
 ![](http://www.stat.ucla.edu/~ybzhao/teaching/stat101c/im/lpball.png)
 
 [Introduction to Statistical Models and Data Mining
 ](http://www.stat.ucla.edu/~ybzhao/teaching/stat101c/) <!-- .element: class="figcaption" -->
 
-Note:
 
 - https://www.quora.com/What-is-the-difference-between-L1-and-L2-regularization-How-does-it-solve-the-problem-of-overfitting-Which-regularizer-to-use-and-when
 - http://blog.shakirm.com/2016/04/learning-in-brains-and-machines-2/
@@ -778,9 +787,9 @@ Note:
 
 <!-- .slide: style="font-size:smaller" -->
 
-- Ridge: $$ \underset{w}{min\,} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $$
-- Lasso: $$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$
-- Elastic Net:  $$ \underset{w}{min\,} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$
+- Ridge: $$ \underset{w}{\min} {{|| X w - y||_2}^2 + \alpha {||w||_2}^2} $$
+- Lasso: $$ \underset{w}{\min} { \frac{1}{2n_{\text{samples}}} ||X w - y||_2 ^ 2 + \alpha ||w||_1} $$
+- Elastic Net:  $$ \underset{w}{\min} { \frac{1}{2n_{\text{samples}}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2} $$
 
 ***
 
@@ -788,9 +797,9 @@ Note:
 
 | Ridge                                  | Lasso                               |
 |----------------------------------------|-------------------------------------|
-| ![](https://rasbt.github.io/mlxtend/user_guide/general_concepts/regularization-linear_files/l2.png) | ![](https://rasbt.github.io/mlxtend/user_guide/general_concepts/regularization-linear_files/l1.png)  |
+| ![](images/regularization-linear_files/l2.png) | ![](images/regularization-linear_files/l1.png)  |
 
-[Regularization of Generalized Linear Models by Sebastian Raschka](https://rasbt.github.io/mlxtend/user_guide/general_concepts/regularization-linear/) <!-- .element: class="figcaption" -->
+[Regularization of Generalized Linear Models by Sebastian Raschka](https://github.com/rasbt/mlxtend/blob/v0.19.0/docs/sources/user_guide/general_concepts/regularization-linear.ipynb) <!-- .element: class="figcaption" -->
 
 [Ridge, Lasso, Group Lasso, Sparse Group Lasso](https://www.zhihu.com/question/38121173/answer/166238142) <!-- .element: class="figcaption see-also" -->
 
@@ -867,7 +876,7 @@ http://xaktly.com/ProbStat_Distributions.html
 
 #### Logistic Function ( a.k.a Sigmoid )
 
-![](https://isaacchanghau.github.io/img/deeplearning/activationfunction/sigmoid.png) <!-- .element: class="img-300" --> [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/post/activation_functions/)  <!-- .element: class="figcaption" -->
+![](images/activationfunction/sigmoid.png) <!-- .element: class="img-300" --> [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/post/activation_functions/)  <!-- .element: class="figcaption" -->
 
 $$ \sigma(x) = \frac{1}{1+e^{-x}} $$   <!-- .element: class="fragment current-only" -->
 
@@ -885,14 +894,14 @@ https://en.wikipedia.org/wiki/Activation_function
 
 #### Hyperbolic Tangent (tanh)
 
-![](https://isaacchanghau.github.io/img/deeplearning/activationfunction/tanh.png)   <!-- .element: class="img-300" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/post/activation_functions/)  <!-- .element: class="figcaption" -->
+![](images/activationfunction/tanh.png)   <!-- .element: class="img-300" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/post/activation_functions/)  <!-- .element: class="figcaption" -->
 
 $$
 \tanh(x) = \frac{1-e^{-2x}}{1+e^{-2x}} = 2\sigma (2x)-1 
 $$
 
 $$
-\tanh(x) \in (-1, 1) \; \text{while} \; \sigma (x) \in (0,1)
+\tanh(x) \in (-1, 1) \  \text{while} \  \sigma (x) \in (0,1)
 $$  <!-- .element: class="fragment" -->
 
 note:
@@ -904,7 +913,7 @@ note:
 
 #### Binary Cross-Entropy Loss
 
-![](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/img/1d8fc59e6a674f1c.png)   <!-- .element: class="img-300" -->  [TensorFlow and deep learning, without a PhD
+![](images/cross-entropy.png)   <!-- .element: class="img-300" -->  [TensorFlow and deep learning, without a PhD
 ](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/#4)  <!-- .element: class="figcaption" -->
 
 $$ \xi(y,\hat{y}) = - \sum_{i=1}^{n} \left[ y_i log(\hat{y}_i) + (1-y_i)log(1-\hat{y}_i) \right] $$
@@ -951,7 +960,7 @@ $$ \xi(t,\hat{y}) = - \sum_{i=1}^{n} \left[ t_i log(\hat{y}_i) + (1-t_i)log(1-\h
 
 ***
 
-<!-- .slide: data-background-iframe="http://nbviewer.jupyter.org/github/peterroelants/peterroelants.github.io/blob/master/notebooks/neural_net_implementation/neural_network_implementation_part02.ipynb" data-background-interactive -->
+<!-- .slide: data-background-iframe="https://nbviewer.org/github/peterroelants/peterroelants.github.io/blob/main/notebooks/neural_net_implementation/neural-network-implementation-part02.ipynb" data-background-interactive -->
 
 ---
 
@@ -961,17 +970,17 @@ $$ \xi(t,\hat{y}) = - \sum_{i=1}^{n} \left[ t_i log(\hat{y}_i) + (1-t_i)log(1-\h
 
 #### Softmax
 
-$$ y_c = \varsigma(\mathbf{x})_c = \frac{e^{x_c}}{\sum_{i=1}^C e^{x_i}} \quad \text{for} \; c = 1 \cdots C $$
+$$ y_c = {\varsigma(\mathbf{x})}\_c = \frac{ e^{x_c} }{ \sum_{i=1}^C e^{x_i} } \quad \text{for} \  c = 1 \cdots C $$
 
-where $ \mathbf{x} , y \in \mathbb{R}^C, y_c \in [0, 1], \sum\limits_{c=1}^C y_c = 1$
+where $ \mathbf{x} , y \in \mathbb{R}^C,\  y_c \in [0, 1],\  \sum\limits_{c=1}^C y_c = 1$
 
 Softmax is a soft version of arg max :  <!-- .element: class="fragment" -->
 
-$$ \operatorname{arg\,max} ([3, 5, 0]) = [0, 1, 0] $$  <!-- .element: class="fragment" -->
+$$ \operatorname{arg max} ([3, 5, 0]) = [0, 1, 0] $$  <!-- .element: class="fragment" -->
 
 $$ \operatorname{softmax} ([3, 5, 0]) \approx [0.12, 0.88, 0] $$   <!-- .element: class="fragment current-only" -->
 
-$$ \operatorname{soft\,arg\,max} ([3, 5, 0]) \approx [0.12, 0.88, 0] $$   <!-- .element: class="fragment current-only" -->
+$$ \operatorname{soft arg max} ([3, 5, 0]) \approx [0.12, 0.88, 0] $$   <!-- .element: class="fragment current-only" -->
 
 Note:
 
@@ -982,7 +991,7 @@ https://www.quora.com/Why-is-softmax-activate-function-called-softmax
 
 #### Softmax Predicts Probability
 
-![](https://isaacchanghau.github.io/images/deeplearning/activationfunction/softmax.png)  <!-- .element: class="img-450" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
+![](images/activationfunction/softmax.png)  <!-- .element: class="img-450" -->  [Activation Functions in Artificial Neural Networks](https://isaacchanghau.github.io/2017/05/22/Activation-Functions-in-Artificial-Neural-Networks/)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -994,9 +1003,9 @@ https://www.quora.com/Why-is-softmax-activate-function-called-softmax
 
 #### Cross-Entropy Loss for Softmax
 
-$$ \underset{\theta}{\operatorname{arg\,max}}\; \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) $$
+$$ \underset{\theta}{\operatorname{arg max}} \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) $$
 
-$$ = \underset{\theta}{\operatorname{arg\,min}} \; - log \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) = \xi(\mathbf{t},\mathbf{z}) \\
+$$ = \underset{\theta}{\operatorname{arg min}} - log \mathcal{L}(\theta|\mathbf{t},\mathbf{z}) = \xi(\mathbf{t},\mathbf{z}) \\\\
 = - log \prod_{i=c}^{C} y_c^{t_c} = - \sum_{i=c}^{C} t_c \cdot log(y_c) $$
 
 [How to implement Softmax Classification](http://peterroelants.github.io/posts/neural_network_implementation_intermezzo02/)  <!-- .element: class="figcaption" -->
@@ -1023,7 +1032,7 @@ Sigmoid: two-class logistic regression
 
 $$
 \begin{align}
-\Pr(Y_i=0) &= \frac{e^{-\boldsymbol\beta \cdot \mathbf{X}_i}} {1 +e^{-\boldsymbol\beta_0 \cdot \mathbf{X}_i}} \, \\
+\Pr(Y_i=0) &= \frac{e^{-\boldsymbol\beta \cdot \mathbf{X}_i}} {1 +e^{-\boldsymbol\beta_0 \cdot \mathbf{X}_i}} \\\\
 \Pr(Y_i=1) &= 1 - \Pr(Y_i=0) = \frac{1} {1 +e^{-\boldsymbol\beta \cdot \mathbf{X}_i}}
 \end{align}
 $$
@@ -1031,7 +1040,7 @@ $$
 Softmax: multiple-class logistic regression
 
 $$ 
-\Pr(Y_i=k) = \frac{e^{\boldsymbol\beta_k \cdot \mathbf{X}_i}} {\sum\limits_{0 \leq c \leq K} {e^{\boldsymbol\beta_c \cdot \mathbf{X}_i}}}
+\Pr(Y_i=k) = \frac{e^{\boldsymbol\beta_k \cdot \mathbf{X}\_i}} {\sum\limits_{0 \leq c \leq K} {e^{\boldsymbol\beta_c \cdot \mathbf{X}_i}}}
 $$
 
 ***
@@ -1140,12 +1149,12 @@ array([[ 0.,  0.,  1.],
 
 #### Support Vector Machine (SVM)
 
-![](https://kernelmachine.github.io/public/20170304/svm.png)  <!-- .element: style="height: 400px" -->
- [Crash Course on Support Vector Machines](https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/) <!-- .element: class="figcaption" -->
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~utensil/5.embed"></iframe>
 
 Note:
 
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~utensil/5.embed"></iframe>
+![](https://kernelmachine.github.io/public/20170304/svm.png)  <!-- .element: style="height: 400px" -->
+ [Crash Course on Support Vector Machines](https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/) <!-- .element: class="figcaption" -->
 
 [Logistic Regression – Geometric Intuition](https://florianhartl.com/logistic-regression-geometric-intuition.html)   <!-- .element: class="figcaption" -->
 
@@ -1162,14 +1171,16 @@ $ where $ \delta $ is called the margin.
 
 ***
 
-<!-- .slide: data-background-iframe="http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/" data-background-interactive -->
+![](images/linear-classify-screenshot.png)  <!-- .element: style="height: 500px" -->
+
+[Linear Classification Loss Visualization](http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/)  <!-- .element: class="figcaption" -->
 
 ***
 
 #### SVM: Hinge Loss
 
 $$
-\min_{\mathbf{w}}\ C\underset{Hinge-Loss}{\underbrace{\sum_{i=1}^{n}max[1-y_{i}\underset{h({\mathbf{x}_i})}{\underbrace{(w^{\top}{\mathbf{x}_i}+b)}},0]}}+\underset{l_{2}-Regularizer}{\underbrace{\left\Vert w\right\Vert _{z}^{2}}}
+\min_{\mathbf{w}}\ C \underset{\text{Hinge-Loss}}{\underbrace{\sum_{i=1}^{n}\max[1-y_{i}\underset{h({\mathbf{x}\_i})}{\underbrace{(w^{\top}{\mathbf{x}\_i}+b)}},0]}}+\underset{l_{2}\text{-Regularizer}}{\underbrace{\left\Vert w\right\Vert _{z}^{2}}}
 $$
 
 ***
@@ -1177,7 +1188,7 @@ $$
 #### SVM: Hinge Loss ( Another Form )
 
 $$
-\underset{w}{min}\ \underset{Hinge-Loss}{\underbrace{\ \sum_{i=1}^n\big(1-y_i \langle x_i,w \rangle\big)_+}} + \lambda\underset{l_{2}-Regularizer}{\underbrace{\parallel w\parallel^2}}
+\underset{w}{\min}\ \underset{\text{Hinge-Loss}}{\underbrace{\ \sum_{i=1}^n\big(1-y_i \langle x_i,w \rangle\big)\_+}} + \lambda\underset{l_{2}\text{-Regularizer}}{\underbrace{\parallel w\parallel^2}}
 $$
 
 [A Support Vector Machine in just a few Lines of Python Code](https://maviccprp.github.io/a-support-vector-machine-in-just-a-few-lines-of-python-code/)  <!-- .element: class="figcaption" -->
@@ -1191,15 +1202,15 @@ $$
 $$
 
 $$
-\frac{\partial}{\partial w_k} \big(1-y_i \langle x_i,w \rangle\big)_+ \ = \begin{cases}
-    0,                       & y_i \langle x_i,w \rangle\geq 1\\
+\frac{\partial}{\partial w_k} \big(1-y_i \langle x_i,w \rangle\big)\_+ \ = \begin{cases}
+    0,                       & y_i \langle x_i,w \rangle\geq 1 \cr
     -y_ix_{ik},              & \text{otherwise}
 \end{cases}
 $$
 
 $$
 \implies \Delta w = \begin{cases}
-    2\lambda w - y_ix_i,     & y_i \langle x_i,w \rangle\lt 1\\
+    2\lambda w - y_ix_i,     & y_i \langle x_i,w \rangle\lt 1 \cr
     2\lambda w,              & \text{otherwise}
 \end{cases}
 $$
@@ -1216,7 +1227,7 @@ $$
 
 #### Soft margin SVM
 
-![](https://qph.ec.quoracdn.net/main-qimg-be899c45024583fbcce41af30e0acd98.webp)  [In layman's terms, how does SVM work?](https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal?srid=xQkR)  <!-- .element: class="figcaption" -->
+![](images/soft-margin-svm.webp)  [In layman's terms, how does SVM work?](https://www.quora.com/In-laymans-terms-how-does-SVM-work/answer/Prasoon-Goyal?srid=xQkR)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1269,9 +1280,8 @@ for epoch in range(1, nb_of_iterations):
     # costs.append(error)
 ```
 
-<p class="fragment current-only" data-code-focus="1-2">
-  ![](images/svm_sample_plot.png) <!-- .element: class="img-code" -->
-  Data points.
+<p class="fragment current-only" data-code-focus="1-2">  
+  <img src="images/svm_sample_plot.png" style="height: 130px" />
 </p>
 <p class="fragment current-only" data-code-focus="3">
   Parameter initialization.
@@ -1286,7 +1296,7 @@ for epoch in range(1, nb_of_iterations):
 </p>
 <p class="fragment current-only" data-code-focus="6">
   $$
-  \min_{\mathbf{w}}\ C\underset{Hinge-Loss}{\underbrace{\sum_{i=1}^{n}max[1-y_{i}\underset{h({\mathbf{x}_i})}{\underbrace{(w^{\top}{\mathbf{x}_i}+b)}},0]}}+\underset{l_{2}-Regularizer}{\underbrace{\left\Vert w\right\Vert _{z}^{2}}}
+    \min_{\mathbf{w}}\ C \underset{\text{Hinge-Loss}}{\underbrace{\sum_{i=1}^{n}\max[1-y_{i}\underset{h({\mathbf{x}_i})}{\underbrace{(w^{\top}{\mathbf{x}_i}+b)}},0]}}+\underset{l_{2}\text{-Regularizer}}{\underbrace{\left\Vert w\right\Vert _{z}^{2}}}
   $$
 </p>
 <p class="fragment current-only" data-code-focus="7-8">
@@ -1357,7 +1367,7 @@ Cons:
 
 #### Decision Trees with Details
 
-![](http://scikit-learn.org/stable/_images/iris.png)   <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Trees](http://scikit-learn.org/stable/modules/tree.html)   <!-- .element: class="figcaption" -->
+![](images/sphx_glr_plot_tree_regression_001.png)   <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Trees](http://scikit-learn.org/stable/modules/tree.html)   <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1369,7 +1379,7 @@ Cons:
 
 #### Decision surface of a decision tree on the iris dataset
 
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_iris_0011.png) <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Plot the decision surface of a decision tree on the iris dataset](http://scikit-learn.org/stable/auto_examples/tree/plot_iris.html)   <!-- .element: class="figcaption" -->
+![](images/decision_tree_for_credit.png) <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Plot the decision surface of a decision tree on the iris dataset](https://scikit-learn.org/stable/auto_examples/tree/plot_iris_dtc.html)   <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1379,7 +1389,9 @@ Cons:
 
 ***
 
-<!-- .slide: data-background-iframe="http://www.r2d3.us/visual-intro-to-machine-learning-part-1/" data-background-interactive -->
+#### Growing A Decision Tree
+
+![](images/r2d3-decision-tree.png)  <!-- .element: style="height: 500px" --> [A visual introduction to machine learning](http://www.r2d3.us/visual-intro-to-machine-learning-part-1/)   <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1448,7 +1460,7 @@ note:
 
 ***
 
-<!-- .slide: data-background-iframe="http://www.learnbymarketing.com/481/decision-tree-flavors-gini-info-gain/" data-background-interactive -->
+<!-- .slide: data-background-iframe="https://web.archive.org/web/20200803161654/https://www.learnbymarketing.com/481/decision-tree-flavors-gini-info-gain/" data-background-interactive -->
 
 ***
 
@@ -1460,11 +1472,7 @@ note:
 
 ***
 
-<!-- .slide: data-background-iframe="http://gabrielelanaro.github.io/blog/2016/03/03/decision-trees.html" data-background-interactive -->
-
-***
-
-<!-- .slide: data-background-iframe="http://gabrielelanaro.github.io/blog/2016/03/03/decision-trees.html" data-background-interactive -->
+<!-- .slide: data-background-iframe="https://gabrielelanaro.github.io/blog/2016/03/03/decision-trees.html" data-background-interactive -->
 
 ***
 
@@ -1490,19 +1498,23 @@ note:
 
 #### Random Forests
 
-![](https://qph.ec.quoracdn.net/main-qimg-132ee5828d1938659e493d902991cca5.webp)
+![](images/bagged-trees-vs-random-forests.png)
 
 [What are the differences between bagged trees and random forests? - Prashanth Ravindran's answer](https://www.quora.com/What-are-the-differences-between-bagged-trees-and-random-forests/answer/Prashanth-Ravindran)  <!-- .element: class="figcaption" -->
 
-[Python Machine Learning: Chapter 10 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch10/ch10.ipynb#Random-forest-regression)  <!-- .element: class="figcaption see-also" -->
+[Python Machine Learning: Chapter 10 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch10/ch10.ipynb#Random-forest-regression)  <!-- .element: class="figcaption see-also" -->
 
 ***
 
-####  Level-wise and leaf-wise growth
+| Level-wise growth                      | Leaf-wise growth                    |
+|:--------------------------------------:|:-----------------------------------:|
+| ![](images/level-wise.png)        |![](images/leaf-wise.webp)      |
 
-![](https://i0.wp.com/mlexplained.com/wp-content/uploads/2018/01/DecisionTrees_3_thumb.png?w=1024)
+[XGBoost vs LightGBM: How Are They Different](https://neptune.ai/blog/xgboost-vs-lightgbm)  <!-- .element: class="figcaption" -->
 
-[LightGBM and XGBoost Explained](http://mlexplained.com/2018/01/05/lightgbm-and-xgboost-explained/)  <!-- .element: class="figcaption" -->
+Note:
+
+[When to Choose CatBoost Over XGBoost or LightGBM](https://neptune.ai/blog/when-to-choose-catboost-over-xgboost-or-lightgbm)
 
 ***
 
@@ -1510,7 +1522,7 @@ note:
 
 - Introduction to Boosted Trees
   - [doc](https://xgboost.readthedocs.io/en/latest/tutorials/model.html)
-  - [slide](https://homes.cs.washington.edu/~tqchen/pdf/BoostedTree.pdf)
+  - [slide](https://speakerdeck.com/datasciencela/tianqi-chen-xgboost-overview-and-latest-news-la-meetup-talk)
 - [A Gentle Introduction to XGBoost for Applied Machine Learning](https://machinelearningmastery.com/gentle-introduction-xgboost-applied-machine-learning/)
 - [gradient boosting decision tree algorithm](https://en.wikipedia.org/wiki/Gradient_boosting)
 - [XGBoost: A Scalable Tree Boosting System](https://arxiv.org/abs/1603.02754)
@@ -1535,7 +1547,7 @@ note:
 
 | Gradient descent | Gradient boosting |
 |------------------|-------------------|
-| $ \vec w_t = \vec w_{t-1} - \eta \nabla f(\vec w_{t-1}) $ | $\hat{\vec y}_m = \hat{\vec y}_{m-1} + \eta (- \nabla L(\vec y, \hat{\vec y}_{m-1}))$ |
+| $ \vec w_t = \vec w_{t-1} - \eta \nabla f(\vec w_{t-1}) $ | $\hat{\vec y}\_m = \hat{\vec y}\_{m-1} + \eta (- \nabla L(\vec y, \hat{\vec y}\_{m-1}))$ |
 
 [How to explain gradient boosting](http://explained.ai/gradient-boosting/index.html)  <!-- .element: class="figcaption" -->
 
@@ -1551,7 +1563,7 @@ note:
 
 #### Higgs Boson ML Challenge
 
-- [Starting kit for the Higgs boson machine learning challenge](http://nbviewer.jupyter.org/urls/www.lri.fr/~kegl/HiggsML/StartingKit/startingKitHiggsKegl.ipynb)
+- [Starting kit for the Higgs boson machine learning challenge](https://github.com/utensil-star/kaggleHiggs/blob/b44bfc86b470c79048289372ea702cd8f645de1c/startingKitHiggsKegl.ipynb)
 - XGBoost
   - [Winning solution of Kaggle Higgs competition: what a single model can do?](https://no2147483647.wordpress.com/2014/09/17/winning-solution-of-kaggle-higgs-competition-what-a-single-model-can-do/)
   - [Higgs Boson Discovery with Boosted Trees](http://proceedings.mlr.press/v42/chen14.pdf)
@@ -1635,7 +1647,7 @@ Note:
 
 ***
 
-<!-- .slide: data-background-iframe="http://vision.stanford.edu/teaching/cs231n-demos/knn/" data-background-interactive -->
+![](images/knn-demo.png)  <!-- .element: style="height: 500px" --> [K-Nearest Neighbors Demo](http://vision.stanford.edu/teaching/cs231n-demos/knn/)   <!-- .element: class="figcaption" -->
 
 ---
 
@@ -1690,7 +1702,7 @@ https://stackoverflow.com/questions/10059594/a-simple-explanation-of-naive-bayes
 
 ***
 
-<!-- .slide: data-background-iframe="https://nbviewer.jupyter.org/github/tirthajyoti/PythonMachineLearning/blob/master/Principal%20Component%20Analysis.ipynb" data-background-interactive -->
+<!-- .slide: data-background-iframe="https://nbviewer.org/github/tirthajyoti/Machine-Learning-with-Python/blob/master/Clustering-Dimensionality-Reduction/Principal%20Component%20Analysis.ipynb" data-background-interactive -->
 
 ***
 
@@ -1742,6 +1754,8 @@ a GP is completely specified by its **mean function** $ m(x) $, and covariance f
 
 ***
 
+<!-- .slide: style="font-size:36px" -->
+
 #### An example of CV
 
 - [train_captcha.py](https://github.com/utensil/julia-playground/blob/master/dl/train_captcha.py)
@@ -1750,6 +1764,7 @@ a GP is completely specified by its **mean function** $ m(x) $, and covariance f
   - [Cross Validation in Keras](https://github.com/fchollet/keras/issues/1711)
   - [keras/scikit-learn: using fit_generator() with cross validation](https://stackoverflow.com/questions/40854232/keras-scikit-learn-using-fit-generator-with-cross-validation)
   - [How to pass callbacks to scikit_learn wrappers (e.g. KerasClassifier)](https://github.com/fchollet/keras/issues/4278#issuecomment-264665803)
+- [verify_captcha.ipynb](https://nbviewer.org/github/utensil/julia-playground/blob/master/dl/verify_captcha.ipynb)
 
 ***
 
