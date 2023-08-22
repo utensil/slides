@@ -20,7 +20,8 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - name: Install and Build 🔧
         run: |
-          bash scripts/install.sh
+          pwd
+          bash ml/scripts/install.sh
           cd ml
           reveal-md --preprocessor js/preproc.js --static ../_site/ml ml.md
           cp -r css ../_site/ml/_assets/
