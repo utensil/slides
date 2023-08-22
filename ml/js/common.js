@@ -32,6 +32,19 @@
 //   renderer: markdownRenderer
 // });
 
+// Reveal.initialize({
+//   mathjax3: {
+//     mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js',
+//     tex: {
+//       inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ]  ]
+//     },
+//     options: {
+//       skipHtmlTags: [ 'script', 'noscript', 'style', 'textarea', 'pre', 'iframe' ]
+//     },
+//   },
+//   plugins: [ RevealMath.MathJax3 ]
+// });
+
 // https://stackoverflow.com/a/14570614/200764
 var observeDOM = (function(){
   var MutationObserver = window.MutationObserver || window.WebKitMutationObserver,
@@ -123,7 +136,7 @@ var fancyboxOptions = {
   afterClose: function (instance, slide) {
     // console.info( slide.opts.$orig );
     slide.opts.$orig.each(function (i, a) {
-      console.log(a);
+      // console.log(a);
       $('svg', a).show();
     });
     Reveal.layout();
@@ -138,7 +151,7 @@ function funcyboxifyImages(cur) {
   var imgs = $('img', cur || document);
   imgs.each(function (i, img) {
     if ($(img).parent().is('[data-fancybox]') || $(img).fancybox == null) {
-      console.log('ignored', img);
+      // console.log('ignored', img);
       return;
     }
 
@@ -146,7 +159,7 @@ function funcyboxifyImages(cur) {
   });
 }
 
-Reveal.addEventListener('ready', function (event) {
+Reveal.on('ready', function (event) {
 
   loadJs('./_assets/js/reveal-code-focus-modified.js', function () {
     // console.log(window);
@@ -193,9 +206,31 @@ function renderIframeSource(cur) {
   }
 }
 
+function ensureSVGRender() {
+  if(window.MathJax) {
+    // Get original renderer
+    originalRenderer = MathJax.Hub.config.menuSettings.renderer;
+    if(originalRenderer !== 'SVG') {
+      // MathJax.Hub.Register.StartupHook("End Jax",function () {
+      //   var jax = "SVG";
+      //   return MathJax.Hub.setRenderer(jax);
+      // });
+      MathJax.Hub.setRenderer('SVG');
+      MathJax.Hub.Queue(
+        ["Rerender",MathJax.Hub],
+        function() {
+          Reveal.layout();
+          console.log('Rendering MathJax with SVG...');
+        });
+    }
+  }
+}
+
 function decorateSlide(cur, event) {
     // console.log(event);
     console.log(event.indexh, event.indexv);
+
+    ensureSVGRender();
 
     renderIframeSource(cur);
     renderMermaid(cur);
@@ -325,6 +360,8 @@ if (window.location.search.match( /print-pdf/gi )) {
   });
 }
 
+
+/* 
 var revealConfig = Reveal.getConfig();
 
 revealConfig.dependencies = (revealConfig.dependencies || []).concat(dependencies);
@@ -390,3 +427,7 @@ Object.defineProperty(revealConfig.markdown, "renderer", { get: function () {
   },
   enumerable: true
 });
+
+*/
+
+
