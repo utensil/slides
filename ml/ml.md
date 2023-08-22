@@ -768,7 +768,7 @@ The L0 norm is the number of non-zero elements in a vector.
 
 Note:
 
-![](http://www.stat.ucla.edu/~ybzhao/teaching/stat101c/im/lpball.png)
+<!-- ![](http://www.stat.ucla.edu/~ybzhao/teaching/stat101c/im/lpball.png) 404 -->
 
 [Introduction to Statistical Models and Data Mining
 ](http://www.stat.ucla.edu/~ybzhao/teaching/stat101c/) <!-- .element: class="figcaption" -->
@@ -1152,7 +1152,7 @@ array([[ 0.,  0.,  1.],
 
 Note:
 
-![](https://kernelmachine.github.io/public/20170304/svm.png)  <!-- .element: style="height: 400px" -->
+<!-- ![](https://kernelmachine.github.io/public/20170304/svm.png) 404 -->
  [Crash Course on Support Vector Machines](https://www.suchin.co/2017/03/04/The-Support-Vector-Machine/) <!-- .element: class="figcaption" -->
 
 [Logistic Regression – Geometric Intuition](https://florianhartl.com/logistic-regression-geometric-intuition.html)   <!-- .element: class="figcaption" -->
