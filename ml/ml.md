@@ -10,11 +10,11 @@ Utensil Song @ 2017-2018
 
 #### [Wolfram Mathematic](https://www.wolfram.com/mathematica/)  (2000) 
 
-![](http://www.wolfram.com/mathematica/online/images/mathematicaOnline-header.png)
+![](https://www.wolfram.com/mathematica/online/images/mathematicaOnline-header.png)
 
 - [My Mathematica Notebooks](https://github.com/utensil/mathematica-notebooks)
-  - [DSolve](http://reference.wolfram.com/language/ref/DSolve.html) / [PhysicalSystemData](http://reference.wolfram.com/language/ref/PhysicalSystemData.html) / [Fit](http://reference.wolfram.com/language/ref/Fit.html)
-- [Wolfram Alpha Step-by-step Solutions](http://www.wolframalpha.com/examples/pro-features/step-by-step-solutions/)
+  - [DSolve](https://reference.wolfram.com/language/ref/DSolve.html) / [PhysicalSystemData](https://reference.wolfram.com/language/ref/PhysicalSystemData.html) / [Fit](https://reference.wolfram.com/language/ref/Fit.html)
+- [Wolfram Alpha Step-by-step Solutions](https://www.wolframalpha.com/examples/pro-features/step-by-step-solutions/)
 
 ***
 
@@ -42,13 +42,13 @@ note:
 
 ***
 
-<!-- .slide: data-background-image="http://donsoft.io/intro-to-deeplearning/images/large_hadron_collider.jpg" data-background-interactive style="font-size: 60px"-->
+<!-- .slide: data-background-image="https://donsoft.io/intro-to-deeplearning/images/large_hadron_collider.jpg" data-background-interactive style="font-size: 60px"-->
 
 Large Hadron Collider <!-- .element class="fragment" -->
 
 ***
 
-<!-- .slide: data-background-image="http://donsoft.io/intro-to-deeplearning/images/higgs_boson.jpg" data-background-interactive style="font-size: 60px"-->
+<!-- .slide: data-background-image="https://donsoft.io/intro-to-deeplearning/images/higgs_boson.jpg" data-background-interactive style="font-size: 60px"-->
 
 Higgs Boson Detection <!-- .element class="fragment" -->
 
@@ -73,7 +73,7 @@ Dive in inclues Julia, Geometric Algebra, Keras and Risk Control.
 
 #### Three Types of Machine Learning
 
-![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_01.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_01.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 Note:
 
@@ -81,13 +81,13 @@ Note:
 |---------------------|-----------------------|------------------------|
 | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_02.png?raw=true) | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_06.png?raw=true) | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_05.png?raw=true)
 
-[Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
 #### Supervised Learning
 
-![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_02.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_02.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -97,7 +97,7 @@ Note:
 |---------------------|-----------------------|
 | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_03.png?raw=true)  <!-- .element: class="img-300" -->  | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_04.png?raw=true)  <!-- .element: class="img-300" --> |
 
-[Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -107,11 +107,11 @@ Note:
 |---------------------|-----------------------|
 | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_06.png?raw=true)  <!-- .element: class="img-300" -->  | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_07.png?raw=true)  <!-- .element: class="img-300" --> |
 
-[Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 Note:
 
-http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html
+https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html
 
 ***
 
@@ -119,7 +119,7 @@ http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.htm
 
 ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_05.png?raw=true)
 
-[Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+[Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -130,7 +130,7 @@ http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.htm
 #### A roadmap for building machine learning systems
 
 
-![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_09.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](http://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
+![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_09.png?raw=true) [Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.jupyter.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
 ---
 
@@ -140,13 +140,13 @@ http://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.htm
 
 #### What is Data Science?
 
-![](images/OS_SignalCentral%20What%20Is%20Data%20Science_GP_2014_V1.2_Venn%20Diagram.jpg)   <!-- .element: class="img-500" --> [DATA SCIENCE & SCIENTISTS](https://science2knowledge.wordpress.com/data-science-scientists/)   <!-- .element: class="figcaption" -->
+![](images/OS_SignalCentral-What-Is-Data-Science_GP_2014_V1.2_Venn-Diagram.jpg)   <!-- .element: class="img-500" --> [DATA SCIENCE & SCIENTISTS](https://science2knowledge.wordpress.com/data-science-scientists/)   <!-- .element: class="figcaption" -->
 
 ***
 
 #### Epicycles of Analysis <!-- .element: style="font-size: 42px" -->
 
-![](images/OS_SignalCentral%20What%20Is%20Data%20Science_GP_2014_V1.2_The%20Data%20Science%20Process.jpg)   <!-- .element: class="img-550" -->  [DATA SCIENCE & SCIENTISTS](https://science2knowledge.wordpress.com/data-science-scientists/)   <!-- .element: class="figcaption" -->
+![](images/OS_SignalCentral-What-Is-Data-Science_GP_2014_V1.2_The-Data-Science-Process.jpg)   <!-- .element: class="img-550" -->  [DATA SCIENCE & SCIENTISTS](https://science2knowledge.wordpress.com/data-science-scientists/)   <!-- .element: class="figcaption" -->
 
 Note:
 
@@ -159,7 +159,7 @@ Note:
 https://gohighbrow.com/the-data-analysis-epicycle/
 https://bookdown.org/rdpeng/artofdatascience/epicycle-of-analysis.html
 
-![](images/OS_SignalCentral%20What%20Is%20Data%20Science_GP_2014_V1.2_The%20Data%20Science%20Process.jpg) [The Data Analysis Epicycle](https://gohighbrow.com/the-data-analysis-epicycle/)  <!-- .element: class="figcaption" -->
+![](images/2_1_Full_Intro-to-Data-Science.jpg) [The Data Analysis Epicycle](https://gohighbrow.com/the-data-analysis-epicycle/)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -275,7 +275,6 @@ Note:
 | Specificity        | $ \frac{\text{True Negative}}{\text{All NOT Real (= True Negative + False Positive)}} $        | Right about NOT Real |
 
 ---
-
 ## Traditional Machine Learning Methods
 
 Note:
@@ -290,7 +289,7 @@ https://towardsdatascience.com/machine-learning-quick-reference-card-cf92f6accd0
 
 ***
 
-<!-- .slide: data-background-image="http://scikit-learn.org/dev/_static/ml_map.png" data-background-size="contain" -->
+<!-- .slide: data-background-image="https://scikit-learn.org/dev/_static/ml_map.png" data-background-size="contain" -->
 
 ***
 
@@ -375,7 +374,7 @@ https://en.wikipedia.org/wiki/Linear_regression
 
 #### Bias trick
 
-![](http://cs231n.github.io/assets/wb.jpeg) [CS231n Convolutional Neural Networks for Visual Recognition: Linear classification](http://cs231n.github.io/linear-classify/)  <!-- .element: class="figcaption" -->
+![](https://cs231n.github.io/assets/wb.jpeg) [CS231n Convolutional Neural Networks for Visual Recognition: Linear classification](https://cs231n.github.io/linear-classify/)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -397,7 +396,7 @@ Note:
 
 #### Ordinary Least Squares
 
-![](http://gluon.mxnet.io/_images/linear-regression.png) [Linear regression from scratch](http://gluon.mxnet.io/chapter02_supervised-learning/linear-regression-scratch.html) <!-- .element: class="figcaption" -->
+![](images/fit-linreg.svg) [Linear regression from scratch](http://gluon.ai/chapter_linear-regression/linear-regression.html#equation-eq-mse) <!-- .element: class="figcaption" -->
 
 $$
 \underset{\boldsymbol{w}}{\operatorname{arg min}} \xi(\hat{y}, y) = \ell_2(\hat{y}, y) \\\\
@@ -446,7 +445,7 @@ https://www.quora.com/Do-extraordinary-claims-require-extraordinary-evidence
 http://www.labtimes.org/labtimes/method/methods/img/2011_04b.jpg
 http://www.labtimes.org/labtimes/method/methods/2011_04.lasso
 
-![](http://gandenberger.org/wp-content/uploads/2014/07/Statistical_Methods.png)  <!-- .element: class="img-450" -->
+![](https://gandenberger.org/wp-content/uploads/2014/07/Statistical_Methods.png)  <!-- .element: class="img-450" -->
 
 [An Introduction to Likelihoodist, Bayesian, and Frequentist Methods](http://gandenberger.org/2014/07/28/intro-to-statistical-methods-2/)  <!-- .element: class="figcaption" -->
 
@@ -523,7 +522,7 @@ t = 3 * x + np.random.normal(0, 0.2, nb_of_samples)
 
 #### Coordinate Descent
 
-![](http://hduongtrong.github.io/assets/gradient_descent/coordinate_descent.gif) <!-- .element: style="height: 300px; background-color: white" --> [Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)  <!-- .element: class="figcaption" -->
+![](https://hduongtrong.github.io/assets/gradient_descent/coordinate_descent.gif) <!-- .element: style="height: 300px; background-color: white" --> [Gradient Descent and Variants - Convergence Rate Summary](https://hduongtrong.github.io/2015/11/23/coordinate-descent/)  <!-- .element: class="figcaption" -->
 
 $$
   w_{k+1} \gets w_k - \alpha_k \nabla_{i_k} F(w_k) e_{i_k}
@@ -628,7 +627,7 @@ for i in range(nb_of_iterations):
 
 #### Nesterov Momentum
 
-![](http://cs231n.github.io/assets/nn3/nesterov.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](http://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
+![](https://cs231n.github.io/assets/nn3/nesterov.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](https://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -642,15 +641,15 @@ for i in range(nb_of_iterations):
 
 #### GD Optimization Algorithms: Noisy Moons
 
-![](http://hduongtrong.github.io/assets/gradient_descent/all.gif) [Alec Radford](https://www.reddit.com/r/MachineLearning/comments/2gopfa/visualizing_gradient_optimization_techniques/cklhott/
+![](https://hduongtrong.github.io/assets/gradient_descent/all.gif) [Alec Radford](https://www.reddit.com/r/MachineLearning/comments/2gopfa/visualizing_gradient_optimization_techniques/cklhott/
 )  <!-- .element: class="figcaption" -->
 
 Note:
 
 Comparison of a few optimization methods (animation by Alec Radford). The star denotes the global minimum on the error surface. Notice that stochastic gradient descent (SGD) without momentum is the slowest method to converge in this example.
 
-[Using convolutional neural nets to detect facial keypoints tutorial](http://danielnouri.org/notes/category/machine-learning/#testing-it-out)
-[Gradient Descent and Variants - Convergence Rate Summary](http://hduongtrong.github.io/2015/11/23/coordinate-descent/)
+[Using convolutional neural nets to detect facial keypoints tutorial](https://danielnouri.org/notes/category/machine-learning/#testing-it-out)
+[Gradient Descent and Variants - Convergence Rate Summary](https://hduongtrong.github.io/2015/11/23/coordinate-descent/)
 [**Test functions for optimization**](https://en.wikipedia.org/wiki/Test_functions_for_optimization)
 
 NAG: Nesterov’s accelerated gradient.
@@ -710,7 +709,7 @@ https://www.slideshare.net/diannepatricia/martin-takac-solving-largescale-machin
 http://andrew.gibiansky.com/blog/machine-learning/hessian-free-optimization/
 http://www.cs.toronto.edu/~jmartens/docs/Momentum_Deep.pdf
 http://runopti.github.io/blog/2016/07/07/HessianComp/
-http://scikit-learn.org/stable/modules/sgd.html
+https://scikit-learn.org/stable/modules/sgd.html
 
 ---
 
@@ -870,7 +869,7 @@ http://xaktly.com/ProbStat_Distributions.html
 
 #### Schematic of Logistic Regression
 
-![](http://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression_files/logistic_regression_schematic.png) [Logistic Regression by Sebastian Raschka](http://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression/)  <!-- .element: class="figcaption" -->
+![](https://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression_files/logistic_regression_schematic.png) [Logistic Regression by Sebastian Raschka](https://rasbt.github.io/mlxtend/user_guide/classifier/LogisticRegression/)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -997,7 +996,7 @@ https://www.quora.com/Why-is-softmax-activate-function-called-softmax
 
 #### Schematic of Softmax Regression
 
-![](http://rasbt.github.io/mlxtend/user_guide/classifier/SoftmaxRegression_files/softmax_schematic_1.png)  <!-- .element: class="img-450" -->  [Softmax Regression by Sebastian Raschka](http://rasbt.github.io/mlxtend/user_guide/classifier/SoftmaxRegression/)  <!-- .element: class="figcaption" -->
+![](https://rasbt.github.io/mlxtend/user_guide/classifier/SoftmaxRegression_files/softmax_schematic_1.png)  <!-- .element: class="img-450" -->  [Softmax Regression by Sebastian Raschka](https://rasbt.github.io/mlxtend/user_guide/classifier/SoftmaxRegression/)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1221,7 +1220,7 @@ $$
 
 #### Hinge Loss is "Soft" Zero-One Loss
 
-![](http://www.cs.cornell.edu/courses/cs4780/2015fa/web/lecturenotes/pngPic/c4/classificationlosses.png) <!-- .element: class="img-450" --> [Machine Learning CS4780/CS5780: Empirical Risk Minimization](http://www.cs.cornell.edu/courses/cs4780/2015fa/page4/index.html)  <!-- .element: class="figcaption" -->
+![](https://www.cs.cornell.edu/courses/cs4780/2015fa/web/lecturenotes/pngPic/c4/classificationlosses.png) <!-- .element: class="img-450" --> [Machine Learning CS4780/CS5780: Empirical Risk Minimization](https://www.cs.cornell.edu/courses/cs4780/2015fa/page4/index.html)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1233,7 +1232,7 @@ $$
 
 #### Kernel Functions in SVM
 
-![](http://i.imgur.com/WuxyO.png) [
+![](images/input-to-feature.png) [
 Rahul Agarwal's Answer: What are kernels in machine learning and SVM and why do we need them?](https://www.quora.com/What-are-kernels-in-machine-learning-and-SVM-and-why-do-we-need-them/answer/Rahul-Agarwal-10?srid=xQkR) <!-- .element: class="figcaption" -->
 
 Note:
@@ -1345,7 +1344,7 @@ Cons:
 - Complexity:
   - $ \mathcal{O}(D_\text{features} N_\text{samples}^{2 \sim 3}) $
 
-[scikit-learn User Guide: Support Vector Machines](http://scikit-learn.org/stable/modules/svm.html)  <!-- .element: class="figcaption" -->
+[scikit-learn User Guide: Support Vector Machines](https://scikit-learn.org/stable/modules/svm.html)  <!-- .element: class="figcaption" -->
 
 ---
 
@@ -1367,13 +1366,13 @@ Cons:
 
 #### Decision Trees with Details
 
-![](images/sphx_glr_plot_tree_regression_001.png)   <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Trees](http://scikit-learn.org/stable/modules/tree.html)   <!-- .element: class="figcaption" -->
+![](images/sphx_glr_plot_tree_regression_001.png)   <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Trees](https://scikit-learn.org/stable/modules/tree.html)   <!-- .element: class="figcaption" -->
 
 ***
 
 #### Decision Surface
 
-![](http://efavdb.com/wp-content/uploads/2015/03/tree1.jpg) [Machine Learning Methods: Decision trees and forests](http://efavdb.com/notes-on-trees/) <!-- .element: class="figcaption" -->
+![](images/tree1.jpg) [Machine Learning Methods: Decision trees and forests](https://efavdb.com/notes-on-trees/) <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1385,7 +1384,7 @@ Cons:
 
 #### Decision Tree Regression 
 
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_tree_regression_001.png)  <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Tree Regression](http://scikit-learn.org/stable/auto_examples/tree/plot_tree_regression.html)   <!-- .element: class="figcaption" -->
+![](https://scikit-learn.org/stable/_images/sphx_glr_plot_tree_regression_001.png)  <!-- .element: style="height: 450px" --> [scikit-learn User Guide: Decision Tree Regression](https://scikit-learn.org/stable/auto_examples/tree/plot_tree_regression.html)   <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1532,9 +1531,9 @@ Note:
 
 #### Gradient Boosting is like Golf
 
-![](http://explained.ai/gradient-boosting/images/golf-MSE.png) <!-- .element: class="img-450" -->
+![](https://explained.ai/gradient-boosting/images/golf-MSE.png) <!-- .element: class="img-450" -->
 
-[How to explain gradient boosting](http://explained.ai/gradient-boosting/index.html)  <!-- .element: class="figcaption" -->
+[How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html)  <!-- .element: class="figcaption" -->
 
 note:
 
@@ -1596,19 +1595,19 @@ Note:
 
 #### Nearest Neighbors Classification
 
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_001.png)  <!-- .element: class="img-left" -->
+![](https://scikit-learn.org/stable/_images/sphx_glr_plot_classification_001.png)  <!-- .element: class="img-left" -->
 
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_classification_002.png)  <!-- .element: class="img-right" -->
+![](https://scikit-learn.org/stable/_images/sphx_glr_plot_classification_002.png)  <!-- .element: class="img-right" -->
 
-[scikit-learn User Guide: Nearest Neighbors Classification Example](http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
+[scikit-learn User Guide: Nearest Neighbors Classification Example](https://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
 
 ***
 
 #### Nearest Neighbors Regression
 
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_regression_001.png)
+![](https://scikit-learn.org/stable/_images/sphx_glr_plot_regression_001.png)
 
-[scikit-learn User Guide: Nearest Neighbors regression Example](http://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
+[scikit-learn User Guide: Nearest Neighbors regression Example](https://scikit-learn.org/stable/auto_examples/neighbors/plot_classification.html)  <!-- .element: class="figcaption" -->
 
 
 
@@ -1720,9 +1719,9 @@ a GP is completely specified by its **mean function** $ m(x) $, and covariance f
 
 #### Gaussian Process Classification (GPC) on Iris dataset
 
-![](http://scikit-learn.org/stable/_images/sphx_glr_plot_gpc_iris_001.png)
+![](https://scikit-learn.org/stable/_images/sphx_glr_plot_gpc_iris_001.png)
 
-[scikit-learn User Guide: Gaussian process classification (GPC) on iris dataset](http://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
+[scikit-learn User Guide: Gaussian process classification (GPC) on iris dataset](https://scikit-learn.org/stable/auto_examples/neighbors/plot_nearest_centroid.html)  <!-- .element: class="figcaption" -->
 
 ---
 
@@ -1770,13 +1769,13 @@ a GP is completely specified by its **mean function** $ m(x) $, and covariance f
 
 #### Learning Rates
 
-![](http://cs231n.github.io/assets/nn3/learningrates.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](http://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
+![](https://cs231n.github.io/assets/nn3/learningrates.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](https://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
 
 ***
 
 #### Training/Validation accuracy
 
-![](http://cs231n.github.io/assets/nn3/accuracies.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](http://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
+![](https://cs231n.github.io/assets/nn3/accuracies.jpeg) [CS231n Neural Networks Part 3: Learning and Evaluation](https://cs231n.github.io/neural-networks-3/)  <!-- .element: class="figcaption" -->
 
 ***
 
@@ -1795,4 +1794,4 @@ a GP is completely specified by its **mean function** $ m(x) $, and covariance f
 https://thuijskens.github.io/2016/12/29/bayesian-optimisation/
 - [Bayesian optimization with scikit-learn](https://github.com/thuijskens/bayesian-optimization)
 - [Overfitting in Machine Learning: What It Is and How to Prevent It](https://elitedatascience.com/overfitting-in-machine-learning#how-to-prevent)
-- [sklearn.model_selection: Model Selection](http://scikit-learn.org/stable/modules/classes.html#module-sklearn.model_selection)
+- [sklearn.model_selection: Model Selection](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.model_selection)
