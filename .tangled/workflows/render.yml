@@ -1,0 +1,61 @@
+engine: nixery
+
+# Build the reveal-md deck (full fidelity, incl. PlantUML/graphviz preprocessor)
+# on tangled's Spindle and publish to the `site` branch → utensil.tngl.sh/slides.
+# bun for all JS tooling; jdk + graphviz for node-plantuml's PlantUML rendering.
+when:
+  # push-to-master only — the spindle injects repo secrets into every run
+  # regardless of event, so PR triggers could leak the deploy key.
+  - event: ["push"]
+    branch: master
+
+dependencies:
+  nixpkgs:
+    - bash
+    - coreutils
+    - gnugrep
+    - git
+    - openssh
+    - cacert
+    - findutils
+    - gcc
+    - bun
+    - graphviz
+    - jdk
+
+steps:
+  - name: build and publish slides
+    command: |
+      set -euo pipefail
+      export SSL_CERT_FILE="${SSL_CERT_FILE:-${NIX_SSL_CERT_FILE:-/etc/ssl/certs/ca-bundle.crt}}"
+      libstdcpp_path="$(find /nix/store -maxdepth 4 -name 'libstdc++.so.6' 2>/dev/null | head -1)"
+      export LD_LIBRARY_PATH="$(dirname "${libstdcpp_path:-/nonexistent}"):${LD_LIBRARY_PATH:-}"
+      export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
+
+      echo "::group::env + install"
+      bun --version; dot -V 2>&1 || echo "no dot"; java -version 2>&1 | head -1 || echo "no java"
+      bun add --no-save reveal-md mathjax-node-cli node-plantuml
+      echo "::endgroup::"
+
+      echo "::group::render (full fidelity: preprocessor on)"
+      mkdir -p _site/ml
+      ( cd ml && bunx reveal-md --preprocessor js/preproc.js --static ../_site/ml ml.md )
+      cp -r ml/css _site/ml/_assets/ 2>/dev/null || true
+      cp -r ml/js  _site/ml/_assets/ 2>/dev/null || true
+      cp -r ml/images _site/ml/ 2>/dev/null || true
+      printf '%s\n' '<!DOCTYPE html><meta charset="utf-8"><title>utensil slides</title><meta http-equiv="refresh" content="0; url=ml/"><a href="ml/">slides &rarr;</a>' > _site/index.html
+      echo "::endgroup::"
+
+      echo "::group::publish"
+      : "${DEPLOY_SSH_KEY_B64:?DEPLOY_SSH_KEY_B64 secret not set}"
+      export HOME="${HOME:-/tmp/cihome}"; mkdir -p "$HOME/.ssh"; chmod 700 "$HOME/.ssh"
+      grep -q ':0:0:' /etc/passwd || echo "root:x:0:0:root:$HOME:/bin/sh" >> /etc/passwd 2>/dev/null || true
+      printf '%s' "$DEPLOY_SSH_KEY_B64" | base64 -d > "$HOME/.ssh/deploy"; chmod 600 "$HOME/.ssh/deploy"
+      export GIT_SSH_COMMAND="ssh -i $HOME/.ssh/deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=$HOME/.ssh/known_hosts"
+      export GIT_AUTHOR_NAME=tangled-ci GIT_AUTHOR_EMAIL=ci@utensil.tngl.sh
+      export GIT_COMMITTER_NAME=tangled-ci GIT_COMMITTER_EMAIL=ci@utensil.tngl.sh
+      cd _site && git init -q && git checkout -q -b site && git add -A
+      git commit -q -m "render slides $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+      git push --force "git@tangled.org:utensil.tngl.sh/slides" site
+      echo "pushed rendered slides → branch 'site'"
+      echo "::endgroup::"
