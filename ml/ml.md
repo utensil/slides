@@ -78,7 +78,7 @@ Dive in inclues Julia, Geometric Algebra, Keras and Risk Control.
 Note:
 
 | Supervised Learning | Unsupervised Learning | Reinforcement Learning |
-|---------------------|-----------------------|------------------------|
+| --- | --- | --- |
 | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_02.png?raw=true) | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_06.png?raw=true) | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_05.png?raw=true)
 
 [Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
@@ -94,8 +94,8 @@ Note:
 #### Supervised Learning (Cont.)
 
 | Classification | Regression |
-|---------------------|-----------------------|
-| ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_03.png?raw=true)  <!-- .element: class="img-300" -->  | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_04.png?raw=true)  <!-- .element: class="img-300" --> |
+| --- | --- |
+| ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_03.png?raw=true) <!-- .element: class="img-300" --> | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_04.png?raw=true) <!-- .element: class="img-300" --> |
 
 [Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
@@ -104,8 +104,8 @@ Note:
 #### Unsupervised Learning
 
 | Clustering | Dimensionality Reduction |
-|---------------------|-----------------------|
-| ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_06.png?raw=true)  <!-- .element: class="img-300" -->  | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_07.png?raw=true)  <!-- .element: class="img-300" --> |
+| --- | --- |
+| ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_06.png?raw=true) <!-- .element: class="img-300" --> | ![](https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch01/images/01_07.png?raw=true) <!-- .element: class="img-300" --> |
 
 [Python Machine Learning: Chapter 1 by Sebastian Raschka](https://nbviewer.org/github/rasbt/python-machine-learning-book/blob/master/code/ch01/ch01.ipynb)  <!-- .element: class="figcaption" -->
 
@@ -253,26 +253,26 @@ negative</td>
 
 #### Confusion Matrix (Simplified)
 
-|  Term              |            Formula                                                                               |         Focus        |
-|--------------------|:------------------------------------------------------------------------------------------------:|----------------------|
-| Accuracy           | $ \frac{\color{green}{✔} + \color{red}{✖}}{\text{All}(\color{green}{✔}+\color{green}{✖}+\color{red}{✔}+\color{red}{✖})} $                           | Right                |
-| Precision          | $ \frac{\color{green}{✔}}{\text{All Positive}(\color{green}{✔}+\color{red}{✔})} $             | Right about Positive |
-| Sensitivity/Recall | $ \frac{\color{green}{✔}}{\text{All Real}(\color{green}{✔}+\color{green}{✖})} $               | Right about Real     |
-| Specificity        | $ \frac{\color{red}{✖}}{\text{All NOT Real}(\color{red}{✔}+\color{red}{✖})} $                 | Right about NOT Real |
+| Term | Formula | Focus |
+| --- | :---: | --- |
+| Accuracy | $ \frac{\color{green}{✔} + \color{red}{✖}}{\text{All}(\color{green}{✔}+\color{green}{✖}+\color{red}{✔}+\color{red}{✖})} $ | Right |
+| Precision | $ \frac{\color{green}{✔}}{\text{All Positive}(\color{green}{✔}+\color{red}{✔})} $ | Right about Positive |
+| Sensitivity/Recall | $ \frac{\color{green}{✔}}{\text{All Real}(\color{green}{✔}+\color{green}{✖})} $ | Right about Real |
+| Specificity | $ \frac{\color{red}{✖}}{\text{All NOT Real}(\color{red}{✔}+\color{red}{✖})} $ | Right about NOT Real |
 
-| Legend    |                             |                               |
-|-----------|-----------------------------|-------------------------------|
-| Actual    | $ \color{green}{●} $ Real | $ \color{red}{●} $ NOT Real |
-| Predicted | ✔ Positive                  | ✖ Negative                   |
+| Legend | | |
+| --- | --- | --- |
+| Actual | $ \color{green}{●} $ Real | $ \color{red}{●} $ NOT Real |
+| Predicted | ✔ Positive | ✖ Negative |
 
 Note:
 
-|  Term              |            Formula                                                                               |         Focus        |
-|--------------------|:------------------------------------------------------------------------------------------------:|----------------------|
-| Accuracy           | $ \frac{(\text{True Positive} + \text{True Negative})}{\text{All}} $                           | Right                |
-| Precision          | $ \frac{\text{True Positive}}{\text{All Positive}} $                                           | Right about Positive |
-| Sensitivity/Recall | $ \frac{\text{True Positive}}{\text{All Real (= True Positive + False Negative)}} $            | Right about Real     |
-| Specificity        | $ \frac{\text{True Negative}}{\text{All NOT Real (= True Negative + False Positive)}} $        | Right about NOT Real |
+| Term | Formula | Focus |
+| --- | :---: | --- |
+| Accuracy | $ \frac{(\text{True Positive} + \text{True Negative})}{\text{All}} $ | Right |
+| Precision | $ \frac{\text{True Positive}}{\text{All Positive}} $ | Right about Positive |
+| Sensitivity/Recall | $ \frac{\text{True Positive}}{\text{All Real (= True Positive + False Negative)}} $ | Right about Real |
+| Specificity | $ \frac{\text{True Negative}}{\text{All NOT Real (= True Negative + False Positive)}} $ | Right about NOT Real |
 
 ---
 ## Traditional Machine Learning Methods
@@ -745,8 +745,8 @@ $$ ||x||_p=(\sum_i |x_i|^p)^{1/p} $$
 
 #### Typical Vector Norms
 
-|                 |               |                                      |
-|-----------------|---------------|--------------------------------------|
+| | | |
+| --- | --- | --- |
 | $\ell_0$-Norm | $ ∣∣x∣∣_0 $ | $ \\#(i \mid x_i \neq 0) $ |
 | $\ell_1$-Norm | $ ∣∣x∣∣_1 $ | $ \sum_i ∣x_i∣ $ |
 | $\ell_2$-Norm | $ ∣∣x∣∣_2 $ | $ \sqrt{\sum_i^{\phantom{n}} ∣x_i∣^2} $ |
@@ -794,9 +794,9 @@ Note:
 
 #### Sparsity
 
-| Ridge                                  | Lasso                               |
-|----------------------------------------|-------------------------------------|
-| ![](images/regularization-linear_files/l2.png) | ![](images/regularization-linear_files/l1.png)  |
+| Ridge | Lasso |
+| --- | --- |
+| ![](images/regularization-linear_files/l2.png) | ![](images/regularization-linear_files/l1.png) |
 
 [Regularization of Generalized Linear Models by Sebastian Raschka](https://github.com/rasbt/mlxtend/blob/v0.19.0/docs/sources/user_guide/general_concepts/regularization-linear.ipynb) <!-- .element: class="figcaption" -->
 
@@ -814,9 +814,9 @@ https://stats.stackexchange.com/questions/45643/why-l1-norm-for-sparse-models
 
 #### Prior
 
-| Ridge: Gaussian                        | Lasso: Laplace                      |
-|----------------------------------------|-------------------------------------|
-| ![](images/10701/map_ridge.png)        |![](images/10701/map_lasso.png)      |
+| Ridge: Gaussian | Lasso: Laplace |
+| --- | --- |
+| ![](images/10701/map_ridge.png) |![](images/10701/map_lasso.png) |
 
 [Machine Learning 10-701/15-781, Fall 2010 Lecture 6: Linear Regression](https://www.cs.cmu.edu/~aarti/Class/10701/slides/Lecture6.pdf) <!-- .element: class="figcaption" -->
 
@@ -1446,10 +1446,10 @@ note:
 
 #### Gini Index VS Information Gain
 
-| Algorithm / <br /> Split Criterion       	| Description	 | Tree Type |
-|-------------------------------------------|--------------|-----------|
-| Gini Split / <br /> Gini Index	          | Favors larger partitions. <br /> Very simple to implement.	 | CART |
-| Information Gain / <br /> Entropy        	| Favors partitions that have small counts <br /> but many distinct values. |	 ID3 / C4.5 |
+| Algorithm / <br /> Split Criterion 	| Description	 | Tree Type |
+| --- | --- | --- |
+| Gini Split / <br /> Gini Index	 | Favors larger partitions. <br /> Very simple to implement.	 | CART |
+| Information Gain / <br /> Entropy 	| Favors partitions that have small counts <br /> but many distinct values. |	 ID3 / C4.5 |
 
 [A Complete Tutorial on Tree Based Modeling from Scratch (in R & Python)](https://www.analyticsvidhya.com/blog/2016/04/complete-tutorial-tree-based-modeling-scratch-in-python/)  <!-- .element: class="figcaption see-also" -->
 
@@ -1505,9 +1505,9 @@ note:
 
 ***
 
-| Level-wise growth                      | Leaf-wise growth                    |
-|:--------------------------------------:|:-----------------------------------:|
-| ![](images/level-wise.png)        |![](images/leaf-wise.webp)      |
+| Level-wise growth | Leaf-wise growth |
+| :---: | :---: |
+| ![](images/level-wise.png) |![](images/leaf-wise.webp) |
 
 [XGBoost vs LightGBM: How Are They Different](https://neptune.ai/blog/xgboost-vs-lightgbm)  <!-- .element: class="figcaption" -->
 
@@ -1545,7 +1545,7 @@ note:
 <!-- .slide: style="font-size:32px;" -->
 
 | Gradient descent | Gradient boosting |
-|------------------|-------------------|
+| --- | --- |
 | $ \vec w_t = \vec w_{t-1} - \eta \nabla f(\vec w_{t-1}) $ | $\hat{\vec y}\_m = \hat{\vec y}\_{m-1} + \eta (- \nabla L(\vec y, \hat{\vec y}\_{m-1}))$ |
 
 [How to explain gradient boosting](https://explained.ai/gradient-boosting/index.html)  <!-- .element: class="figcaption" -->
