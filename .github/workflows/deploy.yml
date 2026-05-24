@@ -40,13 +40,15 @@ jobs:
           restore-keys: ${{ runner.os }}-bun-revealmd-
 
       - name: Install JS tools (bun)
-        run: bun add --no-save reveal-md mathjax-node-cli node-plantuml
+        # reveal-md pinned: 6.x's template injects a mermaid script that --static
+        # doesn't ship (404 → breaks rendering); pin so behavior can't drift.
+        run: bun add --no-save reveal-md@6.1.4 mathjax-node-cli node-plantuml
 
       - name: Build deck (reveal-md, full preprocessor)
         run: |
           set -euo pipefail
           mkdir -p _site/ml
-          ( cd ml && bunx reveal-md --preprocessor js/preproc.js --static ../_site/ml ml.md )
+          ( cd ml && bunx reveal-md@6.1.4 --preprocessor js/preproc.js --static ../_site/ml ml.md )
           cp -r ml/css _site/ml/_assets/ 2>/dev/null || true
           cp -r ml/js  _site/ml/_assets/ 2>/dev/null || true
           cp -r ml/images _site/ml/ 2>/dev/null || true

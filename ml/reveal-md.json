@@ -5,5 +5,6 @@
   "separator": "^---[\r]?\n",
   "verticalSeparator": "^\\*\\*\\*[\r]?\n",
   "css": "./css/common.css",
-  "scripts": "./js/common.js"
+  "scripts": "./js/common.js",
+  "mermaid": false
 }
