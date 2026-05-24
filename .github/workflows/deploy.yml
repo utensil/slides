@@ -1,55 +1,64 @@
 name: Build and Deploy
+
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      # PlantUML (via node-plantuml) shells out to `dot` + Java. Java is
+      # preinstalled on the runner; graphviz is the only extra.
+      - name: Install graphviz
+        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends graphviz
+
+      # bun install — no cache (kept deliberately cold so timing matches what a
+      # cacheless tangled Spindle runner would see).
+      - name: Install JS tools (bun)
+        run: bun add --no-save reveal-md mathjax-node-cli node-plantuml
+
+      - name: Build deck (reveal-md, full preprocessor)
+        run: |
+          set -euo pipefail
+          mkdir -p _site/ml
+          ( cd ml && bunx reveal-md --preprocessor js/preproc.js --static ../_site/ml ml.md )
+          cp -r ml/css _site/ml/_assets/ 2>/dev/null || true
+          cp -r ml/js  _site/ml/_assets/ 2>/dev/null || true
+          cp -r ml/images _site/ml/ 2>/dev/null || true
+          printf '%s\n' '<!DOCTYPE html><meta charset="utf-8"><title>utensil slides</title><meta http-equiv="refresh" content="0; url=ml/"><a href="ml/">slides &rarr;</a>' > _site/index.html
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+  deploy:
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v3
-      - name: Cache node-modules 💽
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-      - name: Install and Build 🔧
-        run: |
-          pwd
-          bash ml/scripts/install.sh
-          cd ml
-          reveal-md --preprocessor js/preproc.js --static ../_site/ml ml.md
-          cp -r css ../_site/ml/_assets/
-          cp -r js ../_site/ml/_assets/
-          cp -r images ../_site/ml/
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: '_site'
-      - name: Deploy to GitHub Pages 🚀
+      - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
