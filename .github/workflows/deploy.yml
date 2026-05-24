@@ -29,8 +29,16 @@ jobs:
       - name: Install graphviz
         run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends graphviz
 
-      # bun install — no cache (kept deliberately cold so timing matches what a
-      # cacheless tangled Spindle runner would see).
+      # Cache bun's package cache for fast warm installs. (Cacheless cold time
+      # was validated separately to confirm it fits tangled's 5-min budget;
+      # GitHub keeps the cache for everyday speed.)
+      - name: Cache bun
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-revealmd-${{ hashFiles('.github/workflows/deploy.yml') }}
+          restore-keys: ${{ runner.os }}-bun-revealmd-
+
       - name: Install JS tools (bun)
         run: bun add --no-save reveal-md mathjax-node-cli node-plantuml
 
