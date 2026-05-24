@@ -258,7 +258,7 @@ function decorateSlide(cur, event) {
 }
 
 function renderMermaid(cur) {
-  var diagramCodeTag = cur.querySelector('code.lang-mermaid');
+  var diagramCodeTag = cur.querySelector('code.mermaid');
   var renderedDiagram = cur.querySelector('.mermaidSvg');
 
   if(diagramCodeTag != null && mermaidAPI != null) {
